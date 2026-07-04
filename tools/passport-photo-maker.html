@@ -1,0 +1,3150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QL80Z3DZ8Z"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QL80Z3DZ8Z');</script>
+    <!-- Resource Hints & Performance Optimizations -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin />
+    <link
+      rel="preconnect"
+      href="https://pagead2.googlesyndication.com"
+      crossorigin
+    />
+    <link
+      rel="preconnect"
+      href="https://googleads.g.doubleclick.net"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
+    />
+
+    <!-- Primary Meta Tags - SEO Optimized -->
+    <title>
+      AI Passport Photo Maker | A4 Layout & Border Options - Pro CSC Tools
+    </title>
+    <meta
+      name="title"
+      content="AI Passport Photo Maker | A4 Layout & Border Options"
+    />
+    <meta
+      name="description"
+      content="Create professional passport size photos with A4 layout and custom borders. Free online AI tool with crop, background removal, suit changer, text overlay, and multiple print layouts. Used by 100,000+ users."
+    />
+    <meta
+      name="keywords"
+      content="ai passport photo maker, passport size photo, A4 layout passport photo, photo border, visa photo, passport photo online, photo crop tool, background remover, change suit"
+    />
+    <meta name="author" content="Pro CSC Tools" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Canonical URL -->
+    <link
+      rel="canonical"
+      href="https://procsctools.in/tools/passport-photo-maker.html"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://procsctools.in/tools/passport-photo-maker.html"
+    />
+    <meta
+      property="og:title"
+      content="Free AI Passport Photo Maker - A4 Layout & Borders"
+    />
+    <meta
+      property="og:description"
+      content="Create passport photos for India, USA, Canada, UK. Print-ready A4 layout with custom borders."
+    />
+    <meta
+      property="og:image"
+      content="https://procsctools.in/images/passport-photo-maker.webp"
+    />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="AI Passport Photo Maker - Free Online Tool"
+    />
+    <meta
+      name="twitter:description"
+      content="Create passport size photos instantly. 100,000+ users trust us."
+    />
+
+    <!-- Preconnect for faster loading -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <!-- Stylesheets -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/selfie_segmentation/selfie_segmentation.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "AI Passport Photo Maker",
+        "description": "Free online tool to create passport size photos with A4 layout",
+        "applicationCategory": "Image Editor",
+        "operatingSystem": "All",
+        "url": "https://procsctools.in/tools/passport-photo-maker.html",
+        "provider": {
+          "@type": "Organization",
+          "name": "Pro CSC Tools"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "INR"
+        },
+        "featureList": [
+          "A4 Layout",
+          "Photo Borders",
+          "Crop Tool",
+          "Background Change",
+          "Text Overlay",
+          "Multiple Layouts"
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "ratingCount": "10234"
+        }
+      }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How to make passport size photo with A4 layout?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Upload photo, select size, crop face, choose border, select A4 layout, and download. The tool automatically arranges multiple photos on A4 paper."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I add border to passport photo?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, you can add white, black, colored, or custom borders with adjustable thickness from 1px to 20px."
+            }
+          }
+        ]
+      }
+    </script>
+
+    <style>
+      * {
+        font-family: "Inter", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+      }
+
+      /* Crop Tool Styles */
+      .crop-container {
+        position: relative;
+        display: inline-block;
+        max-width: 100%;
+        overflow: hidden;
+        border: 3px solid #fff;
+        background: #f0f0f0;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      #cropCanvas {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+
+      .crop-box {
+        position: absolute;
+        border: 3px solid #4f46e5;
+        cursor: move;
+        box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.5);
+        z-index: 10;
+        touch-action: none;
+        border-radius: 4px;
+      }
+
+      .resize-handle {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: #4f46e5;
+        border: 3px solid white;
+        z-index: 11;
+        border-radius: 50%;
+        touch-action: none;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      }
+
+      .resize-handle.nw {
+        top: -10px;
+        left: -10px;
+        cursor: nw-resize;
+      }
+      .resize-handle.ne {
+        top: -10px;
+        right: -10px;
+        cursor: ne-resize;
+      }
+      .resize-handle.sw {
+        bottom: -10px;
+        left: -10px;
+        cursor: sw-resize;
+      }
+      .resize-handle.se {
+        bottom: -10px;
+        right: -10px;
+        cursor: se-resize;
+      }
+      .resize-handle.n {
+        top: -10px;
+        left: 50%;
+        margin-left: -10px;
+        cursor: n-resize;
+      }
+      .resize-handle.s {
+        bottom: -10px;
+        left: 50%;
+        margin-left: -10px;
+        cursor: s-resize;
+      }
+      .resize-handle.e {
+        top: 50%;
+        right: -10px;
+        margin-top: -10px;
+        cursor: e-resize;
+      }
+      .resize-handle.w {
+        top: 50%;
+        left: -10px;
+        margin-top: -10px;
+        cursor: w-resize;
+      }
+
+      /* Border Preview */
+      .border-preview {
+        width: 48px;
+        height: 56px;
+        background: #f8f8f8;
+        border: 1px solid #ddd;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 10px;
+        color: #666;
+        transition: all 0.3s;
+      }
+
+      .border-preview:hover {
+        transform: scale(1.05);
+      }
+
+      .border-white {
+        border: 4px solid white;
+        box-shadow: 0 0 0 1px #ddd;
+      }
+      .border-black {
+        border: 4px solid black;
+      }
+      .border-gray {
+        border: 4px solid #9ca3af;
+      }
+      .border-gold {
+        border: 4px solid #fbbf24;
+      }
+      .border-blue {
+        border: 4px solid #3b82f6;
+      }
+
+      /* Progress Steps */
+      .progress-step {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 14px;
+        transition: all 0.3s;
+      }
+
+      .progress-step.active {
+        background: #4f46e5;
+        color: white;
+        transform: scale(1.1);
+      }
+
+      .progress-step.completed {
+        background: #10b981;
+        color: white;
+      }
+
+      .progress-line {
+        flex: 1;
+        height: 4px;
+        background: #e5e7eb;
+        margin: 0 10px;
+      }
+
+      .progress-line.completed {
+        background: #10b981;
+      }
+
+      /* Toast Notification */
+      .toast-message {
+        animation: slideIn 0.3s ease, fadeOut 0.3s ease 2.7s;
+        padding: 12px 24px;
+        border-radius: 8px;
+        color: white;
+        font-weight: 500;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      @keyframes slideIn {
+        from {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeOut {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+        }
+      }
+
+      /* Buttons */
+      .btn-primary {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 12px 30px;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: all 0.3s;
+        border: none;
+        cursor: pointer;
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+      }
+
+      .btn-secondary {
+        background: white;
+        color: #4f46e5;
+        padding: 12px 30px;
+        border-radius: 50px;
+        font-weight: 600;
+        border: 2px solid #4f46e5;
+        transition: all 0.3s;
+        cursor: pointer;
+      }
+
+      .btn-secondary:hover {
+        background: #4f46e5;
+        color: white;
+      }
+
+      /* Cards */
+      .preset-card {
+        border: 2px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 16px;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+
+      .preset-card:hover {
+        border-color: #4f46e5;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(79, 70, 229, 0.1);
+      }
+
+      .preset-card.selected {
+        border-color: #4f46e5;
+        background: #eef2ff;
+      }
+
+      .hidden {
+        display: none !important;
+      }
+    </style>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.png" />
+  </head>
+  <body class="min-h-screen">
+        <!-- Pro CSC Tools Header -->
+    <nav class="bg-white/90 backdrop-blur shadow-sm sticky top-0 z-50 border-b border-gray-200">
+      <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-16">
+          <a href="https://procsctools.in/" class="flex items-center text-xl font-extrabold text-[#ab183d]"><i class="fas fa-crown mr-2 text-[#e0aa14]"></i> Pro CSC Tools</a>
+          <div class="hidden md:flex items-center gap-7 text-sm font-semibold text-gray-700">
+            <a href="https://procsctools.in/" class="hover:text-[#ab183d] transition">Home</a>
+            <a href="https://procsctools.in/#tools" class="hover:text-[#ab183d] transition">All Tools</a>
+            <a href="https://procsctools.in/blog/" class="hover:text-[#ab183d] transition">Blog</a>
+            <a href="https://procsctools.in/about.html" class="hover:text-[#ab183d] transition">About</a>
+            <a href="https://procsctools.in/contact.html" class="hover:text-[#ab183d] transition">Contact</a>
+            <a href="https://wa.me/916387617678" class="bg-[#ab183d] text-white px-4 py-2 rounded-full hover:bg-[#8f1433] transition"><i class="fab fa-whatsapp mr-1"></i> WhatsApp</a>
+          </div>
+          <button id="pcsMenuBtn" class="md:hidden text-2xl text-[#ab183d]" aria-label="Menu"><i class="fas fa-bars"></i></button>
+        </div>
+      </div>
+      <div id="pcsMobileMenu" class="hidden md:hidden bg-white border-t border-gray-200 px-4 py-3 space-y-1 text-sm font-semibold text-gray-700">
+        <a href="https://procsctools.in/" class="block py-2">Home</a>
+        <a href="https://procsctools.in/#tools" class="block py-2">All Tools</a>
+        <a href="https://procsctools.in/blog/" class="block py-2">Blog</a>
+        <a href="https://procsctools.in/about.html" class="block py-2">About</a>
+        <a href="https://procsctools.in/contact.html" class="block py-2">Contact</a>
+        <a href="https://wa.me/916387617678" class="block py-2 text-green-600"><i class="fab fa-whatsapp mr-1"></i> WhatsApp</a>
+      </div>
+    </nav>
+    <div class="container mx-auto px-4 py-2 text-sm text-gray-500"><a href="https://procsctools.in/" class="hover:text-[#ab183d]">Home</a> / <a href="https://procsctools.in/#tools" class="hover:text-[#ab183d]">Tools</a> / <span class="text-[#ab183d] font-semibold">AI Passport Photo Maker</span></div>
+
+    <!-- Main Container -->
+    <div class="container mx-auto px-4 py-4 md:py-6">
+      <!-- Header -->
+      <div class="text-center mb-4">
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-2">
+          AI Passport Photo Maker
+        </h1>
+        <p class="text-base md:text-lg text-white opacity-90 max-w-3xl mx-auto">
+          Create Professional AI Passport Photos with
+          <span class="font-bold">A4 Layout</span> &
+          <span class="font-bold">Custom Borders</span>
+        </p>
+        <p class="text-xs text-white opacity-75 mt-1">
+          Trusted by 100,000+ users worldwide
+        </p>
+      </div>
+
+      <!-- Progress Tracker -->
+      <div
+        class="max-w-3xl mx-auto mb-4 bg-white rounded-xl p-3 md:p-4 shadow-lg"
+      >
+        <div class="flex items-center justify-between">
+          <div class="flex flex-col items-center">
+            <div class="progress-step completed" id="step1">1</div>
+            <span class="text-sm mt-2 font-medium">Upload</span>
+          </div>
+          <div class="progress-line completed" id="line1"></div>
+
+          <div class="flex flex-col items-center">
+            <div class="progress-step" id="step2">2</div>
+            <span class="text-sm mt-2 font-medium">Size</span>
+          </div>
+          <div class="progress-line" id="line2"></div>
+
+          <div class="flex flex-col items-center">
+            <div class="progress-step" id="step3">3</div>
+            <span class="text-sm mt-2 font-medium">Crop</span>
+          </div>
+          <div class="progress-line" id="line3"></div>
+
+          <div class="flex flex-col items-center">
+            <div class="progress-step" id="step4">4</div>
+            <span class="text-sm mt-2 font-medium">Border</span>
+          </div>
+          <div class="progress-line" id="line4"></div>
+
+          <div class="flex flex-col items-center">
+            <div class="progress-step" id="step5">5</div>
+            <span class="text-sm mt-2 font-medium">Download</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Upload Section -->
+      <div id="uploadSection" class="max-w-4xl mx-auto">
+        <div
+          class="bg-white rounded-2xl shadow-2xl p-12 text-center border-4 border-dashed border-gray-300 hover:border-indigo-500 transition cursor-pointer"
+          id="dropZone"
+        >
+          <div class="mb-6">
+            <i class="fas fa-cloud-upload-alt text-7xl text-indigo-500"></i>
+          </div>
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">
+            Upload Your Photo
+          </h2>
+          <p class="text-gray-600 mb-6">
+            Drag & drop or click to select (JPG, PNG, JPEG - Max 10MB)
+          </p>
+          <input type="file" id="fileInput" accept="image/*" class="hidden" />
+          <button
+            onclick="document.getElementById('fileInput').click()"
+            class="btn-primary text-lg"
+          >
+            <i class="fas fa-search mr-2"></i>Choose Image
+          </button>
+          <p class="text-sm text-gray-500 mt-4">
+            🔒 Your photo never leaves your device
+          </p>
+        </div>
+      </div>
+
+      <!-- Main Tool Section -->
+      <div id="mainToolSection" class="hidden">
+        <!-- Size Selection -->
+        <div id="sizeSection" class="bg-white rounded-2xl shadow-2xl p-8">
+          <h2 class="text-3xl font-bold text-gray-800 mb-6">
+            Select Photo Size
+          </h2>
+
+          <!-- DPI Control -->
+          <div class="mb-8 p-4 bg-gray-50 rounded-xl">
+            <label class="block text-sm font-medium text-gray-700 mb-2"
+              >Resolution (DPI)</label
+            >
+            <div class="flex items-center gap-4">
+              <input
+                type="range"
+                id="dpiSlider"
+                min="150"
+                max="600"
+                value="300"
+                class="flex-1"
+                oninput="updateDpi()"
+              />
+              <input
+                type="number"
+                id="dpiInput"
+                value="300"
+                class="border rounded-lg px-4 py-2 w-24 text-center"
+              />
+              <span class="text-gray-600">DPI</span>
+            </div>
+          </div>
+
+          <!-- Preset Sizes -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8"
+          >
+            <!-- India/UK -->
+            <div
+              onclick="selectSize(35, 45, 'mm', 'India, UK, Australia', 'size-india')"
+              class="preset-card selected"
+              id="size-india"
+            >
+              <div
+                class="bg-indigo-600 text-white text-xs px-2 py-1 rounded inline-block mb-2"
+              >
+                🇮🇳 Most Popular
+              </div>
+              <div class="text-xl font-bold">35 x 45 mm</div>
+              <div class="text-gray-600">India, UK, Australia</div>
+            </div>
+
+            <!-- USA -->
+            <div
+              onclick="selectSize(2, 2, 'inch', 'USA, Philippines', 'size-usa')"
+              class="preset-card"
+              id="size-usa"
+            >
+              <div class="text-xl font-bold">2 x 2 inch</div>
+              <div class="text-gray-600">USA, Philippines</div>
+            </div>
+
+            <!-- Canada -->
+            <div
+              onclick="selectSize(50, 70, 'mm', 'Canada', 'size-canada')"
+              class="preset-card"
+              id="size-canada"
+            >
+              <div class="text-xl font-bold">50 x 70 mm</div>
+              <div class="text-gray-600">Canada</div>
+            </div>
+
+            <!-- China -->
+            <div
+              onclick="selectSize(33, 48, 'mm', 'China', 'size-china')"
+              class="preset-card"
+              id="size-china"
+            >
+              <div class="text-xl font-bold">33 x 48 mm</div>
+              <div class="text-gray-600">China</div>
+            </div>
+          </div>
+
+          <!-- Custom Size -->
+          <div class="border-2 border-gray-200 rounded-xl p-6 mb-8">
+            <h3 class="text-lg font-semibold mb-4">Custom Size</h3>
+            <div class="flex flex-wrap items-center gap-4">
+              <div class="flex gap-3">
+                <label class="flex items-center"
+                  ><input
+                    type="radio"
+                    name="unit"
+                    value="mm"
+                    checked
+                    class="mr-1"
+                  />
+                  MM</label
+                >
+                <label class="flex items-center"
+                  ><input type="radio" name="unit" value="cm" class="mr-1" />
+                  CM</label
+                >
+                <label class="flex items-center"
+                  ><input type="radio" name="unit" value="inch" class="mr-1" />
+                  Inch</label
+                >
+              </div>
+              <div class="flex items-center gap-2">
+                <input
+                  type="number"
+                  id="customWidth"
+                  value="35"
+                  class="border rounded-lg px-4 py-2 w-24"
+                />
+                <span class="text-xl">x</span>
+                <input
+                  type="number"
+                  id="customHeight"
+                  value="45"
+                  class="border rounded-lg px-4 py-2 w-24"
+                />
+                <button
+                  onclick="selectCustomSize()"
+                  class="btn-primary px-6 py-2"
+                >
+                  Apply
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Next Button -->
+          <div class="text-center">
+            <button onclick="goToCrop()" class="btn-primary text-lg px-10">
+              Next: Crop Photo <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Crop Section -->
+        <div
+          id="cropSection"
+          class="hidden bg-white rounded-xl shadow-md p-4 max-w-md mx-auto"
+        >
+          <h2 class="text-xl font-bold text-gray-800 mb-2 text-center">
+            Crop Your Photo
+          </h2>
+
+          <!-- Crop Container -->
+          <div class="text-center mb-4">
+            <div class="crop-container inline-block">
+              <canvas id="cropCanvas"></canvas>
+              <div id="cropBox" class="crop-box">
+                <div class="resize-handle nw"></div>
+                <div class="resize-handle ne"></div>
+                <div class="resize-handle sw"></div>
+                <div class="resize-handle se"></div>
+                <div class="resize-handle n"></div>
+                <div class="resize-handle s"></div>
+                <div class="resize-handle e"></div>
+                <div class="resize-handle w"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Adjustment Tools -->
+          <div class="flex flex-wrap justify-center gap-2 mb-4">
+            <button
+              onclick="zoomIn()"
+              class="bg-gray-100 hover:bg-gray-200 p-2 rounded-lg"
+              title="Zoom In"
+            >
+              <i class="fas fa-search-plus"></i>
+            </button>
+            <button
+              onclick="zoomOut()"
+              class="bg-gray-100 hover:bg-gray-200 p-2 rounded-lg"
+              title="Zoom Out"
+            >
+              <i class="fas fa-search-minus"></i>
+            </button>
+            <button
+              onclick="toggleBrightness()"
+              class="bg-gray-100 hover:bg-gray-200 p-2 rounded-lg"
+              title="Brightness"
+            >
+              <i class="fas fa-sun"></i>
+            </button>
+            <button
+              onclick="adjustContrast()"
+              class="bg-gray-100 hover:bg-gray-200 p-2 rounded-lg"
+              title="Contrast"
+            >
+              <i class="fas fa-adjust"></i>
+            </button>
+            <button
+              onclick="resetAdjustments()"
+              class="bg-gray-100 hover:bg-gray-200 p-2 rounded-lg"
+              title="Reset"
+            >
+              <i class="fas fa-undo"></i>
+            </button>
+          </div>
+
+          <!-- Brightness Slider -->
+          <div
+            id="brightnessControl"
+            class="hidden mb-4 p-3 bg-gray-50 rounded-lg"
+          >
+            <label class="block text-xs font-semibold mb-1 text-gray-600"
+              >Brightness</label
+            >
+            <input
+              type="range"
+              id="brightnessSlider"
+              min="0"
+              max="200"
+              value="100"
+              class="w-full"
+              oninput="applyFilters()"
+            />
+          </div>
+
+          <!-- Navigation -->
+          <div class="flex justify-between">
+            <button
+              onclick="showSizeSection()"
+              class="btn-secondary px-6 py-2 text-sm"
+            >
+              <i class="fas fa-arrow-left mr-2"></i>Back
+            </button>
+            <button
+              onclick="saveCropAndNext()"
+              class="btn-primary px-6 py-2 text-sm"
+            >
+              Save & Next <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Border Section (AI Editor Step) -->
+        <div
+          id="borderSection"
+          class="hidden bg-white rounded-xl shadow-2xl p-4 md:p-6"
+        >
+          <h2
+            class="text-xl md:text-2xl font-bold text-gray-800 mb-4 flex items-center"
+          >
+            <i class="fas fa-magic text-indigo-600 mr-3"></i> AI Photo Editor
+            (Bg, Suits & Borders)
+          </h2>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            <!-- Left Column: Live Preview -->
+            <div
+              class="lg:col-span-5 flex flex-col items-center bg-gray-50 p-4 rounded-xl border border-gray-100"
+            >
+              <span
+                class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2"
+                >Live Preview</span
+              >
+              <div
+                class="flex items-center justify-center bg-white p-3 rounded-lg shadow-sm border border-gray-100 max-w-full"
+              >
+                <canvas
+                  id="editorPreviewCanvas"
+                  class="shadow border rounded bg-white"
+                  style="max-width: 220px; width: 100%"
+                ></canvas>
+              </div>
+              <p class="text-[10px] text-gray-500 mt-2 text-center max-w-xs">
+                <i class="fas fa-info-circle mr-1 text-indigo-500"></i> For best
+                results with suits, please click
+                <b>Remove Background (AI)</b> first!
+              </p>
+            </div>
+
+            <!-- Right Column: Control Panel -->
+            <div class="lg:col-span-7 flex flex-col justify-between">
+              <!-- Tab Selectors -->
+              <div
+                class="flex border-b border-gray-200 mb-4 overflow-x-auto whitespace-nowrap"
+              >
+                <button
+                  onclick="switchTab('bg-ai')"
+                  class="tab-btn px-3 py-2 text-xs md:text-sm font-semibold border-b-2 border-indigo-600 text-indigo-600 flex items-center gap-1.5"
+                  id="tab-bg-ai"
+                >
+                  <i class="fas fa-image"></i> Background & AI
+                </button>
+                <button
+                  onclick="switchTab('suits')"
+                  class="tab-btn px-3 py-2 text-xs md:text-sm font-semibold border-b-2 border-transparent text-gray-500 hover:text-indigo-600 flex items-center gap-1.5"
+                  id="tab-suits"
+                >
+                  <i class="fas fa-user-tie"></i> Add Suit/Dress
+                </button>
+                <button
+                  onclick="switchTab('adjust')"
+                  class="tab-btn px-3 py-2 text-xs md:text-sm font-semibold border-b-2 border-transparent text-gray-500 hover:text-indigo-600 flex items-center gap-1.5"
+                  id="tab-adjust"
+                >
+                  <i class="fas fa-adjust"></i> Color Adjust
+                </button>
+                <button
+                  onclick="switchTab('borders')"
+                  class="tab-btn px-3 py-2 text-xs md:text-sm font-semibold border-b-2 border-transparent text-gray-500 hover:text-indigo-600 flex items-center gap-1.5"
+                  id="tab-borders"
+                >
+                  <i class="fas fa-border-all"></i> Borders & Text
+                </button>
+              </div>
+
+              <!-- Tab 1: Background & AI -->
+              <div id="tab-content-bg-ai" class="space-y-4">
+                <!-- AI Auto Remove Background -->
+                <div class="space-y-2">
+                  <h3
+                    class="font-semibold text-gray-700 flex items-center gap-2 text-xs md:text-sm"
+                  >
+                    <i class="fas fa-magic text-indigo-600"></i> AI Background
+                    Remover
+                  </h3>
+                  <div
+                    class="p-3 bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-100 rounded-xl flex flex-col sm:flex-row items-center justify-between gap-3"
+                  >
+                    <div class="flex items-start gap-2">
+                      <div
+                        class="p-1.5 bg-indigo-100 rounded-lg text-indigo-600"
+                      >
+                        <i class="fas fa-sparkles text-sm animate-pulse"></i>
+                      </div>
+                      <div>
+                        <h4 class="font-bold text-gray-800 text-xs">
+                          AI Auto Background Eraser
+                        </h4>
+                        <p class="text-[10px] text-gray-600 mt-0.5">
+                          Erase the original background automatically using
+                          client-side AI.
+                        </p>
+                      </div>
+                    </div>
+                    <button
+                      id="btnRemoveBg"
+                      onclick="removeBackgroundAI()"
+                      class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xxs px-3 py-2 rounded-lg shadow hover:shadow-indigo-200 transition flex items-center gap-1 shrink-0"
+                    >
+                      <i class="fas fa-sparkles"></i> Remove Background (AI)
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Background Settings -->
+                <div class="space-y-3 pt-3 border-t border-gray-100">
+                  <div class="flex items-center justify-between">
+                    <h3
+                      class="font-semibold text-gray-700 flex items-center gap-2 text-xs md:text-sm"
+                    >
+                      <i class="fas fa-palette text-indigo-600"></i> Background
+                      Color
+                    </h3>
+                    <button
+                      onclick="restoreOriginalBg()"
+                      class="text-xxs bg-white text-gray-600 border border-gray-200 px-2 py-1 rounded font-bold hover:bg-gray-50 transition flex items-center gap-1"
+                    >
+                      <i class="fas fa-undo"></i> Original Background
+                    </button>
+                  </div>
+
+                  <!-- Color controls -->
+                  <div
+                    id="solid-color-controls"
+                    class="space-y-2 bg-gray-50 p-3 rounded-xl border border-gray-100"
+                  >
+                    <div
+                      class="text-[10px] font-semibold text-gray-500 uppercase tracking-wider"
+                    >
+                      Select Preset Color
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                      <button
+                        onclick="setSolidBgColor('#FFFFFF')"
+                        class="w-7 h-7 rounded-full border border-gray-300 bg-white ring-offset-2 hover:scale-110 transition"
+                        title="White"
+                      ></button>
+                      <button
+                        onclick="setSolidBgColor('#A5F3FC')"
+                        class="w-7 h-7 rounded-full border border-cyan-200 bg-cyan-200 ring-offset-2 hover:scale-110 transition"
+                        title="Light Cyan"
+                      ></button>
+                      <button
+                        onclick="setSolidBgColor('#2563EB')"
+                        class="w-7 h-7 rounded-full border border-blue-600 bg-blue-600 ring-offset-2 hover:scale-110 transition"
+                        title="Royal Blue"
+                      ></button>
+                      <button
+                        onclick="setSolidBgColor('#E2E8F0')"
+                        class="w-7 h-7 rounded-full border border-slate-300 bg-slate-300 ring-offset-2 hover:scale-110 transition"
+                        title="Light Grey"
+                      ></button>
+                      <button
+                        onclick="setSolidBgColor('#EF4444')"
+                        class="w-7 h-7 rounded-full border border-red-500 bg-red-500 ring-offset-2 hover:scale-110 transition"
+                        title="Red"
+                      ></button>
+                      <button
+                        onclick="setSolidBgColor('#0ea5e9')"
+                        class="w-7 h-7 rounded-full border border-sky-400 bg-sky-500 ring-offset-2 hover:scale-110 transition"
+                        title="Sky Blue"
+                      ></button>
+                      <button
+                        onclick="setSolidBgColor('#22c55e')"
+                        class="w-7 h-7 rounded-full border border-green-400 bg-green-500 ring-offset-2 hover:scale-110 transition"
+                        title="Green"
+                      ></button>
+                    </div>
+
+                    <div
+                      class="flex items-center gap-2 pt-1 border-t border-gray-200/60"
+                    >
+                      <span class="text-xs font-semibold text-gray-500"
+                        >Custom:</span
+                      >
+                      <input
+                        type="color"
+                        id="bgColorPicker"
+                        value="#FFFFFF"
+                        class="w-7 h-7 border rounded cursor-pointer"
+                        onchange="changeBgColor()"
+                      />
+                      <span
+                        id="bgColorVal"
+                        class="text-xs font-mono text-gray-600"
+                        >#FFFFFF</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tab 2: Add Suit / Dress -->
+              <div id="tab-content-suits" class="space-y-4 hidden">
+                <div>
+                  <h3
+                    class="font-semibold text-gray-700 mb-2 flex items-center gap-2 text-xs md:text-sm"
+                  >
+                    <i class="fas fa-tshirt text-indigo-600"></i> Attire
+                    Category
+                  </h3>
+                  <div class="flex gap-2 mb-3">
+                    <button
+                      onclick="switchSuitCategory('men')"
+                      id="btn-suit-men"
+                      class="px-3 py-1.5 text-xxs font-bold rounded-lg bg-indigo-600 text-white shadow-sm transition"
+                    >
+                      Men's Suits
+                    </button>
+                    <button
+                      onclick="switchSuitCategory('women')"
+                      id="btn-suit-women"
+                      class="px-3 py-1.5 text-xxs font-bold rounded-lg bg-gray-100 text-gray-600 hover:bg-gray-200 transition"
+                    >
+                      Women's Attire
+                    </button>
+                  </div>
+
+                  <div
+                    class="text-[10px] font-semibold text-gray-500 uppercase tracking-wider mb-1.5"
+                  >
+                    Select a Template
+                  </div>
+
+                  <!-- Men's Suits Grid -->
+                  <div id="suit-grid-men" class="grid grid-cols-3 gap-2 mb-3">
+                    <div
+                      onclick="selectSuit('men_navy')"
+                      id="suit-men_navy"
+                      class="preset-card p-1.5 flex flex-col items-center justify-center hover:border-indigo-500 cursor-pointer border border-gray-200 rounded-lg transition"
+                    >
+                      <div
+                        class="w-12 h-10 flex items-center justify-center overflow-hidden bg-white rounded mb-0.5"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 200 160"
+                          class="w-full h-full"
+                        >
+                          <path
+                            d="M75,52 C50,57 25,75 10,160 L100,160 L100,110 Z"
+                            fill="#1E3A8A"
+                          />
+                          <path
+                            d="M125,52 C150,57 175,75 190,160 L100,160 L100,110 Z"
+                            fill="#1E3A8A"
+                          />
+                          <path d="M75,50 L125,50 L100,110 Z" fill="#FFFFFF" />
+                          <path
+                            d="M96,62 L104,62 L106,72 L94,72 Z"
+                            fill="#B91C1C"
+                          />
+                        </svg>
+                      </div>
+                      <span class="text-[9px] font-bold text-gray-600"
+                        >Navy Suit</span
+                      >
+                    </div>
+                    <div
+                      onclick="selectSuit('men_grey')"
+                      id="suit-men_grey"
+                      class="preset-card p-1.5 flex flex-col items-center justify-center hover:border-indigo-500 cursor-pointer border border-gray-200 rounded-lg transition"
+                    >
+                      <div
+                        class="w-12 h-10 flex items-center justify-center overflow-hidden bg-white rounded mb-0.5"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 200 160"
+                          class="w-full h-full"
+                        >
+                          <path
+                            d="M75,52 C50,57 25,75 10,160 L100,160 L100,110 Z"
+                            fill="#374151"
+                          />
+                          <path
+                            d="M125,52 C150,57 175,75 190,160 L100,160 L100,110 Z"
+                            fill="#374151"
+                          />
+                          <path d="M75,50 L125,50 L100,110 Z" fill="#FFFFFF" />
+                          <path
+                            d="M96,62 L104,62 L106,72 L94,72 Z"
+                            fill="#2563EB"
+                          />
+                        </svg>
+                      </div>
+                      <span class="text-[9px] font-bold text-gray-600"
+                        >Grey Suit</span
+                      >
+                    </div>
+                    <div
+                      onclick="selectSuit('men_black')"
+                      id="suit-men_black"
+                      class="preset-card p-1.5 flex flex-col items-center justify-center hover:border-indigo-500 cursor-pointer border border-gray-200 rounded-lg transition"
+                    >
+                      <div
+                        class="w-12 h-10 flex items-center justify-center overflow-hidden bg-white rounded mb-0.5"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 200 160"
+                          class="w-full h-full"
+                        >
+                          <path
+                            d="M75,52 C50,57 25,75 10,160 L100,160 L100,110 Z"
+                            fill="#111827"
+                          />
+                          <path
+                            d="M125,52 C150,57 175,75 190,160 L100,160 L100,110 Z"
+                            fill="#111827"
+                          />
+                          <path d="M75,50 L125,50 L100,110 Z" fill="#FCE7F3" />
+                          <path
+                            d="M96,62 L104,62 L106,72 L94,72 Z"
+                            fill="#111827"
+                          />
+                        </svg>
+                      </div>
+                      <span class="text-[9px] font-bold text-gray-600"
+                        >Black Suit</span
+                      >
+                    </div>
+                  </div>
+
+                  <!-- Women's Suits Grid -->
+                  <div
+                    id="suit-grid-women"
+                    class="grid grid-cols-3 gap-2 mb-3 hidden"
+                  >
+                    <div
+                      onclick="selectSuit('women_black')"
+                      id="suit-women_black"
+                      class="preset-card p-1.5 flex flex-col items-center justify-center hover:border-indigo-500 cursor-pointer border border-gray-200 rounded-lg transition"
+                    >
+                      <div
+                        class="w-12 h-10 flex items-center justify-center overflow-hidden bg-white rounded mb-0.5"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 200 160"
+                          class="w-full h-full"
+                        >
+                          <path
+                            d="M70,50 C45,55 25,75 10,160 L100,160 L100,120 Z"
+                            fill="#1F2937"
+                          />
+                          <path
+                            d="M130,50 C155,55 175,75 190,160 L100,160 L100,120 Z"
+                            fill="#1F2937"
+                          />
+                          <path
+                            d="M70,50 C70,50 100,105 100,105 C100,105 130,50 130,50 Z"
+                            fill="#FFFFFF"
+                          />
+                        </svg>
+                      </div>
+                      <span class="text-[9px] font-bold text-gray-600"
+                        >Black Blazer</span
+                      >
+                    </div>
+                    <div
+                      onclick="selectSuit('women_red')"
+                      id="suit-women_red"
+                      class="preset-card p-1.5 flex flex-col items-center justify-center hover:border-indigo-500 cursor-pointer border border-gray-200 rounded-lg transition"
+                    >
+                      <div
+                        class="w-12 h-10 flex items-center justify-center overflow-hidden bg-white rounded mb-0.5"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 200 160"
+                          class="w-full h-full"
+                        >
+                          <path
+                            d="M70,50 C45,55 25,75 10,160 L100,160 L100,120 Z"
+                            fill="#991B1B"
+                          />
+                          <path
+                            d="M130,50 C155,55 175,75 190,160 L100,160 L100,120 Z"
+                            fill="#991B1B"
+                          />
+                          <path
+                            d="M70,50 C70,50 100,105 100,105 C100,105 130,50 130,50 Z"
+                            fill="#1F2937"
+                          />
+                        </svg>
+                      </div>
+                      <span class="text-[9px] font-bold text-gray-600"
+                        >Red Blazer</span
+                      >
+                    </div>
+                    <div
+                      onclick="selectSuit('women_blue')"
+                      id="suit-women_blue"
+                      class="preset-card p-1.5 flex flex-col items-center justify-center hover:border-indigo-500 cursor-pointer border border-gray-200 rounded-lg transition"
+                    >
+                      <div
+                        class="w-12 h-10 flex items-center justify-center overflow-hidden bg-white rounded mb-0.5"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 200 160"
+                          class="w-full h-full"
+                        >
+                          <path
+                            d="M70,50 C45,55 25,75 10,160 L100,160 L100,120 Z"
+                            fill="#1E40AF"
+                          />
+                          <path
+                            d="M130,50 C155,55 175,75 190,160 L100,160 L100,120 Z"
+                            fill="#1E40AF"
+                          />
+                          <path
+                            d="M70,50 C70,50 100,105 100,105 C100,105 130,50 130,50 Z"
+                            fill="#FDF2F8"
+                          />
+                        </svg>
+                      </div>
+                      <span class="text-[9px] font-bold text-gray-600"
+                        >Blue Blazer</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Suit Controls (Scale, MoveX, MoveY) -->
+                <div
+                  id="suit-controls-panel"
+                  class="hidden space-y-2 bg-gray-50 p-3 rounded-xl border border-gray-100"
+                >
+                  <h4
+                    class="font-semibold text-gray-700 text-xs flex items-center gap-1.5"
+                  >
+                    <i class="fas fa-sliders-h text-indigo-600"></i> Suit
+                    Alignment Settings
+                  </h4>
+
+                  <div>
+                    <div
+                      class="flex justify-between text-[10px] font-semibold text-gray-500 mb-0.5"
+                    >
+                      <span>Suit Size (Scale)</span>
+                      <span id="val-suitScale" class="font-mono text-indigo-600"
+                        >100%</span
+                      >
+                    </div>
+                    <input
+                      type="range"
+                      id="slider-suitScale"
+                      min="0.5"
+                      max="2.0"
+                      step="0.01"
+                      value="1.0"
+                      class="w-full"
+                      oninput="updateSuitAlignment()"
+                    />
+                  </div>
+
+                  <div>
+                    <div
+                      class="flex justify-between text-[10px] font-semibold text-gray-500 mb-0.5"
+                    >
+                      <span>Move X (Horizontal)</span>
+                      <span
+                        id="val-suitOffsetX"
+                        class="font-mono text-indigo-600"
+                        >0px</span
+                      >
+                    </div>
+                    <input
+                      type="range"
+                      id="slider-suitOffsetX"
+                      min="-100"
+                      max="100"
+                      step="1"
+                      value="0"
+                      class="w-full"
+                      oninput="updateSuitAlignment()"
+                    />
+                  </div>
+
+                  <div>
+                    <div
+                      class="flex justify-between text-[10px] font-semibold text-gray-500 mb-0.5"
+                    >
+                      <span>Move Y (Vertical)</span>
+                      <span
+                        id="val-suitOffsetY"
+                        class="font-mono text-indigo-600"
+                        >0px</span
+                      >
+                    </div>
+                    <input
+                      type="range"
+                      id="slider-suitOffsetY"
+                      min="-100"
+                      max="100"
+                      step="1"
+                      value="0"
+                      class="w-full"
+                      oninput="updateSuitAlignment()"
+                    />
+                  </div>
+
+                  <div class="flex gap-2 pt-1.5 border-t border-gray-200/60">
+                    <button
+                      onclick="resetSuitAlignment()"
+                      class="flex-1 text-[10px] bg-white text-gray-600 border border-gray-200 py-1 rounded-lg font-bold hover:bg-gray-50 transition flex items-center justify-center gap-1"
+                    >
+                      <i class="fas fa-undo"></i> Reset
+                    </button>
+                    <button
+                      onclick="removeSuit()"
+                      class="flex-1 text-[10px] bg-red-50 text-red-600 border border-red-100 py-1 rounded-lg font-bold hover:bg-red-100 transition flex items-center justify-center gap-1"
+                    >
+                      <i class="fas fa-trash-alt"></i> Remove
+                    </button>
+                  </div>
+                </div>
+
+                <div
+                  id="suit-empty-state"
+                  class="text-center p-4 border-2 border-dashed border-gray-200 rounded-xl"
+                >
+                  <i
+                    class="fas fa-user-tie text-2xl text-gray-300 mb-1.5 block animate-pulse"
+                  ></i>
+                  <p class="text-[10px] text-gray-500">
+                    Please select a suit or dress template from the options
+                    above to enable custom sizing and alignment controls.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Tab 3: Color Correction -->
+              <div id="tab-content-adjust" class="space-y-3 hidden">
+                <h3
+                  class="font-semibold text-gray-700 flex items-center gap-2 text-xs md:text-sm"
+                >
+                  <i class="fas fa-sliders-h text-indigo-600"></i> Color &
+                  Lighting Correction
+                </h3>
+
+                <div
+                  class="space-y-3 bg-gray-50 p-3 rounded-xl border border-gray-100"
+                >
+                  <!-- Brightness Slider -->
+                  <div>
+                    <div
+                      class="flex justify-between text-[10px] font-semibold text-gray-500 mb-0.5"
+                    >
+                      <span>Brightness</span>
+                      <span
+                        id="val-brightness"
+                        class="font-mono text-indigo-600"
+                        >100%</span
+                      >
+                    </div>
+                    <input
+                      type="range"
+                      id="slider-brightness"
+                      min="50"
+                      max="150"
+                      step="1"
+                      value="100"
+                      class="w-full"
+                      oninput="updateColorCorrection()"
+                    />
+                  </div>
+
+                  <!-- Contrast Slider -->
+                  <div>
+                    <div
+                      class="flex justify-between text-[10px] font-semibold text-gray-500 mb-0.5"
+                    >
+                      <span>Contrast</span>
+                      <span id="val-contrast" class="font-mono text-indigo-600"
+                        >100%</span
+                      >
+                    </div>
+                    <input
+                      type="range"
+                      id="slider-contrast"
+                      min="50"
+                      max="150"
+                      step="1"
+                      value="100"
+                      class="w-full"
+                      oninput="updateColorCorrection()"
+                    />
+                  </div>
+
+                  <!-- Saturation Slider -->
+                  <div>
+                    <div
+                      class="flex justify-between text-[10px] font-semibold text-gray-500 mb-0.5"
+                    >
+                      <span>Saturation</span>
+                      <span
+                        id="val-saturation"
+                        class="font-mono text-indigo-600"
+                        >100%</span
+                      >
+                    </div>
+                    <input
+                      type="range"
+                      id="slider-saturation"
+                      min="0"
+                      max="200"
+                      step="1"
+                      value="100"
+                      class="w-full"
+                      oninput="updateColorCorrection()"
+                    />
+                  </div>
+
+                  <div class="pt-1.5 border-t border-gray-200/60">
+                    <button
+                      onclick="resetColorCorrection()"
+                      class="w-full text-[10px] bg-white text-gray-600 border border-gray-200 py-1.5 rounded-lg font-bold hover:bg-gray-50 transition flex items-center justify-center gap-1"
+                    >
+                      <i class="fas fa-undo"></i> Reset Colors
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tab 4: Borders & Text -->
+              <div id="tab-content-borders" class="space-y-4 hidden">
+                <!-- Border Settings -->
+                <div>
+                  <h3
+                    class="text-xs font-semibold text-gray-700 mb-2 flex items-center gap-2"
+                  >
+                    <i class="fas fa-border-style text-indigo-600"></i> Photo
+                    Border Style
+                  </h3>
+
+                  <div class="grid grid-cols-3 md:grid-cols-6 gap-2 mb-3">
+                    <div
+                      onclick="selectBorder('none')"
+                      class="border-preset cursor-pointer text-center p-1 border rounded-lg border-gray-200"
+                      id="border-none"
+                    >
+                      <div
+                        class="border-preview mx-auto flex items-center justify-center text-[10px] font-semibold"
+                      >
+                        None
+                      </div>
+                    </div>
+                    <div
+                      onclick="selectBorder('white')"
+                      class="border-preset cursor-pointer text-center p-1 border rounded-lg border-gray-200"
+                      id="border-white"
+                    >
+                      <div class="border-preview mx-auto border-white"></div>
+                    </div>
+                    <div
+                      onclick="selectBorder('black')"
+                      class="border-preset cursor-pointer text-center p-1 border rounded-lg border-gray-200"
+                      id="border-black"
+                    >
+                      <div class="border-preview mx-auto border-black"></div>
+                    </div>
+                    <div
+                      onclick="selectBorder('gray')"
+                      class="border-preset cursor-pointer text-center p-1 border rounded-lg border-gray-200"
+                      id="border-gray"
+                    >
+                      <div class="border-preview mx-auto border-gray"></div>
+                    </div>
+                    <div
+                      onclick="selectBorder('gold')"
+                      class="border-preset cursor-pointer text-center p-1 border rounded-lg border-gray-200"
+                      id="border-gold"
+                    >
+                      <div class="border-preview mx-auto border-gold"></div>
+                    </div>
+                    <div
+                      onclick="selectBorder('blue')"
+                      class="border-preset cursor-pointer text-center p-1 border rounded-lg border-gray-200"
+                      id="border-blue"
+                    >
+                      <div class="border-preview mx-auto border-blue"></div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="flex flex-wrap items-center gap-3 bg-gray-50 p-3 rounded-xl border border-gray-100"
+                  >
+                    <div class="flex items-center gap-1.5">
+                      <span class="text-xs font-semibold text-gray-500"
+                        >Custom Color:</span
+                      >
+                      <input
+                        type="color"
+                        id="customBorderColor"
+                        value="#4f46e5"
+                        class="w-7 h-7 border rounded cursor-pointer"
+                        onchange="selectCustomBorder()"
+                      />
+                    </div>
+                    <div class="flex items-center gap-1.5">
+                      <span class="text-xs font-semibold text-gray-500"
+                        >Thickness:</span
+                      >
+                      <input
+                        type="number"
+                        id="borderSize"
+                        value="4"
+                        min="1"
+                        max="20"
+                        class="border rounded-lg px-2 py-1 w-14 text-center text-xs font-semibold"
+                        onchange="updateBorderSize()"
+                      />
+                      <span class="text-xs text-gray-500">px</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Text Overlay -->
+                <div class="border-t border-gray-100 pt-3">
+                  <label class="flex items-center gap-2 cursor-pointer mb-2">
+                    <input
+                      type="checkbox"
+                      id="addTextCheckbox"
+                      onchange="toggleTextInput()"
+                      class="w-3.5 h-3.5 rounded text-indigo-600"
+                    />
+                    <span class="text-xs font-semibold text-gray-700"
+                      >Add text overlay (Name & Date)</span
+                    >
+                  </label>
+
+                  <div
+                    id="textInputSection"
+                    class="hidden space-y-2 bg-gray-50 p-3 rounded-xl border border-gray-100"
+                  >
+                    <div>
+                      <span
+                        class="text-[10px] font-semibold text-gray-500 block mb-0.5"
+                        >Overlay Text</span
+                      >
+                      <input
+                        type="text"
+                        id="imageText"
+                        placeholder="e.g., JOHN DOE / 20-06-2026"
+                        class="w-full border rounded-lg px-2.5 py-1.5 text-xs"
+                        oninput="initBackgroundCanvas()"
+                      />
+                    </div>
+                    <div class="flex gap-3">
+                      <div class="flex-1">
+                        <span
+                          class="text-[10px] font-semibold text-gray-500 block mb-0.5"
+                          >Text Size</span
+                        >
+                        <input
+                          type="number"
+                          id="textSize"
+                          value="16"
+                          min="8"
+                          max="72"
+                          class="w-full border rounded-lg px-2.5 py-1.5 text-xs"
+                          oninput="initBackgroundCanvas()"
+                        />
+                      </div>
+                      <div>
+                        <span
+                          class="text-[10px] font-semibold text-gray-500 block mb-0.5"
+                          >Text Color</span
+                        >
+                        <input
+                          type="color"
+                          id="textColor"
+                          value="#000000"
+                          class="w-12 h-8 border rounded cursor-pointer"
+                          onchange="initBackgroundCanvas()"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Footer Navigation -->
+              <div
+                class="flex justify-between border-t border-gray-100 pt-4 mt-4"
+              >
+                <button
+                  onclick="showCropSection()"
+                  class="btn-secondary px-5 py-2 text-xs"
+                >
+                  <i class="fas fa-arrow-left mr-2"></i>Back to Crop
+                </button>
+                <button
+                  onclick="goToDownload()"
+                  class="btn-primary px-5 py-2 text-xs flex items-center gap-1.5"
+                >
+                  Next: Download & Print <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Download Section -->
+        <div
+          id="downloadSection"
+          class="hidden bg-white rounded-xl shadow-2xl p-4 md:p-6"
+        >
+          <h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">
+            Download Your Photo
+          </h2>
+
+          <!-- Layout Selection -->
+          <div class="mb-4 p-3 bg-gray-50 rounded-xl">
+            <h3 class="text-base font-semibold mb-2">Select Layout</h3>
+            <div class="flex flex-wrap gap-4 text-sm">
+              <label class="flex items-center"
+                ><input
+                  type="radio"
+                  name="layout"
+                  value="single"
+                  checked
+                  onchange="updateLayout()"
+                />
+                Single Photo</label
+              >
+              <label class="flex items-center"
+                ><input
+                  type="radio"
+                  name="layout"
+                  value="2x2"
+                  onchange="updateLayout()"
+                />
+                2x2 Grid</label
+              >
+              <label class="flex items-center"
+                ><input
+                  type="radio"
+                  name="layout"
+                  value="3x4"
+                  onchange="updateLayout()"
+                />
+                3x4 Grid</label
+              >
+              <label class="flex items-center"
+                ><input
+                  type="radio"
+                  name="layout"
+                  value="4x6"
+                  onchange="updateLayout()"
+                />
+                4x6 Grid</label
+              >
+              <label class="flex items-center"
+                ><input
+                  type="radio"
+                  name="layout"
+                  value="a4"
+                  onchange="updateLayout()"
+                />
+                <span class="font-bold text-indigo-600"
+                  >📄 A4 Layout (Print Ready)</span
+                >
+              </label>
+              <label class="flex items-center"
+                ><input
+                  type="radio"
+                  name="layout"
+                  value="custom"
+                  onchange="updateLayout()"
+                />
+                Custom</label
+              >
+            </div>
+          </div>
+
+          <!-- A4 Info -->
+          <div
+            id="a4Info"
+            class="hidden mb-3 p-3 bg-green-50 text-green-700 rounded-lg text-xs"
+          >
+            <i class="fas fa-info-circle mr-2"></i>
+            A4 Layout: Automatically arranges maximum photos on A4 paper (210mm
+            x 297mm)
+          </div>
+
+          <!-- Custom Layout -->
+          <div id="customLayoutInput" class="hidden mb-3">
+            <div class="flex justify-center gap-2">
+              <input
+                type="number"
+                id="customRows"
+                value="2"
+                min="1"
+                max="10"
+                class="border rounded px-3 py-1.5 w-16 text-center text-sm"
+                onchange="updateLayout()"
+              />
+              <span class="text-xl">x</span>
+              <input
+                type="number"
+                id="customCols"
+                value="4"
+                min="1"
+                max="10"
+                class="border rounded px-3 py-1.5 w-16 text-center text-sm"
+                onchange="updateLayout()"
+              />
+            </div>
+          </div>
+
+          <!-- Preview Canvases -->
+          <div class="grid md:grid-cols-2 gap-4 mb-4">
+            <div class="border rounded-xl p-3">
+              <h3 class="font-semibold text-sm text-center mb-2">Preview</h3>
+              <div class="flex justify-center">
+                <canvas
+                  id="singleImageCanvas"
+                  class="border max-w-full"
+                ></canvas>
+              </div>
+              <button
+                onclick="downloadSingle()"
+                class="btn-primary w-full mt-3 py-2 text-sm"
+              >
+                <i class="fas fa-download mr-2"></i>Download Single
+              </button>
+            </div>
+
+            <div class="border rounded-xl p-3">
+              <h3 class="font-semibold text-sm text-center mb-2">
+                Multiple Photos
+              </h3>
+              <div class="flex justify-center">
+                <canvas
+                  id="multipleImageCanvas"
+                  class="border max-w-full"
+                ></canvas>
+              </div>
+              <div class="flex flex-col sm:flex-row gap-2 mt-3">
+                <button
+                  onclick="downloadMultiple()"
+                  class="btn-primary flex-1 py-2 text-sm"
+                >
+                  <i class="fas fa-download mr-1"></i>Download Sheet
+                </button>
+                <button
+                  onclick="printLayout()"
+                  class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-full font-bold transition flex items-center justify-center gap-1.5 shadow-md hover:shadow-lg flex-1 text-sm"
+                >
+                  <i class="fas fa-print"></i> Print Sheet
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation -->
+          <div class="flex justify-between">
+            <button
+              onclick="showBorderSection()"
+              class="btn-secondary px-6 py-2 text-sm"
+            >
+              <i class="fas fa-arrow-left mr-2"></i>Back
+            </button>
+            <button
+              onclick="resetTool()"
+              class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-semibold text-sm"
+            >
+              <i class="fas fa-plus-circle mr-2"></i>Create New Photo
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- How to Use Section -->
+      <div class="mt-12 bg-white rounded-2xl shadow-2xl p-8">
+        <h2 class="text-2xl font-bold mb-6 flex items-center">
+          <i class="fas fa-question-circle text-indigo-600 text-3xl mr-3"></i>
+          How to Use Passport Photo Maker
+        </h2>
+
+        <div class="grid md:grid-cols-4 gap-4">
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-3"
+            >
+              <span class="text-2xl font-bold text-indigo-600">1</span>
+            </div>
+            <h3 class="font-semibold">Upload Photo</h3>
+            <p class="text-sm text-gray-600">Drag & drop your photo</p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-3"
+            >
+              <span class="text-2xl font-bold text-indigo-600">2</span>
+            </div>
+            <h3 class="font-semibold">Select Size</h3>
+            <p class="text-sm text-gray-600">Choose country size</p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-3"
+            >
+              <span class="text-2xl font-bold text-indigo-600">3</span>
+            </div>
+            <h3 class="font-semibold">Crop & Adjust</h3>
+            <p class="text-sm text-gray-600">Position face correctly</p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-3"
+            >
+              <span class="text-2xl font-bold text-indigo-600">4</span>
+            </div>
+            <h3 class="font-semibold">Add Border</h3>
+            <p class="text-sm text-gray-600">Choose border style</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Section -->
+      <div class="mt-8 bg-white rounded-2xl shadow-2xl p-8">
+        <h2 class="text-2xl font-bold mb-6 flex items-center">
+          <i class="fas fa-star text-indigo-600 text-3xl mr-3"></i>
+          Frequently Asked Questions
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="border rounded-xl p-4">
+            <h3 class="font-semibold text-lg mb-2">How to get A4 layout?</h3>
+            <p class="text-gray-600">
+              In download section, select "A4 Layout" option. The tool
+              automatically calculates how many photos fit on one A4 sheet.
+            </p>
+          </div>
+          <div class="border rounded-xl p-4">
+            <h3 class="font-semibold text-lg mb-2">
+              Can I add colored border?
+            </h3>
+            <p class="text-gray-600">
+              Yes! Choose from white, black, gray, gold, blue, or any custom
+              color. Adjust border thickness from 1-20px.
+            </p>
+          </div>
+          <div class="border rounded-xl p-4">
+            <h3 class="font-semibold text-lg mb-2">
+              What is the standard size?
+            </h3>
+            <p class="text-gray-600">
+              India/UK: 35x45mm, USA: 2x2 inch, Canada: 50x70mm. All presets
+              included.
+            </p>
+          </div>
+          <div class="border rounded-xl p-4">
+            <h3 class="font-semibold text-lg mb-2">Is this really free?</h3>
+            <p class="text-gray-600">
+              100% free! No watermarks, no signup, no hidden charges. Create
+              unlimited photos.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Related Tools -->
+      <div
+        class="mt-8 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white"
+      >
+        <h2 class="text-2xl font-bold mb-4">Popular Tools You May Like</h2>
+        <div class="flex flex-wrap gap-3">
+          <a
+            href="/"
+            class="bg-white text-indigo-600 px-4 py-2 rounded-full hover:bg-indigo-100 transition"
+            >Marital Bio Data</a
+          >
+          <a
+            href="/"
+            class="bg-white text-indigo-600 px-4 py-2 rounded-full hover:bg-indigo-100 transition"
+            >Visa Photo Tool</a
+          >
+          <a
+            href="/"
+            class="bg-white text-indigo-600 px-4 py-2 rounded-full hover:bg-indigo-100 transition"
+            >ID Card Maker</a
+          >
+          <a
+            href="/"
+            class="bg-white text-indigo-600 px-4 py-2 rounded-full hover:bg-indigo-100 transition"
+            >Photo Resizer</a
+          >
+          <a
+            href="/"
+            class="bg-white text-indigo-600 px-4 py-2 rounded-full hover:bg-indigo-100 transition"
+            >Background Remover</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toastContainer" class="fixed bottom-5 right-5 z-50"></div>
+
+    <!-- Footer -->
+
+    <!-- Footer -->
+        <!-- Pro CSC Tools Footer -->
+    <footer class="bg-[#0f172a] text-gray-400 pt-14 pb-8">
+      <div class="container mx-auto px-4 grid md:grid-cols-4 gap-8">
+        <div>
+          <a href="https://procsctools.in/" class="flex items-center text-xl font-extrabold text-white mb-3"><i class="fas fa-crown mr-2 text-[#e0aa14]"></i> Pro CSC Tools</a>
+          <p class="text-sm leading-relaxed">Free, fast aur professional online tools CSC VLEs, students, shopkeepers aur farmers ke liye — poore India me.</p>
+          <div class="flex gap-3 mt-4">
+            <a href="https://facebook.com/procsctools" aria-label="Facebook" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-[#ab183d] transition"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com/procsctools" aria-label="Instagram" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-[#ab183d] transition"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com/@procsctools" aria-label="YouTube" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-[#ab183d] transition"><i class="fab fa-youtube"></i></a>
+            <a href="https://t.me/procsctools" aria-label="Telegram" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-[#ab183d] transition"><i class="fab fa-telegram"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-3">Popular Tools</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="https://procsctools.in/tools/passport-photo-maker.html" class="hover:text-white">Passport Photo Maker</a></li>
+            <li><a href="https://procsctools.in/tools/photo-signature-joiner.html" class="hover:text-white">Photo Signature Joiner</a></li>
+            <li><a href="https://procsctools.in/tools/free-background-remover-tool.html" class="hover:text-white">Background Remover</a></li>
+            <li><a href="https://procsctools.in/tools/csc-id-card-maker.html" class="hover:text-white">CSC ID Card Maker</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-3">Company</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="https://procsctools.in/about.html" class="hover:text-white">About Us</a></li>
+            <li><a href="https://procsctools.in/contact.html" class="hover:text-white">Contact</a></li>
+            <li><a href="https://procsctools.in/blog/" class="hover:text-white">Blog</a></li>
+            <li><a href="https://procsctools.in/privacy.html" class="hover:text-white">Privacy Policy</a></li>
+            <li><a href="https://procsctools.in/terms.html" class="hover:text-white">Terms of Use</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-3">Get in Touch</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="mailto:Palcscuno@gmail.com" class="hover:text-white"><i class="fas fa-envelope mr-2"></i>Palcscuno@gmail.com</a></li>
+            <li><a href="https://wa.me/916387617678" class="hover:text-white"><i class="fab fa-whatsapp mr-2 text-green-500"></i>+91 63876 17678</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container mx-auto px-4 mt-10 pt-6 border-t border-gray-800 text-center text-sm">&copy; 2026 Pro CSC Tools &bull; procsctools.in &bull; All rights reserved.</div>
+    </footer>
+
+    <!-- Global Subscribe Handler Script -->
+    <script>
+      function handleSubscribe(event) {
+        event.preventDefault();
+        const emailInput = event.target.querySelector('input[type="email"]');
+        if (emailInput && emailInput.value) {
+          alert("Thank you for subscribing! We'll keep you updated.");
+          emailInput.value = "";
+        }
+      }
+    </script>
+
+    <script>
+      // ==================== GLOBAL VARIABLES ====================
+      let uploadedImage = null;
+      let croppedImage = null;
+      let transparentCroppedImage = null;
+      let selectedSize = { width: 35, height: 45, unit: "mm" };
+      let aspectRatio = 35 / 45;
+      let cropData = { x: 0, y: 0, width: 200, height: 200, scale: 1 };
+      let brightness = 100;
+      let contrast = 100;
+      let saturation = 100;
+      let selectedBackground = "changed";
+      let backgroundColor = "#FFFFFF";
+      let borderType = "none";
+      let borderColor = "#FFFFFF";
+      let borderSize = 4;
+      let isDragging = false;
+      let dragHandle = null;
+      let dragStart = { x: 0, y: 0 };
+
+      // Suit Changer State
+      let selectedSuitId = null;
+      let suitScale = 1.0;
+      let suitOffsetX = 0;
+      let suitOffsetY = 0;
+      let selectedSuitCategory = "men";
+      let selfieSegmentation = null;
+      let isSegmenting = false;
+
+      // SVG Attire Templates
+      const suitTemplates = {
+        men_navy: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 160">
+  <path d="M75,50 L125,50 L100,110 Z" fill="#FFFFFF"/>
+  <path d="M75,50 L90,65 L84,68 Z" fill="#E2E8F0"/>
+  <path d="M125,50 L110,65 L116,68 Z" fill="#E2E8F0"/>
+  <path d="M96,62 L104,62 L106,72 L94,72 Z" fill="#B91C1C"/>
+  <path d="M94,72 L106,72 L109,160 L91,160 Z" fill="#DC2626"/>
+  <path d="M72,48 L128,48 L125,54 L75,54 Z" fill="#1E293B"/>
+  <path d="M75,52 C50,57 25,75 10,160 L100,160 L100,110 Z" fill="#1E3A8A"/>
+  <path d="M125,52 C150,57 175,75 190,160 L100,160 L100,110 Z" fill="#1E3A8A"/>
+  <path d="M75,52 L100,110 L88,110 L55,75 Z" fill="#172554"/>
+  <path d="M125,52 L100,110 L112,110 L145,75 Z" fill="#172554"/>
+  <path d="M45,100 L62,97 L65,101 L48,104 Z" fill="#EF4444"/>
+  <path d="M100,110 L88,110 L100,105 Z" fill="#CBD5E1"/>
+  <circle cx="100" cy="125" r="3" fill="#0F172A"/>
+</svg>`,
+        men_grey: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 160">
+  <path d="M75,50 L125,50 L100,110 Z" fill="#FFFFFF"/>
+  <path d="M75,50 L90,65 L84,68 Z" fill="#E2E8F0"/>
+  <path d="M125,50 L110,65 L116,68 Z" fill="#E2E8F0"/>
+  <path d="M96,62 L104,62 L106,72 L94,72 Z" fill="#1D4ED8"/>
+  <path d="M94,72 L106,72 L109,160 L91,160 Z" fill="#2563EB"/>
+  <path d="M72,48 L128,48 L125,54 L75,54 Z" fill="#111827"/>
+  <path d="M75,52 C50,57 25,75 10,160 L100,160 L100,110 Z" fill="#374151"/>
+  <path d="M125,52 C150,57 175,75 190,160 L100,160 L100,110 Z" fill="#374151"/>
+  <path d="M75,52 L100,110 L88,110 L55,75 Z" fill="#1F2937"/>
+  <path d="M125,52 L100,110 L112,110 L145,75 Z" fill="#1F2937"/>
+  <path d="M45,100 L62,97 L65,101 L48,104 Z" fill="#3B82F6"/>
+  <path d="M100,110 L88,110 L100,105 Z" fill="#CBD5E1"/>
+  <circle cx="100" cy="125" r="3" fill="#111827"/>
+</svg>`,
+        men_black: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 160">
+  <path d="M75,50 L125,50 L100,110 Z" fill="#FCE7F3"/>
+  <path d="M75,50 L90,65 L84,68 Z" fill="#F472B6"/>
+  <path d="M125,50 L110,65 L116,68 Z" fill="#F472B6"/>
+  <path d="M96,62 L104,62 L106,72 L94,72 Z" fill="#111827"/>
+  <path d="M94,72 L106,72 L109,160 L91,160 Z" fill="#1F2937"/>
+  <path d="M72,48 L128,48 L125,54 L75,54 Z" fill="#030712"/>
+  <path d="M75,52 C50,57 25,75 10,160 L100,160 L100,110 Z" fill="#111827"/>
+  <path d="M125,52 C150,57 175,75 190,160 L100,160 L100,110 Z" fill="#111827"/>
+  <path d="M75,52 L100,110 L88,110 L55,75 Z" fill="#030712"/>
+  <path d="M125,52 L100,110 L112,110 L145,75 Z" fill="#030712"/>
+  <path d="M45,100 L62,97 L65,101 L48,104 Z" fill="#F472B6"/>
+  <circle cx="100" cy="125" r="3" fill="#030712"/>
+</svg>`,
+        women_black: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 160">
+  <path d="M70,50 C70,50 100,105 100,105 C100,105 130,50 130,50 Z" fill="#FFFFFF"/>
+  <path d="M90,70 L110,70 L100,85 Z" fill="#F1F5F9"/>
+  <path d="M68,48 L132,48 L128,54 L72,54 Z" fill="#1E293B"/>
+  <path d="M70,50 C45,55 25,75 10,160 L100,160 L100,120 Z" fill="#1F2937"/>
+  <path d="M130,50 C155,55 175,75 190,160 L100,160 L100,120 Z" fill="#1F2937"/>
+  <path d="M70,50 L100,125 L92,125 L50,75 Z" fill="#111827"/>
+  <path d="M130,50 L100,125 L108,125 L150,75 Z" fill="#111827"/>
+  <path d="M82,50 Q100,75 118,50" fill="none" stroke="#FBBF24" stroke-width="1.5"/>
+  <circle cx="100" cy="62" r="2" fill="#EF4444"/>
+</svg>`,
+        women_red: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 160">
+  <path d="M70,50 C70,50 100,105 100,105 C100,105 130,50 130,50 Z" fill="#1F2937"/>
+  <path d="M68,48 L132,48 L128,54 L72,54 Z" fill="#7F1D1D"/>
+  <path d="M70,50 C45,55 25,75 10,160 L100,160 L100,120 Z" fill="#991B1B"/>
+  <path d="M130,50 C155,55 175,75 190,160 L100,160 L100,120 Z" fill="#991B1B"/>
+  <path d="M70,50 L100,125 L92,125 L50,75 Z" fill="#7F1D1D"/>
+  <path d="M130,50 L100,125 L108,125 L150,75 Z" fill="#7F1D1D"/>
+  <path d="M82,50 Q100,75 118,50" fill="none" stroke="#FBBF24" stroke-width="1.5"/>
+</svg>`,
+        women_blue: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 160">
+  <path d="M70,50 C70,50 100,105 100,105 C100,105 130,50 130,50 Z" fill="#FDF2F8"/>
+  <path d="M90,70 L110,70 L100,85 Z" fill="#FCE7F3"/>
+  <path d="M68,48 L132,48 L128,54 L72,54 Z" fill="#1E3A8A"/>
+  <path d="M70,50 C45,55 25,75 10,160 L100,160 L100,120 Z" fill="#1E40AF"/>
+  <path d="M130,50 C155,55 175,75 190,160 L100,160 L100,120 Z" fill="#1E40AF"/>
+  <path d="M70,50 L100,125 L92,125 L50,75 Z" fill="#1E3A8A"/>
+  <path d="M130,50 L100,125 L108,125 L150,75 Z" fill="#1E3A8A"/>
+  <path d="M82,50 Q100,75 118,50" fill="none" stroke="#FBBF24" stroke-width="1.5"/>
+</svg>`,
+      };
+
+      const suitImages = {};
+      let suitsLoaded = 0;
+
+      function preloadSuits() {
+        Object.keys(suitTemplates).forEach((id) => {
+          const img = new Image();
+          img.onload = function () {
+            suitsLoaded++;
+          };
+          img.src =
+            "data:image/svg+xml;charset=utf-8," +
+            encodeURIComponent(suitTemplates[id]);
+          suitImages[id] = img;
+        });
+      }
+
+      // ==================== INITIALIZATION ====================
+      document.addEventListener("DOMContentLoaded", function () {
+        // Set default selected border
+        document
+          .getElementById("border-none")
+          .classList.add("ring-2", "ring-indigo-600");
+        preloadSuits();
+      });
+
+      // ==================== FILE UPLOAD ====================
+      document
+        .getElementById("fileInput")
+        .addEventListener("change", function (e) {
+          const file = e.target.files[0];
+          if (file) {
+            if (file.size > 10 * 1024 * 1024) {
+              showToast("File size must be less than 10MB", "error");
+              return;
+            }
+            if (!file.type.startsWith("image/")) {
+              showToast("Please upload an image file", "error");
+              return;
+            }
+            loadImage(file);
+          }
+        });
+
+      // Drag & Drop
+      const dropZone = document.getElementById("dropZone");
+      dropZone.addEventListener("dragover", (e) => {
+        e.preventDefault();
+        dropZone.classList.add("border-indigo-600", "bg-indigo-50");
+      });
+
+      dropZone.addEventListener("dragleave", (e) => {
+        e.preventDefault();
+        dropZone.classList.remove("border-indigo-600", "bg-indigo-50");
+      });
+
+      dropZone.addEventListener("drop", (e) => {
+        e.preventDefault();
+        dropZone.classList.remove("border-indigo-600", "bg-indigo-50");
+        const file = e.dataTransfer.files[0];
+        if (file && file.type.startsWith("image/")) {
+          loadImage(file);
+        }
+      });
+
+      function loadImage(file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          const img = new Image();
+          img.onload = function () {
+            uploadedImage = img;
+
+            // Hide upload section, show main tool
+            document.getElementById("uploadSection").classList.add("hidden");
+            document
+              .getElementById("mainToolSection")
+              .classList.remove("hidden");
+
+            // Show size section
+            document.getElementById("sizeSection").classList.remove("hidden");
+
+            // Update progress
+            updateProgress(2);
+
+            showToast("Image loaded successfully!", "success");
+          };
+          img.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+
+      // ==================== PROGRESS TRACKER ====================
+      function updateProgress(step) {
+        const steps = [1, 2, 3, 4, 5];
+        steps.forEach((s) => {
+          const stepEl = document.getElementById(`step${s}`);
+          const lineEl = document.getElementById(`line${s}`);
+
+          if (s < step) {
+            stepEl.classList.add("completed");
+            stepEl.classList.remove("active", "bg-gray-300");
+            if (lineEl) lineEl.classList.add("completed");
+          } else if (s === step) {
+            stepEl.classList.add("active");
+            stepEl.classList.remove("completed", "bg-gray-300");
+          } else {
+            stepEl.classList.remove("active", "completed");
+            stepEl.classList.add("bg-gray-300");
+            if (lineEl) lineEl.classList.remove("completed");
+          }
+        });
+      }
+
+      // ==================== TOAST NOTIFICATION ====================
+      function showToast(message, type = "info") {
+        const container = document.getElementById("toastContainer");
+        const toast = document.createElement("div");
+
+        const colors = {
+          success: "bg-green-500",
+          error: "bg-red-500",
+          info: "bg-blue-500",
+        };
+
+        toast.className = `toast-message ${colors[type]} flex items-center`;
+        toast.innerHTML = `<i class="fas ${
+          type === "success" ? "fa-check-circle" : "fa-info-circle"
+        } mr-3"></i>${message}`;
+
+        container.appendChild(toast);
+
+        setTimeout(() => {
+          toast.remove();
+        }, 3000);
+      }
+
+      // ==================== SIZE SECTION ====================
+      function selectSize(width, height, unit, country, elementId) {
+        selectedSize = { width, height, unit };
+        aspectRatio = width / height;
+
+        // Update UI
+        document.querySelectorAll(".preset-card").forEach((el) => {
+          el.classList.remove("selected", "border-indigo-600", "bg-indigo-50");
+        });
+
+        const selected = document.getElementById(elementId);
+        if (selected) {
+          selected.classList.add(
+            "selected",
+            "border-indigo-600",
+            "bg-indigo-50"
+          );
+        }
+
+        showToast(`Selected: ${width}${unit} x ${height}${unit}`, "success");
+      }
+
+      // Apply Custom Dimensions
+      function selectCustomSize() {
+        const width = parseFloat(document.getElementById("customWidth").value);
+        const height = parseFloat(
+          document.getElementById("customHeight").value
+        );
+        const unit = document.querySelector('input[name="unit"]:checked').value;
+
+        if (width > 0 && height > 0) {
+          selectedSize = { width, height, unit };
+          aspectRatio = width / height;
+          showToast(
+            `Custom size: ${width}${unit} x ${height}${unit}`,
+            "success"
+          );
+        } else {
+          showToast("Please enter valid dimensions", "error");
+        }
+      }
+
+      function updateDpi() {
+        const slider = document.getElementById("dpiSlider");
+        const input = document.getElementById("dpiInput");
+        input.value = slider.value;
+      }
+
+      function goToCrop() {
+        document.getElementById("sizeSection").classList.add("hidden");
+        document.getElementById("cropSection").classList.remove("hidden");
+        updateProgress(3);
+        setTimeout(initCropCanvas, 100);
+      }
+
+      // ==================== CROP SECTION ====================
+      function initCropCanvas() {
+        const canvas = document.getElementById("cropCanvas");
+        const ctx = canvas.getContext("2d");
+
+        // Calculate dimensions (compact crop layout)
+        let maxWidth = Math.min(300, window.innerWidth - 40);
+        const scale = maxWidth / uploadedImage.width;
+
+        canvas.width = uploadedImage.width * scale;
+        canvas.height = uploadedImage.height * scale;
+
+        // Initialize crop box
+        const boxWidth = canvas.width * 0.8;
+        const boxHeight = boxWidth / aspectRatio;
+
+        cropData = {
+          x: (canvas.width - boxWidth) / 2,
+          y: (canvas.height - boxHeight) / 2,
+          width: boxWidth,
+          height: boxHeight,
+          scale: 1,
+        };
+
+        drawCropCanvas();
+        initCropBox();
+      }
+
+      function drawCropCanvas() {
+        const canvas = document.getElementById("cropCanvas");
+        const ctx = canvas.getContext("2d");
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.filter = `brightness(${brightness}%) contrast(${contrast}%) saturate(${saturation}%)`;
+        ctx.drawImage(uploadedImage, 0, 0, canvas.width, canvas.height);
+        ctx.filter = "none";
+      }
+
+      function initCropBox() {
+        const cropBox = document.getElementById("cropBox");
+        cropBox.style.left = cropData.x + "px";
+        cropBox.style.top = cropData.y + "px";
+        cropBox.style.width = cropData.width + "px";
+        cropBox.style.height = cropData.height + "px";
+        cropBox.style.display = "block";
+
+        // Remove old listeners and add new ones
+        cropBox.removeEventListener("mousedown", startDrag);
+        cropBox.removeEventListener("touchstart", startDrag);
+        cropBox.addEventListener("mousedown", startDrag);
+        cropBox.addEventListener("touchstart", startDrag, { passive: false });
+      }
+
+      function startDrag(e) {
+        e.preventDefault();
+
+        if (e.target.classList.contains("resize-handle")) {
+          dragHandle = e.target.className.split(" ")[1];
+        } else {
+          dragHandle = "move";
+        }
+
+        isDragging = true;
+        dragStart.x = e.clientX || e.touches[0].clientX;
+        dragStart.y = e.clientY || e.touches[0].clientY;
+
+        document.addEventListener("mousemove", onDrag);
+        document.addEventListener("touchmove", onDrag, { passive: false });
+        document.addEventListener("mouseup", stopDrag);
+        document.addEventListener("touchend", stopDrag);
+      }
+
+      function onDrag(e) {
+        if (!isDragging) return;
+        e.preventDefault();
+
+        const clientX = e.clientX || e.touches[0].clientX;
+        const clientY = e.clientY || e.touches[0].clientY;
+        const deltaX = clientX - dragStart.x;
+        const deltaY = clientY - dragStart.y;
+
+        const canvas = document.getElementById("cropCanvas");
+
+        if (dragHandle === "move") {
+          let newX = cropData.x + deltaX;
+          let newY = cropData.y + deltaY;
+
+          newX = Math.max(0, Math.min(newX, canvas.width - cropData.width));
+          newY = Math.max(0, Math.min(newY, canvas.height - cropData.height));
+
+          cropData.x = newX;
+          cropData.y = newY;
+        } else if (dragHandle === "se") {
+          let newWidth = Math.max(100, cropData.width + deltaX);
+          let newHeight = newWidth / aspectRatio;
+
+          if (cropData.y + newHeight <= canvas.height) {
+            cropData.width = newWidth;
+            cropData.height = newHeight;
+          }
+        } else if (dragHandle === "sw") {
+          let newWidth = Math.max(100, cropData.width - deltaX);
+          let newHeight = newWidth / aspectRatio;
+          let newX = cropData.x + cropData.width - newWidth;
+
+          if (newX >= 0 && cropData.y + newHeight <= canvas.height) {
+            cropData.x = newX;
+            cropData.width = newWidth;
+            cropData.height = newHeight;
+          }
+        } else if (dragHandle === "ne") {
+          let newWidth = Math.max(100, cropData.width + deltaX);
+          let newHeight = newWidth / aspectRatio;
+          let newY = cropData.y + cropData.height - newHeight;
+
+          if (newY >= 0) {
+            cropData.width = newWidth;
+            cropData.height = newHeight;
+            cropData.y = newY;
+          }
+        } else if (dragHandle === "nw") {
+          let newWidth = Math.max(100, cropData.width - deltaX);
+          let newHeight = newWidth / aspectRatio;
+          let newX = cropData.x + cropData.width - newWidth;
+          let newY = cropData.y + cropData.height - newHeight;
+
+          if (newX >= 0 && newY >= 0) {
+            cropData.x = newX;
+            cropData.y = newY;
+            cropData.width = newWidth;
+            cropData.height = newHeight;
+          }
+        }
+
+        // Update UI
+        const cropBox = document.getElementById("cropBox");
+        cropBox.style.left = cropData.x + "px";
+        cropBox.style.top = cropData.y + "px";
+        cropBox.style.width = cropData.width + "px";
+        cropBox.style.height = cropData.height + "px";
+
+        dragStart.x = clientX;
+        dragStart.y = clientY;
+      }
+
+      function stopDrag() {
+        isDragging = false;
+        dragHandle = null;
+
+        document.removeEventListener("mousemove", onDrag);
+        document.removeEventListener("touchmove", onDrag);
+        document.removeEventListener("mouseup", stopDrag);
+        document.removeEventListener("touchend", stopDrag);
+      }
+
+      function zoomIn() {
+        cropData.scale *= 1.1;
+        drawCropCanvas();
+      }
+
+      function zoomOut() {
+        cropData.scale /= 1.1;
+        drawCropCanvas();
+      }
+
+      function toggleBrightness() {
+        document.getElementById("brightnessControl").classList.toggle("hidden");
+      }
+
+      function adjustContrast() {
+        contrast = contrast === 100 ? 120 : 100;
+        applyFilters();
+        showToast(`Contrast: ${contrast}%`, "info");
+      }
+
+      function resetAdjustments() {
+        brightness = 100;
+        contrast = 100;
+        saturation = 100;
+        document.getElementById("brightnessSlider").value = 100;
+        document.getElementById("brightnessControl").classList.add("hidden");
+        applyFilters();
+        showToast("Adjustments reset", "success");
+      }
+
+      function applyFilters() {
+        brightness = document.getElementById("brightnessSlider").value;
+        drawCropCanvas();
+      }
+
+      function saveCropAndNext() {
+        transparentCroppedImage = null;
+        const canvas = document.getElementById("cropCanvas");
+        const croppedCanvas = document.createElement("canvas");
+        const ctx = croppedCanvas.getContext("2d");
+
+        croppedCanvas.width = cropData.width;
+        croppedCanvas.height = cropData.height;
+
+        ctx.drawImage(
+          canvas,
+          cropData.x,
+          cropData.y,
+          cropData.width,
+          cropData.height,
+          0,
+          0,
+          cropData.width,
+          cropData.height
+        );
+
+        croppedImage = new Image();
+        croppedImage.onload = function () {
+          // Pre-render steps once crop is loaded
+          document.getElementById("cropSection").classList.add("hidden");
+          document.getElementById("borderSection").classList.remove("hidden");
+          updateProgress(4);
+
+          setTimeout(initBackgroundCanvas, 100);
+          showToast("Photo cropped successfully!", "success");
+        };
+        croppedImage.src = croppedCanvas.toDataURL();
+      }
+
+      function showSizeSection() {
+        document.getElementById("cropSection").classList.add("hidden");
+        document.getElementById("sizeSection").classList.remove("hidden");
+        updateProgress(2);
+      }
+
+      function showCropSection() {
+        document.getElementById("borderSection").classList.add("hidden");
+        document.getElementById("cropSection").classList.remove("hidden");
+        updateProgress(3);
+      }
+
+      // ==================== TAB SYSTEM ====================
+      function switchTab(tabId) {
+        // Hide all tab contents
+        document.getElementById("tab-content-bg-ai").classList.add("hidden");
+        document.getElementById("tab-content-suits").classList.add("hidden");
+        document.getElementById("tab-content-adjust").classList.add("hidden");
+        document.getElementById("tab-content-borders").classList.add("hidden");
+
+        // Remove active style from all tab buttons
+        document.querySelectorAll(".tab-btn").forEach((btn) => {
+          btn.classList.remove("border-indigo-600", "text-indigo-600");
+          btn.classList.add("border-transparent", "text-gray-500");
+        });
+
+        // Show selected tab content and activate button
+        document
+          .getElementById(`tab-content-${tabId}`)
+          .classList.remove("hidden");
+        document
+          .getElementById(`tab-${tabId}`)
+          .classList.add("border-indigo-600", "text-indigo-600");
+        document
+          .getElementById(`tab-${tabId}`)
+          .classList.remove("border-transparent", "text-gray-500");
+      }
+
+      // ==================== BACKGROUND SECTION ====================
+      function restoreOriginalBg() {
+        selectedBackground = "original";
+        initBackgroundCanvas();
+        showToast("Original background restored.", "info");
+      }
+
+      function setSolidBgColor(color) {
+        selectedBackground = "changed";
+        backgroundColor = color;
+        document.getElementById("bgColorPicker").value = color;
+        document.getElementById("bgColorVal").innerText = color.toUpperCase();
+        initBackgroundCanvas();
+      }
+
+      function changeBgColor() {
+        selectedBackground = "changed";
+        const picker = document.getElementById("bgColorPicker");
+        backgroundColor = picker.value;
+        document.getElementById("bgColorVal").innerText =
+          picker.value.toUpperCase();
+        initBackgroundCanvas();
+      }
+
+      // ==================== COLOR & LIGHTING CORRECTION ====================
+      function updateColorCorrection() {
+        brightness =
+          parseInt(document.getElementById("slider-brightness").value) || 100;
+        contrast =
+          parseInt(document.getElementById("slider-contrast").value) || 100;
+        saturation =
+          parseInt(document.getElementById("slider-saturation").value) || 100;
+
+        document.getElementById("val-brightness").innerText = brightness + "%";
+        document.getElementById("val-contrast").innerText = contrast + "%";
+        document.getElementById("val-saturation").innerText = saturation + "%";
+
+        initBackgroundCanvas();
+      }
+
+      function resetColorCorrection() {
+        brightness = 100;
+        contrast = 100;
+        saturation = 100;
+
+        document.getElementById("slider-brightness").value = 100;
+        document.getElementById("slider-contrast").value = 100;
+        document.getElementById("slider-saturation").value = 100;
+
+        document.getElementById("val-brightness").innerText = "100%";
+        document.getElementById("val-contrast").innerText = "100%";
+        document.getElementById("val-saturation").innerText = "100%";
+
+        initBackgroundCanvas();
+        showToast("Color correction reset.", "info");
+      }
+
+      // ==================== AI BACKGROUND REMOVER ====================
+      function removeBackgroundAI() {
+        const btn = document.getElementById("btnRemoveBg");
+        if (isSegmenting) return;
+
+        const imgToProcess = croppedImage || uploadedImage;
+        if (!imgToProcess) {
+          showToast("No image available to process.", "error");
+          return;
+        }
+
+        isSegmenting = true;
+        btn.disabled = true;
+        btn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Processing AI...`;
+        showToast("Loading AI model & segmenting. Please wait...", "info");
+
+        try {
+          if (!selfieSegmentation) {
+            selfieSegmentation = new SelfieSegmentation({
+              locateFile: (file) =>
+                `https://cdn.jsdelivr.net/npm/@mediapipe/selfie_segmentation/${file}`,
+            });
+            selfieSegmentation.setOptions({
+              modelSelection: 1, // 1 = landscape (faster/better for browser)
+            });
+            selfieSegmentation.onResults((results) => {
+              try {
+                const canvas = document.createElement("canvas");
+                canvas.width = results.image.width;
+                canvas.height = results.image.height;
+                const ctx = canvas.getContext("2d");
+
+                // Draw original image
+                ctx.drawImage(results.image, 0, 0, canvas.width, canvas.height);
+
+                // Keep only target person (using mask)
+                ctx.globalCompositeOperation = "destination-in";
+                ctx.drawImage(
+                  results.segmentationMask,
+                  0,
+                  0,
+                  canvas.width,
+                  canvas.height
+                );
+                ctx.globalCompositeOperation = "source-over";
+
+                transparentCroppedImage = new Image();
+                transparentCroppedImage.onload = function () {
+                  isSegmenting = false;
+                  btn.disabled = false;
+                  btn.innerHTML = `<i class="fas fa-sparkles"></i> Remove Background (AI)`;
+
+                  // Auto-enable Solid Color background mode
+                  selectedBackground = "changed";
+                  initBackgroundCanvas();
+                  showToast("Background removed successfully!", "success");
+                };
+                transparentCroppedImage.src = canvas.toDataURL();
+              } catch (e) {
+                console.error(e);
+                isSegmenting = false;
+                btn.disabled = false;
+                btn.innerHTML = `<i class="fas fa-sparkles"></i> Remove Background (AI)`;
+                showToast("Error parsing AI segments.", "error");
+              }
+            });
+          }
+
+          selfieSegmentation.send({ image: imgToProcess }).catch((err) => {
+            console.error(err);
+            isSegmenting = false;
+            btn.disabled = false;
+            btn.innerHTML = `<i class="fas fa-sparkles"></i> Remove Background (AI)`;
+            showToast("AI pipeline send failure.", "error");
+          });
+        } catch (e) {
+          console.error(e);
+          isSegmenting = false;
+          btn.disabled = false;
+          btn.innerHTML = `<i class="fas fa-sparkles"></i> Remove Background (AI)`;
+          showToast("AI Segmentation failed. Check internet access.", "error");
+        }
+      }
+
+      // ==================== PROFESSIONAL SUITS ====================
+      function switchSuitCategory(category) {
+        selectedSuitCategory = category;
+
+        const btnMen = document.getElementById("btn-suit-men");
+        const btnWomen = document.getElementById("btn-suit-women");
+        const gridMen = document.getElementById("suit-grid-men");
+        const gridWomen = document.getElementById("suit-grid-women");
+
+        if (category === "men") {
+          btnMen.className =
+            "px-4 py-2 text-xs font-bold rounded-lg bg-indigo-600 text-white shadow-sm transition";
+          btnWomen.className =
+            "px-4 py-2 text-xs font-bold rounded-lg bg-gray-100 text-gray-600 hover:bg-gray-200 transition";
+          gridMen.classList.remove("hidden");
+          gridWomen.classList.add("hidden");
+        } else {
+          btnWomen.className =
+            "px-4 py-2 text-xs font-bold rounded-lg bg-indigo-600 text-white shadow-sm transition";
+          btnMen.className =
+            "px-4 py-2 text-xs font-bold rounded-lg bg-gray-100 text-gray-600 hover:bg-gray-200 transition";
+          gridWomen.classList.remove("hidden");
+          gridMen.classList.add("hidden");
+        }
+      }
+
+      function selectSuit(suitId) {
+        selectedSuitId = suitId;
+
+        // Toggle highlight in grids
+        document
+          .querySelectorAll("#tab-content-suits .preset-card")
+          .forEach((card) => {
+            card.classList.remove("border-indigo-600", "bg-indigo-50");
+            card.classList.add("border-gray-200");
+          });
+
+        const activeCard = document.getElementById(`suit-${suitId}`);
+        if (activeCard) {
+          activeCard.classList.add("border-indigo-600", "bg-indigo-50");
+          activeCard.classList.remove("border-gray-200");
+        }
+
+        // Toggle controller panel views
+        document
+          .getElementById("suit-controls-panel")
+          .classList.remove("hidden");
+        document.getElementById("suit-empty-state").classList.add("hidden");
+
+        initBackgroundCanvas();
+      }
+
+      function updateSuitAlignment() {
+        suitScale =
+          parseFloat(document.getElementById("slider-suitScale").value) || 1.0;
+        suitOffsetX =
+          parseInt(document.getElementById("slider-suitOffsetX").value) || 0;
+        suitOffsetY =
+          parseInt(document.getElementById("slider-suitOffsetY").value) || 0;
+
+        document.getElementById("val-suitScale").innerText =
+          Math.round(suitScale * 100) + "%";
+        document.getElementById("val-suitOffsetX").innerText =
+          suitOffsetX + "px";
+        document.getElementById("val-suitOffsetY").innerText =
+          suitOffsetY + "px";
+
+        initBackgroundCanvas();
+      }
+
+      function resetSuitAlignment() {
+        suitScale = 1.0;
+        suitOffsetX = 0;
+        suitOffsetY = 0;
+
+        document.getElementById("slider-suitScale").value = 1.0;
+        document.getElementById("slider-suitOffsetX").value = 0;
+        document.getElementById("slider-suitOffsetY").value = 0;
+
+        document.getElementById("val-suitScale").innerText = "100%";
+        document.getElementById("val-suitOffsetX").innerText = "0px";
+        document.getElementById("val-suitOffsetY").innerText = "0px";
+
+        initBackgroundCanvas();
+        showToast("Suit position alignment reset.", "info");
+      }
+
+      function removeSuit() {
+        selectedSuitId = null;
+
+        // Remove highlight
+        document
+          .querySelectorAll("#tab-content-suits .preset-card")
+          .forEach((card) => {
+            card.classList.remove("border-indigo-600", "bg-indigo-50");
+            card.classList.add("border-gray-200");
+          });
+
+        document.getElementById("suit-controls-panel").classList.add("hidden");
+        document.getElementById("suit-empty-state").classList.remove("hidden");
+
+        initBackgroundCanvas();
+        showToast("Suit overlay removed.", "info");
+      }
+
+      // ==================== BORDER & TEXT OPTIONS ====================
+      function selectBorder(type) {
+        borderType = type;
+
+        // Set border color
+        switch (type) {
+          case "white":
+            borderColor = "#FFFFFF";
+            break;
+          case "black":
+            borderColor = "#000000";
+            break;
+          case "gray":
+            borderColor = "#9CA3AF";
+            break;
+          case "gold":
+            borderColor = "#FBBF24";
+            break;
+          case "blue":
+            borderColor = "#3B82F6";
+            break;
+          case "custom":
+            borderColor = document.getElementById("customBorderColor").value;
+            break;
+          default:
+            borderColor = "#FFFFFF";
+        }
+
+        // Update UI Ring highlights
+        document.querySelectorAll(".border-preset").forEach((el) => {
+          el.classList.remove("ring-2", "ring-indigo-600");
+        });
+
+        if (type !== "none") {
+          const el = document.getElementById("border-" + type);
+          if (el) el.classList.add("ring-2", "ring-indigo-600");
+        }
+
+        initBackgroundCanvas();
+        showToast(`Border style: ${type}`, "success");
+      }
+
+      function selectCustomBorder() {
+        borderType = "custom";
+        borderColor = document.getElementById("customBorderColor").value;
+
+        document.querySelectorAll(".border-preset").forEach((el) => {
+          el.classList.remove("ring-2", "ring-indigo-600");
+        });
+
+        initBackgroundCanvas();
+        showToast("Custom border color applied", "success");
+      }
+
+      function updateBorderSize() {
+        borderSize = parseInt(document.getElementById("borderSize").value) || 4;
+        if (borderSize < 1) borderSize = 1;
+        if (borderSize > 20) borderSize = 20;
+        initBackgroundCanvas();
+      }
+
+      function toggleTextInput() {
+        document.getElementById("textInputSection").classList.toggle("hidden");
+        initBackgroundCanvas();
+      }
+
+      function goToDownload() {
+        document.getElementById("borderSection").classList.add("hidden");
+        document.getElementById("downloadSection").classList.remove("hidden");
+        updateProgress(5);
+        setTimeout(initDownloadCanvas, 100);
+      }
+
+      function showBorderSection() {
+        document.getElementById("downloadSection").classList.add("hidden");
+        document.getElementById("borderSection").classList.remove("hidden");
+        updateProgress(4);
+        setTimeout(initBackgroundCanvas, 100);
+      }
+
+      // ==================== UNIFIED CANVAS LAYERED DRAWING ====================
+      function drawPassportPhoto(ctx, x, y, width, height, isSingle = false) {
+        ctx.save();
+
+        // 1. Draw Background
+        if (selectedBackground === "original") {
+          const img = croppedImage || uploadedImage;
+          if (img) {
+            ctx.save();
+            ctx.filter = `brightness(${brightness}%) contrast(${contrast}%) saturate(${saturation}%)`;
+            ctx.drawImage(img, x, y, width, height);
+            ctx.restore();
+          }
+        } else {
+          ctx.fillStyle = backgroundColor;
+          ctx.fillRect(x, y, width, height);
+
+          const img = transparentCroppedImage || croppedImage || uploadedImage;
+          if (img) {
+            ctx.save();
+            ctx.filter = `brightness(${brightness}%) contrast(${contrast}%) saturate(${saturation}%)`;
+            ctx.drawImage(img, x, y, width, height);
+            ctx.restore();
+          }
+        }
+
+        // 2. Draw Suit
+        if (selectedSuitId && suitImages[selectedSuitId]) {
+          const suitImg = suitImages[selectedSuitId];
+
+          // Suit dimensions scaled relative to crop area
+          const suitW = width * suitScale;
+          const suitH = height * suitScale;
+
+          // Alignment offsets
+          const xOffset = (suitOffsetX / 100) * width;
+          const yOffset = (suitOffsetY / 100) * height;
+
+          // Center suit at bottom margin
+          const suitX = x + (width - suitW) / 2 + xOffset;
+          const suitY = y + (height - suitH) + yOffset;
+
+          ctx.drawImage(suitImg, suitX, suitY, suitW, suitH);
+        }
+
+        // 3. Draw Borders
+        if (borderType !== "none") {
+          ctx.strokeStyle = borderColor;
+          ctx.lineWidth = borderSize * (width / 300); // Scale border thickness proportional to output resolution
+          ctx.strokeRect(x, y, width, height);
+        }
+
+        // 4. Draw Overlay Text
+        if (document.getElementById("addTextCheckbox").checked) {
+          const text = document.getElementById("imageText").value;
+          const textSize =
+            parseInt(document.getElementById("textSize").value) || 16;
+          const textColor = document.getElementById("textColor").value;
+
+          const scaledTextSize = Math.round(textSize * (width / 300));
+          ctx.fillStyle = textColor;
+          ctx.font = `bold ${scaledTextSize}px Arial`;
+          ctx.textAlign = "center";
+
+          // Vertical padding from bottom of passport area
+          const paddingY = 15 * (height / 300);
+          ctx.fillText(text, x + width / 2, y + height - paddingY);
+        }
+
+        ctx.restore();
+      }
+
+      // Editor Live Preview Renderer
+      function initBackgroundCanvas() {
+        const canvas = document.getElementById("editorPreviewCanvas");
+        if (!canvas) return;
+
+        canvas.width = 300;
+        canvas.height = 300 / aspectRatio;
+
+        const ctx = canvas.getContext("2d");
+        drawPassportPhoto(ctx, 0, 0, canvas.width, canvas.height);
+      }
+
+      // ==================== DOWNLOAD SECTION RENDERERS ====================
+      function initDownloadCanvas() {
+        const dpi = parseInt(document.getElementById("dpiInput").value);
+        let pixelWidth, pixelHeight;
+
+        // Convert physical dimensions to pixels based on target DPI
+        if (selectedSize.unit === "mm") {
+          pixelWidth = Math.round((selectedSize.width / 25.4) * dpi);
+          pixelHeight = Math.round((selectedSize.height / 25.4) * dpi);
+        } else if (selectedSize.unit === "cm") {
+          pixelWidth = Math.round(((selectedSize.width * 10) / 25.4) * dpi);
+          pixelHeight = Math.round(((selectedSize.height * 10) / 25.4) * dpi);
+        } else if (selectedSize.unit === "inch") {
+          pixelWidth = Math.round(selectedSize.width * dpi);
+          pixelHeight = Math.round(selectedSize.height * dpi);
+        }
+
+        // Single Canvas Rendering
+        const singleCanvas = document.getElementById("singleImageCanvas");
+        singleCanvas.width = pixelWidth;
+        singleCanvas.height = pixelHeight;
+        singleCanvas.style.width = "200px";
+        singleCanvas.style.height = (200 * pixelHeight) / pixelWidth + "px";
+
+        const ctx = singleCanvas.getContext("2d");
+        drawPassportPhoto(ctx, 0, 0, pixelWidth, pixelHeight, true);
+
+        updateLayout();
+      }
+
+      function updateLayout() {
+        const dpi = parseInt(document.getElementById("dpiInput").value);
+        let pixelWidth, pixelHeight;
+
+        if (selectedSize.unit === "mm") {
+          pixelWidth = Math.round((selectedSize.width / 25.4) * dpi);
+          pixelHeight = Math.round((selectedSize.height / 25.4) * dpi);
+        } else if (selectedSize.unit === "cm") {
+          pixelWidth = Math.round(((selectedSize.width * 10) / 25.4) * dpi);
+          pixelHeight = Math.round(((selectedSize.height * 10) / 25.4) * dpi);
+        } else if (selectedSize.unit === "inch") {
+          pixelWidth = Math.round(selectedSize.width * dpi);
+          pixelHeight = Math.round(selectedSize.height * dpi);
+        }
+
+        const multiCanvas = document.getElementById("multipleImageCanvas");
+        const layout =
+          document.querySelector('input[name="layout"]:checked')?.value ||
+          "single";
+
+        let rows, cols;
+
+        if (layout === "single") {
+          multiCanvas.width = 0;
+          multiCanvas.height = 0;
+          return;
+        } else if (layout === "2x2") {
+          rows = 2;
+          cols = 2;
+        } else if (layout === "3x4") {
+          rows = 3;
+          cols = 4;
+        } else if (layout === "4x6") {
+          rows = 4;
+          cols = 6;
+        } else if (layout === "a4") {
+          const a4WidthPx = Math.round((210 / 25.4) * dpi);
+          const a4HeightPx = Math.round((297 / 25.4) * dpi);
+
+          cols = Math.floor(a4WidthPx / (pixelWidth + 10));
+          rows = Math.floor(a4HeightPx / (pixelHeight + 10));
+
+          cols = Math.max(1, Math.min(cols, 10));
+          rows = Math.max(1, Math.min(rows, 10));
+
+          document.getElementById("a4Info").classList.remove("hidden");
+        } else if (layout === "custom") {
+          rows = parseInt(document.getElementById("customRows").value) || 2;
+          cols = parseInt(document.getElementById("customCols").value) || 4;
+          document
+            .getElementById("customLayoutInput")
+            .classList.remove("hidden");
+          document.getElementById("a4Info").classList.add("hidden");
+        }
+
+        const padding = 10;
+        const totalWidth = cols * pixelWidth + (cols - 1) * padding;
+        const totalHeight = rows * pixelHeight + (rows - 1) * padding;
+
+        multiCanvas.width = totalWidth;
+        multiCanvas.height = totalHeight;
+        multiCanvas.style.width = "400px";
+        multiCanvas.style.height = (400 * totalHeight) / totalWidth + "px";
+
+        const ctx = multiCanvas.getContext("2d");
+        ctx.fillStyle = "#FFFFFF";
+        ctx.fillRect(0, 0, totalWidth, totalHeight);
+
+        for (let row = 0; row < rows; row++) {
+          for (let col = 0; col < cols; col++) {
+            const x = col * (pixelWidth + padding);
+            const y = row * (pixelHeight + padding);
+
+            drawPassportPhoto(ctx, x, y, pixelWidth, pixelHeight);
+          }
+        }
+      }
+
+      function downloadSingle() {
+        const canvas = document.getElementById("singleImageCanvas");
+        const link = document.createElement("a");
+        link.download = "passport-photo-" + Date.now() + ".png";
+        link.href = canvas.toDataURL("image/png");
+        link.click();
+        showToast("Photo downloaded!", "success");
+      }
+
+      function downloadMultiple() {
+        const canvas = document.getElementById("multipleImageCanvas");
+        if (canvas.width === 0) {
+          showToast("Please select a multiple layout first", "error");
+          return;
+        }
+        const link = document.createElement("a");
+        link.download = "passport-photos-" + Date.now() + ".png";
+        link.href = canvas.toDataURL("image/png");
+        link.click();
+        showToast("Multiple photos downloaded!", "success");
+      }
+
+      function printLayout() {
+        const canvas = document.getElementById("multipleImageCanvas");
+        if (canvas.width === 0) {
+          showToast(
+            "Please select a layout (e.g. A4 Layout) to print.",
+            "error"
+          );
+          return;
+        }
+
+        const dataUrl = canvas.toDataURL("image/png");
+        const printWindow = window.open("", "_blank");
+        printWindow.document.write(`
+                <html>
+                <head>
+
+    <!-- Resource Hints & Performance Optimizations -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin />
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin />
+    <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+                    <title>Print Passport Photos</title>
+                    <style>
+                        body {
+                            margin: 0;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background: white;
+                        }
+                        img {
+                            max-width: 100%;
+                            height: auto;
+                        }
+                        @media print {
+                            @page {
+                                margin: 0;
+                                size: auto;
+                            }
+                            body {
+                                margin: 0;
+                            }
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                            }
+                        }
+                    </style>
+                
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+</head>
+                <body>
+                    <img src="${dataUrl}" onload="window.print(); window.close();"  loading="lazy" /></body>
+                </html>
+            `);
+        printWindow.document.close();
+      }
+
+      function resetTool() {
+        if (confirm("Start over? Your current progress will be lost.")) {
+          location.reload();
+        }
+      }
+    </script>
+    
+    <!-- Dynamic Load AdSense -->
+    <script>
+      (function () {
+        const adsenseEvents = ["scroll", "mouseover", "keydown", "touchstart"];
+        let adsenseLoaded = false;
+        function loadAdSense() {
+          if (adsenseLoaded) return;
+          adsenseLoaded = true;
+          const script = document.createElement("script");
+          script.src =
+            "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5903040139930597";
+          script.async = true;
+          script.crossOrigin = "anonymous";
+          document.head.appendChild(script);
+          adsenseEvents.forEach((evt) =>
+            window.removeEventListener(evt, loadAdSense)
+          );
+        }
+        adsenseEvents.forEach((evt) =>
+          window.addEventListener(evt, loadAdSense, {
+            passive: true,
+            once: true,
+          })
+        );
+      })();
+    </script>
+      <a href="https://wa.me/916387617678?text=Hello%20I%20need%20CSC%20help" target="_blank" rel="noopener" aria-label="WhatsApp" class="fixed bottom-5 right-5 z-50 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg text-2xl"><i class="fab fa-whatsapp"></i></a>
+    <script>(function(){var b=document.getElementById('pcsMenuBtn'),m=document.getElementById('pcsMobileMenu');if(b&&m){b.addEventListener('click',function(){m.classList.toggle('hidden');});m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.add('hidden');});});}})();</script>
+  </body>
+</html>

@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Pro CSC Tools: AdSense + Verification -->
+    <meta name="google-adsense-account" content="ca-pub-6791318178265120">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6791318178265120" crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    
+    <!-- Banner Ads -->
+    
+    
+    <!-- Primary Meta Tags - SEO Optimized -->
+    <title>Accurate Age Calculator | Exact Age in Years, Months, Days - Pro CSC Tools</title>
+    <meta name="title" content="Accurate Age Calculator | Exact Age in Years, Months, Days">
+    <meta name="description" content="Calculate your exact age in years, months, days, hours, minutes, and seconds. Free online age calculator with next birthday countdown. Used by 50,000+ users monthly.">
+    <meta name="keywords" content="age calculator, exact age calculator, age calculator online, calculate age, birth date calculator, age finder, how old am i, age counter, birthday calculator, age in months, age in days, age difference calculator">
+    <meta name="author" content="Pro CSC Tools">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="revisit-after" content="1 day">
+    <meta name="language" content="English">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://procsctools.in/age-calculator">
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://procsctools.in/age-calculator">
+    <meta property="og:title" content="Free Accurate Age Calculator - Find Your Exact Age">
+    <meta property="og:description" content="Calculate your exact age in years, months, days, hours, minutes and seconds. Free online tool with next birthday countdown.">
+    <meta property="og:image" content="https://procsctools.in/images/age-calculator-preview.jpg">
+    <meta property="og:site_name" content="Pro CSC Tools">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://procsctools.in/age-calculator.html">
+    <meta name="twitter:title" content="Age Calculator - Exact Age in Years, Months, Days">
+    <meta name="twitter:description" content="Free online age calculator with precise results. Know your exact age today!">
+    <meta name="twitter:image" content="https://procsctools.in/images/age-calculator-preview.jpg">
+
+    <!-- Preconnect for faster loading -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Schema Markup for Rich Snippets -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "Accurate Age Calculator",
+            "description": "Free online tool to calculate exact age in years, months, days, hours, minutes, and seconds",
+            "applicationCategory": "Utility",
+            "operatingSystem": "All",
+            "url": "https://procsctools.in/age-calculator.html",
+            "provider": {
+                "@type": "Organization",
+                "name": "Pro CSC Tools",
+                "url": "https://procsctools.in"
+            },
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "INR"
+            },
+            "featureList": [
+                "Years Calculation",
+                "Months Calculation",
+                "Days Calculation",
+                "Hours Calculation",
+                "Minutes Calculation",
+                "Seconds Calculation",
+                "Next Birthday Countdown",
+                "Age in Total Days"
+            ],
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "ratingCount": "5230"
+            }
+        }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [{
+                "@type": "Question",
+                "name": "How to calculate age accurately?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Enter your birth date and our calculator will show your exact age in years, months, days, hours, minutes, and seconds. It also shows your next birthday countdown."
+                }
+            }, {
+                "@type": "Question",
+                "name": "Is this age calculator free?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, it's completely free with no hidden charges. You can calculate age as many times as you want."
+                }
+            }, {
+                "@type": "Question",
+                "name": "Can I calculate age in months and days?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, our calculator shows age in years, months, days, hours, minutes, seconds, and total days lived."
+                }
+            }]
+        }
+    </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://procsctools.in"
+            }, {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Age Calculator",
+                "item": "https://procsctools.in/age-calculator.html"
+            }]
+        }
+    </script>
+
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.1"><circle cx="50" cy="50" r="40" stroke="white" stroke-width="2" fill="none"/></svg>');
+            background-size: 100px 100px;
+            pointer-events: none;
+        }
+
+        .calculator-card {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .input-field {
+            transition: all 0.3s ease;
+            border: 2px solid #e5e7eb;
+        }
+
+        .input-field:focus {
+            border-color: #8b5cf6;
+            box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+            outline: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 30px -10px rgba(139, 92, 246, 0.5);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+
+        .result-card {
+            animation: slideUp 0.5s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .stat-box {
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #ffffff, #f9fafb);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        .stat-box:hover {
+            transform: scale(1.05);
+            border-color: #8b5cf6;
+            box-shadow: 0 10px 25px -5px rgba(139, 92, 246, 0.3);
+        }
+
+        .toast-message {
+            animation: slideInRight 0.3s ease, fadeOut 0.3s ease 2.7s;
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #8b5cf6;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .stat-box {
+                padding: 0.75rem;
+            }
+            .stat-value {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="flex items-center justify-center p-4 relative">
+<!-- PCT-CHROME-START -->
+<style id="pct-chrome">
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+.pct-header,.pct-footer,.pct-ad{font-family:"Inter",Arial,sans-serif;box-sizing:border-box}
+.pct-header{background:#fff;border-bottom:1px solid #eee;box-shadow:0 2px 10px rgba(0,0,0,.06);padding:10px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;position:relative;z-index:9999}
+.pct-logo{font-size:22px;font-weight:800;color:#ab183d;text-decoration:none;white-space:nowrap}
+.pct-nav{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.pct-nav a{color:#374151;text-decoration:none;font-weight:500;font-size:15px}
+.pct-nav a:hover{color:#ab183d}
+.pct-menu-btn{display:none;background:none;border:0;font-size:26px;color:#ab183d;cursor:pointer;line-height:1}
+.pct-footer{background:#111827;color:#fff;padding:40px 20px 24px;margin-top:48px}
+.pct-footer-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:26px}
+.pct-footer h3{font-size:20px;font-weight:800;margin:0 0 12px;color:#fff}
+.pct-footer h4{font-size:16px;font-weight:600;margin:0 0 12px;color:#fff}
+.pct-footer p{color:#9ca3af;font-size:14px;line-height:1.6;margin:0}
+.pct-footer a{color:#9ca3af;text-decoration:none;display:block;margin-bottom:8px;font-size:14px}
+.pct-footer a:hover{color:#fff}
+.pct-copy{max-width:1100px;margin:26px auto 0;border-top:1px solid #1f2937;padding-top:18px;text-align:center;color:#9ca3af;font-size:13px}
+.pct-ad{margin:18px auto;text-align:center;max-width:1100px;min-height:50px;overflow:hidden}
+@media(max-width:768px){.pct-menu-btn{display:block}.pct-nav{display:none;width:100%;flex-direction:column;align-items:flex-start;gap:12px;padding-top:10px}.pct-nav.open{display:flex}}
+</style>
+
+<header class="pct-header">
+  <a href="/" class="pct-logo">Pro CSC Tools</a>
+  <button class="pct-menu-btn" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu">&#9776;</button>
+  <nav class="pct-nav">
+    <a href="/">Home</a>
+    <a href="/csc-billing-software">Csc Billing</a>
+    <a href="/csc-manager">Csc Work</a>
+    <a href="/#tools">Tools</a>
+    <a href="/blog">Blog</a>
+    <a href="/about">About Us</a>
+    <a href="/contact">Contact</a>
+  </nav>
+</header>
+<div class="pct-ad"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6791318178265120" data-ad-slot="7017392570" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+<!-- PCT-CHROME-END -->
+
+
+    <!-- Navigation Bar with Breadcrumbs -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md shadow-sm z-50" aria-label="Breadcrumb">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <ol class="flex items-center space-x-2 text-sm">
+                    <li>
+                        <a href="/" class="text-gray-600 hover:text-purple-600 transition flex items-center">
+                            <i class="fas fa-home mr-1"></i> Home
+                        </a>
+                    </li>
+
+                    <li class="text-gray-400">/</li>
+                    <li class="text-purple-600 font-semibold" aria-current="page">Age Calculator</li>
+                </ol>
+
+                <!-- Share Buttons -->
+                <div class="flex items-center space-x-2">
+                    <button onclick="shareOnWhatsApp()" class="text-green-600 hover:text-green-700 transition" title="Share on WhatsApp">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                    </button>
+                    <button onclick="shareOnFacebook()" class="text-blue-600 hover:text-blue-700 transition" title="Share on Facebook">
+                        <i class="fab fa-facebook text-xl"></i>
+                    </button>
+                    <button onclick="shareOnTwitter()" class="text-sky-500 hover:text-sky-600 transition" title="Share on Twitter">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="w-full max-w-4xl mt-16">
+
+        <!-- Header with Stats -->
+        <div class="text-center text-white mb-8">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">
+                Accurate Age Calculator
+            </h1>
+            <p class="text-xl opacity-90 max-w-2xl mx-auto">
+                Calculate your exact age in years, months, days, hours, minutes, and seconds
+            </p>
+
+            <!-- Stats Counter -->
+            <div class="flex justify-center gap-6 mt-4 text-sm">
+                <div class="flex items-center bg-white/20 backdrop-blur rounded-full px-4 py-2">
+                    <i class="fas fa-users mr-2"></i>
+                    <span>52,340+ Calculations Today</span>
+                </div>
+                <div class="flex items-center bg-white/20 backdrop-blur rounded-full px-4 py-2">
+                    <i class="fas fa-star text-yellow-300 mr-2"></i>
+                    <span>4.9/5 Rating</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Calculator Card -->
+        <div class="calculator-card rounded-2xl shadow-2xl overflow-hidden">
+
+            <!-- Card Header -->
+            <div class="bg-gradient-to-r from-purple-600 to-pink-600 text-white p-6 text-center">
+                <h2 class="text-2xl font-bold flex items-center justify-center">
+                    <i class="fas fa-calendar-alt mr-3"></i> Age Calculator
+                </h2>
+                <p class="mt-2 opacity-90">Enter your birth date to calculate exact age</p>
+            </div>
+
+            <!-- Calculator Body -->
+            <div class="p-6 md:p-8">
+
+                <!-- Input Section -->
+                <div class="space-y-6">
+
+                    <!-- Date Input with Label -->
+                    <div>
+                        <label for="birthdate" class="block text-sm font-medium text-gray-700 mb-2">
+                            <i class="fas fa-birthday-cake text-purple-600 mr-2"></i>
+                            Select your birth date
+                        </label>
+
+                        <div class="relative">
+                            <input type="date" id="birthdate" class="input-field w-full px-5 py-4 border border-gray-300 rounded-xl focus:ring-4 focus:ring-purple-200 focus:border-purple-500 outline-none transition text-lg" required aria-label="Birth date" />
+                            <i class="fas fa-calendar-day absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"></i>
+                        </div>
+
+                        <!-- Quick Select Buttons -->
+                        <div class="flex flex-wrap gap-2 mt-3">
+                            <button onclick="setAge(18)" class="text-xs bg-gray-100 hover:bg-purple-100 px-3 py-1.5 rounded-full transition">
+                                18 years ago
+                            </button>
+                            <button onclick="setAge(25)" class="text-xs bg-gray-100 hover:bg-purple-100 px-3 py-1.5 rounded-full transition">
+                                25 years ago
+                            </button>
+                            <button onclick="setAge(30)" class="text-xs bg-gray-100 hover:bg-purple-100 px-3 py-1.5 rounded-full transition">
+                                30 years ago
+                            </button>
+                            <button onclick="setAge(40)" class="text-xs bg-gray-100 hover:bg-purple-100 px-3 py-1.5 rounded-full transition">
+                                40 years ago
+                            </button>
+                            <button onclick="setToday()" class="text-xs bg-purple-100 text-purple-700 hover:bg-purple-200 px-3 py-1.5 rounded-full transition">
+                                Today
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Calculate Button -->
+                    <button id="calculateBtn" class="btn-primary w-full text-white font-semibold py-5 rounded-xl flex items-center justify-center gap-3 text-lg shadow-lg">
+                        <i class="fas fa-calculator"></i>
+                        <span>Calculate My Age</span>
+                    </button>
+
+                    <!-- Live Age Counter (Optional) -->
+                    <div class="text-center text-sm text-gray-500">
+                        <i class="fas fa-sync-alt mr-1 text-purple-500"></i> Results update automatically as you type
+                    </div>
+                </div>
+
+                <!-- Loading Spinner -->
+                <div id="loading" class="hidden flex justify-center my-8">
+                    <div class="spinner"></div>
+                </div>
+
+                <!-- Detailed Result Display -->
+                <div id="result" class="mt-8 hidden result-card">
+
+                    <!-- Main Age Display -->
+                    <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border-2 border-purple-200">
+
+                        <!-- Exact Age in Years, Months, Days -->
+                        <div class="text-center mb-6">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Your Exact Age</h3>
+                            <div class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+                                <span id="years">0</span> <span class="text-2xl">Y</span>
+                                <span id="months" class="ml-2">0</span> <span class="text-2xl">M</span>
+                                <span id="days" class="ml-2">0</span> <span class="text-2xl">D</span>
+                            </div>
+                        </div>
+
+                        <!-- Detailed Stats Grid -->
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+                            <div class="stat-box bg-white rounded-xl p-4 text-center shadow">
+                                <i class="fas fa-calendar-alt text-purple-600 text-xl mb-2"></i>
+                                <div class="stat-value text-2xl font-bold text-purple-600" id="totalMonths">0</div>
+                                <div class="text-xs text-gray-600">Total Months</div>
+                            </div>
+                            <div class="stat-box bg-white rounded-xl p-4 text-center shadow">
+                                <i class="fas fa-sun text-pink-600 text-xl mb-2"></i>
+                                <div class="stat-value text-2xl font-bold text-pink-600" id="totalDays">0</div>
+                                <div class="text-xs text-gray-600">Total Days</div>
+                            </div>
+                            <div class="stat-box bg-white rounded-xl p-4 text-center shadow">
+                                <i class="fas fa-clock text-purple-600 text-xl mb-2"></i>
+                                <div class="stat-value text-2xl font-bold text-purple-600" id="totalHours">0</div>
+                                <div class="text-xs text-gray-600">Total Hours</div>
+                            </div>
+                            <div class="stat-box bg-white rounded-xl p-4 text-center shadow">
+                                <i class="fas fa-hourglass-half text-pink-600 text-xl mb-2"></i>
+                                <div class="stat-value text-2xl font-bold text-pink-600" id="totalMinutes">0</div>
+                                <div class="text-xs text-gray-600">Total Minutes</div>
+                            </div>
+                        </div>
+
+                        <!-- Additional Info -->
+                        <div class="mt-6 space-y-3">
+                            <!-- Next Birthday -->
+                            <div class="flex items-center justify-between bg-white p-4 rounded-lg">
+                                <span class="text-gray-700">
+                                    <i class="fas fa-gift text-purple-600 mr-2"></i>
+                                    Next Birthday:
+                                </span>
+                                <span id="nextBirthday" class="font-bold text-purple-600"></span>
+                            </div>
+
+                            <!-- Zodiac Sign -->
+                            <div class="flex items-center justify-between bg-white p-4 rounded-lg">
+                                <span class="text-gray-700">
+                                    <i class="fas fa-star text-pink-600 mr-2"></i>
+                                    Your Zodiac Sign:
+                                </span>
+                                <span id="zodiacSign" class="font-bold text-pink-600"></span>
+                            </div>
+
+                            <!-- Birth Day of Week -->
+                            <div class="flex items-center justify-between bg-white p-4 rounded-lg">
+                                <span class="text-gray-700">
+                                    <i class="fas fa-calendar-week text-purple-600 mr-2"></i>
+                                    Born on:
+                                </span>
+                                <span id="birthDayOfWeek" class="font-bold text-purple-600"></span>
+                            </div>
+
+                            <!-- Age in Seconds (Fun Fact) -->
+                            <div class="text-center text-sm text-gray-500 mt-4">
+                                <i class="fas fa-clock mr-1"></i> That's approximately <span id="totalSeconds" class="font-bold"></span> seconds old!
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex gap-3 mt-4">
+                        <button onclick="copyResult()" class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 py-3 rounded-lg transition flex items-center justify-center gap-2">
+                            <i class="fas fa-copy"></i>
+                            <span class="hidden sm:inline">Copy Result</span>
+                        </button>
+                        <button onclick="downloadResult()" class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 py-3 rounded-lg transition flex items-center justify-center gap-2">
+                            <i class="fas fa-download"></i>
+                            <span class="hidden sm:inline">Download</span>
+                        </button>
+                        <button onclick="shareResult()" class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 py-3 rounded-lg transition flex items-center justify-center gap-2">
+                            <i class="fas fa-share-alt"></i>
+                            <span class="hidden sm:inline">Share</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Error Display -->
+                <div id="error" class="mt-4 hidden bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-center font-medium"></div>
+            </div>
+        </div>
+
+        
+        <!-- Banner Ads -->
+        
+        
+        <!-- How to Use Section -->
+        <div class="mt-8 bg-white/90 backdrop-blur rounded-xl p-6 shadow-lg">
+            <h2 class="text-xl font-bold mb-4 text-gray-800 flex items-center">
+                <i class="fas fa-question-circle text-purple-600 mr-3"></i> How to Use Age Calculator?
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-4">
+                <div class="flex items-start gap-3">
+                    <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span class="text-purple-600 font-bold">1</span>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold">Select Date</h3>
+                        <p class="text-sm text-gray-600">Choose your birth date from the calendar</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-3">
+                    <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span class="text-purple-600 font-bold">2</span>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold">Click Calculate</h3>
+                        <p class="text-sm text-gray-600">Press the calculate button or wait for auto-update</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-3">
+                    <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span class="text-purple-600 font-bold">3</span>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold">Get Results</h3>
+                        <p class="text-sm text-gray-600">View your exact age in multiple formats</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="mt-8 bg-white/90 backdrop-blur rounded-xl p-6 shadow-lg">
+            <h2 class="text-xl font-bold mb-4 text-gray-800 flex items-center">
+                <i class="fas fa-star text-purple-600 mr-3"></i> Frequently Asked Questions
+            </h2>
+
+            <div class="space-y-3">
+                <details class="group">
+                    <summary class="flex justify-between items-center cursor-pointer list-none p-3 bg-purple-50 rounded-lg">
+                        <span class="font-medium">How accurate is this age calculator?</span>
+                        <i class="fas fa-chevron-down group-open:rotate-180 transition"></i>
+                    </summary>
+                    <p class="p-3 text-gray-600">Our calculator provides 100% accurate results considering leap years and different month lengths. It shows age in years, months, days, hours, minutes, and seconds.</p>
+                </details>
+
+                <details class="group">
+                    <summary class="flex justify-between items-center cursor-pointer list-none p-3 bg-purple-50 rounded-lg">
+                        <span class="font-medium">Can I calculate age for legal purposes?</span>
+                        <i class="fas fa-chevron-down group-open:rotate-180 transition"></i>
+                    </summary>
+                    <p class="p-3 text-gray-600">Yes, our calculator provides accurate age calculation that can be used for legal documents, job applications, and other official purposes.</p>
+                </details>
+
+                <details class="group">
+                    <summary class="flex justify-between items-center cursor-pointer list-none p-3 bg-purple-50 rounded-lg">
+                        <span class="font-medium">Is this tool mobile friendly?</span>
+                        <i class="fas fa-chevron-down group-open:rotate-180 transition"></i>
+                    </summary>
+                    <p class="p-3 text-gray-600">Absolutely! Our age calculator works perfectly on all devices including mobile phones, tablets, and desktop computers.</p>
+                </details>
+            </div>
+        </div>
+
+        <!-- Related Tools -->
+        <div class="mt-8 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl p-6 shadow-lg text-white">
+            <h2 class="text-xl font-bold mb-4 flex items-center">
+                <i class="fas fa-tools mr-3"></i> Popular Age-Related Tools
+            </h2>
+            <div class="flex flex-wrap gap-3">
+                <a href="/date-difference.html" class="bg-white/20 backdrop-blur px-4 py-2 rounded-full text-sm hover:bg-white/30 transition">Date Difference Calculator</a>
+                <a href="/gst.html" class="bg-white/20 backdrop-blur px-4 py-2 rounded-full text-sm hover:bg-white/30 transition">GST Calculator</a>
+                <a href="/percentage-cal.html" class="bg-white/20 backdrop-blur px-4 py-2 rounded-full text-sm hover:bg-white/30 transition">Percentage Calculator</a>
+                <a href="/loan-emi.html" class="bg-white/20 backdrop-blur px-4 py-2 rounded-full text-sm hover:bg-white/30 transition">Loan EMI Calculator</a>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="fixed bottom-5 right-5 z-50 space-y-2"></div>
+
+    <!-- Footer -->
+    <footer class="absolute bottom-0 left-0 right-0 text-center text-white/80 text-sm py-4">
+        <p>© 2026 Pro CSC Tools. All rights reserved. Made with ❤️ in India for All CSC VLEs. |
+            <a href="/privacy.html" class="hover:underline">Privacy</a> |
+            <a href="/terms.html" class="hover:underline">Terms</a>
+        </p>
+    </footer>
+
+    <script>
+        // DOM Elements
+        const birthdateInput = document.getElementById('birthdate');
+        const calculateBtn = document.getElementById('calculateBtn');
+        const resultDiv = document.getElementById('result');
+        const errorDiv = document.getElementById('error');
+        const loadingDiv = document.getElementById('loading');
+
+        // Result Elements
+        const yearsEl = document.getElementById('years');
+        const monthsEl = document.getElementById('months');
+        const daysEl = document.getElementById('days');
+        const totalMonthsEl = document.getElementById('totalMonths');
+        const totalDaysEl = document.getElementById('totalDays');
+        const totalHoursEl = document.getElementById('totalHours');
+        const totalMinutesEl = document.getElementById('totalMinutes');
+        const totalSecondsEl = document.getElementById('totalSeconds');
+        const nextBirthdayEl = document.getElementById('nextBirthday');
+        const zodiacSignEl = document.getElementById('zodiacSign');
+        const birthDayOfWeekEl = document.getElementById('birthDayOfWeek');
+
+        // Set max date to today
+        const today = new Date();
+        const todayStr = today.toISOString().split('T')[0];
+        birthdateInput.setAttribute('max', todayStr);
+
+        // Set default date to 25 years ago (common age)
+        const defaultDate = new Date();
+        defaultDate.setFullYear(today.getFullYear() - 25);
+        birthdateInput.value = defaultDate.toISOString().split('T')[0];
+
+        // Event Listeners
+        birthdateInput.addEventListener('change', calculateAge);
+        birthdateInput.addEventListener('input', calculateAge);
+        calculateBtn.addEventListener('click', calculateAge);
+
+        // Auto-calculate on page load
+        window.addEventListener('load', calculateAge);
+
+        function calculateAge() {
+            const birthDate = new Date(birthdateInput.value);
+            const now = new Date();
+
+            // Reset displays
+            errorDiv.classList.add('hidden');
+            resultDiv.classList.add('hidden');
+            loadingDiv.classList.remove('hidden');
+
+            // Simulate loading for better UX
+            setTimeout(() => {
+                // Validation
+                if (!birthdateInput.value) {
+                    showError("Please select your birth date.");
+                    loadingDiv.classList.add('hidden');
+                    return;
+                }
+
+                if (isNaN(birthDate.getTime())) {
+                    showError("Please enter a valid date.");
+                    loadingDiv.classList.add('hidden');
+                    return;
+                }
+
+                if (birthDate > now) {
+                    showError("Birth date cannot be in the future!");
+                    loadingDiv.classList.add('hidden');
+                    return;
+                }
+
+                // Calculate detailed age
+                const age = calculateDetailedAge(birthDate, now);
+
+                // Update UI
+                updateResultDisplay(age, birthDate, now);
+
+                resultDiv.classList.remove('hidden');
+                loadingDiv.classList.add('hidden');
+
+                // Save to history
+                saveToHistory(birthDate, age);
+            }, 300);
+        }
+
+        function calculateDetailedAge(birthDate, currentDate) {
+            // Years calculation
+            let years = currentDate.getFullYear() - birthDate.getFullYear();
+            let months = currentDate.getMonth() - birthDate.getMonth();
+            let days = currentDate.getDate() - birthDate.getDate();
+
+            // Adjust for negative days
+            if (days < 0) {
+                months--;
+                const lastMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 0);
+                days += lastMonth.getDate();
+            }
+
+            // Adjust for negative months
+            if (months < 0) {
+                years--;
+                months += 12;
+            }
+
+            // Calculate total units
+            const totalDays = Math.floor((currentDate - birthDate) / (1000 * 60 * 60 * 24));
+            const totalMonths = (years * 12) + months;
+            const totalHours = totalDays * 24 + currentDate.getHours() - birthDate.getHours();
+            const totalMinutes = totalHours * 60 + currentDate.getMinutes() - birthDate.getMinutes();
+            const totalSeconds = totalMinutes * 60 + currentDate.getSeconds() - birthDate.getSeconds();
+
+            return {
+                years,
+                months,
+                days,
+                totalMonths,
+                totalDays,
+                totalHours,
+                totalMinutes,
+                totalSeconds
+            };
+        }
+
+        function updateResultDisplay(age, birthDate, currentDate) {
+            // Main age
+            yearsEl.textContent = age.years;
+            monthsEl.textContent = age.months;
+            daysEl.textContent = age.days;
+
+            // Total units
+            totalMonthsEl.textContent = age.totalMonths.toLocaleString();
+            totalDaysEl.textContent = age.totalDays.toLocaleString();
+            totalHoursEl.textContent = age.totalHours.toLocaleString();
+            totalMinutesEl.textContent = age.totalMinutes.toLocaleString();
+            totalSecondsEl.textContent = age.totalSeconds.toLocaleString();
+
+            // Next birthday
+            let nextBirthday = new Date(currentDate.getFullYear(), birthDate.getMonth(), birthDate.getDate());
+            if (nextBirthday < currentDate) {
+                nextBirthday.setFullYear(currentDate.getFullYear() + 1);
+            }
+
+            const daysUntilBirthday = Math.ceil((nextBirthday - currentDate) / (1000 * 60 * 60 * 24));
+
+            if (daysUntilBirthday === 0) {
+                nextBirthdayEl.innerHTML = 'Today! 🎉';
+            } else if (daysUntilBirthday === 1) {
+                nextBirthdayEl.innerHTML = 'Tomorrow! 🎂';
+            } else {
+                nextBirthdayEl.innerHTML = `${daysUntilBirthday} days`;
+            }
+
+            // Zodiac sign
+            zodiacSignEl.textContent = getZodiacSign(birthDate);
+
+            // Birth day of week
+            const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            birthDayOfWeekEl.textContent = daysOfWeek[birthDate.getDay()];
+        }
+
+        function getZodiacSign(date) {
+            const day = date.getDate();
+            const month = date.getMonth() + 1;
+
+            if ((month == 3 && day >= 21) || (month == 4 && day <= 19)) return 'Aries ♈';
+            if ((month == 4 && day >= 20) || (month == 5 && day <= 20)) return 'Taurus ♉';
+            if ((month == 5 && day >= 21) || (month == 6 && day <= 20)) return 'Gemini ♊';
+            if ((month == 6 && day >= 21) || (month == 7 && day <= 22)) return 'Cancer ♋';
+            if ((month == 7 && day >= 23) || (month == 8 && day <= 22)) return 'Leo ♌';
+            if ((month == 8 && day >= 23) || (month == 9 && day <= 22)) return 'Virgo ♍';
+            if ((month == 9 && day >= 23) || (month == 10 && day <= 22)) return 'Libra ♎';
+            if ((month == 10 && day >= 23) || (month == 11 && day <= 21)) return 'Scorpio ♏';
+            if ((month == 11 && day >= 22) || (month == 12 && day <= 21)) return 'Sagittarius ♐';
+            if ((month == 12 && day >= 22) || (month == 1 && day <= 19)) return 'Capricorn ♑';
+            if ((month == 1 && day >= 20) || (month == 2 && day <= 18)) return 'Aquarius ♒';
+            return 'Pisces ♓';
+        }
+
+        // Quick set functions
+        window.setAge = function(years) {
+            const date = new Date();
+            date.setFullYear(date.getFullYear() - years);
+            birthdateInput.value = date.toISOString().split('T')[0];
+            calculateAge();
+        };
+
+        window.setToday = function() {
+            birthdateInput.value = todayStr;
+            calculateAge();
+        };
+
+        // Utility functions
+        function showError(message) {
+            errorDiv.textContent = message;
+            errorDiv.classList.remove('hidden');
+        }
+
+        function showToast(message, type = 'info') {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+
+            const colors = {
+                success: 'bg-green-500',
+                error: 'bg-red-500',
+                info: 'bg-blue-500',
+                warning: 'bg-yellow-500'
+            };
+
+            toast.className = `toast-message ${colors[type]} text-white px-6 py-3 rounded-lg shadow-lg flex items-center`;
+            toast.innerHTML = `
+                <i class="fas ${type === 'success' ? 'fa-check-circle' : type === 'error' ? 'fa-exclamation-circle' : 'fa-info-circle'} mr-3"></i>
+                ${message}
+            `;
+
+            container.appendChild(toast);
+
+            setTimeout(() => {
+                toast.remove();
+            }, 3000);
+        }
+
+        // Copy result
+        window.copyResult = function() {
+            const text = `Age: ${yearsEl.textContent} Years, ${monthsEl.textContent} Months, ${daysEl.textContent} Days | Total Days: ${totalDaysEl.textContent}`;
+            navigator.clipboard.writeText(text).then(() => {
+                showToast('Result copied to clipboard!', 'success');
+            }).catch(() => {
+                showToast('Failed to copy', 'error');
+            });
+        };
+
+        // Download result
+        window.downloadResult = function() {
+            const result = `AGE CALCULATION RESULTS
+------------------------
+Date: ${new Date().toLocaleDateString()}
+Birth Date: ${birthdateInput.value}
+
+EXACT AGE:
+${yearsEl.textContent} Years, ${monthsEl.textContent} Months, ${daysEl.textContent} Days
+
+TOTAL UNITS:
+Total Months: ${totalMonthsEl.textContent}
+Total Days: ${totalDaysEl.textContent}
+Total Hours: ${totalHoursEl.textContent}
+Total Minutes: ${totalMinutesEl.textContent}
+Total Seconds: ${totalSecondsEl.textContent}
+
+Next Birthday: ${nextBirthdayEl.textContent}
+Zodiac Sign: ${zodiacSignEl.textContent}
+Born on: ${birthDayOfWeekEl.textContent}
+
+Calculated using Pro CSC Tools Age Calculator`;
+
+            const blob = new Blob([result], {
+                type: 'text/plain'
+            });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `age-calculation-${todayStr}.txt`;
+            a.click();
+            URL.revokeObjectURL(url);
+            showToast('Result downloaded!', 'success');
+        };
+
+        // Share result
+        window.shareResult = function() {
+            const text = `My age is ${yearsEl.textContent} years, ${monthsEl.textContent} months, ${daysEl.textContent} days. Calculate yours at Pro CSC Tools!`;
+            if (navigator.share) {
+                navigator.share({
+                    title: 'My Age Calculation',
+                    text: text,
+                    url: window.location.href
+                }).catch(() => {});
+            } else {
+                copyResult();
+            }
+        };
+
+        // Save to history
+        function saveToHistory(birthDate, age) {
+            let history = JSON.parse(localStorage.getItem('ageHistory') || '[]');
+            history.unshift({
+                date: birthDate.toISOString().split('T')[0],
+                age: `${age.years}y ${age.months}m ${age.days}d`,
+                timestamp: new Date().toISOString()
+            });
+            history = history.slice(0, 5); // Keep only last 5
+            localStorage.setItem('ageHistory', JSON.stringify(history));
+        }
+
+        // Share functions
+        window.shareOnWhatsApp = function() {
+            const text = 'Check out this accurate age calculator - Calculate your exact age in years, months, and days';
+            const url = window.location.href;
+            window.open(`https://wa.me/?text=${encodeURIComponent(text + ' ' + url)}`, '_blank');
+        };
+
+        window.shareOnFacebook = function() {
+            const url = window.location.href;
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank');
+        };
+
+        window.shareOnTwitter = function() {
+            const text = 'Free Accurate Age Calculator - Find your exact age';
+            const url = window.location.href;
+            window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
+        };
+
+        // Initial calculation
+        calculateAge();
+    </script>
+
+<!-- PCT-FOOTER-START -->
+<div class="pct-ad"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6791318178265120" data-ad-slot="7017392570" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+<footer class="pct-footer">
+  <div class="pct-footer-grid">
+    <div>
+      <h3>Pro CSC Tools</h3>
+      <p>India's Most Trusted Platform for CSC VLEs &ndash; Government Document, ID Card, PDF &amp; Online Tools.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <a href="/">Home</a><a href="/#tools">Tools</a><a href="/about">About Us</a><a href="/contact">Contact</a>
+    </div>
+    <div>
+      <h4>Popular Tools</h4>
+      <a href="/resume-builder">Resume Maker</a><a href="/image-to-pdf">Image to PDF</a><a href="/image-resizer">Image Resizer</a><a href="/age-calculator">Age Calculator</a>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Service</a><a href="/disclaimer">Disclaimer</a><a href="/contact">Contact</a>
+    </div>
+  </div>
+  <div class="pct-copy">&copy; 2026 Pro CSC Tools. All rights reserved. Made with &#10084;&#65039; in India for All CSC VLEs.</div>
+</footer>
+<!-- PCT-FOOTER-END -->
+</body>
+
+</html>

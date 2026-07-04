@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Pro CSC Tools: AdSense + Verification -->
+    <meta name="google-adsense-account" content="ca-pub-6791318178265120">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6791318178265120" crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+    <!-- Primary Meta Tags - SEO Optimized -->
+    <title>Photo Signature Joiner with Border | Custom Size Photo Signature Combiner - Pro CSC Tools</title>
+    <meta name="title" content="Photo Signature Joiner with Border | Custom Size Photo Signature Combiner">
+    <meta name="description" content="Free online tool to join photo and signature with adjustable border and signature box size. Create perfect combined image for forms, applications, and exams. Customize photo border and signature area.">
+    <meta name="keywords" content="photo signature joiner with border, adjustable signature box, photo border adder, combine photo and signature with border, custom photo signature merger">
+    <meta name="author" content="Pro CSC Tools">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://procsctools.in/photo-sign">
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://procsctools.in/photo-sign">
+    <meta property="og:title" content="Photo Signature Joiner with Border - Customize Your Image">
+    <meta property="og:description" content="Join photo and signature with adjustable border and signature box size. Perfect for exam forms.">
+    <meta property="og:image" content="https://procsctools.in/images/photo-signature-preview.jpg">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Photo Signature Joiner with Border">
+    <meta name="twitter:description" content="Combine photo and signature with customizable border and signature size">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <!-- Stylesheets -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "Photo Signature Joiner with Border",
+            "description": "Advanced photo signature joiner with border customization and adjustable signature box",
+            "applicationCategory": "Utility",
+            "operatingSystem": "All",
+            "url": "https://procsctools.in/photo-sign.html",
+            "provider": {
+                "@type": "Organization",
+                "name": "Pro CSC Tools"
+            },
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "INR"
+            },
+            "featureList": [
+                "Photo Upload",
+                "Signature Upload",
+                "Border Customization",
+                "Adjustable Signature Box",
+                "Multiple Border Styles",
+                "Live Preview"
+            ]
+        }
+    </script>
+
+
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .upload-area {
+            border: 2px dashed #cbd5e1;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .upload-area:hover {
+            border-color: #06b6d4;
+            background-color: #f0f9ff;
+        }
+
+        .upload-area.dragover {
+            border-color: #06b6d4;
+            background-color: #e0f2fe;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #0891b2 0%, #06b6d4 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(6, 182, 212, 0.5);
+        }
+
+        .preview-container {
+            background: repeating-linear-gradient( 45deg, #f9fafb, #f9fafb 10px, #f3f4f6 10px, #f3f4f6 20px);
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .border-preview {
+            transition: all 0.3s ease;
+        }
+
+        .border-option {
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .border-option:hover {
+            transform: scale(1.05);
+        }
+
+        .border-option.selected {
+            border: 2px solid #0891b2;
+            background-color: #e0f2fe;
+        }
+
+        .toast-message {
+            animation: slideIn 0.3s ease, fadeOut 0.3s ease 2.7s;
+            z-index: 1000;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        .progress-bar {
+            height: 4px;
+            background: linear-gradient(90deg, #0891b2, #06b6d4);
+            transition: width 0.3s ease;
+        }
+
+        /* Custom Range Slider */
+
+        input[type=range] {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, #0891b2, #06b6d4);
+            border-radius: 5px;
+            outline: none;
+        }
+
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border: 2px solid #0891b2;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        input[type=range]::-webkit-slider-thumb:hover {
+            transform: scale(1.15);
+            background: #0891b2;
+        }
+
+        /* Color Picker Custom Style */
+
+        .color-picker-wrapper {
+            position: relative;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 2px solid #e2e8f0;
+            cursor: pointer;
+        }
+
+        .color-picker-wrapper input[type=color] {
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            width: 44px;
+            height: 44px;
+            border: none;
+            cursor: pointer;
+            opacity: 0;
+        }
+
+        .color-picker-display {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Signature Box Handle */
+
+        .signature-handle {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #0891b2;
+            border: 2px solid white;
+            border-radius: 50%;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+            cursor: ns-resize;
+            z-index: 10;
+        }
+
+        .signature-handle:hover {
+            transform: scale(1.2);
+            background: #0e7490;
+        }
+
+        @media (max-width: 640px) {
+            .preview-container {
+                min-height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-br from-slate-50 to-cyan-50 min-h-screen">
+<!-- PCT-CHROME-START -->
+<style id="pct-chrome">
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+.pct-header,.pct-footer,.pct-ad{font-family:"Inter",Arial,sans-serif;box-sizing:border-box}
+.pct-header{background:#fff;border-bottom:1px solid #eee;box-shadow:0 2px 10px rgba(0,0,0,.06);padding:10px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;position:relative;z-index:9999}
+.pct-logo{font-size:22px;font-weight:800;color:#ab183d;text-decoration:none;white-space:nowrap}
+.pct-nav{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.pct-nav a{color:#374151;text-decoration:none;font-weight:500;font-size:15px}
+.pct-nav a:hover{color:#ab183d}
+.pct-menu-btn{display:none;background:none;border:0;font-size:26px;color:#ab183d;cursor:pointer;line-height:1}
+.pct-footer{background:#111827;color:#fff;padding:40px 20px 24px;margin-top:48px}
+.pct-footer-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:26px}
+.pct-footer h3{font-size:20px;font-weight:800;margin:0 0 12px;color:#fff}
+.pct-footer h4{font-size:16px;font-weight:600;margin:0 0 12px;color:#fff}
+.pct-footer p{color:#9ca3af;font-size:14px;line-height:1.6;margin:0}
+.pct-footer a{color:#9ca3af;text-decoration:none;display:block;margin-bottom:8px;font-size:14px}
+.pct-footer a:hover{color:#fff}
+.pct-copy{max-width:1100px;margin:26px auto 0;border-top:1px solid #1f2937;padding-top:18px;text-align:center;color:#9ca3af;font-size:13px}
+.pct-ad{margin:18px auto;text-align:center;max-width:1100px;min-height:50px;overflow:hidden}
+@media(max-width:768px){.pct-menu-btn{display:block}.pct-nav{display:none;width:100%;flex-direction:column;align-items:flex-start;gap:12px;padding-top:10px}.pct-nav.open{display:flex}}
+</style>
+
+<header class="pct-header">
+  <a href="/" class="pct-logo">Pro CSC Tools</a>
+  <button class="pct-menu-btn" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu">&#9776;</button>
+  <nav class="pct-nav">
+    <a href="/">Home</a>
+    <a href="/csc-billing-software">Csc Billing</a>
+    <a href="/csc-manager">Csc Work</a>
+    <a href="/#tools">Tools</a>
+    <a href="/blog">Blog</a>
+    <a href="/about">About Us</a>
+    <a href="/contact">Contact</a>
+  </nav>
+</header>
+<div class="pct-ad"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6791318178265120" data-ad-slot="7017392570" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+<!-- PCT-CHROME-END -->
+
+
+    <!-- Navigation Bar with Breadcrumbs -->
+    <nav class="bg-white shadow-sm sticky top-0 z-40" aria-label="Breadcrumb">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <ol class="flex items-center space-x-2 text-sm">
+                    <li>
+                        <a href="/" class="text-gray-600 hover:text-cyan-600 transition flex items-center">
+                            <i class="fas fa-home mr-1"></i> Home
+                        </a>
+                    </li>
+
+                    <li class="text-gray-400">/</li>
+                    <li class="text-cyan-600 font-semibold" aria-current="page">Photo Signature Joiner</li>
+                </ol>
+
+                <!-- Share Buttons -->
+                <div class="flex items-center space-x-2">
+                    <button onclick="shareOnWhatsApp()" class="text-green-600 hover:text-green-700 transition" title="Share on WhatsApp">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                    </button>
+                    <button onclick="shareOnFacebook()" class="text-blue-600 hover:text-blue-700 transition" title="Share on Facebook">
+                        <i class="fab fa-facebook text-xl"></i>
+                    </button>
+                    <button onclick="shareOnTwitter()" class="text-sky-500 hover:text-sky-600 transition" title="Share on Twitter">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container mx-auto px-4 py-6 max-w-6xl">
+
+        <!-- Header Section -->
+        <div class="text-center mb-8">
+            <h1 class="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600 mb-4">
+                Photo Signature Joiner with Border
+            </h1>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                Join photo and signature with <span class="font-bold text-cyan-600">customizable border</span> and
+                <span class="font-bold text-cyan-600">adjustable signature box</span>. Perfect for exam forms and applications.
+            </p>
+
+            <!-- Stats Counter -->
+            <div class="flex flex-wrap justify-center gap-4 sm:gap-8 mt-4 text-sm text-gray-500">
+                <div class="flex items-center">
+                    <i class="fas fa-images text-cyan-500 mr-2"></i>
+                    <span>1,50,000+ Images Created</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-star text-yellow-500 mr-2"></i>
+                    <span>4.9/5 Rating</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-paint-brush text-cyan-500 mr-2"></i>
+                    <span>Custom Border Option</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Tool Card -->
+        <div class="bg-white rounded-2xl shadow-xl border-2 border-cyan-400/30 overflow-hidden">
+
+            <!-- Tool Header -->
+            <div class="bg-gradient-to-r from-cyan-500 to-blue-500 px-6 py-4">
+                <h2 class="text-white text-xl font-semibold flex items-center">
+                    <i class="fas fa-magic mr-3"></i> Upload Images - Customize Border & Signature - Generate
+                </h2>
+            </div>
+
+            <div class="p-4 sm:p-6 md:p-8">
+
+                <!-- Two Column Layout for Uploads -->
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+
+                    <!-- Photo Upload Card -->
+                    <div class="border rounded-xl p-4 bg-gray-50">
+                        <h3 class="text-lg font-semibold mb-3 flex items-center">
+                            <i class="fas fa-camera text-cyan-600 mr-2"></i> Photo
+                            <span class="ml-2 text-xs bg-red-100 text-red-600 px-2 py-1 rounded">Required</span>
+                        </h3>
+
+                        <div id="photoUploadArea" class="upload-area rounded-lg p-6 text-center" onclick="document.getElementById('photoInput').click()">
+                            <i class="fas fa-cloud-upload-alt text-4xl text-cyan-500 mb-3"></i>
+                            <p class="text-gray-600 mb-1">Click or drag to upload photo</p>
+                            <p class="text-xs text-gray-400">JPG, PNG, JPEG (Max 5MB)</p>
+                        </div>
+
+                        <input type="file" id="photoInput" accept="image/*" class="hidden">
+
+                        <!-- Photo File Info -->
+                        <div id="photoInfo" class="mt-3 hidden">
+                            <div class="flex items-center justify-between bg-white p-2 rounded-lg border">
+                                <div class="flex items-center truncate">
+                                    <i class="fas fa-image text-cyan-600 mr-2"></i>
+                                    <span id="photoFileName" class="text-sm text-gray-600 truncate max-w-[150px]"></span>
+                                </div>
+                                <div class="flex gap-2">
+                                    <button id="cropPhotoBtn" class="text-cyan-600 hover:text-cyan-800 text-sm font-medium">
+                                        <i class="fas fa-crop mr-1"></i>Crop
+                                    </button>
+                                    <button onclick="removePhoto()" class="text-red-500 hover:text-red-700 text-sm font-medium">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Photo Preview -->
+                        <div id="photoPreview" class="mt-4 hidden">
+                            <div class="relative">
+                                <img id="photoPreviewImg" class="w-full h-48 object-contain border rounded-lg bg-white">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Signature Upload Card -->
+                    <div class="border rounded-xl p-4 bg-gray-50">
+                        <h3 class="text-lg font-semibold mb-3 flex items-center">
+                            <i class="fas fa-pen text-blue-600 mr-2"></i> Signature
+                            <span class="ml-2 text-xs bg-red-100 text-red-600 px-2 py-1 rounded">Required</span>
+                        </h3>
+
+                        <div id="signatureUploadArea" class="upload-area rounded-lg p-6 text-center" onclick="document.getElementById('signatureInput').click()">
+                            <i class="fas fa-cloud-upload-alt text-4xl text-blue-500 mb-3"></i>
+                            <p class="text-gray-600 mb-1">Click or drag to upload signature</p>
+                            <p class="text-xs text-gray-400">JPG, PNG, JPEG (Max 5MB)</p>
+                        </div>
+
+                        <input type="file" id="signatureInput" accept="image/*" class="hidden">
+
+                        <!-- Signature File Info -->
+                        <div id="signatureInfo" class="mt-3 hidden">
+                            <div class="flex items-center justify-between bg-white p-2 rounded-lg border">
+                                <div class="flex items-center truncate">
+                                    <i class="fas fa-signature text-blue-600 mr-2"></i>
+                                    <span id="signatureFileName" class="text-sm text-gray-600 truncate max-w-[150px]"></span>
+                                </div>
+                                <div class="flex gap-2">
+                                    <button id="cropSignatureBtn" class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                                        <i class="fas fa-crop mr-1"></i>Crop
+                                    </button>
+                                    <button onclick="removeSignature()" class="text-red-500 hover:text-red-700 text-sm font-medium">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Signature Preview -->
+                        <div id="signaturePreview" class="mt-4 hidden">
+                            <div class="relative">
+                                <img id="signaturePreviewImg" class="w-full h-48 object-contain border rounded-lg bg-white">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Customization Section -->
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+
+                    <!-- Border Customization -->
+                    <div class="border rounded-xl p-4 bg-gray-50">
+                        <h3 class="text-lg font-semibold mb-4 flex items-center">
+                            <i class="fas fa-border-all text-cyan-600 mr-2"></i> Border Customization
+                        </h3>
+
+                        <!-- Border Style -->
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Border Style</label>
+                            <div class="grid grid-cols-4 gap-2">
+                                <div id="borderNone" class="border-option p-2 text-center border rounded-lg bg-white" onclick="selectBorderStyle('none')">
+                                    <div class="h-6 bg-gray-200 rounded"></div>
+                                    <span class="text-xs mt-1 block">None</span>
+                                </div>
+                                <div id="borderSolid" class="border-option p-2 text-center border rounded-lg bg-white selected" onclick="selectBorderStyle('solid')">
+                                    <div class="h-6 bg-cyan-600"></div>
+                                    <span class="text-xs mt-1 block">Solid</span>
+                                </div>
+                                <div id="borderDashed" class="border-option p-2 text-center border rounded-lg bg-white" onclick="selectBorderStyle('dashed')">
+                                    <div class="h-6 bg-cyan-600" style="background: repeating-linear-gradient(90deg, #0891b2, #0891b2 5px, transparent 5px, transparent 10px);"></div>
+                                    <span class="text-xs mt-1 block">Dashed</span>
+                                </div>
+                                <div id="borderDotted" class="border-option p-2 text-center border rounded-lg bg-white" onclick="selectBorderStyle('dotted')">
+                                    <div class="h-6" style="background: repeating-linear-gradient(90deg, #0891b2, #0891b2 2px, transparent 2px, transparent 6px);"></div>
+                                    <span class="text-xs mt-1 block">Dotted</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Border Width -->
+                        <div class="mb-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <label class="block text-sm font-medium text-gray-700">Border Width</label>
+                                <span id="borderWidthValue" class="text-sm font-semibold text-cyan-600">3px</span>
+                            </div>
+                            <input type="range" id="borderWidth" min="1" max="10" value="3" class="w-full" oninput="updateBorderPreview()">
+                        </div>
+
+                        <!-- Border Color -->
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Border Color</label>
+                            <div class="flex items-center gap-3">
+                                <div class="color-picker-wrapper">
+                                    <div id="borderColorDisplay" class="color-picker-display" style="background-color: #0891b2;"></div>
+                                    <input type="color" id="borderColor" value="#0891b2" onchange="updateBorderPreview()">
+                                </div>
+                                <span class="text-sm text-gray-600">Click to change color</span>
+                            </div>
+                        </div>
+
+                        <!-- Border Radius -->
+                        <div class="mb-2">
+                            <div class="flex justify-between items-center mb-2">
+                                <label class="block text-sm font-medium text-gray-700">Border Radius (Rounded Corners)</label>
+                                <span id="borderRadiusValue" class="text-sm font-semibold text-cyan-600">0px</span>
+                            </div>
+                            <input type="range" id="borderRadius" min="0" max="30" value="0" class="w-full" oninput="updateBorderPreview()">
+                        </div>
+                    </div>
+
+                    <!-- Signature Box Adjustment -->
+                    <div class="border rounded-xl p-4 bg-gray-50">
+                        <h3 class="text-lg font-semibold mb-4 flex items-center">
+                            <i class="fas fa-arrows-alt-v text-blue-600 mr-2"></i> Signature Box Size Adjustment
+                        </h3>
+
+                        <p class="text-sm text-gray-600 mb-4">Adjust the size of signature area (0% to 50% of total height)</p>
+
+                        <!-- Signature Height Slider -->
+                        <div class="mb-6">
+                            <div class="flex justify-between items-center mb-2">
+                                <label class="block text-sm font-medium text-gray-700">Signature Box Height</label>
+                                <span id="signatureHeightValue" class="text-sm font-semibold text-blue-600">40%</span>
+                            </div>
+                            <input type="range" id="signatureHeight" min="20" max="50" value="40" class="w-full" oninput="updateSignatureHeight()">
+                            <div class="flex justify-between text-xs text-gray-500 mt-1">
+                                <span>Small (20%)</span>
+                                <span>Medium (35%)</span>
+                                <span>Large (50%)</span>
+                            </div>
+                        </div>
+
+                        <!-- Visual Guide -->
+                        <div class="bg-white p-3 rounded-lg border">
+                            <p class="text-xs text-gray-500 mb-2 flex items-center">
+                                <i class="fas fa-info-circle text-blue-500 mr-1"></i> Live Preview: Adjust and see changes instantly
+                            </p>
+                            <div class="flex h-20 border rounded overflow-hidden">
+                                <div class="w-1/2 bg-gradient-to-r from-cyan-100 to-cyan-200 flex items-center justify-center text-xs text-cyan-700">
+                                    Photo Area
+                                </div>
+                                <div id="signatureGuide" class="w-1/2 bg-gradient-to-r from-blue-100 to-blue-200 flex items-center justify-center text-xs text-blue-700" style="height: 40%; align-self: flex-end;">
+                                    Signature
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Size Selection with Search -->
+                <div class="mb-8">
+                    <label class="block text-gray-700 font-medium mb-2 flex items-center">
+                        <i class="fas fa-ruler-combined text-cyan-600 mr-2"></i>
+                        Select Size <span class="ml-2 text-xs bg-red-100 text-red-600 px-2 py-1 rounded">Required</span>
+                    </label>
+
+                    <div class="relative">
+                        <input type="text" id="sizeSearch" placeholder="Search size (e.g., 295x360, Bank, UPSC)" class="w-full border rounded-lg px-4 py-3 pl-10 focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                        <i class="fas fa-search absolute left-3 top-3.5 text-gray-400"></i>
+                    </div>
+
+                    <select id="sizeSelect" size="5" class="w-full border rounded-lg mt-2 focus:outline-none focus:ring-2 focus:ring-cyan-500 overflow-y-auto">
+                        <option value="295x360">📸 Standard (295x360) - Most Common</option>
+                        <option value="413x531">📄 DSSSB Photo (413x531)</option>
+                        <option value="827x1063">✍️ DSSSB Signature (827x1063)</option>
+                        <option value="315x405">👍 DSSSB Thumb (315x405)</option>
+                        <option value="200x230">🏦 Bank Photo (200x230)</option>
+                        <option value="450x230">🏦 Bank Signature (450x230)</option>
+                        <option value="450x450">📋 UPSC Photo (450x450)</option>
+                        <option value="500x350">📋 UPSC Signature (500x350)</option>
+                        <option value="200x200">📝 UPSSSC OTR Photo (200x200)</option>
+                        <option value="220x150">📝 UPSSSC OTR Signature (220x150)</option>
+                        <option value="800x700">📜 MPPEB Marksheet (800x700)</option>
+                        <option value="590x826">🖼️ 8x12 Photo</option>
+                        <option value="961x1417">🖼️ 13x19 Photo</option>
+                        <option value="1417x961">🖼️ 19x13 Photo</option>
+                    </select>
+
+                    <p id="sizeError" class="text-red-500 text-sm mt-1 hidden">Please select a size</p>
+                </div>
+
+                <!-- Generate Button -->
+                <div class="text-center mb-6">
+                    <button id="generateBtn" class="btn-primary text-white px-12 py-4 rounded-xl text-lg font-medium shadow-lg inline-flex items-center">
+                        <i class="fas fa-magic mr-2"></i>
+                        Generate Combined Image
+                    </button>
+                </div>
+
+                <!-- Progress Bar -->
+                <div id="progressContainer" class="hidden mb-6">
+                    <div class="flex justify-between text-sm mb-1">
+                        <span>Processing</span>
+                        <span id="progressPercentage">0%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div id="progressBar" class="progress-bar rounded-full h-2.5" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <!-- Result Preview -->
+                <div id="resultSection" class="mb-6 hidden">
+                    <h3 class="text-lg font-semibold mb-3 flex items-center">
+                        <i class="fas fa-eye text-green-600 mr-2"></i> Preview - Combined Image with Border
+                    </h3>
+                    <div class="preview-container border rounded-xl p-4 bg-gray-50">
+                        <div class="flex justify-center">
+                            <canvas id="resultCanvas" class="max-w-full h-auto border-2 border-gray-300 rounded-lg shadow-lg"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Download Section -->
+                <div id="downloadSection" class="text-center hidden">
+                    <button id="downloadBtn" class="bg-green-600 text-white px-12 py-4 rounded-xl text-lg font-medium shadow-lg hover:bg-green-700 transition inline-flex items-center">
+                        <i class="fas fa-download mr-2"></i>
+                        Download Combined Image
+                    </button>
+
+                    <div class="mt-4 flex items-center justify-center text-green-600">
+                        <i class="fas fa-check-circle mr-2"></i>
+                        <span>Your image with border is ready!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- How to Use Section -->
+        <div class="mt-12 bg-white p-6 sm:p-8 rounded-xl shadow-lg">
+            <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center">
+                <i class="fas fa-question-circle text-cyan-600 mr-3"></i> How to Join Photo and Signature?
+            </h2>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="text-center p-4">
+                    <div class="w-12 h-12 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="text-xl font-bold text-cyan-600">1</span>
+                    </div>
+                    <h3 class="font-semibold mb-2">Upload Photo</h3>
+                    <p class="text-gray-600 text-sm">Upload your passport size photo</p>
+                </div>
+                <div class="text-center p-4">
+                    <div class="w-12 h-12 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="text-xl font-bold text-cyan-600">2</span>
+                    </div>
+                    <h3 class="font-semibold mb-2">Upload Signature</h3>
+                    <p class="text-gray-600 text-sm">Upload your signature image</p>
+                </div>
+                <div class="text-center p-4">
+                    <div class="w-12 h-12 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="text-xl font-bold text-cyan-600">3</span>
+                    </div>
+                    <h3 class="font-semibold mb-2">Select Size</h3>
+                    <p class="text-gray-600 text-sm">Choose required size for your application</p>
+                </div>
+                <div class="text-center p-4">
+                    <div class="w-12 h-12 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="text-xl font-bold text-cyan-600">4</span>
+                    </div>
+                    <h3 class="font-semibold mb-2">Download</h3>
+                    <p class="text-gray-600 text-sm">Generate and download combined image</p>
+                </div>
+            </div>
+        </div>
+        <!-- Live Preview Guide -->
+        <div class="mt-8 bg-white p-6 rounded-xl shadow-lg">
+            <h2 class="text-xl font-bold mb-4 text-gray-800 flex items-center">
+                <i class="fas fa-eye text-cyan-600 mr-3"></i> Border & Signature Size Preview Guide
+            </h2>
+
+            <div class="grid sm:grid-cols-3 gap-4">
+                <div class="text-center p-3 border rounded-lg">
+                    <div class="w-16 h-16 mx-auto mb-2 border-4 border-cyan-600 border-solid rounded-lg bg-gray-100"></div>
+                    <p class="font-medium">Solid Border</p>
+                    <p class="text-xs text-gray-500">Clean and professional</p>
+                </div>
+                <div class="text-center p-3 border rounded-lg">
+                    <div class="w-16 h-16 mx-auto mb-2 border-4 border-cyan-600 border-dashed rounded-lg bg-gray-100"></div>
+                    <p class="font-medium">Dashed Border</p>
+                    <p class="text-xs text-gray-500">Modern look</p>
+                </div>
+                <div class="text-center p-3 border rounded-lg">
+                    <div class="w-16 h-16 mx-auto mb-2 border-4 border-cyan-600 border-dotted rounded-lg bg-gray-100"></div>
+                    <p class="font-medium">Dotted Border</p>
+                    <p class="text-xs text-gray-500">Subtle style</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- How to Use Section -->
+        <div class="mt-8 bg-white p-6 sm:p-8 rounded-xl shadow-lg">
+            <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center">
+                <i class="fas fa-question-circle text-cyan-600 mr-3"></i> How to Add Border and Adjust Signature Size?
+            </h2>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="text-center p-4">
+                    <div class="w-12 h-12 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="text-xl font-bold text-cyan-600">1</span>
+                    </div>
+                    <h3 class="font-semibold mb-2">Upload Images</h3>
+                    <p class="text-gray-600 text-sm">Upload photo and signature</p>
+                </div>
+                <div class="text-center p-4">
+                    <div class="w-12 h-12 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="text-xl font-bold text-cyan-600">2</span>
+                    </div>
+                    <h3 class="font-semibold mb-2">Choose Border</h3>
+                    <p class="text-gray-600 text-sm">Select style, width, and color</p>
+                </div>
+                <div class="text-center p-4">
+                    <div class="w-12 h-12 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="text-xl font-bold text-cyan-600">3</span>
+                    </div>
+                    <h3 class="font-semibold mb-2">Adjust Signature</h3>
+                    <p class="text-gray-600 text-sm">Set signature box size</p>
+                </div>
+                <div class="text-center p-4">
+                    <div class="w-12 h-12 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="text-xl font-bold text-cyan-600">4</span>
+                    </div>
+                    <h3 class="font-semibold mb-2">Download</h3>
+                    <p class="text-gray-600 text-sm">Generate and save image</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Crop Modal -->
+    <div id="cropModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50 p-4">
+        <div class="bg-white rounded-2xl shadow-xl max-w-4xl w-full max-h-[90vh] overflow-auto">
+            <div class="p-4 sm:p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl sm:text-2xl font-bold text-gray-800">Crop Image</h2>
+                    <button onclick="closeCropModal()" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                </div>
+
+                <div class="mb-4 bg-gray-100 rounded-lg p-2">
+                    <img id="cropImage" class="max-w-full mx-auto">
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-sm font-medium mb-2 flex items-center">
+                        <i class="fas fa-search-plus text-cyan-600 mr-2"></i>
+                        Zoom
+                    </label>
+                    <input type="range" id="zoomSlider" min="0" max="2" step="0.01" value="0" class="w-full">
+                </div>
+
+                <div class="flex gap-3 justify-end">
+                    <button id="cropBtn" class="bg-cyan-600 text-white px-8 py-3 rounded-lg hover:bg-cyan-700 transition font-medium">
+                        <i class="fas fa-check mr-2"></i>Apply Crop
+                    </button>
+                    <button onclick="closeCropModal()" class="bg-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:bg-gray-400 transition font-medium">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toastContainer" class="fixed bottom-5 right-5 z-50 space-y-2"></div>
+
+    <!-- Footer -->
+    <footer class="bg-white mt-12 py-6 border-t">
+        <div class="container mx-auto px-4 text-center text-gray-600">
+            <p>&copy; 2026 Pro CSC Tools. All rights reserved. |
+                <a href="/privacy.html" class="text-cyan-600 hover:underline">Privacy Policy</a> |
+                <a href="/terms.html" class="text-cyan-600 hover:underline">Terms of Use</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // State Management
+        let photoFile = null;
+        let signatureFile = null;
+        let cropper = null;
+        let currentCropType = null;
+
+        // Border Settings
+        let borderStyle = 'solid';
+        let borderWidth = 3;
+        let borderColor = '#0891b2';
+        let borderRadius = 0;
+
+        // Signature Settings
+        let signatureHeightPercent = 40;
+
+        // DOM Elements
+        const photoInput = document.getElementById('photoInput');
+        const signatureInput = document.getElementById('signatureInput');
+        const photoFileName = document.getElementById('photoFileName');
+        const signatureFileName = document.getElementById('signatureFileName');
+        const photoInfo = document.getElementById('photoInfo');
+        const signatureInfo = document.getElementById('signatureInfo');
+        const photoPreview = document.getElementById('photoPreview');
+        const signaturePreview = document.getElementById('signaturePreview');
+        const photoPreviewImg = document.getElementById('photoPreviewImg');
+        const signaturePreviewImg = document.getElementById('signaturePreviewImg');
+        const cropPhotoBtn = document.getElementById('cropPhotoBtn');
+        const cropSignatureBtn = document.getElementById('cropSignatureBtn');
+        const sizeSelect = document.getElementById('sizeSelect');
+        const sizeSearch = document.getElementById('sizeSearch');
+        const generateBtn = document.getElementById('generateBtn');
+        const resultSection = document.getElementById('resultSection');
+        const resultCanvas = document.getElementById('resultCanvas');
+        const downloadSection = document.getElementById('downloadSection');
+        const downloadBtn = document.getElementById('downloadBtn');
+        const progressContainer = document.getElementById('progressContainer');
+        const progressBar = document.getElementById('progressBar');
+        const progressPercentage = document.getElementById('progressPercentage');
+        const cropModal = document.getElementById('cropModal');
+        const cropImage = document.getElementById('cropImage');
+        const cropBtn = document.getElementById('cropBtn');
+        const zoomSlider = document.getElementById('zoomSlider');
+        const sizeError = document.getElementById('sizeError');
+        const photoUploadArea = document.getElementById('photoUploadArea');
+        const signatureUploadArea = document.getElementById('signatureUploadArea');
+
+        // Border Elements
+        const borderWidthSlider = document.getElementById('borderWidth');
+        const borderWidthValue = document.getElementById('borderWidthValue');
+        const borderColorInput = document.getElementById('borderColor');
+        const borderColorDisplay = document.getElementById('borderColorDisplay');
+        const borderRadiusSlider = document.getElementById('borderRadius');
+        const borderRadiusValue = document.getElementById('borderRadiusValue');
+
+        // Signature Elements
+        const signatureHeightSlider = document.getElementById('signatureHeight');
+        const signatureHeightValue = document.getElementById('signatureHeightValue');
+        const signatureGuide = document.getElementById('signatureGuide');
+
+        // Event Listeners
+        photoInput.addEventListener('change', handlePhotoUpload);
+        signatureInput.addEventListener('change', handleSignatureUpload);
+        cropPhotoBtn.addEventListener('click', () => openCropModal('photo'));
+        cropSignatureBtn.addEventListener('click', () => openCropModal('signature'));
+        generateBtn.addEventListener('click', generateImage);
+        downloadBtn.addEventListener('click', downloadImage);
+        cropBtn.addEventListener('click', applyCrop);
+        zoomSlider.addEventListener('input', handleZoom);
+        sizeSearch.addEventListener('input', filterSizes);
+
+        // Drag and Drop
+        photoUploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            photoUploadArea.classList.add('dragover');
+        });
+
+        photoUploadArea.addEventListener('dragleave', () => {
+            photoUploadArea.classList.remove('dragover');
+        });
+
+        photoUploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            photoUploadArea.classList.remove('dragover');
+            const file = e.dataTransfer.files[0];
+            if (file && file.type.startsWith('image/')) {
+                handleFile(file, 'photo');
+            }
+        });
+
+        signatureUploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            signatureUploadArea.classList.add('dragover');
+        });
+
+        signatureUploadArea.addEventListener('dragleave', () => {
+            signatureUploadArea.classList.remove('dragover');
+        });
+
+        signatureUploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            signatureUploadArea.classList.remove('dragover');
+            const file = e.dataTransfer.files[0];
+            if (file && file.type.startsWith('image/')) {
+                handleFile(file, 'signature');
+            }
+        });
+
+        // Border Style Selection
+        window.selectBorderStyle = function(style) {
+            borderStyle = style;
+
+            // Update UI
+            document.querySelectorAll('.border-option').forEach(opt => {
+                opt.classList.remove('selected');
+            });
+
+            if (style === 'none') document.getElementById('borderNone').classList.add('selected');
+            if (style === 'solid') document.getElementById('borderSolid').classList.add('selected');
+            if (style === 'dashed') document.getElementById('borderDashed').classList.add('selected');
+            if (style === 'dotted') document.getElementById('borderDotted').classList.add('selected');
+
+            // Enable/disable border controls
+            const controls = [borderWidthSlider, borderColorInput, borderRadiusSlider];
+            if (style === 'none') {
+                controls.forEach(c => c.disabled = true);
+            } else {
+                controls.forEach(c => c.disabled = false);
+            }
+        };
+
+        // Update Border Preview
+        window.updateBorderPreview = function() {
+            borderWidth = borderWidthSlider.value;
+            borderWidthValue.textContent = borderWidth + 'px';
+
+            borderColor = borderColorInput.value;
+            borderColorDisplay.style.backgroundColor = borderColor;
+
+            borderRadius = borderRadiusSlider.value;
+            borderRadiusValue.textContent = borderRadius + 'px';
+        };
+
+        // Update Signature Height
+        window.updateSignatureHeight = function() {
+            signatureHeightPercent = signatureHeightSlider.value;
+            signatureHeightValue.textContent = signatureHeightPercent + '%';
+
+            // Update visual guide
+            signatureGuide.style.height = signatureHeightPercent + '%';
+        };
+
+        // Handle Photo Upload
+        function handlePhotoUpload(e) {
+            const file = e.target.files[0];
+            if (file) {
+                handleFile(file, 'photo');
+            }
+        }
+
+        // Handle Signature Upload
+        function handleSignatureUpload(e) {
+            const file = e.target.files[0];
+            if (file) {
+                handleFile(file, 'signature');
+            }
+        }
+
+        // Handle File
+        function handleFile(file, type) {
+            if (!file.type.startsWith('image/')) {
+                showToast('Please upload an image file', 'error');
+                return;
+            }
+
+            if (file.size > 5 * 1024 * 1024) {
+                showToast('File size should be less than 5MB', 'error');
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = (event) => {
+                if (type === 'photo') {
+                    photoFile = event.target.result;
+                    photoFileName.textContent = file.name;
+                    photoInfo.classList.remove('hidden');
+                    photoPreview.classList.remove('hidden');
+                    photoPreviewImg.src = photoFile;
+                    cropPhotoBtn.classList.remove('hidden');
+                    photoUploadArea.classList.add('hidden');
+                } else {
+                    signatureFile = event.target.result;
+                    signatureFileName.textContent = file.name;
+                    signatureInfo.classList.remove('hidden');
+                    signaturePreview.classList.remove('hidden');
+                    signaturePreviewImg.src = signatureFile;
+                    cropSignatureBtn.classList.remove('hidden');
+                    signatureUploadArea.classList.add('hidden');
+                }
+
+                showToast(`${type === 'photo' ? 'Photo' : 'Signature'} uploaded successfully`, 'success');
+            };
+            reader.readAsDataURL(file);
+        }
+
+        // Remove Photo
+        window.removePhoto = function() {
+            photoFile = null;
+            photoInfo.classList.add('hidden');
+            photoPreview.classList.add('hidden');
+            cropPhotoBtn.classList.add('hidden');
+            photoUploadArea.classList.remove('hidden');
+            photoInput.value = '';
+            showToast('Photo removed', 'info');
+        };
+
+        // Remove Signature
+        window.removeSignature = function() {
+            signatureFile = null;
+            signatureInfo.classList.add('hidden');
+            signaturePreview.classList.add('hidden');
+            cropSignatureBtn.classList.add('hidden');
+            signatureUploadArea.classList.remove('hidden');
+            signatureInput.value = '';
+            showToast('Signature removed', 'info');
+        };
+
+        // Filter Sizes
+        function filterSizes() {
+            const searchTerm = sizeSearch.value.toLowerCase();
+            const options = sizeSelect.options;
+
+            for (let option of options) {
+                const text = option.text.toLowerCase();
+                if (text.includes(searchTerm) || searchTerm === '') {
+                    option.style.display = '';
+                } else {
+                    option.style.display = 'none';
+                }
+            }
+        }
+
+        // Open Crop Modal
+        function openCropModal(type) {
+            currentCropType = type;
+            const imageData = type === 'photo' ? photoFile : signatureFile;
+
+            if (!imageData) return;
+
+            cropImage.src = imageData;
+            cropModal.classList.remove('hidden');
+            cropModal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+
+            setTimeout(() => {
+                if (cropper) {
+                    cropper.destroy();
+                }
+                cropper = new Cropper(cropImage, {
+                    viewMode: 1,
+                    dragMode: 'move',
+                    aspectRatio: NaN,
+                    autoCropArea: 1,
+                    restore: false,
+                    guides: true,
+                    center: true,
+                    highlight: false,
+                    cropBoxMovable: true,
+                    cropBoxResizable: true,
+                    toggleDragModeOnDblclick: false,
+                });
+                zoomSlider.value = 0;
+            }, 100);
+        }
+
+        // Close Crop Modal
+        window.closeCropModal = function() {
+            cropModal.classList.add('hidden');
+            cropModal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+            if (cropper) {
+                cropper.destroy();
+                cropper = null;
+            }
+        };
+
+        // Handle Zoom
+        function handleZoom(e) {
+            if (cropper) {
+                cropper.zoomTo(parseFloat(e.target.value));
+            }
+        }
+
+        // Apply Crop
+        function applyCrop() {
+            if (!cropper) return;
+
+            const canvas = cropper.getCroppedCanvas({
+                maxWidth: 1000,
+                maxHeight: 1000,
+                fillColor: '#fff'
+            });
+
+            const croppedImage = canvas.toDataURL('image/png');
+
+            if (currentCropType === 'photo') {
+                photoFile = croppedImage;
+                photoPreviewImg.src = croppedImage;
+            } else {
+                signatureFile = croppedImage;
+                signaturePreviewImg.src = croppedImage;
+            }
+
+            closeCropModal();
+            showToast('Image cropped successfully', 'success');
+        }
+
+        // Generate Image with Border and Custom Signature Size
+        function generateImage() {
+            if (!photoFile || !signatureFile) {
+                showToast('Please upload both photo and signature', 'error');
+                return;
+            }
+
+            const selectedSize = sizeSelect.value;
+            if (!selectedSize) {
+                sizeError.classList.remove('hidden');
+                showToast('Please select a size', 'error');
+                return;
+            }
+            sizeError.classList.add('hidden');
+
+            // Show progress
+            progressContainer.classList.remove('hidden');
+            progressBar.style.width = '0%';
+            progressPercentage.textContent = '0%';
+
+            const [width, height] = selectedSize.split('x').map(Number);
+
+            const photoImg = new Image();
+            const signatureImg = new Image();
+            let loadedImages = 0;
+
+            function checkAllLoaded() {
+                loadedImages++;
+                if (loadedImages === 2) {
+                    createCombinedImageWithBorder(photoImg, signatureImg, width, height);
+                }
+            }
+
+            photoImg.onload = checkAllLoaded;
+            signatureImg.onload = checkAllLoaded;
+
+            photoImg.src = photoFile;
+            signatureImg.src = signatureFile;
+
+            // Progress animation
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += 10;
+                if (progress <= 90) {
+                    progressBar.style.width = progress + '%';
+                    progressPercentage.textContent = progress + '%';
+                }
+            }, 100);
+        }
+
+        // Create Combined Image with Border
+        function createCombinedImageWithBorder(photoImg, signatureImg, width, height) {
+            // Calculate signature height based on percentage
+            const signatureHeight = Math.floor(height * (signatureHeightPercent / 100));
+            const photoHeight = height - signatureHeight;
+
+            // Set canvas size
+            resultCanvas.width = width;
+            resultCanvas.height = height;
+
+            const ctx = resultCanvas.getContext('2d');
+
+            // White background
+            ctx.fillStyle = 'white';
+            ctx.fillRect(0, 0, width, height);
+
+            // Draw photo (top portion)
+            ctx.drawImage(photoImg, 0, 0, width, photoHeight);
+
+            // Draw signature (bottom portion)
+            ctx.drawImage(signatureImg, 0, photoHeight, width, signatureHeight);
+
+            // Add border if not 'none'
+            if (borderStyle !== 'none') {
+                ctx.save();
+                ctx.strokeStyle = borderColor;
+                ctx.lineWidth = borderWidth;
+
+                // Set border style
+                if (borderStyle === 'dashed') {
+                    ctx.setLineDash([10, 5]);
+                } else if (borderStyle === 'dotted') {
+                    ctx.setLineDash([2, 4]);
+                }
+
+                // Draw border with rounded corners
+                if (borderRadius > 0) {
+                    ctx.beginPath();
+                    ctx.moveTo(borderRadius, 0);
+                    ctx.lineTo(width - borderRadius, 0);
+                    ctx.quadraticCurveTo(width, 0, width, borderRadius);
+                    ctx.lineTo(width, height - borderRadius);
+                    ctx.quadraticCurveTo(width, height, width - borderRadius, height);
+                    ctx.lineTo(borderRadius, height);
+                    ctx.quadraticCurveTo(0, height, 0, height - borderRadius);
+                    ctx.lineTo(0, borderRadius);
+                    ctx.quadraticCurveTo(0, 0, borderRadius, 0);
+                    ctx.closePath();
+                } else {
+                    ctx.strokeRect(0, 0, width, height);
+                }
+
+                ctx.stroke();
+                ctx.restore();
+            }
+
+            // Add a thin line between photo and signature
+            ctx.strokeStyle = '#cbd5e1';
+            ctx.lineWidth = 1;
+            ctx.setLineDash([]);
+            ctx.beginPath();
+            ctx.moveTo(0, photoHeight);
+            ctx.lineTo(width, photoHeight);
+            ctx.stroke();
+
+            // Hide progress
+            progressContainer.classList.add('hidden');
+
+            // Show result
+            resultSection.classList.remove('hidden');
+            downloadSection.classList.remove('hidden');
+
+            // Scroll to result
+            setTimeout(() => {
+                resultSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest'
+                });
+            }, 100);
+
+            showToast('Image with border generated successfully!', 'success');
+        }
+
+        // Download Image
+        function downloadImage() {
+            const link = document.createElement('a');
+            const timestamp = new Date().toISOString().slice(0, 10);
+            const borderText = borderStyle !== 'none' ? `-border-${borderWidth}px` : '';
+            link.download = `photo-signature${borderText}-${timestamp}.png`;
+            link.href = resultCanvas.toDataURL('image/png');
+            link.click();
+            showToast('Download started!', 'success');
+        }
+
+        // Show Toast
+        function showToast(message, type = 'info') {
+            const container = document.getElementById('toastContainer');
+            const toast = document.createElement('div');
+
+            const colors = {
+                success: 'bg-green-500',
+                error: 'bg-red-500',
+                info: 'bg-blue-500',
+                warning: 'bg-yellow-500'
+            };
+
+            const icons = {
+                success: 'fa-check-circle',
+                error: 'fa-exclamation-circle',
+                info: 'fa-info-circle',
+                warning: 'fa-exclamation-triangle'
+            };
+
+            toast.className = `toast-message ${colors[type]} text-white px-6 py-3 rounded-lg shadow-lg flex items-center`;
+            toast.innerHTML = `
+                <i class="fas ${icons[type]} mr-3"></i>
+                ${message}
+            `;
+
+            container.appendChild(toast);
+
+            setTimeout(() => {
+                toast.remove();
+            }, 3000);
+        }
+
+        // Share Functions
+        window.shareOnWhatsApp = function() {
+            const text = 'Check out this Photo Signature Joiner with Border - Customize your exam photos';
+            const url = window.location.href;
+            window.open(`https://wa.me/?text=${encodeURIComponent(text + ' ' + url)}`, '_blank');
+        };
+
+        window.shareOnFacebook = function() {
+            const url = window.location.href;
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank');
+        };
+
+        window.shareOnTwitter = function() {
+            const text = 'Free Photo Signature Joiner with Border and Adjustable Signature';
+            const url = window.location.href;
+            window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
+        };
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set default size
+            sizeSelect.value = '295x360';
+
+            // Initialize border
+            selectBorderStyle('solid');
+            updateBorderPreview();
+            updateSignatureHeight();
+        });
+    </script>
+
+<!-- PCT-FOOTER-START -->
+<div class="pct-ad"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6791318178265120" data-ad-slot="7017392570" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+<footer class="pct-footer">
+  <div class="pct-footer-grid">
+    <div>
+      <h3>Pro CSC Tools</h3>
+      <p>India's Most Trusted Platform for CSC VLEs &ndash; Government Document, ID Card, PDF &amp; Online Tools.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <a href="/">Home</a><a href="/#tools">Tools</a><a href="/about">About Us</a><a href="/contact">Contact</a>
+    </div>
+    <div>
+      <h4>Popular Tools</h4>
+      <a href="/resume-builder">Resume Maker</a><a href="/image-to-pdf">Image to PDF</a><a href="/image-resizer">Image Resizer</a><a href="/age-calculator">Age Calculator</a>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Service</a><a href="/disclaimer">Disclaimer</a><a href="/contact">Contact</a>
+    </div>
+  </div>
+  <div class="pct-copy">&copy; 2026 Pro CSC Tools. All rights reserved. Made with &#10084;&#65039; in India for All CSC VLEs.</div>
+</footer>
+<!-- PCT-FOOTER-END -->
+</body>
+
+</html>

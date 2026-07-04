@@ -1,0 +1,1606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Pro CSC Tools: AdSense + Verification -->
+    <meta name="google-adsense-account" content="ca-pub-6791318178265120">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6791318178265120" crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+
+    <!-- Primary Meta Tags - SEO Optimized -->
+    <title>Percentage Calculator - Free Online Percentage Calculator Tool | Pro CSC Tools</title>
+    <meta name="title" content="Percentage Calculator - Free Online Percentage Calculator Tool" />
+    <meta name="description" content="Free online percentage calculator for all your needs. Calculate percentages, percentage increase/decrease, percentage of a number, and more. Used by 50,000+ users daily." />
+    <meta name="keywords" content="percentage calculator, percent calculator, percentage increase calculator, percentage decrease calculator, find percentage, online calculator, free tool, math calculator, percentage formula" />
+    <meta name="author" content="Pro CSC Tools" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="revisit-after" content="1 day" />
+    <meta name="language" content="English" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://procsctools.in/percentage-cal">
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://procsctools.in/percentage-cal" />
+    <meta property="og:title" content="Free Online Percentage Calculator - Calculate Instantly" />
+    <meta property="og:description" content="Free percentage calculator with step-by-step solutions. Calculate percentages, increases, decreases, and more." />
+    <meta property="og:image" content="https://procsctools.in/images/percentage-calculator-preview.jpg" />
+    <meta property="og:site_name" content="Pro CSC Tools" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://procsctools.in/percentage-cal.html" />
+    <meta name="twitter:title" content="Percentage Calculator - Free Online Tool" />
+    <meta name="twitter:description" content="Calculate percentages instantly with our free online tool" />
+    <meta name="twitter:image" content="https://procsctools.in/images/percentage-calculator-preview.jpg" />
+
+    <!-- Schema Markup for Rich Snippets -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "Percentage Calculator",
+            "description": "Free online percentage calculator for all percentage calculations",
+            "applicationCategory": "Calculator",
+            "operatingSystem": "All",
+            "url": "https://procsctools.in/percentage-cal.html",
+            "provider": {
+                "@type": "Organization",
+                "name": "Pro CSC Tools",
+                "url": "https://procsctools.in"
+            },
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "INR"
+            },
+            "featureList": [
+                "Basic Percentage",
+                "Percentage Increase",
+                "Percentage Decrease",
+                "Find Percentage",
+                "Step-by-step Solution",
+                "Visual Charts"
+            ],
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "ratingCount": "25843"
+            }
+        }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [{
+                "@type": "Question",
+                "name": "How to calculate percentage of a number?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "To calculate X% of Y, multiply Y by X and divide by 100. For example, 20% of 150 = (20 × 150) ÷ 100 = 30."
+                }
+            }, {
+                "@type": "Question",
+                "name": "How to calculate percentage increase?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Percentage increase = [(New Value - Original Value) ÷ Original Value] × 100. For example, from 100 to 150 is a 50% increase."
+                }
+            }, {
+                "@type": "Question",
+                "name": "Is this percentage calculator free?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, it's completely free with no limits. Calculate unlimited percentages instantly."
+                }
+            }]
+        }
+    </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://procsctools.in"
+            }, {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Calculators",
+                "item": "https://procsctools.in/calculators"
+            }, {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Percentage Calculator",
+                "item": "https://procsctools.in/percentage-cal.html"
+            }]
+        }
+    </script>
+
+    <!-- Preconnect for faster loading -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <!-- Stylesheets with SRI -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .calculator-container {
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+        }
+
+        .input-group {
+            transition: all 0.2s ease;
+        }
+
+        .input-group:focus-within {
+            transform: translateY(-2px);
+        }
+
+        .input-field {
+            transition: all 0.3s ease;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 12px 16px;
+            width: 100%;
+        }
+
+        .input-field:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+            outline: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            font-weight: 600;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px -10px rgba(102, 126, 234, 0.6);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #4b5563 0%, #1f2937 100%);
+            transition: all 0.3s ease;
+            border-radius: 12px;
+            font-weight: 600;
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px -10px rgba(75, 85, 99, 0.5);
+        }
+
+        .result-card {
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+            border-left: 6px solid #10b981;
+            border-radius: 16px;
+            padding: 20px;
+        }
+
+        .explanation-card {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border-left: 6px solid #3b82f6;
+            border-radius: 16px;
+            padding: 20px;
+        }
+
+        .percentage-btn {
+            transition: all 0.3s ease;
+            border-radius: 12px;
+            padding: 12px 8px;
+            font-weight: 500;
+        }
+
+        .percentage-btn.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -5px rgba(102, 126, 234, 0.5);
+        }
+
+        .percentage-btn:not(.active):hover {
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+            transform: translateY(-1px);
+        }
+
+        .visual-bar {
+            height: 30px;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            background: #e5e7eb;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .bar-fill {
+            height: 100%;
+            transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .bar-fill.bg-indigo-500 {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+        }
+
+        .bar-fill.bg-blue-500 {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        }
+
+        .bar-fill.bg-green-500 {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        }
+
+        .bar-fill.bg-red-500 {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+        }
+
+        .formula-box {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border-left: 4px solid #3b82f6;
+            padding: 12px 16px;
+            border-radius: 12px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.2);
+        }
+
+        .toast-message {
+            animation: slideIn 0.3s ease, fadeOut 0.3s ease 2.7s;
+            border-radius: 12px;
+            padding: 12px 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        .progress-ring {
+            transition: stroke-dashoffset 0.5s ease;
+        }
+
+        .glow {
+            animation: glow 1s ease;
+        }
+
+        @keyframes glow {
+            0%,
+            100% {
+                box-shadow: 0 0 0 rgba(102, 126, 234, 0.4);
+            }
+            50% {
+                box-shadow: 0 0 30px rgba(102, 126, 234, 0.8);
+            }
+        }
+
+        .floating-action {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 50;
+        }
+
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            body {
+                background: white;
+            }
+            .calculator-container {
+                box-shadow: none;
+            }
+        }
+
+        .loading-spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex flex-col items-center p-4 pt-24">
+<!-- PCT-CHROME-START -->
+<style id="pct-chrome">
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+.pct-header,.pct-footer,.pct-ad{font-family:"Inter",Arial,sans-serif;box-sizing:border-box}
+.pct-header{background:#fff;border-bottom:1px solid #eee;box-shadow:0 2px 10px rgba(0,0,0,.06);padding:10px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;position:relative;z-index:9999}
+.pct-logo{font-size:22px;font-weight:800;color:#ab183d;text-decoration:none;white-space:nowrap}
+.pct-nav{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.pct-nav a{color:#374151;text-decoration:none;font-weight:500;font-size:15px}
+.pct-nav a:hover{color:#ab183d}
+.pct-menu-btn{display:none;background:none;border:0;font-size:26px;color:#ab183d;cursor:pointer;line-height:1}
+.pct-footer{background:#111827;color:#fff;padding:40px 20px 24px;margin-top:48px}
+.pct-footer-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:26px}
+.pct-footer h3{font-size:20px;font-weight:800;margin:0 0 12px;color:#fff}
+.pct-footer h4{font-size:16px;font-weight:600;margin:0 0 12px;color:#fff}
+.pct-footer p{color:#9ca3af;font-size:14px;line-height:1.6;margin:0}
+.pct-footer a{color:#9ca3af;text-decoration:none;display:block;margin-bottom:8px;font-size:14px}
+.pct-footer a:hover{color:#fff}
+.pct-copy{max-width:1100px;margin:26px auto 0;border-top:1px solid #1f2937;padding-top:18px;text-align:center;color:#9ca3af;font-size:13px}
+.pct-ad{margin:18px auto;text-align:center;max-width:1100px;min-height:50px;overflow:hidden}
+@media(max-width:768px){.pct-menu-btn{display:block}.pct-nav{display:none;width:100%;flex-direction:column;align-items:flex-start;gap:12px;padding-top:10px}.pct-nav.open{display:flex}}
+</style>
+
+<header class="pct-header">
+  <a href="/" class="pct-logo">Pro CSC Tools</a>
+  <button class="pct-menu-btn" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu">&#9776;</button>
+  <nav class="pct-nav">
+    <a href="/">Home</a>
+    <a href="/csc-billing-software">Csc Billing</a>
+    <a href="/csc-manager">Csc Work</a>
+    <a href="/#tools">Tools</a>
+    <a href="/blog">Blog</a>
+    <a href="/about">About Us</a>
+    <a href="/contact">Contact</a>
+  </nav>
+</header>
+<div class="pct-ad"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6791318178265120" data-ad-slot="7017392570" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+<!-- PCT-CHROME-END -->
+
+
+    <!-- Navigation with Breadcrumbs -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-lg no-print">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo and Breadcrumb -->
+                <div class="flex items-center space-x-4">
+                    <a href="/" class="flex items-center space-x-2 text-gray-700 hover:text-indigo-600 transition">
+                        <i class="fas fa-home text-xl"></i>
+                        <span class="font-medium">Home</span>
+                    </a>
+
+                    <i class="fas fa-chevron-right text-gray-400 text-sm"></i>
+                    <span class="text-indigo-600 font-semibold">Percentage Calculator</span>
+                </div>
+
+                <!-- Share Buttons -->
+                <div class="flex items-center space-x-3">
+                    <button onclick="shareOnWhatsApp()" class="w-10 h-10 bg-green-500 text-white rounded-full hover:bg-green-600 transition flex items-center justify-center" title="Share on WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </button>
+                    <button onclick="shareOnFacebook()" class="w-10 h-10 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition flex items-center justify-center" title="Share on Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </button>
+                    <button onclick="shareOnTwitter()" class="w-10 h-10 bg-sky-500 text-white rounded-full hover:bg-sky-600 transition flex items-center justify-center" title="Share on Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </button>
+                    <button onclick="copyToClipboard()" class="w-10 h-10 bg-gray-600 text-white rounded-full hover:bg-gray-700 transition flex items-center justify-center" title="Copy Link">
+                        <i class="fas fa-link"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="calculator-container w-full max-w-7xl mx-auto">
+
+        <!-- Header with Stats -->
+        <div class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 p-8 text-white">
+            <div class="flex items-center justify-between flex-wrap gap-4">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-3">Percentage Calculator</h1>
+                    <p class="text-indigo-100 text-lg max-w-2xl">
+                        Calculate percentages instantly with step-by-step solutions. Trusted by <span class="font-bold text-white">50,000+</span> users daily.
+                    </p>
+                </div>
+                <div class="flex items-center gap-6">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold">25K+</div>
+                        <div class="text-indigo-200 text-sm">Daily Users</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold">4.9</div>
+                        <div class="text-indigo-200 text-sm">User Rating</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold">100%</div>
+                        <div class="text-indigo-200 text-sm">Free</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="p-6 md:p-8">
+
+            <!-- Calculation Type Selection -->
+            <div class="mb-8">
+                <label class="block text-gray-800 font-semibold text-lg mb-4">
+                    <i class="fas fa-calculator text-indigo-600 mr-2"></i>
+                    Select Calculation Type
+                </label>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <button data-percentage="basic" class="percentage-btn active border-2 border-indigo-500 bg-indigo-50 text-indigo-700">
+                        <i class="fas fa-percent mr-2"></i>Basic %
+                    </button>
+                    <button data-percentage="increase" class="percentage-btn border-2 border-gray-200 text-gray-700 hover:bg-gray-50">
+                        <i class="fas fa-arrow-up text-green-500 mr-2"></i>% Increase
+                    </button>
+                    <button data-percentage="decrease" class="percentage-btn border-2 border-gray-200 text-gray-700 hover:bg-gray-50">
+                        <i class="fas fa-arrow-down text-red-500 mr-2"></i>% Decrease
+                    </button>
+                    <button data-percentage="percentageOf" class="percentage-btn border-2 border-gray-200 text-gray-700 hover:bg-gray-50">
+                        <i class="fas fa-search mr-2"></i>Find %
+                    </button>
+                </div>
+            </div>
+
+            <!-- Input and Visualization Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+
+                <!-- Input Sections -->
+                <div class="space-y-6">
+                    <!-- Basic Percentage Inputs -->
+                    <div id="basicInputs" class="bg-gray-50 p-6 rounded-xl">
+                        <h3 class="font-bold text-gray-800 text-lg mb-4 flex items-center">
+                            <i class="fas fa-percent text-indigo-600 mr-2"></i> Basic Percentage: What is X% of Y?
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="input-group">
+                                <label class="block text-gray-700 font-medium mb-2">
+                                    <i class="fas fa-percent text-indigo-500 mr-2"></i>Percentage (%)
+                                </label>
+                                <input type="number" id="basicPercentage" class="input-field" placeholder="Enter percentage" value="20" min="0" step="0.01" />
+                            </div>
+                            <div class="input-group">
+                                <label class="block text-gray-700 font-medium mb-2">
+                                    <i class="fas fa-hashtag text-green-500 mr-2"></i>Number
+                                </label>
+                                <input type="number" id="basicNumber" class="input-field" placeholder="Enter number" value="150" min="0" step="0.01" />
+                            </div>
+                            <div class="bg-indigo-50 p-3 rounded-lg">
+                                <p class="text-sm text-gray-700">Example: 20% of 150 = 30</p>
+                                <p class="text-xs text-gray-500 mt-1">Formula: (20 ÷ 100) × 150 = 30</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Percentage Increase Inputs -->
+                    <div id="increaseInputs" class="bg-gray-50 p-6 rounded-xl hidden">
+                        <h3 class="font-bold text-gray-800 text-lg mb-4 flex items-center">
+                            <i class="fas fa-arrow-up text-green-600 mr-2"></i> Percentage Increase: From X to Y
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="input-group">
+                                <label class="block text-gray-700 font-medium mb-2">
+                                    <i class="fas fa-arrow-up text-green-500 mr-2"></i>From (Original)
+                                </label>
+                                <input type="number" id="increaseFrom" class="input-field" placeholder="Original value" value="100" min="0" step="0.01" />
+                            </div>
+                            <div class="input-group">
+                                <label class="block text-gray-700 font-medium mb-2">
+                                    <i class="fas fa-arrow-up text-blue-500 mr-2"></i>To (New)
+                                </label>
+                                <input type="number" id="increaseTo" class="input-field" placeholder="New value" value="150" min="0" step="0.01" />
+                            </div>
+                            <div class="bg-green-50 p-3 rounded-lg">
+                                <p class="text-sm text-gray-700">Example: From 100 to 150 = 50% increase</p>
+                                <p class="text-xs text-gray-500 mt-1">Formula: [(150-100)÷100] × 100 = 50%</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Percentage Decrease Inputs -->
+                    <div id="decreaseInputs" class="bg-gray-50 p-6 rounded-xl hidden">
+                        <h3 class="font-bold text-gray-800 text-lg mb-4 flex items-center">
+                            <i class="fas fa-arrow-down text-red-600 mr-2"></i> Percentage Decrease: From X to Y
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="input-group">
+                                <label class="block text-gray-700 font-medium mb-2">
+                                    <i class="fas fa-arrow-down text-red-500 mr-2"></i>From (Original)
+                                </label>
+                                <input type="number" id="decreaseFrom" class="input-field" placeholder="Original value" value="200" min="0" step="0.01" />
+                            </div>
+                            <div class="input-group">
+                                <label class="block text-gray-700 font-medium mb-2">
+                                    <i class="fas fa-arrow-down text-purple-500 mr-2"></i>To (New)
+                                </label>
+                                <input type="number" id="decreaseTo" class="input-field" placeholder="New value" value="150" min="0" step="0.01" />
+                            </div>
+                            <div class="bg-red-50 p-3 rounded-lg">
+                                <p class="text-sm text-gray-700">Example: From 200 to 150 = 25% decrease</p>
+                                <p class="text-xs text-gray-500 mt-1">Formula: [(200-150)÷200] × 100 = 25%</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Percentage Of Inputs -->
+                    <div id="percentageOfInputs" class="bg-gray-50 p-6 rounded-xl hidden">
+                        <h3 class="font-bold text-gray-800 text-lg mb-4 flex items-center">
+                            <i class="fas fa-pie-chart text-purple-600 mr-2"></i> Find Percentage: X is what % of Y?
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="input-group">
+                                <label class="block text-gray-700 font-medium mb-2">
+                                    <i class="fas fa-pie-chart text-blue-500 mr-2"></i>Part (X)
+                                </label>
+                                <input type="number" id="partValue" class="input-field" placeholder="Part value" value="30" min="0" step="0.01" />
+                            </div>
+                            <div class="input-group">
+                                <label class="block text-gray-700 font-medium mb-2">
+                                    <i class="fas fa-square text-green-500 mr-2"></i>Whole (Y)
+                                </label>
+                                <input type="number" id="wholeValue" class="input-field" placeholder="Whole value" value="150" min="0" step="0.01" />
+                            </div>
+                            <div class="bg-purple-50 p-3 rounded-lg">
+                                <p class="text-sm text-gray-700">Example: 30 is what % of 150? = 20%</p>
+                                <p class="text-xs text-gray-500 mt-1">Formula: (30 ÷ 150) × 100 = 20%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visualization Area -->
+                <div class="bg-gradient-to-br from-gray-50 to-indigo-50 p-6 rounded-xl">
+                    <h3 class="font-bold text-gray-800 text-lg mb-6 text-center">
+                        <i class="fas fa-chart-bar text-indigo-600 mr-2"></i> Live Visualization
+                    </h3>
+
+                    <!-- Basic Percentage Visualization -->
+                    <div id="basicViz" class="space-y-6">
+                        <div>
+                            <div class="flex justify-between text-sm text-gray-600 mb-2">
+                                <span>0%</span>
+                                <span class="font-semibold text-indigo-600" id="basicPercentageLabel">20%</span>
+                                <span>100%</span>
+                            </div>
+                            <div class="visual-bar">
+                                <div id="basicBar" class="bar-fill bg-indigo-500" style="width: 20%">
+                                    <span class="bar-label">20%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="stat-card">
+                                <p class="text-gray-600 mb-1">Percentage</p>
+                                <p id="basicPercentageDisplay" class="text-3xl font-bold text-indigo-600">20%</p>
+                            </div>
+                            <div class="stat-card">
+                                <p class="text-gray-600 mb-1">Value</p>
+                                <p id="basicValueDisplay" class="text-3xl font-bold text-green-600">30</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Increase Visualization -->
+                    <div id="increaseViz" class="space-y-6 hidden">
+                        <div>
+                            <div class="flex justify-between text-sm text-gray-600 mb-2">
+                                <span>Original: <span id="originalValueLabel">100</span></span>
+                                <span class="font-semibold text-green-600" id="increasePercentageLabel">+50%</span>
+                                <span>New: <span id="newValueLabel">150</span></span>
+                            </div>
+                            <div class="visual-bar flex">
+                                <div id="originalBar" class="bar-fill bg-blue-500" style="width: 66.67%">
+                                    <span class="bar-label">Original</span>
+                                </div>
+                                <div id="increaseBar" class="bar-fill bg-green-500" style="width: 33.33%">
+                                    <span class="bar-label">+50%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-3 gap-3">
+                            <div class="stat-card p-4">
+                                <p class="text-xs text-gray-600">Original</p>
+                                <p id="originalValue" class="text-xl font-bold text-blue-600">100</p>
+                            </div>
+                            <div class="stat-card p-4">
+                                <p class="text-xs text-gray-600">Increase</p>
+                                <p id="increaseValue" class="text-xl font-bold text-green-600">50</p>
+                            </div>
+                            <div class="stat-card p-4">
+                                <p class="text-xs text-gray-600">New</p>
+                                <p id="newValue" class="text-xl font-bold text-purple-600">150</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Decrease Visualization -->
+                    <div id="decreaseViz" class="space-y-6 hidden">
+                        <div>
+                            <div class="flex justify-between text-sm text-gray-600 mb-2">
+                                <span>Original: <span id="decreaseOriginalLabel">200</span></span>
+                                <span class="font-semibold text-red-600" id="decreasePercentageLabel">-25%</span>
+                                <span>New: <span id="decreaseNewLabel">150</span></span>
+                            </div>
+                            <div class="visual-bar flex">
+                                <div id="decreaseOriginalBar" class="bar-fill bg-red-500" style="width: 75%">
+                                    <span class="bar-label">Remaining</span>
+                                </div>
+                                <div id="decreaseBar" class="bar-fill bg-gray-500" style="width: 25%">
+                                    <span class="bar-label">-25%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-3 gap-3">
+                            <div class="stat-card p-4">
+                                <p class="text-xs text-gray-600">Original</p>
+                                <p id="decreaseOriginalValue" class="text-xl font-bold text-red-600">200</p>
+                            </div>
+                            <div class="stat-card p-4">
+                                <p class="text-xs text-gray-600">Decrease</p>
+                                <p id="decreaseAmount" class="text-xl font-bold text-gray-600">50</p>
+                            </div>
+                            <div class="stat-card p-4">
+                                <p class="text-xs text-gray-600">New</p>
+                                <p id="decreaseNewValue" class="text-xl font-bold text-purple-600">150</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Percentage Of Visualization -->
+                    <div id="percentageOfViz" class="space-y-6 hidden">
+                        <div>
+                            <div class="flex justify-between text-sm text-gray-600 mb-2">
+                                <span>Part: <span id="partLabel">30</span></span>
+                                <span class="font-semibold text-indigo-600" id="percentageOfLabel">20%</span>
+                                <span>Whole: <span id="wholeLabel">150</span></span>
+                            </div>
+                            <div class="visual-bar">
+                                <div id="partBar" class="bar-fill bg-indigo-500" style="width: 20%">
+                                    <span class="bar-label">20%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="stat-card">
+                                <p class="text-gray-600 mb-1">Part</p>
+                                <p id="partDisplay" class="text-3xl font-bold text-indigo-600">30</p>
+                            </div>
+                            <div class="stat-card">
+                                <p class="text-gray-600 mb-1">Percentage</p>
+                                <p id="percentageOfDisplay" class="text-3xl font-bold text-green-600">20%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 my-8">
+                <button id="calculateBtn" class="btn-primary text-white font-bold py-4 px-8 flex-1 flex items-center justify-center text-lg">
+                    <i class="fas fa-calculator mr-3"></i> Calculate Now
+                </button>
+                <button id="resetBtn" class="btn-secondary text-white font-bold py-4 px-8 flex-1 flex items-center justify-center text-lg">
+                    <i class="fas fa-redo-alt mr-3"></i> Reset All
+                </button>
+                <button id="saveCalculation" class="bg-white border-2 border-gray-300 text-gray-700 font-bold py-4 px-8 rounded-xl hover:bg-gray-50 transition flex items-center justify-center text-lg">
+                    <i class="fas fa-bookmark mr-3"></i> Save Result
+                </button>
+            </div>
+
+            <!-- Results Section -->
+            <div id="results" class="space-y-6 mb-8 hidden">
+                <!-- Main Results -->
+                <div class="result-card">
+                    <h3 class="font-bold text-gray-800 text-xl mb-4 flex items-center">
+                        <i class="fas fa-check-circle text-green-600 mr-2"></i> Calculation Results
+                    </h3>
+                    <div id="resultsContainer" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <!-- Results will be populated here -->
+                    </div>
+                </div>
+
+                <!-- Step-by-Step Explanation -->
+                <div id="stepExplanation" class="explanation-card">
+                    <h3 class="font-bold text-gray-800 text-xl mb-4 flex items-center">
+                        <i class="fas fa-list-ol text-blue-600 mr-2"></i> Step-by-Step Solution
+                    </h3>
+                    <div id="stepList" class="space-y-3">
+                        <!-- Steps will be populated here -->
+                    </div>
+                </div>
+
+                <!-- Formula and Examples Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white border border-gray-200 rounded-xl p-6">
+                        <h4 class="font-bold text-gray-800 mb-4 flex items-center">
+                            <i class="fas fa-square-root-alt text-indigo-600 mr-2"></i> Formula Used
+                        </h4>
+                        <div id="formulaList" class="space-y-3">
+                            <!-- Formulas will be populated here -->
+                        </div>
+                    </div>
+
+                    <div class="bg-white border border-gray-200 rounded-xl p-6">
+                        <h4 class="font-bold text-gray-800 mb-4 flex items-center">
+                            <i class="fas fa-lightbulb text-yellow-600 mr-2"></i> Real-World Examples
+                        </h4>
+                        <div id="examplesList" class="space-y-3">
+                            <!-- Examples will be populated here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Common Percentages Reference -->
+            <div class="mt-8 bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-xl">
+                <h3 class="font-bold text-gray-800 text-xl mb-4">Common Percentages Reference</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3">
+                    <div class="bg-white p-3 rounded-lg text-center shadow-sm">
+                        <div class="font-bold text-indigo-600">1%</div>
+                        <div class="text-xs text-gray-600">= 0.01</div>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg text-center shadow-sm">
+                        <div class="font-bold text-indigo-600">5%</div>
+                        <div class="text-xs text-gray-600">= 0.05</div>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg text-center shadow-sm">
+                        <div class="font-bold text-indigo-600">10%</div>
+                        <div class="text-xs text-gray-600">= 0.1</div>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg text-center shadow-sm">
+                        <div class="font-bold text-indigo-600">15%</div>
+                        <div class="text-xs text-gray-600">= 0.15</div>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg text-center shadow-sm">
+                        <div class="font-bold text-indigo-600">20%</div>
+                        <div class="text-xs text-gray-600">= 0.2</div>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg text-center shadow-sm">
+                        <div class="font-bold text-indigo-600">25%</div>
+                        <div class="text-xs text-gray-600">= 0.25</div>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg text-center shadow-sm">
+                        <div class="font-bold text-indigo-600">50%</div>
+                        <div class="text-xs text-gray-600">= 0.5</div>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg text-center shadow-sm">
+                        <div class="font-bold text-indigo-600">75%</div>
+                        <div class="text-xs text-gray-600">= 0.75</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- How to Use Section -->
+            <div class="mt-8 bg-white p-6 rounded-xl border-2 border-gray-100">
+                <h3 class="font-bold text-gray-800 text-xl mb-4 flex items-center">
+                    <i class="fas fa-question-circle text-indigo-600 mr-2"></i> How to Use Percentage Calculator?
+                </h3>
+                <div class="grid md:grid-cols-4 gap-4">
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <span class="text-xl font-bold text-indigo-600">1</span>
+                        </div>
+                        <h4 class="font-semibold mb-2">Select Type</h4>
+                        <p class="text-sm text-gray-600">Choose calculation type from 4 options</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <span class="text-xl font-bold text-indigo-600">2</span>
+                        </div>
+                        <h4 class="font-semibold mb-2">Enter Numbers</h4>
+                        <p class="text-sm text-gray-600">Fill in the required values</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <span class="text-xl font-bold text-indigo-600">3</span>
+                        </div>
+                        <h4 class="font-semibold mb-2">Click Calculate</h4>
+                        <p class="text-sm text-gray-600">Get instant results</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <span class="text-xl font-bold text-indigo-600">4</span>
+                        </div>
+                        <h4 class="font-semibold mb-2">Save Results</h4>
+                        <p class="text-sm text-gray-600">Save or share your calculations</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="mt-8 bg-white p-6 rounded-xl border-2 border-gray-100">
+                <h3 class="font-bold text-gray-800 text-xl mb-4 flex items-center">
+                    <i class="fas fa-star text-yellow-500 mr-2"></i> Frequently Asked Questions
+                </h3>
+                <div class="space-y-4">
+                    <div class="border rounded-lg p-4">
+                        <h4 class="font-semibold text-lg mb-2">How do I calculate percentage of a number?</h4>
+                        <p class="text-gray-600">To calculate X% of Y, multiply Y by X and divide by 100. For example, 20% of 150 = (20 × 150) ÷ 100 = 30.</p>
+                    </div>
+                    <div class="border rounded-lg p-4">
+                        <h4 class="font-semibold text-lg mb-2">How to calculate percentage increase?</h4>
+                        <p class="text-gray-600">Percentage increase = [(New Value - Original Value) ÷ Original Value] × 100. For example, from 100 to 150 is a 50% increase.</p>
+                    </div>
+                    <div class="border rounded-lg p-4">
+                        <h4 class="font-semibold text-lg mb-2">Is this calculator really free?</h4>
+                        <p class="text-gray-600">Yes, it's completely free! No registration, no hidden charges. Use it as many times as you want.</p>
+                    </div>
+                    <div class="border rounded-lg p-4">
+                        <h4 class="font-semibold text-lg mb-2">Can I save my calculations?</h4>
+                        <p class="text-gray-600">Yes, click the "Save Result" button to bookmark your calculation. Results are saved in your browser.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Calculators -->
+            <div class="mt-8 bg-gradient-to-r from-indigo-600 to-purple-600 p-6 rounded-xl text-white">
+                <h3 class="font-bold text-xl mb-4">Popular Calculators</h3>
+                <div class="flex flex-wrap gap-3">
+                    <a href="/" class="bg-white/20 px-4 py-2 rounded-full hover:bg-white/30 transition">Basic Calculator</a>
+
+                    <a href="/" class="bg-white/20 px-4 py-2 rounded-full hover:bg-white/30 transition">Discount Calculator</a>
+                    <a href="/" class="bg-white/20 px-4 py-2 rounded-full hover:bg-white/30 transition">GST Calculator</a>
+                    <a href="/" class="bg-white/20 px-4 py-2 rounded-full hover:bg-white/30 transition">CGPA Calculator</a>
+                    <a href="/" class="bg-white/20 px-4 py-2 rounded-full hover:bg-white/30 transition">Profit Calculator</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-gray-100 p-6 text-center text-gray-600 text-sm border-t">
+            <p>&copy; 2026 Pro CSC Tools. All rights reserved. |
+                <a href="/privacy.html" class="text-indigo-600 hover:underline">Privacy Policy</a> |
+                <a href="/terms.html" class="text-indigo-600 hover:underline">Terms of Use</a> |
+                <a href="/contact.html" class="text-indigo-600 hover:underline">Contact Us</a>
+            </p>
+        </footer>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="fixed bottom-5 right-5 z-50 space-y-2"></div>
+
+    <!-- Floating Action Button -->
+    <button id="scrollToTop" class="floating-action w-12 h-12 bg-indigo-600 text-white rounded-full shadow-lg hover:bg-indigo-700 transition flex items-center justify-center">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // DOM Elements
+        const calculateBtn = document.getElementById("calculateBtn");
+        const resetBtn = document.getElementById("resetBtn");
+        const saveBtn = document.getElementById("saveCalculation");
+        const resultsDiv = document.getElementById("results");
+        const stepExplanation = document.getElementById("stepExplanation");
+        const stepList = document.getElementById("stepList");
+        const resultsContainer = document.getElementById("resultsContainer");
+        const formulaList = document.getElementById("formulaList");
+        const examplesList = document.getElementById("examplesList");
+
+        // Percentage type buttons
+        const percentageBtns = document.querySelectorAll(".percentage-btn");
+
+        // Input containers
+        const basicInputs = document.getElementById("basicInputs");
+        const increaseInputs = document.getElementById("increaseInputs");
+        const decreaseInputs = document.getElementById("decreaseInputs");
+        const percentageOfInputs = document.getElementById("percentageOfInputs");
+
+        // Visualization containers
+        const basicViz = document.getElementById("basicViz");
+        const increaseViz = document.getElementById("increaseViz");
+        const decreaseViz = document.getElementById("decreaseViz");
+        const percentageOfViz = document.getElementById("percentageOfViz");
+
+        // Input elements
+        const basicPercentage = document.getElementById("basicPercentage");
+        const basicNumber = document.getElementById("basicNumber");
+        const increaseFrom = document.getElementById("increaseFrom");
+        const increaseTo = document.getElementById("increaseTo");
+        const decreaseFrom = document.getElementById("decreaseFrom");
+        const decreaseTo = document.getElementById("decreaseTo");
+        const partValue = document.getElementById("partValue");
+        const wholeValue = document.getElementById("wholeValue");
+
+        // Basic visualization elements
+        const basicBar = document.getElementById("basicBar");
+        const basicPercentageLabel = document.getElementById("basicPercentageLabel");
+        const basicPercentageDisplay = document.getElementById("basicPercentageDisplay");
+        const basicValueDisplay = document.getElementById("basicValueDisplay");
+
+        // Increase visualization elements
+        const originalBar = document.getElementById("originalBar");
+        const increaseBar = document.getElementById("increaseBar");
+        const originalValueLabel = document.getElementById("originalValueLabel");
+        const newValueLabel = document.getElementById("newValueLabel");
+        const increasePercentageLabel = document.getElementById("increasePercentageLabel");
+        const originalValue = document.getElementById("originalValue");
+        const increaseValue = document.getElementById("increaseValue");
+        const newValue = document.getElementById("newValue");
+
+        // Decrease visualization elements
+        const decreaseOriginalBar = document.getElementById("decreaseOriginalBar");
+        const decreaseBar = document.getElementById("decreaseBar");
+        const decreaseOriginalLabel = document.getElementById("decreaseOriginalLabel");
+        const decreaseNewLabel = document.getElementById("decreaseNewLabel");
+        const decreasePercentageLabel = document.getElementById("decreasePercentageLabel");
+        const decreaseOriginalValue = document.getElementById("decreaseOriginalValue");
+        const decreaseAmount = document.getElementById("decreaseAmount");
+        const decreaseNewValue = document.getElementById("decreaseNewValue");
+
+        // Percentage of visualization elements
+        const partBar = document.getElementById("partBar");
+        const partLabel = document.getElementById("partLabel");
+        const wholeLabel = document.getElementById("wholeLabel");
+        const percentageOfLabel = document.getElementById("percentageOfLabel");
+        const partDisplay = document.getElementById("partDisplay");
+        const percentageOfDisplay = document.getElementById("percentageOfDisplay");
+
+        let currentPercentageType = "basic";
+        let savedCalculations = JSON.parse(localStorage.getItem('savedPercentages') || '[]');
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            attachEventListeners();
+            updateInputVisibility();
+            calculate();
+            checkForSavedCalculations();
+        });
+
+        // Attach event listeners
+        function attachEventListeners() {
+            percentageBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    switchPercentageType(this.dataset.percentage);
+                });
+            });
+
+            calculateBtn.addEventListener('click', calculate);
+            resetBtn.addEventListener('click', resetCalculator);
+            saveBtn.addEventListener('click', saveCalculation);
+
+            // Auto-calculate on input
+            document.querySelectorAll('input').forEach(input => {
+                input.addEventListener('input', calculate);
+            });
+
+            // Keyboard shortcuts
+            document.addEventListener('keydown', function(e) {
+                if (e.ctrlKey && e.key === 'Enter') {
+                    calculate();
+                    showToast('Calculated!', 'success');
+                }
+                if (e.key === 'Escape') {
+                    resetCalculator();
+                }
+            });
+
+            // Scroll to top
+            document.getElementById('scrollToTop').addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        // Switch percentage type
+        function switchPercentageType(type) {
+            percentageBtns.forEach(btn => {
+                btn.classList.remove('active', 'border-indigo-500', 'text-indigo-700', 'bg-indigo-50');
+                btn.classList.add('border-gray-200', 'text-gray-700', 'bg-white');
+            });
+
+            const activeBtn = Array.from(percentageBtns).find(btn => btn.dataset.percentage === type);
+            if (activeBtn) {
+                activeBtn.classList.add('active', 'border-indigo-500', 'text-white');
+                activeBtn.classList.remove('border-gray-200', 'text-gray-700', 'bg-white');
+            }
+
+            currentPercentageType = type;
+            updateInputVisibility();
+            calculate();
+        }
+
+        // Update input visibility
+        function updateInputVisibility() {
+            basicInputs.classList.add('hidden');
+            increaseInputs.classList.add('hidden');
+            decreaseInputs.classList.add('hidden');
+            percentageOfInputs.classList.add('hidden');
+
+            basicViz.classList.add('hidden');
+            increaseViz.classList.add('hidden');
+            decreaseViz.classList.add('hidden');
+            percentageOfViz.classList.add('hidden');
+
+            switch (currentPercentageType) {
+                case 'basic':
+                    basicInputs.classList.remove('hidden');
+                    basicViz.classList.remove('hidden');
+                    break;
+                case 'increase':
+                    increaseInputs.classList.remove('hidden');
+                    increaseViz.classList.remove('hidden');
+                    break;
+                case 'decrease':
+                    decreaseInputs.classList.remove('hidden');
+                    decreaseViz.classList.remove('hidden');
+                    break;
+                case 'percentageOf':
+                    percentageOfInputs.classList.remove('hidden');
+                    percentageOfViz.classList.remove('hidden');
+                    break;
+            }
+        }
+
+        // Calculate functions
+        function calculateBasic(percentage, number) {
+            const result = (percentage / 100) * number;
+
+            // Update visualization
+            const percentageWidth = Math.min(percentage, 100);
+            basicBar.style.width = `${percentageWidth}%`;
+            basicBar.querySelector('.bar-label').textContent = `${percentage}%`;
+            basicPercentageLabel.textContent = `${percentage}%`;
+            basicPercentageDisplay.textContent = `${percentage}%`;
+            basicValueDisplay.textContent = result.toFixed(2);
+
+            const steps = [
+                `Step 1: Convert ${percentage}% to decimal: ${percentage} ÷ 100 = ${(percentage/100).toFixed(4)}`,
+                `Step 2: Multiply decimal by ${number}: ${(percentage/100).toFixed(4)} × ${number} = ${result.toFixed(2)}`,
+                `Result: ${percentage}% of ${number} = ${result.toFixed(2)}`
+            ];
+
+            return {
+                results: [{
+                        label: "Percentage",
+                        value: `${percentage}%`,
+                        color: "text-indigo-600"
+                    },
+                    {
+                        label: "Number",
+                        value: number,
+                        color: "text-blue-600"
+                    },
+                    {
+                        label: "Result",
+                        value: result.toFixed(2),
+                        color: "text-green-600"
+                    },
+                    {
+                        label: "Decimal",
+                        value: (percentage / 100).toFixed(4),
+                        color: "text-purple-600"
+                    }
+                ],
+                steps,
+                formulas: [
+                    "Formula: X% of Y = (X/100) × Y",
+                    "Step 1: Convert percentage to decimal: X ÷ 100",
+                    "Step 2: Multiply decimal by Y"
+                ],
+                examples: [
+                    "💰 Discount: 20% off ₹1500 = ₹300 savings",
+                    "🍽️ Tip: 15% tip on ₹800 bill = ₹120",
+                    "📊 Tax: 18% GST on ₹2000 = ₹360",
+                    "📈 Commission: 5% on ₹10,000 sale = ₹500"
+                ]
+            };
+        }
+
+        function calculateIncrease(from, to) {
+            const increase = to - from;
+            const percentage = (increase / from) * 100;
+
+            // Update visualization
+            const originalWidth = (from / to) * 100;
+            const increaseWidth = 100 - originalWidth;
+
+            originalBar.style.width = `${originalWidth}%`;
+            increaseBar.style.width = `${increaseWidth}%`;
+            increaseBar.querySelector('.bar-label').textContent = `+${percentage.toFixed(1)}%`;
+
+            originalValueLabel.textContent = from;
+            newValueLabel.textContent = to;
+            increasePercentageLabel.textContent = `+${percentage.toFixed(1)}%`;
+
+            originalValue.textContent = from;
+            increaseValue.textContent = increase.toFixed(2);
+            newValue.textContent = to;
+
+            const steps = [
+                `Step 1: Calculate increase: ${to} - ${from} = ${increase.toFixed(2)}`,
+                `Step 2: Divide increase by original: ${increase.toFixed(2)} ÷ ${from} = ${(increase/from).toFixed(4)}`,
+                `Step 3: Convert to percentage: ${(increase/from).toFixed(4)} × 100 = ${percentage.toFixed(2)}%`,
+                `Result: ${percentage.toFixed(2)}% increase from ${from} to ${to}`
+            ];
+
+            return {
+                results: [{
+                        label: "Original",
+                        value: from,
+                        color: "text-blue-600"
+                    },
+                    {
+                        label: "New",
+                        value: to,
+                        color: "text-purple-600"
+                    },
+                    {
+                        label: "Increase",
+                        value: increase.toFixed(2),
+                        color: "text-green-600"
+                    },
+                    {
+                        label: "Increase %",
+                        value: `${percentage.toFixed(2)}%`,
+                        color: "text-indigo-600"
+                    }
+                ],
+                steps,
+                formulas: [
+                    "Formula: % Increase = [(New - Original) ÷ Original] × 100",
+                    "Step 1: Find the difference (New - Original)",
+                    "Step 2: Divide difference by Original",
+                    "Step 3: Multiply by 100"
+                ],
+                examples: [
+                    "📈 Salary: ₹50,000 to ₹55,000 = 10% increase",
+                    "👥 Population: 1,000 to 1,200 = 20% increase",
+                    "📊 Sales: ₹10,000 to ₹12,500 = 25% increase",
+                    "🏠 Rent: ₹15,000 to ₹16,500 = 10% increase"
+                ]
+            };
+        }
+
+        function calculateDecrease(from, to) {
+            const decrease = from - to;
+            const percentage = (decrease / from) * 100;
+
+            // Update visualization
+            const remainingWidth = (to / from) * 100;
+            const decreaseWidth = 100 - remainingWidth;
+
+            decreaseOriginalBar.style.width = `${remainingWidth}%`;
+            decreaseBar.style.width = `${decreaseWidth}%`;
+            decreaseBar.querySelector('.bar-label').textContent = `-${percentage.toFixed(1)}%`;
+
+            decreaseOriginalLabel.textContent = from;
+            decreaseNewLabel.textContent = to;
+            decreasePercentageLabel.textContent = `-${percentage.toFixed(1)}%`;
+
+            decreaseOriginalValue.textContent = from;
+            decreaseAmount.textContent = decrease.toFixed(2);
+            decreaseNewValue.textContent = to;
+
+            const steps = [
+                `Step 1: Calculate decrease: ${from} - ${to} = ${decrease.toFixed(2)}`,
+                `Step 2: Divide decrease by original: ${decrease.toFixed(2)} ÷ ${from} = ${(decrease/from).toFixed(4)}`,
+                `Step 3: Convert to percentage: ${(decrease/from).toFixed(4)} × 100 = ${percentage.toFixed(2)}%`,
+                `Result: ${percentage.toFixed(2)}% decrease from ${from} to ${to}`
+            ];
+
+            return {
+                results: [{
+                        label: "Original",
+                        value: from,
+                        color: "text-red-600"
+                    },
+                    {
+                        label: "New",
+                        value: to,
+                        color: "text-purple-600"
+                    },
+                    {
+                        label: "Decrease",
+                        value: decrease.toFixed(2),
+                        color: "text-gray-600"
+                    },
+                    {
+                        label: "Decrease %",
+                        value: `${percentage.toFixed(2)}%`,
+                        color: "text-indigo-600"
+                    }
+                ],
+                steps,
+                formulas: [
+                    "Formula: % Decrease = [(Original - New) ÷ Original] × 100",
+                    "Step 1: Find the decrease (Original - New)",
+                    "Step 2: Divide decrease by Original",
+                    "Step 3: Multiply by 100"
+                ],
+                examples: [
+                    "🏷️ Discount: ₹200 to ₹150 = 25% off",
+                    "⚖️ Weight: 80kg to 72kg = 10% loss",
+                    "📉 Stock: ₹500 to ₹400 = 20% drop",
+                    "🌡️ Temperature: 30°C to 24°C = 20% decrease"
+                ]
+            };
+        }
+
+        function calculatePercentageOf(part, whole) {
+            const percentage = (part / whole) * 100;
+
+            // Update visualization
+            const percentageWidth = Math.min(percentage, 100);
+            partBar.style.width = `${percentageWidth}%`;
+            partBar.querySelector('.bar-label').textContent = `${percentage.toFixed(1)}%`;
+
+            partLabel.textContent = part;
+            wholeLabel.textContent = whole;
+            percentageOfLabel.textContent = `${percentage.toFixed(1)}%`;
+
+            partDisplay.textContent = part;
+            percentageOfDisplay.textContent = `${percentage.toFixed(2)}%`;
+
+            const steps = [
+                `Step 1: Divide part by whole: ${part} ÷ ${whole} = ${(part/whole).toFixed(4)}`,
+                `Step 2: Convert to percentage: ${(part/whole).toFixed(4)} × 100 = ${percentage.toFixed(2)}%`,
+                `Result: ${part} is ${percentage.toFixed(2)}% of ${whole}`
+            ];
+
+            return {
+                results: [{
+                        label: "Part",
+                        value: part,
+                        color: "text-indigo-600"
+                    },
+                    {
+                        label: "Whole",
+                        value: whole,
+                        color: "text-blue-600"
+                    },
+                    {
+                        label: "Percentage",
+                        value: `${percentage.toFixed(2)}%`,
+                        color: "text-green-600"
+                    },
+                    {
+                        label: "Decimal",
+                        value: (part / whole).toFixed(4),
+                        color: "text-purple-600"
+                    }
+                ],
+                steps,
+                formulas: [
+                    "Formula: Percentage = (Part ÷ Whole) × 100",
+                    "Step 1: Divide part by whole",
+                    "Step 2: Multiply by 100"
+                ],
+                examples: [
+                    "📝 Test Score: 45 out of 50 = 90%",
+                    "💰 Budget: ₹300 spent of ₹1000 = 30%",
+                    "📚 Progress: 75 pages of 300 = 25% complete",
+                    "👥 Attendance: 45 out of 60 students = 75%"
+                ]
+            };
+        }
+
+        // Main calculate function
+        function calculate() {
+            let result;
+
+            switch (currentPercentageType) {
+                case 'basic':
+                    const perc = parseFloat(basicPercentage.value) || 0;
+                    const num = parseFloat(basicNumber.value) || 0;
+                    if (perc < 0 || num < 0) {
+                        showToast('Please enter positive numbers', 'error');
+                        return;
+                    }
+                    result = calculateBasic(perc, num);
+                    break;
+                case 'increase':
+                    const fromInc = parseFloat(increaseFrom.value) || 0;
+                    const toInc = parseFloat(increaseTo.value) || 0;
+                    if (fromInc <= 0) {
+                        showToast('Original value must be greater than 0', 'error');
+                        return;
+                    }
+                    result = calculateIncrease(fromInc, toInc);
+                    break;
+                case 'decrease':
+                    const fromDec = parseFloat(decreaseFrom.value) || 0;
+                    const toDec = parseFloat(decreaseTo.value) || 0;
+                    if (fromDec <= 0) {
+                        showToast('Original value must be greater than 0', 'error');
+                        return;
+                    }
+                    result = calculateDecrease(fromDec, toDec);
+                    break;
+                case 'percentageOf':
+                    const part = parseFloat(partValue.value) || 0;
+                    const whole = parseFloat(wholeValue.value) || 0;
+                    if (whole <= 0) {
+                        showToast('Whole value must be greater than 0', 'error');
+                        return;
+                    }
+                    result = calculatePercentageOf(part, whole);
+                    break;
+            }
+
+            displayResults(result);
+        }
+
+        // Display results
+        function displayResults(result) {
+            // Update results container
+            resultsContainer.innerHTML = '';
+            result.results.forEach(item => {
+                const div = document.createElement('div');
+                div.className = `stat-card p-4`;
+                div.innerHTML = `
+                    <p class="text-gray-600 text-sm mb-1">${item.label}</p>
+                    <p class="text-2xl font-bold ${item.color}">${item.value}</p>
+                `;
+                resultsContainer.appendChild(div);
+            });
+
+            // Update steps
+            stepList.innerHTML = '';
+            result.steps.forEach((step, index) => {
+                const div = document.createElement('div');
+                div.className = 'flex items-start space-x-3';
+                div.innerHTML = `
+                    <span class="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-sm font-bold">${index + 1}</span>
+                    <p class="text-gray-700">${step}</p>
+                `;
+                stepList.appendChild(div);
+            });
+
+            // Update formulas
+            formulaList.innerHTML = '';
+            result.formulas.forEach(formula => {
+                const div = document.createElement('div');
+                div.className = 'formula-box';
+                div.textContent = formula;
+                formulaList.appendChild(div);
+            });
+
+            // Update examples
+            examplesList.innerHTML = '';
+            result.examples.forEach(example => {
+                const div = document.createElement('div');
+                div.className = 'flex items-center space-x-2 text-sm border-b border-gray-100 pb-2';
+                div.innerHTML = `
+                    <i class="fas fa-check-circle text-green-500 text-xs"></i>
+                    <span>${example}</span>
+                `;
+                examplesList.appendChild(div);
+            });
+
+            // Show results with animation
+            resultsDiv.classList.remove('hidden');
+            resultsDiv.classList.add('glow');
+            setTimeout(() => resultsDiv.classList.remove('glow'), 1000);
+        }
+
+        // Reset calculator
+        function resetCalculator() {
+            basicPercentage.value = "20";
+            basicNumber.value = "150";
+            increaseFrom.value = "100";
+            increaseTo.value = "150";
+            decreaseFrom.value = "200";
+            decreaseTo.value = "150";
+            partValue.value = "30";
+            wholeValue.value = "150";
+
+            switchPercentageType('basic');
+            showToast('Calculator reset to default values', 'info');
+        }
+
+        // Save calculation
+        function saveCalculation() {
+            const calculation = {
+                type: currentPercentageType,
+                inputs: {},
+                timestamp: new Date().toISOString(),
+                id: Date.now()
+            };
+
+            switch (currentPercentageType) {
+                case 'basic':
+                    calculation.inputs = {
+                        percentage: basicPercentage.value,
+                        number: basicNumber.value
+                    };
+                    break;
+                case 'increase':
+                    calculation.inputs = {
+                        from: increaseFrom.value,
+                        to: increaseTo.value
+                    };
+                    break;
+                case 'decrease':
+                    calculation.inputs = {
+                        from: decreaseFrom.value,
+                        to: decreaseTo.value
+                    };
+                    break;
+                case 'percentageOf':
+                    calculation.inputs = {
+                        part: partValue.value,
+                        whole: wholeValue.value
+                    };
+                    break;
+            }
+
+            savedCalculations.push(calculation);
+            if (savedCalculations.length > 10) {
+                savedCalculations = savedCalculations.slice(-10);
+            }
+            localStorage.setItem('savedPercentages', JSON.stringify(savedCalculations));
+            showToast('Calculation saved!', 'success');
+        }
+
+        // Check for saved calculations
+        function checkForSavedCalculations() {
+            if (savedCalculations.length > 0) {
+                showToast(`You have ${savedCalculations.length} saved calculations`, 'info');
+            }
+        }
+
+        // Toast notification
+        function showToast(message, type = 'info') {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+
+            const colors = {
+                success: 'bg-gradient-to-r from-green-500 to-green-600',
+                error: 'bg-gradient-to-r from-red-500 to-red-600',
+                info: 'bg-gradient-to-r from-blue-500 to-blue-600',
+                warning: 'bg-gradient-to-r from-yellow-500 to-yellow-600'
+            };
+
+            const icons = {
+                success: 'fa-check-circle',
+                error: 'fa-exclamation-circle',
+                info: 'fa-info-circle',
+                warning: 'fa-exclamation-triangle'
+            };
+
+            toast.className = `toast-message ${colors[type]} text-white px-6 py-4 rounded-xl shadow-lg flex items-center`;
+            toast.innerHTML = `
+                <i class="fas ${icons[type]} mr-3 text-xl"></i>
+                <span class="font-medium">${message}</span>
+            `;
+
+            container.appendChild(toast);
+
+            setTimeout(() => toast.remove(), 3000);
+        }
+
+        // Share functions
+        window.shareOnWhatsApp = function() {
+            const text = 'Check out this free Percentage Calculator - Calculate percentages instantly';
+            const url = window.location.href;
+            window.open(`https://wa.me/?text=${encodeURIComponent(text + ' ' + url)}`, '_blank');
+            showToast('Opening WhatsApp...', 'info');
+        };
+
+        window.shareOnFacebook = function() {
+            const url = window.location.href;
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank');
+            showToast('Opening Facebook...', 'info');
+        };
+
+        window.shareOnTwitter = function() {
+            const text = 'Free Percentage Calculator - Calculate percentages with step-by-step solutions';
+            const url = window.location.href;
+            window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
+            showToast('Opening Twitter...', 'info');
+        };
+
+        window.copyToClipboard = function() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                showToast('Link copied to clipboard!', 'success');
+            }).catch(() => {
+                showToast('Failed to copy link', 'error');
+            });
+        };
+
+        // Initialize with calculation
+        calculate();
+    </script>
+
+<!-- PCT-FOOTER-START -->
+<div class="pct-ad"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6791318178265120" data-ad-slot="7017392570" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+<footer class="pct-footer">
+  <div class="pct-footer-grid">
+    <div>
+      <h3>Pro CSC Tools</h3>
+      <p>India's Most Trusted Platform for CSC VLEs &ndash; Government Document, ID Card, PDF &amp; Online Tools.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <a href="/">Home</a><a href="/#tools">Tools</a><a href="/about">About Us</a><a href="/contact">Contact</a>
+    </div>
+    <div>
+      <h4>Popular Tools</h4>
+      <a href="/resume-builder">Resume Maker</a><a href="/image-to-pdf">Image to PDF</a><a href="/image-resizer">Image Resizer</a><a href="/age-calculator">Age Calculator</a>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Service</a><a href="/disclaimer">Disclaimer</a><a href="/contact">Contact</a>
+    </div>
+  </div>
+  <div class="pct-copy">&copy; 2026 Pro CSC Tools. All rights reserved. Made with &#10084;&#65039; in India for All CSC VLEs.</div>
+</footer>
+<!-- PCT-FOOTER-END -->
+</body>
+
+</html>

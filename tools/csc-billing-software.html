@@ -1,0 +1,3076 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Pro CSC Tools: AdSense + Verification -->
+    <meta name="google-adsense-account" content="ca-pub-6791318178265120">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6791318178265120" crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    
+    <!-- Banner Ads -->
+    
+    
+    <title>CSC Billing Software | Pro CSC Tools | Complete Billing Solution for CSC VLE</title>
+    <link rel="canonical" href="https://procsctools.in/csc-billing-software">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Complete offline billing software for CSC VLE - Manage services, customers, GST billing, reports, and data backup. Professional invoice generator with QR code payments.">
+    <meta name="keywords" content="CSC billing software, VLE billing system, GST billing software, offline billing, CSC center software, invoice generator, QR code billing">
+    <meta name="author" content="Pro CSC Tools">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Pro CSC Tools - Complete Offline Billing Solution">
+    <meta property="og:description" content="Professional billing software for Common Service Centers with GST, reports, customer management, and QR code payments">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://procsctools.in/csc-billing-software">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- html2pdf for PDF generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <!-- Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Custom styles for advanced features */
+
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f3f4f6;
+            --text-primary: #111827;
+            --text-secondary: #4b5563;
+            --accent-primary: #2563eb;
+            --accent-secondary: #1e40af;
+            /* Invoice Template Variables */
+            --invoice-primary: #2563eb;
+            --invoice-secondary: #1e40af;
+            --invoice-border: 2px solid #2563eb;
+            --invoice-border-radius: 12px;
+            --invoice-header-bg: #f8fafc;
+            --invoice-font-size: 14px;
+            --invoice-show-border: true;
+        }
+
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .dark-mode {
+            --bg-primary: #1f2937;
+            --bg-secondary: #111827;
+            --text-primary: #f9fafb;
+            --text-secondary: #d1d5db;
+            --accent-primary: #3b82f6;
+            --accent-secondary: #60a5fa;
+        }
+
+        body {
+            background-color: var(--bg-secondary);
+            color: var(--text-primary);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .card {
+            background-color: var(--bg-primary);
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transform: translateY(-2px);
+        }
+
+        .gradient-primary {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+        }
+
+        .gradient-success {
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+        }
+
+        .gradient-warning {
+            background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+        }
+
+        .gradient-danger {
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+        }
+
+        /* Animated Badge Styles */
+
+        .smart-badge {
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1, #96c93d);
+            background-size: 300% 300%;
+            animation: gradientFlow 5s ease infinite;
+            padding: 8px 16px;
+            border-radius: 30px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .smart-badge:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .smart-badge::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient( 45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transform: rotate(45deg);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes gradientFlow {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes shine {
+            0% {
+                left: -50%;
+                top: -50%;
+            }
+            100% {
+                left: 150%;
+                top: 150%;
+            }
+        }
+
+        .badge-text {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .badge-text i {
+            font-size: 1.2rem;
+            filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2));
+        }
+
+        /* Tab styles */
+
+        .tab-active {
+            border-bottom: 3px solid #2563eb;
+            color: #2563eb;
+            font-weight: 600;
+            background-color: rgba(37, 99, 235, 0.1);
+        }
+
+        .dark-mode .tab-active {
+            border-bottom-color: #60a5fa;
+            color: #60a5fa;
+            background-color: rgba(96, 165, 250, 0.1);
+        }
+
+        /* Toast animation */
+
+        .toast {
+            animation: slideIn 0.3s ease, fadeOut 0.3s ease 2.7s;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        /* Modal backdrop */
+
+        .modal-backdrop {
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+        }
+
+        /* Custom scrollbar */
+
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #2563eb;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #1e40af;
+        }
+
+        /* Print styles */
+
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            .print-area {
+                background: white;
+                color: black;
+                padding: 10px;
+                max-height: 100vh;
+                overflow: hidden;
+            }
+            body * {
+                visibility: hidden;
+            }
+            .bill-print-container,
+            .bill-print-container * {
+                visibility: visible;
+            }
+            .bill-print-container {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                background: white;
+                page-break-inside: avoid;
+                page-break-after: avoid;
+                page-break-before: avoid;
+            }
+        }
+
+        /* Bill container with dynamic border */
+
+        .bill-container {
+            border: var(--invoice-show-border) ? var(--invoice-border): none;
+            border-radius: var(--invoice-border-radius);
+            padding: 15px;
+            background: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: var(--invoice-font-size);
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        /* Single page bill */
+
+        .single-page-bill {
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 10px;
+        }
+
+        /* QR Code styles */
+
+        .qr-preview {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .qr-large {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+        }
+
+        /* Loading spinner */
+
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #2563eb;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Auto-fill highlight */
+
+        .auto-fill-highlight {
+            background-color: rgba(37, 99, 235, 0.1);
+            transition: background-color 0.3s;
+        }
+
+        /* Print Layout Styles */
+
+        .print-layout {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 16px;
+            page-break-inside: avoid;
+        }
+
+        .print-header {
+            text-align: center;
+            margin-bottom: 15px;
+            border-bottom: 2px dashed var(--invoice-primary);
+            padding-bottom: 10px;
+        }
+
+        .print-header h1 {
+            color: var(--invoice-primary);
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .print-details {
+            background: var(--invoice-header-bg);
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .print-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            page-break-inside: avoid;
+        }
+
+        .print-table th {
+            background: var(--invoice-primary);
+            color: white;
+            padding: 8px;
+            font-weight: 600;
+            font-size: 13px;
+        }
+
+        .print-table td {
+            padding: 6px 8px;
+            border: 1px solid #e2e8f0;
+            font-size: 12px;
+        }
+
+        .print-table tr:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        .print-total {
+            text-align: right;
+            font-size: 16px;
+            font-weight: bold;
+            color: var(--invoice-primary);
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 2px dashed var(--invoice-primary);
+        }
+
+        .print-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px solid #e2e8f0;
+            font-size: 10px;
+            color: #64748b;
+        }
+
+        .qr-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .qr-text {
+            font-size: 9px;
+            line-height: 1.2;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .action-btn {
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            color: white;
+            font-size: 13px;
+        }
+
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-print {
+            background: #2563eb;
+        }
+
+        .btn-pdf {
+            background: #dc2626;
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+        }
+
+        .btn-copy {
+            background: #6b7280;
+        }
+
+        .btn-new {
+            background: #059669;
+        }
+
+        /* Color picker styles */
+
+        .color-option {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .color-option:hover {
+            transform: scale(1.1);
+        }
+
+        .color-option.selected {
+            border-color: #000;
+            transform: scale(1.1);
+        }
+
+        /* Template preview */
+
+        .template-preview {
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .template-preview:hover {
+            border-color: var(--invoice-primary);
+            transform: translateY(-2px);
+        }
+
+        .template-preview.selected {
+            border-color: var(--invoice-primary);
+            background: #f0f9ff;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen antialiased">
+<!-- PCT-CHROME-START -->
+<style id="pct-chrome">
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+.pct-header,.pct-footer,.pct-ad{font-family:"Inter",Arial,sans-serif;box-sizing:border-box}
+.pct-header{background:#fff;border-bottom:1px solid #eee;box-shadow:0 2px 10px rgba(0,0,0,.06);padding:10px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;position:relative;z-index:9999}
+.pct-logo{font-size:22px;font-weight:800;color:#ab183d;text-decoration:none;white-space:nowrap}
+.pct-nav{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.pct-nav a{color:#374151;text-decoration:none;font-weight:500;font-size:15px}
+.pct-nav a:hover{color:#ab183d}
+.pct-menu-btn{display:none;background:none;border:0;font-size:26px;color:#ab183d;cursor:pointer;line-height:1}
+.pct-footer{background:#111827;color:#fff;padding:40px 20px 24px;margin-top:48px}
+.pct-footer-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:26px}
+.pct-footer h3{font-size:20px;font-weight:800;margin:0 0 12px;color:#fff}
+.pct-footer h4{font-size:16px;font-weight:600;margin:0 0 12px;color:#fff}
+.pct-footer p{color:#9ca3af;font-size:14px;line-height:1.6;margin:0}
+.pct-footer a{color:#9ca3af;text-decoration:none;display:block;margin-bottom:8px;font-size:14px}
+.pct-footer a:hover{color:#fff}
+.pct-copy{max-width:1100px;margin:26px auto 0;border-top:1px solid #1f2937;padding-top:18px;text-align:center;color:#9ca3af;font-size:13px}
+.pct-ad{margin:18px auto;text-align:center;max-width:1100px;min-height:50px;overflow:hidden}
+@media(max-width:768px){.pct-menu-btn{display:block}.pct-nav{display:none;width:100%;flex-direction:column;align-items:flex-start;gap:12px;padding-top:10px}.pct-nav.open{display:flex}}
+</style>
+
+<header class="pct-header">
+  <a href="/" class="pct-logo">Pro CSC Tools</a>
+  <button class="pct-menu-btn" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu">&#9776;</button>
+  <nav class="pct-nav">
+    <a href="/">Home</a>
+    <a href="/csc-billing-software">Csc Billing</a>
+    <a href="/csc-manager">Csc Work</a>
+    <a href="/#tools">Tools</a>
+    <a href="/blog">Blog</a>
+    <a href="/about">About Us</a>
+    <a href="/contact">Contact</a>
+  </nav>
+</header>
+<div class="pct-ad"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6791318178265120" data-ad-slot="7017392570" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+<!-- PCT-CHROME-END -->
+
+
+    <!-- Main Container -->
+    <div class="container mx-auto px-4 py-4 max-w-7xl">
+
+        <!-- ==================== HEADER WITH ANIMATED BADGE ==================== -->
+        <div class="gradient-primary rounded-2xl p-4 md:p-6 mb-6 text-white shadow-xl no-print flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center gap-4">
+                <div class="bg-white/20 p-3 rounded-xl">
+                    <i class="fas fa-store-alt text-3xl md:text-4xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-2xl md:text-4xl font-bold">CSC Billing Software
+                    </h1>
+                    <p class="text-blue-100 text-sm md:text-base">by <span class="font-bold">Pro CSC Tools</span> - Complete billing solution for CSC VLE</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-3 mt-4 md:mt-0">
+                <button onclick="toggleDarkMode()" class="bg-white/20 px-4 py-2 rounded-lg hover:bg-white/30 transition flex items-center">
+                    <i class="fas fa-moon mr-2"></i>
+                    <span class="hidden md:inline">Dark Mode</span>
+                </button>
+
+                <!-- Animated Pro CSC Tools Badge - Clickable -->
+                <a href="https://procsctools.in" target="_blank" class="smart-badge" title="Visit Pro CSC Tools">
+                    <div class="badge-text">
+                        <i class="fas fa-crown"></i>
+                        <span class="font-bold">Pro CSC Tools</span>
+                        <i class="fas fa-external-link-alt text-xs"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- ==================== STATS DASHBOARD ==================== -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 md:gap-4 mb-6 no-print">
+            <div class="card p-4 flex items-center">
+                <div class="w-10 h-10 md:w-12 md:h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-rupee-sign text-xl md:text-2xl text-blue-600"></i>
+                </div>
+                <div class="ml-3">
+                    <p class="text-xs md:text-sm text-gray-500">Today's Income</p>
+                    <p class="text-lg md:text-2xl font-bold" id="todayIncome">₹0</p>
+                </div>
+            </div>
+
+            <div class="card p-4 flex items-center">
+                <div class="w-10 h-10 md:w-12 md:h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-file-invoice text-xl md:text-2xl text-green-600"></i>
+                </div>
+                <div class="ml-3">
+                    <p class="text-xs md:text-sm text-gray-500">Today's Bills</p>
+                    <p class="text-lg md:text-2xl font-bold" id="todayBills">0</p>
+                </div>
+            </div>
+
+            <div class="card p-4 flex items-center">
+                <div class="w-10 h-10 md:w-12 md:h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-users text-xl md:text-2xl text-purple-600"></i>
+                </div>
+                <div class="ml-3">
+                    <p class="text-xs md:text-sm text-gray-500">Customers</p>
+                    <p class="text-lg md:text-2xl font-bold" id="totalCustomers">0</p>
+                </div>
+            </div>
+
+            <div class="card p-4 flex items-center">
+                <div class="w-10 h-10 md:w-12 md:h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-cubes text-xl md:text-2xl text-orange-600"></i>
+                </div>
+                <div class="ml-3">
+                    <p class="text-xs md:text-sm text-gray-500">Services</p>
+                    <p class="text-lg md:text-2xl font-bold" id="totalServices">0</p>
+                </div>
+            </div>
+
+            <div class="card p-4 flex items-center">
+                <div class="w-10 h-10 md:w-12 md:h-12 bg-red-100 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-calendar text-xl md:text-2xl text-red-600"></i>
+                </div>
+                <div class="ml-3">
+                    <p class="text-xs md:text-sm text-gray-500">Monthly</p>
+                    <p class="text-lg md:text-2xl font-bold" id="monthlyIncome">₹0</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== TABS NAVIGATION ==================== -->
+        <div class="card p-2 mb-6 no-print overflow-x-auto">
+            <div class="flex flex-nowrap md:flex-wrap gap-1 min-w-max md:min-w-0">
+                <button class="tab-btn active px-3 md:px-6 py-2 md:py-3 rounded-lg text-sm md:text-base transition flex items-center" data-tab="dashboard">
+                    <i class="fas fa-home mr-1 md:mr-2"></i>Dashboard
+                </button>
+                <button class="tab-btn px-3 md:px-6 py-2 md:py-3 rounded-lg text-sm md:text-base transition flex items-center" data-tab="profile">
+                    <i class="fas fa-store mr-1 md:mr-2"></i>Profile
+                </button>
+                <button class="tab-btn px-3 md:px-6 py-2 md:py-3 rounded-lg text-sm md:text-base transition flex items-center" data-tab="services">
+                    <i class="fas fa-cogs mr-1 md:mr-2"></i>Services
+                </button>
+                <button class="tab-btn px-3 md:px-6 py-2 md:py-3 rounded-lg text-sm md:text-base transition flex items-center" data-tab="customers">
+                    <i class="fas fa-users mr-1 md:mr-2"></i>Customers
+                </button>
+                <button class="tab-btn px-3 md:px-6 py-2 md:py-3 rounded-lg text-sm md:text-base transition flex items-center" data-tab="billing">
+                    <i class="fas fa-file-invoice mr-1 md:mr-2"></i>Billing
+                </button>
+                <button class="tab-btn px-3 md:px-6 py-2 md:py-3 rounded-lg text-sm md:text-base transition flex items-center" data-tab="history">
+                    <i class="fas fa-history mr-1 md:mr-2"></i>History
+                </button>
+                <button class="tab-btn px-3 md:px-6 py-2 md:py-3 rounded-lg text-sm md:text-base transition flex items-center" data-tab="reports">
+                    <i class="fas fa-chart-bar mr-1 md:mr-2"></i>Reports
+                </button>
+
+                <button class="tab-btn px-3 md:px-6 py-2 md:py-3 rounded-lg text-sm md:text-base transition flex items-center" data-tab="data">
+                    <i class="fas fa-database mr-1 md:mr-2"></i>Data
+                </button>
+            </div>
+        </div>
+
+        <!-- ==================== TAB CONTENTS ==================== -->
+
+        <!-- Dashboard Tab -->
+        <div id="dashboard-tab" class="tab-content">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Quick Actions -->
+                <div class="lg:col-span-2">
+                    <div class="card p-6">
+                        <h2 class="text-xl font-bold mb-4 flex items-center">
+                            <i class="fas fa-bolt text-blue-600 mr-2"></i>Quick Actions
+                        </h2>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                            <button onclick="newBill()" class="p-4 border-2 border-blue-200 rounded-xl text-center hover:bg-blue-50 transition group">
+                                <i class="fas fa-plus-circle text-3xl text-blue-600 mb-2 group-hover:scale-110 transition"></i>
+                                <p class="text-sm font-medium">New Bill</p>
+                            </button>
+                            <button onclick="switchTab('customers')" class="p-4 border-2 border-green-200 rounded-xl text-center hover:bg-green-50 transition group">
+                                <i class="fas fa-user-plus text-3xl text-green-600 mb-2 group-hover:scale-110 transition"></i>
+                                <p class="text-sm font-medium">Add Customer</p>
+                            </button>
+                            <button onclick="switchTab('services')" class="p-4 border-2 border-purple-200 rounded-xl text-center hover:bg-purple-50 transition group">
+                                <i class="fas fa-cog text-3xl text-purple-600 mb-2 group-hover:scale-110 transition"></i>
+                                <p class="text-sm font-medium">Manage Services</p>
+                            </button>
+                            <button onclick="switchTab('settings')" class="p-4 border-2 border-orange-200 rounded-xl text-center hover:bg-orange-50 transition group">
+                                <i class="fas fa-palette text-3xl text-orange-600 mb-2 group-hover:scale-110 transition"></i>
+                                <p class="text-sm font-medium">Invoice Settings</p>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Recent Activity -->
+                    <div class="card p-6 mt-6">
+                        <h2 class="text-xl font-bold mb-4 flex items-center">
+                            <i class="fas fa-clock text-blue-600 mr-2"></i>Recent Bills
+                        </h2>
+                        <div id="recentBillsList" class="space-y-3">
+                            <p class="text-gray-500 text-center py-8">No bills generated yet</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Sidebar -->
+                <div class="lg:col-span-1 space-y-6">
+                    <!-- Top Selling Services -->
+                    <div class="card p-6">
+                        <h2 class="text-lg font-bold mb-4 flex items-center">
+                            <i class="fas fa-trophy text-yellow-500 mr-2"></i>Top Services
+                        </h2>
+                        <div id="topServicesList" class="space-y-3">
+                            <p class="text-gray-500 text-sm">Loading...</p>
+                        </div>
+                    </div>
+
+                    <!-- Quick Stats -->
+                    <div class="gradient-primary text-white p-6 rounded-xl">
+                        <h3 class="font-semibold mb-3">Today's Summary</h3>
+                        <div class="space-y-2">
+                            <div class="flex justify-between">
+                                <span>Cash Payments:</span>
+                                <span class="font-bold" id="todayCash">₹0</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>UPI Payments:</span>
+                                <span class="font-bold" id="todayUPI">₹0</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Card Payments:</span>
+                                <span class="font-bold" id="todayCard">₹0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile Tab -->
+        <div id="profile-tab" class="tab-content hidden">
+            <div class="card p-6">
+                <h2 class="text-2xl font-bold mb-6 flex items-center">
+                    <i class="fas fa-store text-blue-600 mr-3"></i>CSC Center Profile
+                </h2>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Logo Upload -->
+                    <div class="lg:col-span-1">
+                        <div class="border-2 border-dashed border-blue-300 rounded-xl p-6 text-center">
+                            <div class="flex justify-center mb-4">
+                                <img id="logoPreview" class="w-32 h-32 object-cover rounded-lg border hidden" alt="Logo">
+                                <div id="logoPlaceholder" class="w-32 h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-400">
+                                    <i class="fas fa-upload text-4xl"></i>
+                                </div>
+                            </div>
+                            <button onclick="document.getElementById('logoInput').click()" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm">
+                                <i class="fas fa-cloud-upload-alt mr-2"></i>Upload Logo
+                            </button>
+                            <input type="file" id="logoInput" accept="image/*" class="hidden" onchange="handleLogoUpload(event)">
+                            <p class="text-xs text-gray-500 mt-2">Max 2MB, Square image</p>
+                        </div>
+                    </div>
+
+                    <!-- Profile Form -->
+                    <div class="lg:col-span-2">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Center Name <span class="text-red-500">*</span></label>
+                                <input type="text" id="centerName" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">VLE Name <span class="text-red-500">*</span></label>
+                                <input type="text" id="vleName" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">CSC ID <span class="text-red-500">*</span></label>
+                                <input type="text" id="cscId" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Mobile <span class="text-red-500">*</span></label>
+                                <input type="tel" id="centerMobile" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500" maxlength="10">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Email</label>
+                                <input type="email" id="centerEmail" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div class="md:col-span-2">
+                                <label class="block text-sm font-medium mb-2">Address <span class="text-red-500">*</span></label>
+                                <textarea id="centerAddress" rows="3" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 flex gap-3">
+                            <button onclick="saveCenterProfile()" class="gradient-primary text-white px-8 py-3 rounded-lg hover:shadow-lg transition font-semibold">
+                                <i class="fas fa-save mr-2"></i>Save Profile
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- QR Code Upload Section -->
+                <div class="mt-8 border-t pt-6">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-qrcode text-blue-600 mr-2"></i>QR Code for Payments
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4">Upload your UPI QR code. This will appear on every bill automatically.</p>
+
+                    <div class="flex flex-col md:flex-row items-center gap-8">
+                        <div class="border-2 border-dashed border-blue-300 rounded-xl p-6 text-center">
+                            <div class="flex justify-center mb-4">
+                                <img id="qrPreview" class="qr-large rounded-lg border hidden" alt="QR Code">
+                                <div id="qrPlaceholder" class="w-32 h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-400">
+                                    <i class="fas fa-qrcode text-4xl"></i>
+                                </div>
+                            </div>
+                            <button onclick="document.getElementById('qrInput').click()" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm">
+                                <i class="fas fa-cloud-upload-alt mr-2"></i>Upload QR Code
+                            </button>
+                            <input type="file" id="qrInput" accept="image/*" class="hidden" onchange="handleQRUpload(event)">
+                            <p class="text-xs text-gray-500 mt-2">Upload your UPI QR code (PNG/JPG)</p>
+                        </div>
+
+                        <div class="flex-1 bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-semibold mb-2">Benefits of QR Code:</h4>
+                            <ul class="text-sm space-y-1 text-gray-600">
+                                <li><i class="fas fa-check text-green-600 mr-2"></i>Customers can pay instantly</li>
+                                <li><i class="fas fa-check text-green-600 mr-2"></i>No need to share UPI ID</li>
+                                <li><i class="fas fa-check text-green-600 mr-2"></i>Auto appears on every bill</li>
+                                <li><i class="fas fa-check text-green-600 mr-2"></i>Supports all UPI apps</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Services Tab -->
+        <div id="services-tab" class="tab-content hidden">
+            <div class="card p-6">
+                <div class="flex flex-col md:flex-row justify-between items-center mb-6">
+                    <h2 class="text-2xl font-bold flex items-center">
+                        <i class="fas fa-cogs text-blue-600 mr-3"></i>Service Management
+                    </h2>
+                    <button onclick="openServiceModal()" class="gradient-success text-white px-6 py-2 rounded-lg hover:shadow-lg transition flex items-center mt-3 md:mt-0">
+                        <i class="fas fa-plus mr-2"></i>Add Service
+                    </button>
+                </div>
+
+                <!-- Category Filter -->
+                <div class="mb-4 flex gap-2 overflow-x-auto pb-2">
+                    <button onclick="filterServicesByCategory('all')" class="category-filter active px-4 py-2 bg-blue-600 text-white rounded-lg text-sm">All</button>
+                    <button onclick="filterServicesByCategory('Government')" class="category-filter px-4 py-2 border rounded-lg text-sm hover:bg-blue-50">Government</button>
+                    <button onclick="filterServicesByCategory('Banking')" class="category-filter px-4 py-2 border rounded-lg text-sm hover:bg-blue-50">Banking</button>
+                    <button onclick="filterServicesByCategory('Insurance')" class="category-filter px-4 py-2 border rounded-lg text-sm hover:bg-blue-50">Insurance</button>
+                    <button onclick="filterServicesByCategory('Recharge')" class="category-filter px-4 py-2 border rounded-lg text-sm hover:bg-blue-50">Recharge</button>
+                </div>
+
+                <!-- Search -->
+                <div class="mb-6">
+                    <input type="text" id="serviceSearch" placeholder="Search services..." class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500">
+                </div>
+
+                <!-- Services Grid -->
+                <div id="servicesList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+            </div>
+        </div>
+
+        <!-- Customers Tab -->
+        <div id="customers-tab" class="tab-content hidden">
+            <div class="card p-6">
+                <h2 class="text-2xl font-bold mb-6 flex items-center">
+                    <i class="fas fa-users text-blue-600 mr-3"></i>Customer Database
+                </h2>
+
+                <!-- Search -->
+                <div class="mb-6">
+                    <input type="text" id="customerSearch" placeholder="Search by name or mobile..." class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500">
+                </div>
+
+                <!-- Customers List -->
+                <div id="customersList" class="space-y-3"></div>
+            </div>
+        </div>
+
+        <!-- Billing Tab -->
+        <div id="billing-tab" class="tab-content hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Left Column - Bill Entry -->
+                <div class="space-y-6">
+                    <!-- Customer Selection -->
+                    <div class="card p-6">
+                        <h3 class="text-lg font-bold mb-4">Customer Details</h3>
+
+                        <!-- Mobile Number Search -->
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium mb-2">Mobile Number</label>
+                            <input type="tel" id="billMobile" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500" placeholder="Enter mobile number" maxlength="10" onchange="searchCustomerByMobile()">
+                        </div>
+
+                        <!-- Customer Info -->
+                        <div id="customerInfo" class="hidden p-4 bg-green-50 rounded-lg mb-4">
+                            <p class="font-semibold" id="selectedCustomerName"></p>
+                            <p class="text-sm text-gray-600" id="selectedCustomerMobile"></p>
+                        </div>
+
+                        <!-- New Customer Form -->
+                        <div id="newCustomerForm">
+                            <div class="mb-3">
+                                <input type="text" id="newCustomerName" placeholder="Customer Name" class="w-full p-3 border rounded-lg">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Selection -->
+                    <div class="card p-6">
+                        <h3 class="text-lg font-bold mb-4">Add Services</h3>
+
+                        <div class="space-y-4">
+                            <select id="billServiceSelect" class="w-full p-3 border rounded-lg">
+                                <option value="">Select Service</option>
+                            </select>
+
+                            <div class="grid grid-cols-2 gap-3">
+                                <input type="number" id="billQuantity" placeholder="Qty" value="1" min="1" class="p-3 border rounded-lg">
+                                <input type="number" id="billCustomPrice" placeholder="Custom Price" class="p-3 border rounded-lg">
+                            </div>
+
+                            <button onclick="addServiceToBill()" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition">
+                                <i class="fas fa-plus mr-2"></i>Add to Bill
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Bill Options -->
+                    <div class="card p-6">
+                        <h3 class="text-lg font-bold mb-4">Bill Options</h3>
+
+                        <div class="space-y-4">
+                            <!-- Discount -->
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Discount (%)</label>
+                                <input type="number" id="billDiscount" value="0" min="0" max="100" class="w-full p-3 border rounded-lg" onchange="updateBillTotals()">
+                            </div>
+
+                            <!-- GST -->
+                            <div>
+                                <label class="block text-sm font-medium mb-2">GST (%)</label>
+                                <select id="billGst" class="w-full p-3 border rounded-lg" onchange="updateBillTotals()">
+                                    <option value="0">No GST (0%)</option>
+                                    <option value="5">GST 5%</option>
+                                    <option value="12">GST 12%</option>
+                                    <option value="18">GST 18%</option>
+                                    <option value="28">GST 28%</option>
+                                </select>
+                            </div>
+
+                            <!-- Payment Mode -->
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Payment Mode</label>
+                                <select id="billPaymentMode" class="w-full p-3 border rounded-lg" onchange="updateBillTotals()">
+                                    <option value="Cash">Cash</option>
+                                    <option value="UPI">UPI</option>
+                                    <option value="Card">Card</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Generate Button -->
+                    <button onclick="generateBill()" class="w-full gradient-success text-white py-4 rounded-xl text-lg font-bold hover:shadow-lg transition">
+                        <i class="fas fa-file-invoice mr-2"></i>Generate Bill
+                    </button>
+
+                    <!-- New Bill Button -->
+                    <button onclick="resetBill()" class="w-full bg-gray-600 text-white py-3 rounded-lg hover:bg-gray-700 transition">
+                        <i class="fas fa-plus-circle mr-2"></i>Reset Form
+                    </button>
+                </div>
+
+                <!-- Right Column - Bill Preview -->
+                <div class="lg:sticky lg:top-4">
+                    <div class="card p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold">Bill Preview</h3>
+                            <div class="flex gap-2" id="previewActionButtons">
+                                <button onclick="printBillFromPreview()" class="p-2 bg-gray-200 rounded-lg hover:bg-gray-300" title="Print">
+                                    <i class="fas fa-print"></i>
+                                </button>
+                                <button onclick="downloadPDFFromPreview()" class="p-2 bg-gray-200 rounded-lg hover:bg-gray-300" title="PDF">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button onclick="copyBillFromPreview()" class="p-2 bg-gray-200 rounded-lg hover:bg-gray-300" title="Copy">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                                <button onclick="shareWhatsAppFromPreview()" class="p-2 bg-green-600 text-white rounded-lg hover:bg-green-700" title="WhatsApp">
+                                    <i class="fab fa-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Invoice Preview with Dynamic Template -->
+                        <div id="billPreview" class="bill-container">
+                            <!-- Content will be dynamically updated -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- History Tab -->
+        <div id="history-tab" class="tab-content hidden">
+            <div class="card p-6">
+                <h2 class="text-2xl font-bold mb-6">Bill History</h2>
+
+                <!-- Search -->
+                <div class="mb-6">
+                    <input type="text" id="historySearch" placeholder="Search bills..." class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500">
+                </div>
+
+                <!-- Bills List -->
+                <div id="billsHistoryList" class="space-y-4"></div>
+            </div>
+        </div>
+
+        <!-- Reports Tab -->
+        <div id="reports-tab" class="tab-content hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Date Range -->
+                <div class="lg:col-span-3">
+                    <div class="card p-6">
+                        <div class="flex flex-col md:flex-row gap-4 items-center">
+                            <input type="date" id="reportStartDate" class="p-3 border rounded-lg">
+                            <span>to</span>
+                            <input type="date" id="reportEndDate" class="p-3 border rounded-lg">
+                            <button onclick="generateReport()" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+                                Generate Report
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Daily Report -->
+                <div class="card p-6">
+                    <h3 class="font-bold mb-4">Daily Income</h3>
+                    <canvas id="dailyChart" class="w-full h-48"></canvas>
+                </div>
+
+                <!-- Service Report -->
+                <div class="card p-6">
+                    <h3 class="font-bold mb-4">Top Services</h3>
+                    <div id="serviceReportList" class="space-y-2"></div>
+                </div>
+
+                <!-- Payment Modes -->
+                <div class="card p-6">
+                    <h3 class="font-bold mb-4">Payment Modes</h3>
+                    <div id="paymentModeReport" class="space-y-2"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Settings Tab -->
+        <div id="settings-tab" class="tab-content hidden">
+            <div class="card p-6">
+                <h2 class="text-2xl font-bold mb-6 flex items-center">
+                    <i class="fas fa-palette text-blue-600 mr-3"></i>Invoice Settings
+                </h2>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Left Column - Template Settings -->
+                    <div>
+                        <h3 class="text-lg font-bold mb-4">Template Colors</h3>
+
+                        <!-- Primary Color -->
+                        <div class="mb-6">
+                            <label class="block text-sm font-medium mb-2">Primary Color</label>
+                            <div class="flex gap-3 flex-wrap">
+                                <div class="color-option selected" style="background: #2563eb;" onclick="setInvoiceColor('#2563eb', 'primary')" data-color="#2563eb"></div>
+                                <div class="color-option" style="background: #059669;" onclick="setInvoiceColor('#059669', 'primary')" data-color="#059669"></div>
+                                <div class="color-option" style="background: #dc2626;" onclick="setInvoiceColor('#dc2626', 'primary')" data-color="#dc2626"></div>
+                                <div class="color-option" style="background: #7c3aed;" onclick="setInvoiceColor('#7c3aed', 'primary')" data-color="#7c3aed"></div>
+                                <div class="color-option" style="background: #ea580c;" onclick="setInvoiceColor('#ea580c', 'primary')" data-color="#ea580c"></div>
+                                <div class="color-option" style="background: #0891b2;" onclick="setInvoiceColor('#0891b2', 'primary')" data-color="#0891b2"></div>
+                            </div>
+                        </div>
+
+                        <!-- Border Settings -->
+                        <div class="mb-6">
+                            <h3 class="text-lg font-bold mb-4">Border Settings</h3>
+                            <div class="space-y-3">
+                                <label class="flex items-center">
+                                    <input type="checkbox" id="showBorder" class="mr-2" checked onchange="toggleInvoiceBorder()">
+                                    Show Border
+                                </label>
+
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">Border Width</label>
+                                    <select id="borderWidth" class="w-full p-2 border rounded-lg" onchange="updateInvoiceBorder()">
+                                        <option value="1px">Thin (1px)</option>
+                                        <option value="2px" selected>Medium (2px)</option>
+                                        <option value="3px">Thick (3px)</option>
+                                        <option value="4px">Extra Thick (4px)</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">Border Radius</label>
+                                    <select id="borderRadius" class="w-full p-2 border rounded-lg" onchange="updateInvoiceBorder()">
+                                        <option value="4px">Small (4px)</option>
+                                        <option value="8px">Medium (8px)</option>
+                                        <option value="12px" selected>Large (12px)</option>
+                                        <option value="16px">Extra Large (16px)</option>
+                                        <option value="0">None</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Header Background -->
+                        <div class="mb-6">
+                            <h3 class="text-lg font-bold mb-4">Header Background</h3>
+                            <select id="headerBg" class="w-full p-2 border rounded-lg" onchange="updateInvoiceStyle()">
+                                <option value="#f8fafc">Light Gray</option>
+                                <option value="#eff6ff">Light Blue</option>
+                                <option value="#ecfdf5">Light Green</option>
+                                <option value="#fef2f2">Light Red</option>
+                                <option value="#faf5ff">Light Purple</option>
+                                <option value="#ffffff">White</option>
+                            </select>
+                        </div>
+
+                        <!-- Font Size -->
+                        <div class="mb-6">
+                            <h3 class="text-lg font-bold mb-4">Font Size</h3>
+                            <select id="fontSize" class="w-full p-2 border rounded-lg" onchange="updateInvoiceFontSize()">
+                                <option value="12px">Small</option>
+                                <option value="14px" selected>Medium</option>
+                                <option value="16px">Large</option>
+                                <option value="18px">Extra Large</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Right Column - Template Previews -->
+                    <div>
+                        <h3 class="text-lg font-bold mb-4">Template Designs</h3>
+
+                        <!-- Template 1 -->
+                        <div class="template-preview selected" onclick="selectTemplate(1)">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 bg-blue-600 rounded-lg"></div>
+                                <div>
+                                    <h4 class="font-bold">Professional Template</h4>
+                                    <p class="text-sm text-gray-600">Blue theme with border</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Template 2 -->
+                        <div class="template-preview" onclick="selectTemplate(2)">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 bg-green-600 rounded-lg"></div>
+                                <div>
+                                    <h4 class="font-bold">Modern Template</h4>
+                                    <p class="text-sm text-gray-600">Green theme, no border</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Template 3 -->
+                        <div class="template-preview" onclick="selectTemplate(3)">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 bg-purple-600 rounded-lg"></div>
+                                <div>
+                                    <h4 class="font-bold">Elegant Template</h4>
+                                    <p class="text-sm text-gray-600">Purple theme, rounded corners</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Template 4 -->
+                        <div class="template-preview" onclick="selectTemplate(4)">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 bg-orange-600 rounded-lg"></div>
+                                <div>
+                                    <h4 class="font-bold">Classic Template</h4>
+                                    <p class="text-sm text-gray-600">Orange theme, thick border</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Save Settings Button -->
+                        <button onclick="saveInvoiceSettings()" class="w-full gradient-primary text-white py-3 rounded-lg mt-6">
+                            <i class="fas fa-save mr-2"></i>Save Settings
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Live Preview -->
+                <div class="mt-8">
+                    <h3 class="text-lg font-bold mb-4">Live Preview</h3>
+                    <div id="settingsPreview" class="bill-container">
+                        <div class="print-header">
+                            <h1 style="color: var(--invoice-primary);">CSC Center</h1>
+                            <p>Sample Invoice Preview</p>
+                        </div>
+                        <div class="print-details">
+                            <p><strong>Bill No:</strong> CSC-0001</p>
+                            <p><strong>Customer:</strong> Sample Customer</p>
+                        </div>
+                        <table class="print-table">
+                            <tr>
+                                <td colspan="4" class="text-center">Preview with your settings</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Data Management Tab -->
+        <div id="data-tab" class="tab-content hidden">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Backup -->
+                <div class="card p-6">
+                    <h2 class="text-xl font-bold mb-4">Backup Data</h2>
+                    <p class="text-gray-600 mb-4">Download all your data as JSON file</p>
+                    <button onclick="backupData()" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 w-full">
+                        <i class="fas fa-download mr-2"></i>Download Backup
+                    </button>
+                </div>
+
+                <!-- Restore -->
+                <div class="card p-6">
+                    <h2 class="text-xl font-bold mb-4">Restore Data</h2>
+                    <p class="text-gray-600 mb-4">Upload previously backed up JSON file</p>
+                    <input type="file" id="restoreFile" accept=".json" class="mb-4">
+                    <button onclick="restoreData()" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 w-full">
+                        <i class="fas fa-upload mr-2"></i>Restore Data
+                    </button>
+                </div>
+
+                <!-- Clear Data -->
+                <div class="card p-6 md:col-span-2">
+                    <h2 class="text-xl font-bold mb-4 text-red-600">Danger Zone</h2>
+                    <p class="text-gray-600 mb-4">Clear all data from local storage</p>
+                    <button onclick="clearAllData()" class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700">
+                        <i class="fas fa-trash mr-2"></i>Clear All Data
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== MODALS ==================== -->
+
+    <!-- Service Modal -->
+    <div id="serviceModal" class="fixed inset-0 modal-backdrop flex items-center justify-center hidden z-50 p-4">
+        <div class="bg-white rounded-xl max-w-md w-full p-6">
+            <h3 id="serviceModalTitle" class="text-2xl font-bold mb-4">Add Service</h3>
+
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium mb-2">Service Name</label>
+                    <input type="text" id="modalServiceName" class="w-full p-3 border rounded-lg">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Category</label>
+                    <select id="modalServiceCategory" class="w-full p-3 border rounded-lg">
+                        <option value="Government">Government</option>
+                        <option value="Banking">Banking</option>
+                        <option value="Insurance">Insurance</option>
+                        <option value="Recharge">Recharge</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Price (₹)</label>
+                    <input type="number" id="modalServicePrice" class="w-full p-3 border rounded-lg">
+                </div>
+            </div>
+
+            <div class="flex justify-end gap-3 mt-6">
+                <button onclick="closeServiceModal()" class="px-6 py-2 border rounded-lg">Cancel</button>
+                <button onclick="saveService()" class="bg-blue-600 text-white px-6 py-2 rounded-lg">Save</button>
+            </div>
+            <input type="hidden" id="editingServiceId">
+        </div>
+    </div>
+
+    <!-- Print Layout Modal -->
+    <div id="printLayoutModal" class="fixed inset-0 modal-backdrop flex items-center justify-center hidden z-50 p-4 overflow-y-auto">
+        <div class="bg-white rounded-xl max-w-4xl w-full p-6 relative">
+            <div class="flex justify-between items-center mb-4 no-print">
+                <h2 class="text-2xl font-bold" style="color: var(--invoice-primary);">Bill Preview</h2>
+                <button onclick="closePrintModal()" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons no-print mb-6">
+                <button onclick="printFromModal()" class="action-btn btn-print">
+                    <i class="fas fa-print mr-2"></i>Print Bill
+                </button>
+                <button onclick="downloadPDFFromModal()" class="action-btn btn-pdf">
+                    <i class="fas fa-file-pdf mr-2"></i>Download PDF
+                </button>
+                <button onclick="shareWhatsAppFromModal()" class="action-btn btn-whatsapp">
+                    <i class="fab fa-whatsapp mr-2"></i>WhatsApp
+                </button>
+                <button onclick="copyBillFromModal()" class="action-btn btn-copy">
+                    <i class="fas fa-copy mr-2"></i>Copy
+                </button>
+                <button onclick="newBillFromModal()" class="action-btn btn-new">
+                    <i class="fas fa-plus mr-2"></i>New Bill
+                </button>
+            </div>
+
+            <!-- Bill Container with Dynamic Template -->
+            <div id="printBillContainer" class="bill-container single-page-bill">
+                <!-- Content will be injected via JavaScript -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Banner Ads -->
+    
+    
+    <!-- Toast Container -->
+    <div id="toastContainer" class="fixed bottom-5 right-5 z-50 space-y-2"></div>
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+    <script>
+        // ==================== STATE MANAGEMENT ====================
+
+        let appState = {
+            centerProfile: {
+                logo: null,
+                qrCode: null,
+                centerName: '',
+                vleName: '',
+                cscId: '',
+                mobile: '',
+                email: '',
+                address: ''
+            },
+            services: [],
+            customers: [],
+            bills: [],
+            categories: ['Government', 'Banking', 'Insurance', 'Recharge', 'Other'],
+            lastBillNumber: 0,
+            darkMode: false,
+            invoiceSettings: {
+                primaryColor: '#2563eb',
+                showBorder: true,
+                borderWidth: '2px',
+                borderRadius: '12px',
+                headerBg: '#f8fafc',
+                fontSize: '14px',
+                templateId: 1
+            }
+        };
+
+        let currentBill = {
+            items: [],
+            customerName: '',
+            customerMobile: '',
+            discount: 0,
+            gst: 0,
+            paymentMode: 'Cash',
+            subtotal: 0,
+            total: 0
+        };
+
+        let lastGeneratedBill = null;
+
+        // ==================== INITIALIZATION ====================
+
+        document.addEventListener('DOMContentLoaded', function() {
+            loadFromLocalStorage();
+            initializeDefaultData();
+            setupEventListeners();
+            updateDashboard();
+            renderServices();
+            renderCustomers();
+            renderBillsHistory();
+            updateBillPreview();
+            updateStats();
+            applyTheme();
+            applyInvoiceSettings();
+            populateSettingsForm();
+        });
+
+        function loadFromLocalStorage() {
+            try {
+                // Load center profile
+                const savedProfile = localStorage.getItem('smartCscCenterProfile');
+                if (savedProfile) {
+                    appState.centerProfile = JSON.parse(savedProfile);
+                    populateCenterProfile();
+                    populateQRCode();
+                }
+
+                // Load services
+                const savedServices = localStorage.getItem('smartCscServices');
+                if (savedServices) {
+                    appState.services = JSON.parse(savedServices);
+                }
+
+                // Load customers
+                const savedCustomers = localStorage.getItem('smartCscCustomers');
+                if (savedCustomers) {
+                    appState.customers = JSON.parse(savedCustomers);
+                }
+
+                // Load bills
+                const savedBills = localStorage.getItem('smartCscBills');
+                if (savedBills) {
+                    appState.bills = JSON.parse(savedBills);
+                    // Get last bill number
+                    if (appState.bills.length > 0) {
+                        const lastBill = appState.bills[appState.bills.length - 1];
+                        const billNum = parseInt(lastBill.billNumber.split('-')[1]);
+                        appState.lastBillNumber = billNum || 0;
+                    }
+                }
+
+                // Load invoice settings
+                const savedSettings = localStorage.getItem('smartCscInvoiceSettings');
+                if (savedSettings) {
+                    appState.invoiceSettings = JSON.parse(savedSettings);
+                }
+
+                // Load dark mode preference
+                const savedDarkMode = localStorage.getItem('smartCscDarkMode');
+                if (savedDarkMode) {
+                    appState.darkMode = savedDarkMode === 'true';
+                }
+            } catch (error) {
+                console.error('Error loading data:', error);
+                showToast('Error loading data', 'error');
+            }
+        }
+
+        function saveToLocalStorage() {
+            try {
+                localStorage.setItem('smartCscCenterProfile', JSON.stringify(appState.centerProfile));
+                localStorage.setItem('smartCscServices', JSON.stringify(appState.services));
+                localStorage.setItem('smartCscCustomers', JSON.stringify(appState.customers));
+                localStorage.setItem('smartCscBills', JSON.stringify(appState.bills));
+                localStorage.setItem('smartCscDarkMode', appState.darkMode);
+                localStorage.setItem('smartCscInvoiceSettings', JSON.stringify(appState.invoiceSettings));
+            } catch (error) {
+                console.error('Error saving data:', error);
+                showToast('Error saving data', 'error');
+            }
+        }
+
+        function initializeDefaultData() {
+            if (appState.services.length === 0) {
+                const defaultServices = [{
+                        id: '1',
+                        name: 'PAN Card Apply',
+                        category: 'Government',
+                        price: 50
+                    },
+                    {
+                        id: '2',
+                        name: 'Aadhaar Update',
+                        category: 'Government',
+                        price: 30
+                    },
+                    {
+                        id: '3',
+                        name: 'Voter ID Apply',
+                        category: 'Government',
+                        price: 40
+                    },
+                    {
+                        id: '4',
+                        name: 'Ayushman Card',
+                        category: 'Government',
+                        price: 60
+                    },
+                    {
+                        id: '5',
+                        name: 'Electricity Bill',
+                        category: 'Recharge',
+                        price: 20
+                    },
+                    {
+                        id: '6',
+                        name: 'Bank CSP Withdrawal',
+                        category: 'Banking',
+                        price: 10
+                    },
+                    {
+                        id: '7',
+                        name: 'Insurance Premium',
+                        category: 'Insurance',
+                        price: 100
+                    },
+                    {
+                        id: '8',
+                        name: 'Mobile Recharge',
+                        category: 'Recharge',
+                        price: 10
+                    },
+                    {
+                        id: '9',
+                        name: 'DTH Recharge',
+                        category: 'Recharge',
+                        price: 10
+                    },
+                    {
+                        id: '10',
+                        name: 'Passport Service',
+                        category: 'Government',
+                        price: 150
+                    }
+                ];
+
+                defaultServices.forEach(service => {
+                    appState.services.push({
+                        id: Date.now() + Math.random().toString(),
+                        ...service
+                    });
+                });
+            }
+
+            saveToLocalStorage();
+        }
+
+        function setupEventListeners() {
+            // Tab switching
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    switchTab(this.dataset.tab);
+                });
+            });
+
+            // Service search
+            document.getElementById('serviceSearch') ? .addEventListener('input', function() {
+                renderServices(this.value);
+            });
+
+            // Customer search
+            document.getElementById('customerSearch') ? .addEventListener('input', function() {
+                renderCustomers(this.value);
+            });
+
+            // History search
+            document.getElementById('historySearch') ? .addEventListener('input', function() {
+                renderBillsHistory(this.value);
+            });
+
+            // Bill service select
+            document.getElementById('billServiceSelect') ? .addEventListener('change', function() {
+                const selected = this.options[this.selectedIndex];
+                if (selected && selected.value) {
+                    const price = selected.dataset.price;
+                    document.getElementById('billCustomPrice').value = price;
+                }
+            });
+        }
+
+        // ==================== QR CODE FUNCTIONS ====================
+
+        function handleQRUpload(event) {
+            const file = event.target.files[0];
+            if (file) {
+                if (file.size > 2 * 1024 * 1024) {
+                    showToast('QR code size should be less than 2MB', 'error');
+                    return;
+                }
+
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const qrPreview = document.getElementById('qrPreview');
+                    const qrPlaceholder = document.getElementById('qrPlaceholder');
+
+                    qrPreview.src = e.target.result;
+                    qrPreview.classList.remove('hidden');
+                    qrPlaceholder.classList.add('hidden');
+
+                    appState.centerProfile.qrCode = e.target.result;
+                    saveToLocalStorage();
+                    updateBillPreview();
+                    showToast('QR code uploaded successfully! It will appear on all bills.', 'success');
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function populateQRCode() {
+            const qrCode = appState.centerProfile.qrCode;
+            if (qrCode) {
+                const qrPreview = document.getElementById('qrPreview');
+                const qrPlaceholder = document.getElementById('qrPlaceholder');
+
+                qrPreview.src = qrCode;
+                qrPreview.classList.remove('hidden');
+                qrPlaceholder.classList.add('hidden');
+            }
+        }
+
+        // ==================== THEME FUNCTIONS ====================
+
+        function toggleDarkMode() {
+            appState.darkMode = !appState.darkMode;
+            applyTheme();
+            saveToLocalStorage();
+            showToast(`Dark mode ${appState.darkMode ? 'enabled' : 'disabled'}`, 'success');
+        }
+
+        function applyTheme() {
+            if (appState.darkMode) {
+                document.body.classList.add('dark-mode');
+                document.querySelectorAll('.card').forEach(card => {
+                    card.classList.add('dark-mode');
+                });
+            } else {
+                document.body.classList.remove('dark-mode');
+                document.querySelectorAll('.card').forEach(card => {
+                    card.classList.remove('dark-mode');
+                });
+            }
+        }
+
+        // ==================== TAB FUNCTIONS ====================
+
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.add('hidden');
+            });
+
+            document.getElementById(tabName + '-tab').classList.remove('hidden');
+
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('tab-active', 'bg-blue-50');
+            });
+
+            const activeBtn = Array.from(document.querySelectorAll('.tab-btn')).find(btn =>
+                btn.dataset.tab === tabName
+            );
+            if (activeBtn) {
+                activeBtn.classList.add('tab-active', 'bg-blue-50');
+            }
+
+            // Refresh data when switching tabs
+            if (tabName === 'dashboard') updateStats();
+            if (tabName === 'services') renderServices();
+            if (tabName === 'customers') renderCustomers();
+            if (tabName === 'history') renderBillsHistory();
+            if (tabName === 'billing') {
+                populateServiceSelect();
+                updateBillPreview();
+            }
+            if (tabName === 'reports') generateReport();
+            if (tabName === 'settings') populateSettingsForm();
+        }
+
+        // ==================== CENTER PROFILE FUNCTIONS ====================
+
+        function handleLogoUpload(event) {
+            const file = event.target.files[0];
+            if (file) {
+                if (file.size > 2 * 1024 * 1024) {
+                    showToast('Logo size should be less than 2MB', 'error');
+                    return;
+                }
+
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const logoPreview = document.getElementById('logoPreview');
+                    const logoPlaceholder = document.getElementById('logoPlaceholder');
+
+                    logoPreview.src = e.target.result;
+                    logoPreview.classList.remove('hidden');
+                    logoPlaceholder.classList.add('hidden');
+
+                    appState.centerProfile.logo = e.target.result;
+                    saveToLocalStorage();
+                    updateBillPreview();
+                    showToast('Logo uploaded successfully', 'success');
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function populateCenterProfile() {
+            const profile = appState.centerProfile;
+
+            document.getElementById('centerName').value = profile.centerName || '';
+            document.getElementById('vleName').value = profile.vleName || '';
+            document.getElementById('cscId').value = profile.cscId || '';
+            document.getElementById('centerMobile').value = profile.mobile || '';
+            document.getElementById('centerEmail').value = profile.email || '';
+            document.getElementById('centerAddress').value = profile.address || '';
+
+            if (profile.logo) {
+                const logoPreview = document.getElementById('logoPreview');
+                const logoPlaceholder = document.getElementById('logoPlaceholder');
+                logoPreview.src = profile.logo;
+                logoPreview.classList.remove('hidden');
+                logoPlaceholder.classList.add('hidden');
+            }
+        }
+
+        function saveCenterProfile() {
+            const centerName = document.getElementById('centerName').value;
+            const vleName = document.getElementById('vleName').value;
+            const cscId = document.getElementById('cscId').value;
+            const mobile = document.getElementById('centerMobile').value;
+            const address = document.getElementById('centerAddress').value;
+
+            if (!centerName || !vleName || !cscId || !mobile || !address) {
+                showToast('Please fill all required fields', 'error');
+                return;
+            }
+
+            if (mobile.length !== 10) {
+                showToast('Please enter valid 10-digit mobile number', 'error');
+                return;
+            }
+
+            appState.centerProfile = {
+                ...appState.centerProfile,
+                centerName,
+                vleName,
+                cscId,
+                mobile,
+                email: document.getElementById('centerEmail').value,
+                address
+            };
+
+            saveToLocalStorage();
+            updateBillPreview();
+            showToast('Center profile saved successfully!', 'success');
+        }
+
+        // ==================== SERVICE FUNCTIONS ====================
+
+        function openServiceModal(editId = null) {
+            if (editId) {
+                const service = appState.services.find(s => s.id === editId);
+                if (service) {
+                    document.getElementById('serviceModalTitle').textContent = 'Edit Service';
+                    document.getElementById('modalServiceName').value = service.name;
+                    document.getElementById('modalServiceCategory').value = service.category;
+                    document.getElementById('modalServicePrice').value = service.price;
+                    document.getElementById('editingServiceId').value = service.id;
+                }
+            } else {
+                document.getElementById('serviceModalTitle').textContent = 'Add Service';
+                document.getElementById('modalServiceName').value = '';
+                document.getElementById('modalServiceCategory').value = 'Government';
+                document.getElementById('modalServicePrice').value = '';
+                document.getElementById('editingServiceId').value = '';
+            }
+            document.getElementById('serviceModal').classList.remove('hidden');
+        }
+
+        function closeServiceModal() {
+            document.getElementById('serviceModal').classList.add('hidden');
+        }
+
+        function saveService() {
+            const name = document.getElementById('modalServiceName').value;
+            const category = document.getElementById('modalServiceCategory').value;
+            const price = document.getElementById('modalServicePrice').value;
+            const editId = document.getElementById('editingServiceId').value;
+
+            if (!name || !price) {
+                showToast('Please fill all fields', 'error');
+                return;
+            }
+
+            if (editId) {
+                // Update existing service
+                const index = appState.services.findIndex(s => s.id === editId);
+                if (index !== -1) {
+                    appState.services[index] = {
+                        ...appState.services[index],
+                        name,
+                        category,
+                        price: parseFloat(price)
+                    };
+                    showToast('Service updated successfully', 'success');
+                }
+            } else {
+                // Add new service
+                const newService = {
+                    id: Date.now().toString() + Math.random(),
+                    name,
+                    category,
+                    price: parseFloat(price)
+                };
+                appState.services.push(newService);
+                showToast('Service added successfully', 'success');
+            }
+
+            saveToLocalStorage();
+            renderServices();
+            populateServiceSelect();
+            closeServiceModal();
+        }
+
+        function deleteService(id) {
+            if (confirm('Are you sure you want to delete this service?')) {
+                appState.services = appState.services.filter(s => s.id !== id);
+                saveToLocalStorage();
+                renderServices();
+                populateServiceSelect();
+                showToast('Service deleted successfully', 'success');
+            }
+        }
+
+        let currentCategory = 'all';
+
+        function filterServicesByCategory(category) {
+            currentCategory = category;
+            document.querySelectorAll('.category-filter').forEach(btn => {
+                btn.classList.remove('bg-blue-600', 'text-white');
+                btn.classList.add('border');
+            });
+            event.target.classList.add('bg-blue-600', 'text-white');
+            event.target.classList.remove('border');
+            renderServices(document.getElementById('serviceSearch').value);
+        }
+
+        function renderServices(searchTerm = '') {
+            const servicesList = document.getElementById('servicesList');
+
+            let filteredServices = appState.services;
+
+            // Filter by category
+            if (currentCategory !== 'all') {
+                filteredServices = filteredServices.filter(s => s.category === currentCategory);
+            }
+
+            // Filter by search
+            if (searchTerm) {
+                filteredServices = filteredServices.filter(s =>
+                    s.name.toLowerCase().includes(searchTerm.toLowerCase())
+                );
+            }
+
+            if (filteredServices.length === 0) {
+                servicesList.innerHTML = '<p class="text-gray-500 text-center col-span-3 py-8">No services found</p>';
+                return;
+            }
+
+            servicesList.innerHTML = filteredServices.map(service => `
+                <div class="border rounded-lg p-4 card-hover">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h4 class="font-semibold">${service.name}</h4>
+                            <p class="text-sm text-gray-500">${service.category}</p>
+                            <p class="text-blue-600 font-bold mt-2">₹${service.price}</p>
+                        </div>
+                        <div class="flex gap-2">
+                            <button onclick="openServiceModal('${service.id}')" class="text-blue-600 hover:text-blue-800 p-2">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button onclick="deleteService('${service.id}')" class="text-red-600 hover:text-red-800 p-2">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function populateServiceSelect() {
+            const select = document.getElementById('billServiceSelect');
+            select.innerHTML = '<option value="">Select Service</option>' +
+                appState.services.map(s => `<option value="${s.id}" data-price="${s.price}">${s.name} - ₹${s.price}</option>`).join('');
+        }
+
+        // ==================== CUSTOMER FUNCTIONS ====================
+
+        function searchCustomerByMobile() {
+            const mobile = document.getElementById('billMobile').value;
+            if (mobile.length === 10) {
+                const customer = appState.customers.find(c => c.mobile === mobile);
+                if (customer) {
+                    document.getElementById('newCustomerName').value = customer.name;
+                    document.getElementById('customerInfo').classList.remove('hidden');
+                    document.getElementById('selectedCustomerName').textContent = customer.name;
+                    document.getElementById('selectedCustomerMobile').textContent = customer.mobile;
+
+                    currentBill.customerName = customer.name;
+                    currentBill.customerMobile = customer.mobile;
+
+                    document.getElementById('newCustomerForm').classList.add('hidden');
+                    showToast('Customer loaded', 'success');
+                } else {
+                    document.getElementById('customerInfo').classList.add('hidden');
+                    document.getElementById('newCustomerForm').classList.remove('hidden');
+                    currentBill.customerName = '';
+                    currentBill.customerMobile = mobile;
+                }
+            }
+        }
+
+        function saveCustomer(name, mobile) {
+            if (!name || !mobile) return;
+
+            const existing = appState.customers.find(c => c.mobile === mobile);
+            if (!existing) {
+                appState.customers.push({
+                    id: Date.now().toString(),
+                    name,
+                    mobile,
+                    createdAt: new Date().toISOString()
+                });
+                saveToLocalStorage();
+                renderCustomers();
+            }
+        }
+
+        function renderCustomers(searchTerm = '') {
+            const customersList = document.getElementById('customersList');
+
+            let filteredCustomers = appState.customers;
+            if (searchTerm) {
+                filteredCustomers = appState.customers.filter(c =>
+                    c.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                    c.mobile.includes(searchTerm)
+                );
+            }
+
+            if (filteredCustomers.length === 0) {
+                customersList.innerHTML = '<p class="text-gray-500 text-center py-8">No customers found</p>';
+                return;
+            }
+
+            customersList.innerHTML = filteredCustomers.map(customer => `
+                <div class="border rounded-lg p-4 flex justify-between items-center">
+                    <div>
+                        <p class="font-semibold">${customer.name}</p>
+                        <p class="text-sm text-gray-500">${customer.mobile}</p>
+                    </div>
+                    <button onclick="useCustomer('${customer.mobile}')" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm">
+                        Use for Bill
+                    </button>
+                </div>
+            `).join('');
+        }
+
+        function useCustomer(mobile) {
+            switchTab('billing');
+            document.getElementById('billMobile').value = mobile;
+            searchCustomerByMobile();
+        }
+
+        // ==================== NEW BILL FUNCTION ====================
+
+        function newBill() {
+            // Reset current bill completely
+            currentBill = {
+                items: [],
+                customerName: '',
+                customerMobile: '',
+                discount: 0,
+                gst: 0,
+                paymentMode: 'Cash',
+                subtotal: 0,
+                total: 0
+            };
+
+            // Clear all form fields
+            document.getElementById('billMobile').value = '';
+            document.getElementById('newCustomerName').value = '';
+            document.getElementById('billDiscount').value = 0;
+            document.getElementById('billGst').value = 0;
+            document.getElementById('billPaymentMode').value = 'Cash';
+            document.getElementById('billQuantity').value = 1;
+            document.getElementById('billCustomPrice').value = '';
+            document.getElementById('customerInfo').classList.add('hidden');
+            document.getElementById('newCustomerForm').classList.remove('hidden');
+
+            // Reset bill number preview
+            document.getElementById('previewBillNo').textContent = 'Bill No: CSC-0001';
+
+            // Update preview
+            updateBillPreview();
+
+            // Switch to billing tab
+            switchTab('billing');
+
+            showToast('New bill started', 'success');
+        }
+
+        // ==================== BILLING FUNCTIONS ====================
+
+        function addServiceToBill() {
+            const select = document.getElementById('billServiceSelect');
+            const quantity = parseInt(document.getElementById('billQuantity').value) || 1;
+            const customPrice = parseFloat(document.getElementById('billCustomPrice').value);
+
+            if (!select.value) {
+                showToast('Please select a service', 'error');
+                return;
+            }
+
+            const selectedOption = select.options[select.selectedIndex];
+            const serviceId = select.value;
+            const service = appState.services.find(s => s.id === serviceId);
+
+            if (service) {
+                const price = customPrice || service.price;
+                const total = price * quantity;
+
+                currentBill.items.push({
+                    id: Date.now().toString() + Math.random(),
+                    name: service.name,
+                    price: price,
+                    quantity: quantity,
+                    total: total
+                });
+
+                showToast('Service added to bill', 'success');
+                updateBillTotals();
+
+                // Reset fields
+                document.getElementById('billQuantity').value = 1;
+                document.getElementById('billCustomPrice').value = '';
+            }
+        }
+
+        function removeBillItem(itemId) {
+            currentBill.items = currentBill.items.filter(item => item.id !== itemId);
+            updateBillTotals();
+        }
+
+        function updateBillTotals() {
+            // Calculate subtotal
+            const subtotal = currentBill.items.reduce((sum, item) => sum + item.total, 0);
+            currentBill.subtotal = subtotal;
+
+            // Get discount and GST
+            const discountPercent = parseFloat(document.getElementById('billDiscount').value) || 0;
+            const gstPercent = parseFloat(document.getElementById('billGst').value) || 0;
+            const paymentMode = document.getElementById('billPaymentMode').value;
+
+            currentBill.discount = discountPercent;
+            currentBill.gst = gstPercent;
+            currentBill.paymentMode = paymentMode;
+
+            // Calculate totals
+            const discountAmount = (subtotal * discountPercent) / 100;
+            const afterDiscount = subtotal - discountAmount;
+            const gstAmount = (afterDiscount * gstPercent) / 100;
+            const grandTotal = afterDiscount + gstAmount;
+
+            currentBill.total = grandTotal;
+
+            // Update preview
+            updateBillPreview();
+        }
+
+        function updateBillPreview() {
+            const profile = appState.centerProfile;
+            const settings = appState.invoiceSettings;
+
+            // Apply settings to preview
+            document.documentElement.style.setProperty('--invoice-primary', settings.primaryColor);
+            document.documentElement.style.setProperty('--invoice-border', settings.showBorder ? `${settings.borderWidth} solid ${settings.primaryColor}` : 'none');
+            document.documentElement.style.setProperty('--invoice-border-radius', settings.borderRadius);
+            document.documentElement.style.setProperty('--invoice-header-bg', settings.headerBg);
+            document.documentElement.style.setProperty('--invoice-font-size', settings.fontSize);
+
+            // Generate bill HTML
+            const billHTML = generateBillPreviewHTML(profile, currentBill);
+            document.getElementById('billPreview').innerHTML = billHTML;
+        }
+
+        function generateBillPreviewHTML(profile, bill) {
+            const settings = appState.invoiceSettings;
+
+            // Generate items rows
+            let itemsRows = '';
+            if (bill.items.length === 0) {
+                itemsRows = '<tr><td colspan="5" class="text-center p-4">No services added</td></tr>';
+            } else {
+                itemsRows = bill.items.map(item => `
+                    <tr class="border-b">
+                        <td class="p-2">${item.name}</td>
+                        <td class="p-2 text-right">${item.quantity}</td>
+                        <td class="p-2 text-right">₹${item.price}</td>
+                        <td class="p-2 text-right">₹${item.total}</td>
+                        <td class="p-2 text-right no-print">
+                            <button onclick="removeBillItem('${item.id}')" class="text-red-600 hover:text-red-800">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </td>
+                    </tr>
+                `).join('');
+            }
+
+            // Calculate amounts
+            const subtotal = bill.subtotal || 0;
+            const discountAmount = (subtotal * (bill.discount || 0)) / 100;
+            const afterDiscount = subtotal - discountAmount;
+            const gstAmount = (afterDiscount * (bill.gst || 0)) / 100;
+            const grandTotal = bill.total || 0;
+
+            // Get today's date
+            const today = new Date().toLocaleDateString();
+
+            return `
+                <div style="border: ${settings.showBorder ? settings.borderWidth + ' solid ' + settings.primaryColor : 'none'}; border-radius: ${settings.borderRadius}; padding: 15px;">
+                    <!-- Header -->
+                    <div class="print-header" style="border-bottom-color: ${settings.primaryColor};">
+                        ${profile.logo ? `<img src="${profile.logo}" style="width: 60px; height: 60px; margin: 0 auto 10px; border-radius: 8px;">` : ''}
+                        <h1 style="color: ${settings.primaryColor};">${profile.centerName || 'CSC Center'}</h1>
+                        <p style="color: #4b5563;">${profile.address || ''}</p>
+                        <p style="color: #4b5563;">CSC ID: ${profile.cscId || ''} | VLE: ${profile.vleName || ''}</p>
+                        <p style="color: #4b5563;">Mobile: ${profile.mobile || ''}</p>
+                    </div>
+                    
+                    <!-- Bill Details -->
+                    <div class="print-details" style="background: ${settings.headerBg};">
+                        <div style="display: flex; justify-content: space-between;">
+                            <div>
+                                <p><strong>Bill No:</strong> <span id="previewBillNo">CSC-${String(appState.lastBillNumber + 1).padStart(4, '0')}</span></p>
+                                <p><strong>Date:</strong> ${today}</p>
+                            </div>
+                            <div>
+                                <p><strong>Customer:</strong> <span id="previewCustomerName">${bill.customerName || '-'}</span></p>
+                                <p><strong>Mobile:</strong> <span id="previewCustomerMobile">${bill.customerMobile || '-'}</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Services Table -->
+                    <table class="print-table" style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+                        <thead>
+                            <tr style="background: ${settings.primaryColor}; color: white;">
+                                <th style="padding: 8px; text-align: left;">Service</th>
+                                <th style="padding: 8px; text-align: right;">Qty</th>
+                                <th style="padding: 8px; text-align: right;">Price</th>
+                                <th style="padding: 8px; text-align: right;">Total</th>
+                                <th class="no-print" style="padding: 8px; text-align: right;">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="previewServicesList">
+                            ${itemsRows}
+                        </tbody>
+                    </table>
+                    
+                    <!-- Totals -->
+                    <div class="print-total" style="border-top-color: ${settings.primaryColor};">
+                        <p>Subtotal: ₹${subtotal.toFixed(2)}</p>
+                        <p>Discount (${bill.discount}%): -₹${discountAmount.toFixed(2)}</p>
+                        <p>GST (${bill.gst}%): +₹${gstAmount.toFixed(2)}</p>
+                        <p style="font-size: 18px; color: ${settings.primaryColor};">Grand Total: ₹${grandTotal.toFixed(2)}</p>
+                        <p style="font-size: 14px; color: #4b5563;">Payment Mode: ${bill.paymentMode}</p>
+                    </div>
+                    
+                    <!-- Footer with QR Code -->
+                    <div class="print-footer">
+                        <div class="qr-section">
+                            ${profile.qrCode ? `
+                                <img src="${profile.qrCode}" style="width: 70px; height: 70px; border: 1px solid #e2e8f0; border-radius: 8px;" alt="Scan to Pay">
+                                <div class="qr-text">
+                                    <p><strong>Scan to Pay</strong></p>
+                                    <p>UPI / QR Code</p>
+                                </div>
+                            ` : ''}
+                        </div>
+                        <div class="text-right">
+                            <p>This is a computer generated invoice.</p>
+                            <p id="previewCscDetails">CSC ID: ${profile.cscId || ''} | VLE: ${profile.vleName || ''}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // ==================== GENERATE BILL WITH PRINT LAYOUT ====================
+
+        function generateBill() {
+            // Validate customer
+            const customerName = document.getElementById('newCustomerName').value || currentBill.customerName;
+            const customerMobile = document.getElementById('billMobile').value;
+
+            if (!customerName) {
+                showToast('Please enter customer name', 'error');
+                return;
+            }
+
+            if (currentBill.items.length === 0) {
+                showToast('Please add at least one service', 'error');
+                return;
+            }
+
+            // Save customer
+            if (customerMobile && customerMobile.length === 10) {
+                saveCustomer(customerName, customerMobile);
+            }
+
+            // Generate bill number
+            appState.lastBillNumber++;
+            const billNumber = 'CSC-' + String(appState.lastBillNumber).padStart(4, '0');
+
+            // Create bill object
+            const newBill = {
+                id: Date.now().toString(),
+                billNumber: billNumber,
+                date: new Date().toISOString(),
+                customerName: customerName,
+                customerMobile: customerMobile || '',
+                items: [...currentBill.items],
+                discount: currentBill.discount || 0,
+                gst: currentBill.gst || 0,
+                subtotal: currentBill.subtotal,
+                total: currentBill.total,
+                paymentMode: currentBill.paymentMode || 'Cash',
+                centerProfile: { ...appState.centerProfile
+                },
+                createdAt: new Date().toISOString()
+            };
+
+            // Save to history
+            appState.bills.push(newBill);
+            saveToLocalStorage();
+
+            // Store last generated bill
+            lastGeneratedBill = newBill;
+
+            showToast(`Bill generated: ${billNumber}`, 'success');
+
+            // Open print layout with the bill
+            openPrintLayout(newBill);
+
+            // Reset bill after generation
+            resetBill();
+
+            // Update UI
+            renderBillsHistory();
+            updateStats();
+        }
+
+        function resetBill() {
+            currentBill = {
+                items: [],
+                customerName: '',
+                customerMobile: '',
+                discount: 0,
+                gst: 0,
+                paymentMode: 'Cash',
+                subtotal: 0,
+                total: 0
+            };
+
+            document.getElementById('billMobile').value = '';
+            document.getElementById('newCustomerName').value = '';
+            document.getElementById('billDiscount').value = 0;
+            document.getElementById('billGst').value = 0;
+            document.getElementById('billPaymentMode').value = 'Cash';
+            document.getElementById('billQuantity').value = 1;
+            document.getElementById('billCustomPrice').value = '';
+            document.getElementById('customerInfo').classList.add('hidden');
+            document.getElementById('newCustomerForm').classList.remove('hidden');
+
+            updateBillPreview();
+        }
+
+        // ==================== PRINT LAYOUT FUNCTIONS ====================
+
+        function openPrintLayout(bill) {
+            const container = document.getElementById('printBillContainer');
+
+            // Generate bill HTML with dynamic template
+            const billHTML = generatePrintBillHTML(bill);
+            container.innerHTML = billHTML;
+
+            // Show modal
+            document.getElementById('printLayoutModal').classList.remove('hidden');
+        }
+
+        function closePrintModal() {
+            document.getElementById('printLayoutModal').classList.add('hidden');
+        }
+
+        function generatePrintBillHTML(bill) {
+            const profile = bill.centerProfile;
+            const settings = appState.invoiceSettings;
+
+            // Generate items rows
+            const itemsRows = bill.items.map(item => `
+                <tr>
+                    <td style="padding: 6px 8px; border: 1px solid #e2e8f0;">${item.name}</td>
+                    <td style="padding: 6px 8px; border: 1px solid #e2e8f0; text-align: right;">${item.quantity}</td>
+                    <td style="padding: 6px 8px; border: 1px solid #e2e8f0; text-align: right;">₹${item.price}</td>
+                    <td style="padding: 6px 8px; border: 1px solid #e2e8f0; text-align: right;">₹${item.total}</td>
+                </tr>
+            `).join('');
+
+            // Calculate amounts
+            const discountAmount = (bill.subtotal * (bill.discount || 0)) / 100;
+            const afterDiscount = bill.subtotal - discountAmount;
+            const gstAmount = (afterDiscount * (bill.gst || 0)) / 100;
+
+            return `
+                <div style="border: ${settings.showBorder ? settings.borderWidth + ' solid ' + settings.primaryColor : 'none'}; border-radius: ${settings.borderRadius}; padding: 15px; background: white;">
+                    <!-- Header -->
+                    <div class="print-header" style="border-bottom-color: ${settings.primaryColor}; margin-bottom: 15px;">
+                        ${profile.logo ? `<img src="${profile.logo}" style="width: 60px; height: 60px; margin: 0 auto 10px; border-radius: 8px;">` : ''}
+                        <h1 style="color: ${settings.primaryColor}; font-size: 24px; margin-bottom: 5px;">${profile.centerName || 'CSC Center'}</h1>
+                        <p style="color: #4b5563; margin: 2px 0;">${profile.address || ''}</p>
+                        <p style="color: #4b5563; margin: 2px 0;">CSC ID: ${profile.cscId || ''} | VLE: ${profile.vleName || ''}</p>
+                        <p style="color: #4b5563; margin: 2px 0;">Mobile: ${profile.mobile || ''}</p>
+                    </div>
+                    
+                    <!-- Bill Details -->
+                    <div class="print-details" style="background: ${settings.headerBg}; padding: 10px; border-radius: 8px; margin-bottom: 15px;">
+                        <div style="display: flex; justify-content: space-between;">
+                            <div>
+                                <p style="margin: 2px 0;"><strong>Bill No:</strong> ${bill.billNumber}</p>
+                                <p style="margin: 2px 0;"><strong>Date:</strong> ${new Date(bill.date).toLocaleDateString()}</p>
+                            </div>
+                            <div>
+                                <p style="margin: 2px 0;"><strong>Customer:</strong> ${bill.customerName}</p>
+                                <p style="margin: 2px 0;"><strong>Mobile:</strong> ${bill.customerMobile || 'N/A'}</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Services Table -->
+                    <table class="print-table" style="width: 100%; border-collapse: collapse; margin: 15px 0; page-break-inside: avoid;">
+                        <thead>
+                            <tr style="background: ${settings.primaryColor}; color: white;">
+                                <th style="padding: 8px; text-align: left; font-size: 13px;">Service</th>
+                                <th style="padding: 8px; text-align: right; font-size: 13px;">Qty</th>
+                                <th style="padding: 8px; text-align: right; font-size: 13px;">Price</th>
+                                <th style="padding: 8px; text-align: right; font-size: 13px;">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${itemsRows}
+                        </tbody>
+                    </table>
+                    
+                    <!-- Totals -->
+                    <div class="print-total" style="border-top-color: ${settings.primaryColor}; margin-top: 15px; padding-top: 10px;">
+                        <p style="margin: 2px 0;">Subtotal: ₹${bill.subtotal.toFixed(2)}</p>
+                        <p style="margin: 2px 0;">Discount (${bill.discount}%): -₹${discountAmount.toFixed(2)}</p>
+                        <p style="margin: 2px 0;">GST (${bill.gst}%): +₹${gstAmount.toFixed(2)}</p>
+                        <p style="font-size: 18px; color: ${settings.primaryColor}; margin: 5px 0;">Grand Total: ₹${bill.total.toFixed(2)}</p>
+                        <p style="font-size: 14px; color: #4b5563; margin: 2px 0;">Payment Mode: ${bill.paymentMode}</p>
+                    </div>
+                    
+                    <!-- Footer with QR Code -->
+                    <div class="print-footer" style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 10px; border-top: 1px solid #e2e8f0;">
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            ${profile.qrCode ? `
+                                <img src="${profile.qrCode}" style="width: 70px; height: 70px; border: 1px solid #e2e8f0; border-radius: 8px;" alt="Scan to Pay">
+                                <div style="font-size: 9px; line-height: 1.2;">
+                                    <p><strong>Scan to Pay</strong></p>
+                                    <p>UPI / QR Code</p>
+                                </div>
+                            ` : ''}
+                        </div>
+                        <div style="text-align: right; font-size: 9px;">
+                            <p style="margin: 2px 0;">This is a computer generated invoice.</p>
+                            <p style="margin: 2px 0;">CSC ID: ${profile.cscId || ''} | VLE: ${profile.vleName || ''}</p>
+                            <p style="margin: 2px 0;">Generated by Pro CSC Tools</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // ==================== PRINT LAYOUT ACTIONS ====================
+
+        function printFromModal() {
+            const printContent = document.getElementById('printBillContainer').innerHTML;
+            const settings = appState.invoiceSettings;
+
+            const printWindow = window.open('', '_blank');
+            printWindow.document.write(`
+                <html>
+                <head>
+                    <title>Bill - ${lastGeneratedBill?.billNumber || 'CSC Bill'}</title>
+                    <style>
+                        body { font-family: 'Poppins', Arial, sans-serif; padding: 10px; background: white; margin: 0; }
+                        .print-header { text-align: center; margin-bottom: 15px; border-bottom: 2px dashed ${settings.primaryColor}; padding-bottom: 10px; }
+                        .print-header h1 { color: ${settings.primaryColor}; font-size: 24px; margin-bottom: 5px; }
+                        .print-details { background: ${settings.headerBg}; padding: 10px; border-radius: 8px; margin-bottom: 15px; }
+                        .print-table { width: 100%; border-collapse: collapse; margin: 15px 0; page-break-inside: avoid; }
+                        .print-table th { background: ${settings.primaryColor}; color: white; padding: 8px; }
+                        .print-table td { padding: 6px 8px; border: 1px solid #e2e8f0; }
+                        .print-table tr:nth-child(even) { background: #f8fafc; }
+                        .print-total { text-align: right; font-size: 16px; font-weight: bold; color: ${settings.primaryColor}; margin-top: 15px; padding-top: 10px; border-top: 2px dashed ${settings.primaryColor}; }
+                        .print-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 10px; border-top: 1px solid #e2e8f0; font-size: 10px; color: #64748b; }
+                        .qr-section { display: flex; align-items: center; gap: 10px; }
+                        .bill-container { border: ${settings.showBorder ? settings.borderWidth + ' solid ' + settings.primaryColor : 'none'}; border-radius: ${settings.borderRadius}; padding: 15px; background: white; max-width: 800px; margin: 0 auto; page-break-inside: avoid; }
+                        @media print {
+                            body { padding: 0; }
+                            .bill-container { box-shadow: none; }
+                        }
+                    </style>
+                </head>
+                <body>
+                    <div class="bill-container">
+                        ${printContent}
+                    </div>
+                    <script>
+                        window.onload = function() { 
+                            setTimeout(function() { window.print(); window.close(); }, 500);
+                        }
+                    <\/script>
+                </body>
+                </html>
+            `);
+            printWindow.document.close();
+        }
+
+        function downloadPDFFromModal() {
+            const element = document.getElementById('printBillContainer');
+            const billNumber = lastGeneratedBill ? .billNumber || 'CSC-Bill';
+
+            const opt = {
+                margin: [0.3, 0.3, 0.3, 0.3],
+                filename: `bill_${billNumber}.pdf`,
+                image: {
+                    type: 'jpeg',
+                    quality: 0.98
+                },
+                html2canvas: {
+                    scale: 1.5,
+                    letterRendering: true
+                },
+                jsPDF: {
+                    unit: 'mm',
+                    format: 'a4',
+                    orientation: 'portrait'
+                }
+            };
+
+            html2pdf().from(element).set(opt).save();
+            showToast('PDF downloaded successfully!', 'success');
+        }
+
+        function shareWhatsAppFromModal() {
+            const billNumber = lastGeneratedBill ? .billNumber || 'CSC-Bill';
+            const customerName = lastGeneratedBill ? .customerName || 'Customer';
+            const total = lastGeneratedBill ? .total || 0;
+
+            const text = `*Pro CSC Tools - Bill*\n\nBill No: ${billNumber}\nCustomer: ${customerName}\nTotal: ₹${total}\nPayment: ${lastGeneratedBill?.paymentMode || 'Cash'}\n\nScan QR code on bill to pay\n\nVisit: https://procsctools.in`;
+
+            window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+        }
+
+        function copyBillFromModal() {
+            const billContent = document.getElementById('printBillContainer').innerText;
+            navigator.clipboard.writeText(billContent).then(() => {
+                showToast('Bill copied to clipboard', 'success');
+            });
+        }
+
+        function newBillFromModal() {
+            closePrintModal();
+            newBill();
+        }
+
+        // ==================== PREVIEW BUTTON FUNCTIONS ====================
+
+        function printBillFromPreview() {
+            if (currentBill.items.length === 0) {
+                showToast('No items in bill', 'error');
+                return;
+            }
+
+            // Create a temporary bill object
+            const tempBill = {
+                billNumber: 'CSC-' + String(appState.lastBillNumber + 1).padStart(4, '0'),
+                date: new Date().toISOString(),
+                customerName: document.getElementById('newCustomerName').value || currentBill.customerName || 'Customer',
+                customerMobile: document.getElementById('billMobile').value || '',
+                items: currentBill.items,
+                discount: currentBill.discount || 0,
+                gst: currentBill.gst || 0,
+                subtotal: currentBill.subtotal,
+                total: currentBill.total,
+                paymentMode: currentBill.paymentMode || 'Cash',
+                centerProfile: appState.centerProfile
+            };
+
+            lastGeneratedBill = tempBill;
+            openPrintLayout(tempBill);
+        }
+
+        function downloadPDFFromPreview() {
+            printBillFromPreview();
+            setTimeout(() => {
+                downloadPDFFromModal();
+            }, 500);
+        }
+
+        function copyBillFromPreview() {
+            if (currentBill.items.length === 0) {
+                showToast('No items in bill', 'error');
+                return;
+            }
+
+            const billContent = document.getElementById('billPreview').innerText;
+            navigator.clipboard.writeText(billContent).then(() => {
+                showToast('Bill copied to clipboard', 'success');
+            });
+        }
+
+        function shareWhatsAppFromPreview() {
+            if (currentBill.items.length === 0) {
+                showToast('No items in bill', 'error');
+                return;
+            }
+
+            const customerName = document.getElementById('newCustomerName').value || currentBill.customerName || 'Customer';
+            const total = currentBill.total || 0;
+
+            const text = `*Pro CSC Tools - Bill*\n\nCustomer: ${customerName}\nTotal: ₹${total}\nPayment: ${currentBill.paymentMode}\n\nScan QR code on bill to pay\n\nVisit: https://procsctools.in`;
+
+            window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+        }
+
+        // ==================== BILL HISTORY FUNCTIONS ====================
+
+        function renderBillsHistory(searchTerm = '') {
+            const historyDiv = document.getElementById('billsHistoryList');
+
+            if (appState.bills.length === 0) {
+                historyDiv.innerHTML = '<p class="text-gray-500 text-center py-8">No bills generated yet</p>';
+                return;
+            }
+
+            let filteredBills = appState.bills;
+            if (searchTerm) {
+                filteredBills = appState.bills.filter(bill =>
+                    bill.billNumber.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                    bill.customerName.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                    (bill.customerMobile && bill.customerMobile.includes(searchTerm))
+                );
+            }
+
+            // Sort by date (newest first)
+            filteredBills.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+
+            historyDiv.innerHTML = filteredBills.map(bill => `
+                <div class="border rounded-lg p-4 card-hover">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+                        <div class="flex-1">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
+                                    ${bill.billNumber}
+                                </span>
+                                <span class="text-gray-500 text-sm">
+                                    ${new Date(bill.date).toLocaleDateString()}
+                                </span>
+                            </div>
+                            <h4 class="font-semibold">${bill.customerName}</h4>
+                            <p class="text-sm text-gray-500">
+                                ${bill.items.length} items | ${bill.paymentMode}
+                            </p>
+                        </div>
+                        <div class="mt-3 md:mt-0 flex items-center gap-3">
+                            <p class="text-xl font-bold" style="color: ${appState.invoiceSettings.primaryColor};">₹${bill.total}</p>
+                            <button onclick="viewBill('${bill.id}')" class="text-blue-600 hover:text-blue-800 p-2" title="View">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button onclick="printBillFromHistory('${bill.id}')" class="text-green-600 hover:text-green-800 p-2" title="Print">
+                                <i class="fas fa-print"></i>
+                            </button>
+                            <button onclick="deleteBill('${bill.id}')" class="text-red-600 hover:text-red-800 p-2" title="Delete">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function viewBill(billId) {
+            const bill = appState.bills.find(b => b.id === billId);
+            if (bill) {
+                // Load bill into current bill
+                currentBill = {
+                    items: [...bill.items],
+                    customerName: bill.customerName,
+                    customerMobile: bill.customerMobile,
+                    discount: bill.discount || 0,
+                    gst: bill.gst || 0,
+                    paymentMode: bill.paymentMode || 'Cash',
+                    subtotal: bill.subtotal,
+                    total: bill.total
+                };
+
+                document.getElementById('billMobile').value = bill.customerMobile || '';
+                document.getElementById('newCustomerName').value = bill.customerName;
+                document.getElementById('billDiscount').value = bill.discount || 0;
+                document.getElementById('billGst').value = bill.gst || 0;
+                document.getElementById('billPaymentMode').value = bill.paymentMode || 'Cash';
+
+                if (bill.customerMobile) {
+                    document.getElementById('customerInfo').classList.remove('hidden');
+                    document.getElementById('selectedCustomerName').textContent = bill.customerName;
+                    document.getElementById('selectedCustomerMobile').textContent = bill.customerMobile;
+                    document.getElementById('newCustomerForm').classList.add('hidden');
+                }
+
+                updateBillPreview();
+                switchTab('billing');
+            }
+        }
+
+        function printBillFromHistory(billId) {
+            const bill = appState.bills.find(b => b.id === billId);
+            if (bill) {
+                lastGeneratedBill = bill;
+                openPrintLayout(bill);
+            }
+        }
+
+        function deleteBill(billId) {
+            if (confirm('Are you sure you want to delete this bill?')) {
+                appState.bills = appState.bills.filter(b => b.id !== billId);
+                saveToLocalStorage();
+                renderBillsHistory();
+                updateStats();
+                showToast('Bill deleted', 'success');
+            }
+        }
+
+        // ==================== STATS FUNCTIONS ====================
+
+        function updateStats() {
+            const today = new Date().toISOString().split('T')[0];
+
+            // Today's bills
+            const todayBills = appState.bills.filter(bill => bill.date.split('T')[0] === today);
+            const todayIncome = todayBills.reduce((sum, bill) => sum + bill.total, 0);
+
+            // Monthly income
+            const currentMonth = new Date().getMonth();
+            const currentYear = new Date().getFullYear();
+            const monthlyBills = appState.bills.filter(bill => {
+                const billDate = new Date(bill.date);
+                return billDate.getMonth() === currentMonth && billDate.getFullYear() === currentYear;
+            });
+            const monthlyIncome = monthlyBills.reduce((sum, bill) => sum + bill.total, 0);
+
+            // Payment mode breakdown
+            const cashTotal = todayBills.filter(b => b.paymentMode === 'Cash').reduce((sum, b) => sum + b.total, 0);
+            const upiTotal = todayBills.filter(b => b.paymentMode === 'UPI').reduce((sum, b) => sum + b.total, 0);
+            const cardTotal = todayBills.filter(b => b.paymentMode === 'Card').reduce((sum, b) => sum + b.total, 0);
+
+            // Update UI
+            document.getElementById('todayIncome').textContent = `₹${todayIncome}`;
+            document.getElementById('todayBills').textContent = todayBills.length;
+            document.getElementById('totalCustomers').textContent = appState.customers.length;
+            document.getElementById('totalServices').textContent = appState.services.length;
+            document.getElementById('monthlyIncome').textContent = `₹${monthlyIncome}`;
+
+            document.getElementById('todayCash').textContent = `₹${cashTotal}`;
+            document.getElementById('todayUPI').textContent = `₹${upiTotal}`;
+            document.getElementById('todayCard').textContent = `₹${cardTotal}`;
+
+            // Recent bills
+            const recentBills = appState.bills.slice(-5).reverse();
+            const recentDiv = document.getElementById('recentBillsList');
+
+            if (recentBills.length === 0) {
+                recentDiv.innerHTML = '<p class="text-gray-500 text-center py-8">No bills yet</p>';
+            } else {
+                recentDiv.innerHTML = recentBills.map(bill => `
+                    <div class="flex justify-between items-center border-b pb-2">
+                        <div>
+                            <span class="font-semibold">${bill.billNumber}</span>
+                            <p class="text-sm text-gray-500">${bill.customerName}</p>
+                        </div>
+                        <span class="font-bold" style="color: ${appState.invoiceSettings.primaryColor};">₹${bill.total}</span>
+                    </div>
+                `).join('');
+            }
+
+            // Top services
+            const serviceCount = {};
+            appState.bills.forEach(bill => {
+                bill.items.forEach(item => {
+                    serviceCount[item.name] = (serviceCount[item.name] || 0) + item.quantity;
+                });
+            });
+
+            const topServices = Object.entries(serviceCount)
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 5);
+
+            const topDiv = document.getElementById('topServicesList');
+            if (topServices.length === 0) {
+                topDiv.innerHTML = '<p class="text-gray-500 text-sm">No data yet</p>';
+            } else {
+                topDiv.innerHTML = topServices.map(([name, count]) => `
+                    <div class="flex justify-between items-center">
+                        <span>${name}</span>
+                        <span class="font-semibold">${count} sold</span>
+                    </div>
+                `).join('');
+            }
+        }
+
+        function updateDashboard() {
+            updateStats();
+        }
+
+        // ==================== REPORT FUNCTIONS ====================
+
+        function generateReport() {
+            const startDate = document.getElementById('reportStartDate').value;
+            const endDate = document.getElementById('reportEndDate').value;
+
+            if (!startDate || !endDate) {
+                showToast('Please select date range', 'error');
+                return;
+            }
+
+            const filteredBills = appState.bills.filter(bill => {
+                const billDate = bill.date.split('T')[0];
+                return billDate >= startDate && billDate <= endDate;
+            });
+
+            // Calculate service wise report
+            const serviceReport = {};
+            filteredBills.forEach(bill => {
+                bill.items.forEach(item => {
+                    if (!serviceReport[item.name]) {
+                        serviceReport[item.name] = {
+                            quantity: 0,
+                            revenue: 0
+                        };
+                    }
+                    serviceReport[item.name].quantity += item.quantity;
+                    serviceReport[item.name].revenue += item.total;
+                });
+            });
+
+            // Display service report
+            const serviceList = document.getElementById('serviceReportList');
+            serviceList.innerHTML = Object.entries(serviceReport)
+                .sort((a, b) => b[1].revenue - a[1].revenue)
+                .map(([name, data]) => `
+                    <div class="flex justify-between items-center border-b pb-2">
+                        <span>${name}</span>
+                        <div>
+                            <span class="font-semibold">${data.quantity}</span>
+                            <span class="text-blue-600 ml-2">₹${data.revenue}</span>
+                        </div>
+                    </div>
+                `).join('');
+
+            // Payment mode report
+            const paymentModes = {
+                Cash: 0,
+                UPI: 0,
+                Card: 0
+            };
+
+            filteredBills.forEach(bill => {
+                if (paymentModes[bill.paymentMode] !== undefined) {
+                    paymentModes[bill.paymentMode] += bill.total;
+                }
+            });
+
+            const paymentDiv = document.getElementById('paymentModeReport');
+            paymentDiv.innerHTML = Object.entries(paymentModes).map(([mode, amount]) => `
+                <div class="flex justify-between items-center">
+                    <span>${mode}</span>
+                    <span class="font-semibold">₹${amount}</span>
+                </div>
+            `).join('');
+        }
+
+        // ==================== INVOICE SETTINGS FUNCTIONS ====================
+
+        function setInvoiceColor(color, type) {
+            document.querySelectorAll('.color-option').forEach(opt => opt.classList.remove('selected'));
+            event.target.classList.add('selected');
+
+            appState.invoiceSettings.primaryColor = color;
+            applyInvoiceSettings();
+            updateBillPreview();
+        }
+
+        function toggleInvoiceBorder() {
+            const checkbox = document.getElementById('showBorder');
+            appState.invoiceSettings.showBorder = checkbox.checked;
+            applyInvoiceSettings();
+            updateBillPreview();
+        }
+
+        function updateInvoiceBorder() {
+            const width = document.getElementById('borderWidth').value;
+            const radius = document.getElementById('borderRadius').value;
+
+            appState.invoiceSettings.borderWidth = width;
+            appState.invoiceSettings.borderRadius = radius;
+            applyInvoiceSettings();
+            updateBillPreview();
+        }
+
+        function updateInvoiceStyle() {
+            const headerBg = document.getElementById('headerBg').value;
+            appState.invoiceSettings.headerBg = headerBg;
+            applyInvoiceSettings();
+            updateBillPreview();
+        }
+
+        function updateInvoiceFontSize() {
+            const fontSize = document.getElementById('fontSize').value;
+            appState.invoiceSettings.fontSize = fontSize;
+            applyInvoiceSettings();
+            updateBillPreview();
+        }
+
+        function selectTemplate(templateId) {
+            document.querySelectorAll('.template-preview').forEach(t => t.classList.remove('selected'));
+            event.target.closest('.template-preview').classList.add('selected');
+
+            switch (templateId) {
+                case 1:
+                    appState.invoiceSettings = {
+                        ...appState.invoiceSettings,
+                        primaryColor: '#2563eb',
+                        showBorder: true,
+                        borderWidth: '2px',
+                        borderRadius: '12px',
+                        headerBg: '#f8fafc',
+                        fontSize: '14px'
+                    };
+                    break;
+                case 2:
+                    appState.invoiceSettings = {
+                        ...appState.invoiceSettings,
+                        primaryColor: '#059669',
+                        showBorder: false,
+                        borderWidth: '2px',
+                        borderRadius: '8px',
+                        headerBg: '#ecfdf5',
+                        fontSize: '14px'
+                    };
+                    break;
+                case 3:
+                    appState.invoiceSettings = {
+                        ...appState.invoiceSettings,
+                        primaryColor: '#7c3aed',
+                        showBorder: true,
+                        borderWidth: '2px',
+                        borderRadius: '16px',
+                        headerBg: '#faf5ff',
+                        fontSize: '14px'
+                    };
+                    break;
+                case 4:
+                    appState.invoiceSettings = {
+                        ...appState.invoiceSettings,
+                        primaryColor: '#ea580c',
+                        showBorder: true,
+                        borderWidth: '3px',
+                        borderRadius: '4px',
+                        headerBg: '#fff7ed',
+                        fontSize: '14px'
+                    };
+                    break;
+            }
+
+            populateSettingsForm();
+            applyInvoiceSettings();
+            updateBillPreview();
+        }
+
+        function applyInvoiceSettings() {
+            const settings = appState.invoiceSettings;
+
+            document.documentElement.style.setProperty('--invoice-primary', settings.primaryColor);
+            document.documentElement.style.setProperty('--invoice-border', settings.showBorder ? `${settings.borderWidth} solid ${settings.primaryColor}` : 'none');
+            document.documentElement.style.setProperty('--invoice-border-radius', settings.borderRadius);
+            document.documentElement.style.setProperty('--invoice-header-bg', settings.headerBg);
+            document.documentElement.style.setProperty('--invoice-font-size', settings.fontSize);
+        }
+
+        function populateSettingsForm() {
+            const settings = appState.invoiceSettings;
+
+            document.getElementById('showBorder').checked = settings.showBorder;
+            document.getElementById('borderWidth').value = settings.borderWidth;
+            document.getElementById('borderRadius').value = settings.borderRadius;
+            document.getElementById('headerBg').value = settings.headerBg;
+            document.getElementById('fontSize').value = settings.fontSize;
+
+            // Update color selection
+            document.querySelectorAll('.color-option').forEach(opt => {
+                if (opt.style.backgroundColor === settings.primaryColor) {
+                    opt.classList.add('selected');
+                } else {
+                    opt.classList.remove('selected');
+                }
+            });
+
+            // Update settings preview
+            const preview = document.getElementById('settingsPreview');
+            preview.style.border = settings.showBorder ? `${settings.borderWidth} solid ${settings.primaryColor}` : 'none';
+            preview.style.borderRadius = settings.borderRadius;
+
+            const previewHeader = preview.querySelector('.print-header h1');
+            if (previewHeader) {
+                previewHeader.style.color = settings.primaryColor;
+                previewHeader.style.borderBottomColor = settings.primaryColor;
+            }
+
+            const previewDetails = preview.querySelector('.print-details');
+            if (previewDetails) {
+                previewDetails.style.background = settings.headerBg;
+            }
+        }
+
+        function saveInvoiceSettings() {
+            saveToLocalStorage();
+            updateBillPreview();
+            showToast('Invoice settings saved successfully!', 'success');
+        }
+
+        // ==================== DATA MANAGEMENT FUNCTIONS ====================
+
+        function backupData() {
+            const data = {
+                centerProfile: appState.centerProfile,
+                services: appState.services,
+                customers: appState.customers,
+                bills: appState.bills,
+                lastBillNumber: appState.lastBillNumber,
+                invoiceSettings: appState.invoiceSettings,
+                exportDate: new Date().toISOString()
+            };
+
+            const blob = new Blob([JSON.stringify(data, null, 2)], {
+                type: 'application/json'
+            });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `smart_csc_backup_${new Date().toISOString().split('T')[0]}.json`;
+            a.click();
+
+            showToast('Backup downloaded', 'success');
+        }
+
+        function restoreData() {
+            const file = document.getElementById('restoreFile').files[0];
+            if (!file) {
+                showToast('Please select a file', 'error');
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const data = JSON.parse(e.target.result);
+
+                    if (data.centerProfile) appState.centerProfile = data.centerProfile;
+                    if (data.services) appState.services = data.services;
+                    if (data.customers) appState.customers = data.customers;
+                    if (data.bills) appState.bills = data.bills;
+                    if (data.lastBillNumber) appState.lastBillNumber = data.lastBillNumber;
+                    if (data.invoiceSettings) appState.invoiceSettings = data.invoiceSettings;
+
+                    saveToLocalStorage();
+
+                    // Refresh UI
+                    populateCenterProfile();
+                    populateQRCode();
+                    renderServices();
+                    renderCustomers();
+                    renderBillsHistory();
+                    updateStats();
+                    applyInvoiceSettings();
+
+                    showToast('Data restored successfully', 'success');
+                } catch (error) {
+                    showToast('Invalid backup file', 'error');
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        function clearAllData() {
+            if (confirm('⚠️ WARNING: This will delete ALL data permanently!\n\nAre you sure?')) {
+                localStorage.clear();
+                location.reload();
+            }
+        }
+
+        // ==================== TOAST FUNCTION ====================
+
+        function showToast(message, type = 'info') {
+            const container = document.getElementById('toastContainer');
+            const toast = document.createElement('div');
+
+            const colors = {
+                success: 'bg-green-500',
+                error: 'bg-red-500',
+                info: 'bg-blue-500',
+                warning: 'bg-yellow-500'
+            };
+
+            toast.className = `toast ${colors[type]} text-white px-6 py-3 rounded-lg shadow-lg flex items-center`;
+            toast.innerHTML = `
+                <i class="fas ${type === 'success' ? 'fa-check-circle' : type === 'error' ? 'fa-exclamation-circle' : 'fa-info-circle'} mr-3"></i>
+                ${message}
+            `;
+
+            container.appendChild(toast);
+
+            setTimeout(() => {
+                toast.remove();
+            }, 3000);
+        }
+    </script>
+
+<!-- PCT-FOOTER-START -->
+<div class="pct-ad"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6791318178265120" data-ad-slot="7017392570" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+<footer class="pct-footer">
+  <div class="pct-footer-grid">
+    <div>
+      <h3>Pro CSC Tools</h3>
+      <p>India's Most Trusted Platform for CSC VLEs &ndash; Government Document, ID Card, PDF &amp; Online Tools.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <a href="/">Home</a><a href="/#tools">Tools</a><a href="/about">About Us</a><a href="/contact">Contact</a>
+    </div>
+    <div>
+      <h4>Popular Tools</h4>
+      <a href="/resume-builder">Resume Maker</a><a href="/image-to-pdf">Image to PDF</a><a href="/image-resizer">Image Resizer</a><a href="/age-calculator">Age Calculator</a>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Service</a><a href="/disclaimer">Disclaimer</a><a href="/contact">Contact</a>
+    </div>
+  </div>
+  <div class="pct-copy">&copy; 2026 Pro CSC Tools. All rights reserved. Made with &#10084;&#65039; in India for All CSC VLEs.</div>
+</footer>
+<!-- PCT-FOOTER-END -->
+</body>
+
+</html>

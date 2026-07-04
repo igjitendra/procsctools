@@ -1,0 +1,4073 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farmer ID Card Maker – Kisan Pehchaan Patra</title>
+
+    <meta
+      name="title"
+      content="Farmer ID Card Print Online | Farmer Registration & Farmer ID Card Maker"
+    />
+
+    <meta
+      name="description"
+      content="Print Farmer ID Card online free. Create and print Farmer Registration cards with photo, QR code and farmer details. Supports Farmer ID Uttar Pradesh, Madhya Pradesh, Maharashtra, Himachal Pradesh and other Indian states."
+    />
+
+    <meta
+      name="keywords"
+      content="Farmer Registration, Farmer ID Card Print, Farmer ID Card Maker, Farmer ID Uttar Pradesh, Farmer ID Madhya Pradesh, Farmer ID Maharashtra, Farmer ID Himachal Pradesh, Farmer Registration Card, Kisan ID Card Print, Farmer Card Download, Agriculture ID Card"
+    />
+
+    <meta name="author" content="Pro CSC Tools" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="language" content="English" />
+
+    <link rel="canonical" href="https://procsctools.in/tools/farmer-id-card-print.html" />
+
+    <!-- ========== OPEN GRAPH ========== -->
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://procsctools.in/og-image.jpg" />
+    <meta name="twitter:image" content="https://procsctools.in/og-image.jpg" />
+    <meta
+      property="og:url"
+      content="https://procsctools.in/tools/farmer-id-card-print.html"
+    />
+    <meta
+      property="og:title"
+      content="Farmer ID Card Print Online | Farmer ID Card Maker"
+    />
+    <meta
+      property="og:description"
+      content="Create and print Farmer ID Cards online with photo, QR code and farmer details. Easy, fast and print-ready format."
+    />
+    <meta property="og:site_name" content="Pro CSC Tools" />
+
+    <!-- ========== TWITTER ========== -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:url"
+      content="https://procsctools.in/tools/farmer-id-card-print.html"
+    />
+    <meta name="twitter:title" content="Farmer ID Card Print Online" />
+    <meta
+      name="twitter:description"
+      content="Free Farmer ID Card Maker and Print Tool for Indian farmers."
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+    <style>
+      /* ===== RESET & BASE ===== */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      }
+      body {
+        background: #eaf5e9;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 15px;
+        min-height: 100vh;
+        background-image: radial-gradient(
+            ellipse at 10% 90%,
+            rgba(46, 125, 50, 0.06) 0%,
+            transparent 60%
+          ),
+          radial-gradient(
+            ellipse at 90% 80%,
+            rgba(27, 94, 32, 0.05) 0%,
+            transparent 50%
+          );
+      }
+
+      /* ===== TOOL CONTAINER ===== */
+      .tool-container {
+        max-width: 1120px;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(8px);
+        padding: 32px 36px;
+        border-radius: 28px;
+        box-shadow: 0 16px 56px rgba(0, 0, 0, 0.07),
+          0 4px 16px rgba(0, 0, 0, 0.03);
+        margin-bottom: 30px;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+      }
+      .tool-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 6px;
+        background: linear-gradient(
+          90deg,
+          #ff9933 0%,
+          #ffffff 40%,
+          #138808 70%,
+          #2e7d32 100%
+        );
+        z-index: 2;
+      }
+
+      /* ===== LEAF DECORATIONS ===== */
+      .leaf-deco {
+        position: absolute;
+        font-size: 28px;
+        opacity: 0.06;
+        pointer-events: none;
+        z-index: 0;
+        user-select: none;
+      }
+      .leaf-deco.l1 {
+        top: 20px;
+        right: 30px;
+        transform: rotate(20deg);
+        font-size: 48px;
+      }
+      .leaf-deco.l2 {
+        bottom: 20px;
+        left: 20px;
+        transform: rotate(-30deg);
+        font-size: 40px;
+      }
+      .leaf-deco.l3 {
+        top: 50%;
+        right: 10px;
+        transform: rotate(60deg);
+        font-size: 32px;
+      }
+      .leaf-deco.l4 {
+        bottom: 40%;
+        left: 15px;
+        transform: rotate(-15deg);
+        font-size: 36px;
+      }
+
+      /* ===== HEADER ===== */
+      .tool-header {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        margin-bottom: 22px;
+        flex-wrap: wrap;
+        position: relative;
+        z-index: 1;
+      }
+      .tool-logo-wrap {
+        position: relative;
+        flex-shrink: 0;
+      }
+      .tool-logo {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: linear-gradient(145deg, #1a3c6e, #0d2b4a);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 20px rgba(26, 60, 110, 0.25);
+        position: relative;
+        border: 2px solid rgba(255, 215, 0, 0.3);
+      }
+      .tool-logo svg {
+        width: 38px;
+        height: 38px;
+      }
+      .tool-logo-ring {
+        position: absolute;
+        inset: -4px;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        border-top-color: #ff9933;
+        border-right-color: #138808;
+        animation: spinRing 6s linear infinite;
+        pointer-events: none;
+      }
+      @keyframes spinRing {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .tool-title-group h1 {
+        font-size: 26px;
+        font-weight: 800;
+        color: #1a3c6e;
+        line-height: 1.2;
+      }
+      .tool-title-group h1 .highlight {
+        color: #f7931e;
+      }
+      .tool-title-group h1 .green {
+        color: #2e7d32;
+      }
+      .tool-title-group .subhead {
+        font-size: 14px;
+        color: #4a6a4f;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .tool-title-group .subhead .tag {
+        background: #e8f5e9;
+        color: #2e7d32;
+        padding: 2px 14px;
+        border-radius: 30px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.3px;
+      }
+
+      /* ===== DESIGN SELECTOR ===== */
+      .design-selector {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        margin: 16px 0 20px;
+        position: relative;
+        z-index: 1;
+      }
+      .design-option {
+        flex: 1;
+        min-width: 170px;
+        padding: 16px 20px;
+        border: 2px solid #e0ebe0;
+        border-radius: 16px;
+        cursor: pointer;
+        transition: 0.3s ease;
+        background: rgba(255, 255, 255, 0.7);
+        text-align: center;
+        position: relative;
+        backdrop-filter: blur(4px);
+      }
+      .design-option:hover {
+        border-color: #81c784;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.05);
+      }
+      .design-option.active {
+        border-color: #1a3c6e;
+        background: #f0f6ff;
+        box-shadow: 0 4px 24px rgba(26, 60, 110, 0.1);
+      }
+      .design-option .design-icon {
+        font-size: 28px;
+        display: block;
+        margin-bottom: 4px;
+      }
+      .design-option h3 {
+        font-size: 15px;
+        color: #1a3c6e;
+        font-weight: 700;
+      }
+      .design-option p {
+        font-size: 12px;
+        color: #5a7a5f;
+        margin-top: 2px;
+      }
+      .design-option .badge {
+        display: inline-block;
+        background: linear-gradient(135deg, #f7931e, #e67e22);
+        color: white;
+        font-size: 10px;
+        font-weight: 700;
+        padding: 2px 14px;
+        border-radius: 30px;
+        margin-top: 6px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .design-option .badge.green {
+        background: linear-gradient(135deg, #2e7d32, #43a047);
+      }
+
+      /* ===== FORM ===== */
+      .form-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px 20px;
+        margin-bottom: 10px;
+        position: relative;
+        z-index: 1;
+      }
+      .form-group {
+        flex: 1 0 calc(50% - 20px);
+        min-width: 200px;
+      }
+      .form-group label {
+        display: block;
+        font-weight: 600;
+        font-size: 11px;
+        color: #2c3e50;
+        margin-bottom: 3px;
+        letter-spacing: 0.3px;
+        text-transform: uppercase;
+        opacity: 0.8;
+      }
+      .form-group label .required {
+        color: #e74c3c;
+      }
+      .form-group input,
+      .form-group select {
+        width: 100%;
+        padding: 10px 14px;
+        border: 1.5px solid #dce8dc;
+        border-radius: 12px;
+        font-size: 14px;
+        transition: 0.3s;
+        background: rgba(255, 255, 255, 0.7);
+        color: #1a202c;
+        backdrop-filter: blur(4px);
+      }
+      .form-group input:focus,
+      .form-group select:focus {
+        border-color: #2e7d32;
+        outline: none;
+        box-shadow: 0 0 0 4px rgba(46, 125, 50, 0.08);
+        background: white;
+      }
+      .form-group input::placeholder {
+        color: #a0b8a0;
+        font-size: 13px;
+      }
+
+      /* ===== PHOTO UPLOAD ===== */
+      .photo-upload-box {
+        border: 2px dashed #b8d4b8;
+        border-radius: 14px;
+        padding: 14px;
+        text-align: center;
+        cursor: pointer;
+        transition: 0.3s;
+        min-height: 120px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        background: linear-gradient(145deg, #f2faf2, #e8f5e9);
+        overflow: hidden;
+      }
+      .photo-upload-box::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+            ellipse at 30% 100%,
+            rgba(46, 125, 50, 0.06) 0%,
+            transparent 60%
+          ),
+          radial-gradient(
+            ellipse at 70% 80%,
+            rgba(27, 94, 32, 0.04) 0%,
+            transparent 50%
+          );
+        pointer-events: none;
+      }
+      .photo-upload-box:hover {
+        border-color: #2e7d32;
+        background: #eaf5ea;
+        transform: scale(1.005);
+      }
+      .photo-upload-box .farmer-illustration {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+        opacity: 0.15;
+      }
+      .photo-upload-box .farmer-illustration svg {
+        width: 100%;
+        height: 100%;
+        max-width: 180px;
+        max-height: 140px;
+      }
+      .photo-upload-box img {
+        max-width: 100px;
+        max-height: 120px;
+        border-radius: 10px;
+        object-fit: cover;
+        border: 2px solid #c8e0c8;
+        position: relative;
+        z-index: 2;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+      }
+      .photo-upload-box .placeholder {
+        color: #4a7a4f;
+        font-size: 13px;
+        font-weight: 500;
+        position: relative;
+        z-index: 2;
+        background: rgba(255, 255, 255, 0.7);
+        padding: 6px 16px;
+        border-radius: 30px;
+        backdrop-filter: blur(4px);
+      }
+      .photo-upload-box .placeholder .icon {
+        font-size: 28px;
+        display: block;
+        margin-bottom: 2px;
+      }
+      .photo-upload-box .placeholder .sub {
+        font-size: 11px;
+        opacity: 0.7;
+      }
+      .photo-upload-box input {
+        display: none;
+      }
+
+      /* ===== LAND ROWS ===== */
+      .land-section-title {
+        font-size: 16px;
+        font-weight: 700;
+        color: #1a3c6e;
+        margin-bottom: 4px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .land-section-title .icon {
+        font-size: 20px;
+      }
+      .land-subtitle {
+        font-size: 13px;
+        color: #5a7a5f;
+        margin-bottom: 12px;
+      }
+      .land-row {
+        background: rgba(248, 252, 248, 0.8);
+        border-radius: 14px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        border: 1px solid #dce8dc;
+        transition: 0.3s;
+        backdrop-filter: blur(4px);
+      }
+      .land-row:hover {
+        border-color: #a0c8a0;
+      }
+      .land-row .form-group {
+        flex: 1 0 calc(25% - 20px);
+        min-width: 120px;
+      }
+      .land-row .form-group:last-child {
+        flex: 1 0 calc(25% - 20px);
+        min-width: 140px;
+        display: flex;
+        align-items: flex-end;
+        gap: 6px;
+      }
+      .land-row .form-group:last-child input {
+        flex: 1;
+      }
+      .remove-row-btn {
+        padding: 4px 12px;
+        border: none;
+        border-radius: 20px;
+        background: #fee2e2;
+        color: #dc2626;
+        font-weight: 700;
+        cursor: pointer;
+        font-size: 13px;
+        transition: 0.3s;
+        height: 38px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 38px;
+      }
+      .remove-row-btn:hover {
+        background: #fecaca;
+        transform: scale(1.05);
+      }
+      .add-row-btn {
+        padding: 8px 24px;
+        border: 2px dashed #2e7d32;
+        border-radius: 30px;
+        background: transparent;
+        color: #2e7d32;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 13px;
+        margin-top: 4px;
+      }
+      .add-row-btn:hover {
+        background: #2e7d32;
+        color: white;
+        border-style: solid;
+      }
+
+      /* ===== BUTTONS ===== */
+      .btn-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 22px;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+      }
+      .btn {
+        padding: 12px 36px;
+        border: none;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 15px;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s ease;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: center;
+      }
+      .btn-download {
+        background: linear-gradient(135deg, #1a3c6e, #2a5a9a);
+      }
+      .btn-download:hover:not(:disabled) {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 28px rgba(26, 60, 110, 0.25);
+      }
+      .btn-download:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        transform: none !important;
+        box-shadow: none !important;
+      }
+      .btn-pay {
+        background: linear-gradient(135deg, #f7931e, #e67e22);
+        animation: pulse 2s infinite;
+      }
+      .btn-pay:hover:not(:disabled) {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 28px rgba(247, 147, 30, 0.35);
+      }
+      .btn-pay:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        animation: none;
+        transform: none !important;
+        box-shadow: none !important;
+      }
+      .btn-success {
+        background: linear-gradient(135deg, #2e7d32, #43a047);
+      }
+      .btn-success:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 28px rgba(46, 125, 50, 0.3);
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          box-shadow: 0 0 0 0 rgba(247, 147, 30, 0.4);
+        }
+        50% {
+          box-shadow: 0 0 0 14px rgba(247, 147, 30, 0);
+        }
+      }
+      .btn-download.download-ready {
+        background: linear-gradient(135deg, #2e7d32, #43a047);
+        animation: glowPulse 1.5s ease-in-out 3;
+        box-shadow: 0 0 20px rgba(46, 125, 50, 0.3);
+      }
+      @keyframes glowPulse {
+        0%,
+        100% {
+          box-shadow: 0 0 20px rgba(46, 125, 50, 0.2);
+        }
+        50% {
+          box-shadow: 0 0 40px rgba(46, 125, 50, 0.5);
+        }
+      }
+
+      /* ===== PREVIEW ===== */
+      .preview-section {
+        max-width: 1120px;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(8px);
+        padding: 28px 32px;
+        border-radius: 28px;
+        box-shadow: 0 16px 56px rgba(0, 0, 0, 0.07);
+        margin-bottom: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+      }
+      .preview-section h2 {
+        font-size: 20px;
+        color: #1a3c6e;
+        margin-bottom: 18px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .preview-section h2 .badge-preview {
+        font-size: 12px;
+        background: #e8f5e9;
+        color: #2e7d32;
+        padding: 2px 14px;
+        border-radius: 30px;
+        font-weight: 500;
+      }
+      .card-preview-wrap {
+        display: flex;
+        justify-content: center;
+        overflow: auto;
+        padding: 10px 0;
+        gap: 40px;
+        flex-wrap: wrap;
+        align-items: flex-start;
+      }
+      .card-side-label {
+        font-size: 13px;
+        font-weight: 700;
+        color: #1a3c6e;
+        text-align: center;
+        margin-bottom: 8px;
+        letter-spacing: 0.5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+      .card-side-label .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        display: inline-block;
+      }
+      .card-side-label .dot.front {
+        background: #1a3c6e;
+      }
+      .card-side-label .dot.back {
+        background: #2e7d32;
+      }
+      .card-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      /* ============================================================
+           ID CARD — PREMIUM (shared preview + print)
+           ============================================================ */
+      .id-card {
+        width: 85mm;
+        height: 54mm;
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.13);
+        padding: 3.5mm 4.5mm;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+        border: 1px solid rgba(46, 125, 50, 0.1);
+        transition: transform 0.3s ease;
+      }
+      .id-card:hover {
+        transform: scale(1.005);
+      }
+      .id-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+            ellipse at 15% 85%,
+            rgba(46, 125, 50, 0.04) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            ellipse at 85% 15%,
+            rgba(255, 153, 51, 0.03) 0%,
+            transparent 50%
+          ),
+          linear-gradient(
+            180deg,
+            #f7fcf7 0%,
+            #ffffff 40%,
+            #ffffff 70%,
+            #f0f7f0 100%
+          );
+        pointer-events: none;
+        z-index: 0;
+      }
+      .id-card .tricolor-bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3.6mm;
+        background: linear-gradient(
+          90deg,
+          #ff9933 0%,
+          #ff9933 33.33%,
+          #ffffff 33.33%,
+          #ffffff 66.66%,
+          #138808 66.66%,
+          #138808 100%
+        );
+        z-index: 5;
+        border-radius: 10px 10px 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .id-card .tricolor-bar .chakra {
+        position: absolute;
+        width: 5mm;
+        height: 5mm;
+        opacity: 0.4;
+        color: #1a3c6e;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 4.2mm;
+        line-height: 1;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        backdrop-filter: blur(2px);
+      }
+      .id-card .watermark-farmer {
+        position: absolute;
+        bottom: 2mm;
+        right: 3mm;
+        font-size: 32px;
+        opacity: 0.04;
+        z-index: 0;
+        pointer-events: none;
+        transform: rotate(-6deg);
+      }
+      .id-card .watermark-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-10deg);
+        font-size: 24px;
+        font-weight: 900;
+        color: #1a3c6e;
+        opacity: 0.025;
+        letter-spacing: 6px;
+        pointer-events: none;
+        z-index: 0;
+        white-space: nowrap;
+      }
+      .id-card .corner-leaf {
+        position: absolute;
+        font-size: 14px;
+        opacity: 0.07;
+        pointer-events: none;
+        z-index: 1;
+      }
+      .id-card .corner-leaf.tl {
+        top: 4mm;
+        left: 4mm;
+        transform: rotate(-20deg);
+      }
+      .id-card .corner-leaf.br {
+        bottom: 4mm;
+        right: 4mm;
+        transform: rotate(160deg);
+      }
+      .card-inner {
+        background: rgba(255, 255, 255, 0.92);
+        height: 100%;
+        width: 100%;
+        border-radius: 6px;
+        padding: 3mm 4mm;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        z-index: 2;
+        backdrop-filter: blur(1px);
+        border: 0.5px solid rgba(255, 255, 255, 0.3);
+      }
+      .card-body {
+        display: flex;
+        gap: 3.5mm;
+        flex: 1;
+        min-height: 0;
+      }
+      .inner-leaf-top {
+        position: absolute;
+        font-size: 16px;
+        opacity: 0.25;
+        pointer-events: none;
+        z-index: 3;
+        top: 2mm;
+      }
+      .inner-leaf-top.left {
+        left: 2mm;
+      }
+      .inner-leaf-top.right {
+        right: 2mm;
+      }
+      .farmer-id-footer {
+        margin-top: 0.4mm;
+        padding-top: 0.3mm;
+        font-size: 5px;
+        font-weight: 700;
+        color: #1a3c6e;
+        text-align: center;
+        border-top: 0.5px solid #dce8dc;
+        letter-spacing: 0.5px;
+        opacity: 0.7;
+        width: 100%;
+        flex-shrink: 0;
+      }
+      .farmer-id-footer.no-border {
+        border-top: none;
+        padding-top: 0.1mm;
+      }
+      .card-left {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.4mm;
+        position: relative;
+        z-index: 1;
+        min-width: 0;
+      }
+      .card-header {
+        display: flex;
+        align-items: center;
+        gap: 2.5mm;
+        margin-bottom: 0.6mm;
+      }
+      /* ===== NEW EYE-CATCHING LOGO ===== */
+      .card-logo {
+        width: 8.5mm;
+        height: 8.5mm;
+        flex-shrink: 0;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        background: linear-gradient(145deg, #ff9933, #f57c00);
+        box-shadow: 0 1px 6px rgba(255, 153, 51, 0.4);
+        border: 1.5px solid #ffffff;
+      }
+      .card-logo .logo-ring {
+        position: absolute;
+        inset: -2px;
+        border-radius: 50%;
+        border: 1.5px solid rgba(255, 255, 255, 0.3);
+        pointer-events: none;
+      }
+      .card-logo .logo-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+      .card-logo .logo-bg {
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        background: radial-gradient(ellipse at 30% 30%, #ffcc80, #f57c00);
+      }
+      .card-logo .logo-farmer {
+        position: relative;
+        z-index: 1;
+        width: 70%;
+        height: 70%;
+      }
+      .card-logo .logo-farmer svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      .card-logo .logo-leaf {
+        position: absolute;
+        bottom: -1mm;
+        right: -1mm;
+        font-size: 3.2mm;
+        opacity: 0.9;
+        filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+        z-index: 2;
+      }
+      .card-title-group {
+        flex: 1;
+        min-width: 0;
+      }
+      .card-title-group .govt {
+        font-size: 4.8px;
+        font-weight: 600;
+        color: #4a6a4f;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        line-height: 1.2;
+      }
+      .card-title-group .title {
+        font-size: 9px;
+        font-weight: 800;
+        color: #1a3c6e;
+        letter-spacing: 0.4px;
+        line-height: 1.1;
+      }
+      .card-title-group .title .highlight {
+        color: #f7931e;
+      }
+      .card-title-group .title .green-text {
+        color: #2e7d32;
+      }
+      .card-title-group .subtitle {
+        font-size: 4.8px;
+        color: #5a7a5f;
+        font-weight: 500;
+        letter-spacing: 0.3px;
+      }
+      .divider-premium {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        margin: 0.6mm 0 0.8mm 0;
+        border: none;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          #dce8dc 0%,
+          #a0c8a0 50%,
+          #dce8dc 100%
+        );
+        position: relative;
+      }
+      .divider-premium::after {
+        content: "🌱";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) scale(0.8);
+        background: white;
+        padding: 0 3px;
+        font-size: 5px;
+        top: -2.5px;
+      }
+      .detail-line {
+        display: flex;
+        align-items: center;
+        font-size: 6px;
+        line-height: 1.3;
+        gap: 2px;
+        padding: 0.2mm 0;
+      }
+      .detail-line .dl-icon {
+        font-size: 4.5px;
+        opacity: 0.5;
+        min-width: 3.5mm;
+        text-align: center;
+        flex-shrink: 0;
+      }
+      .detail-line .dl-label {
+        font-weight: 600;
+        color: #4a6a4f;
+        min-width: 16%;
+        flex-shrink: 0;
+        font-size: 5px;
+        text-transform: uppercase;
+        letter-spacing: 0.2px;
+        opacity: 0.7;
+      }
+      .detail-line .dl-value {
+        color: #1a202c;
+        font-weight: 600;
+        word-break: break-word;
+        font-size: 6px;
+      }
+      .detail-line .dl-value.regional {
+        color: #1a3c6e;
+        font-weight: 700;
+      }
+      .detail-line .dl-value.highlight-value {
+        color: #f7931e;
+        font-weight: 700;
+      }
+      .card-right {
+        width: 16mm;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1mm;
+        flex-shrink: 0;
+        position: relative;
+        z-index: 1;
+      }
+      .photo-box {
+        width: 14mm;
+        height: 17mm;
+        border: 1.5px solid #b8d4b8;
+        border-radius: 5px;
+        background: linear-gradient(145deg, #f2faf2, #e8f5e9);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        flex-shrink: 0;
+        position: relative;
+        box-shadow: inset 0 2px 8px rgba(46, 125, 50, 0.06);
+      }
+      .photo-box .farmer-bg {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0.12;
+        pointer-events: none;
+      }
+      .photo-box .farmer-bg svg {
+        width: 100%;
+        height: 100%;
+      }
+      .photo-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: relative;
+        z-index: 2;
+      }
+      .photo-box .photo-placeholder-text {
+        font-size: 4px;
+        color: #4a7a4f;
+        line-height: 1.3;
+        position: relative;
+        z-index: 2;
+        background: rgba(255, 255, 255, 0.5);
+        padding: 1px 6px;
+        border-radius: 4px;
+        backdrop-filter: blur(2px);
+      }
+      .photo-box .photo-placeholder-text .big {
+        font-size: 12px;
+        display: block;
+        margin-bottom: 0px;
+      }
+      .card-right .uid-badge {
+        font-size: 4.8px;
+        font-weight: 700;
+        color: white;
+        text-align: center;
+        background: linear-gradient(135deg, #1a3c6e, #2a5a9a);
+        padding: 0.6mm 1.4mm;
+        border-radius: 4px;
+        width: 100%;
+        line-height: 1.2;
+        letter-spacing: 0.2px;
+        box-shadow: 0 1px 6px rgba(26, 60, 110, 0.12);
+      }
+      .card-right .uid-badge .small {
+        font-weight: 400;
+        opacity: 0.7;
+        font-size: 3.8px;
+      }
+      .card-right .qr-wrap {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        border-radius: 4px;
+        padding: 0.5px 0;
+        border: 0.5px solid #dce8dc;
+      }
+      .card-right .qr-wrap img {
+        display: block;
+        width: 12mm !important;
+        height: 12mm !important;
+        max-width: 12mm;
+        max-height: 12mm;
+        border-radius: 2px;
+        background: white;
+      }
+
+      /* BACK SIDE */
+      .card-back .card-left {
+        justify-content: flex-start;
+        padding-top: 0.5mm;
+      }
+      .card-back .land-section {
+        margin-top: 0.6mm;
+        border-top: 0.5px solid #dce8dc;
+        padding-top: 0.6mm;
+      }
+      .card-back .land-section .land-title {
+        font-size: 5px;
+        font-weight: 700;
+        color: #1a3c6e;
+        margin-bottom: 0.3mm;
+        display: flex;
+        align-items: center;
+        gap: 2px;
+      }
+      .card-back .land-table-mini {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 5px;
+      }
+      .card-back .land-table-mini th {
+        background: #eaf5ea;
+        font-weight: 700;
+        color: #2e7d32;
+        padding: 0.2mm 0.5mm;
+        border: 0.5px solid #c8e0c8;
+        text-align: left;
+        font-size: 4.6px;
+        text-transform: uppercase;
+        letter-spacing: 0.2px;
+      }
+      .card-back .land-table-mini td {
+        padding: 0.2mm 0.5mm;
+        border: 0.5px solid #c8e0c8;
+        color: #1a202c;
+        font-size: 4.8px;
+      }
+      .card-back .land-table-mini tr:nth-child(even) td {
+        background: #f7fcf7;
+      }
+      .card-back .thumb-sign-area {
+        display: flex;
+        gap: 2mm;
+        margin-top: 0.8mm;
+        padding-top: 0.6mm;
+        border-top: 0.5px solid #dce8dc;
+        justify-content: space-between;
+      }
+      .card-back .thumb-box {
+        text-align: center;
+        flex: 1;
+      }
+      .card-back .thumb-box .label {
+        font-size: 3.8px;
+        font-weight: 700;
+        color: #4a6a4f;
+        text-transform: uppercase;
+        letter-spacing: 0.2px;
+        opacity: 0.6;
+      }
+      .card-back .thumb-box .box {
+        width: 100%;
+        height: 6.5mm;
+        border: 1px dashed #b8d4b8;
+        border-radius: 4px;
+        background: rgba(248, 252, 248, 0.6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 10px;
+        color: #a0c8a0;
+        margin-top: 0.3mm;
+      }
+      .card-back .thumb-box .box .icon {
+        font-size: 14px;
+      }
+      .card-back .thumb-box .box .line {
+        width: 70%;
+        border-bottom: 1px solid #4a6a4f;
+        margin-top: 1px;
+      }
+      .card-back .thumb-box .box .line-text {
+        font-size: 3.2px;
+        color: #7a9a7f;
+        margin-top: 0.5px;
+      }
+      .side-badge {
+        position: absolute;
+        top: 4mm;
+        right: 4.5mm;
+        font-size: 4.5px;
+        font-weight: 700;
+        color: #2e7d32;
+        background: rgba(255, 255, 255, 0.85);
+        padding: 0.3mm 2mm;
+        border-radius: 3px;
+        border: 0.5px solid #81c784;
+        z-index: 6;
+        opacity: 0.6;
+        letter-spacing: 0.5px;
+      }
+
+      /* ===== SCALING ===== */
+      .id-card {
+        transform: scale(0.8);
+        transform-origin: top left;
+      }
+      @media (max-width: 800px) {
+        .id-card {
+          transform: scale(0.5);
+          transform-origin: top left;
+        }
+        .tool-container {
+          padding: 18px;
+        }
+        .preview-section {
+          padding: 16px;
+        }
+        .form-group {
+          flex: 1 0 100%;
+          min-width: 0;
+        }
+        .card-preview-wrap {
+          gap: 20px;
+        }
+        .tool-title-group h1 {
+          font-size: 20px;
+        }
+        .tool-logo {
+          width: 48px;
+          height: 48px;
+        }
+        .tool-logo svg {
+          width: 30px;
+          height: 30px;
+        }
+        .design-option {
+          min-width: 130px;
+          padding: 12px 14px;
+        }
+        .land-row .form-group {
+          flex: 1 0 calc(50% - 10px);
+          min-width: 100px;
+        }
+        .btn {
+          padding: 10px 24px;
+          font-size: 13px;
+        }
+        .leaf-deco {
+          display: none;
+        }
+      }
+      @media (max-width: 500px) {
+        .id-card {
+          transform: scale(0.38);
+          transform-origin: top left;
+        }
+        .tool-container {
+          padding: 12px;
+        }
+        .preview-section {
+          padding: 12px;
+        }
+      }
+
+      /* ===== PRINT / DOWNLOAD STYLES (Premium) ===== */
+      @media print {
+        /* Force exact color rendering */
+        * {
+          print-color-adjust: exact !important;
+          -webkit-print-color-adjust: exact !important;
+          color-adjust: exact !important;
+        }
+
+        body {
+          background: white !important;
+          padding: 0 !important;
+          margin: 0 !important;
+        }
+        .no-print {
+          display: none !important;
+        }
+        .preview-section,
+        .tool-container {
+          box-shadow: none !important;
+          border: none !important;
+          padding: 0 !important;
+          margin: 0 !important;
+          background: white !important;
+          max-width: 100% !important;
+        }
+        .card-preview-wrap {
+          display: block !important;
+        }
+        .id-card {
+          box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08) !important;
+          border: 1px solid #c8dcc8 !important;
+          border-radius: 8px !important;
+          margin: 0 auto !important;
+          transform: none !important;
+          page-break-inside: avoid;
+          break-inside: avoid;
+          background: #ffffff !important;
+        }
+        .id-card:hover {
+          transform: none !important;
+        }
+        .id-card::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: radial-gradient(
+              ellipse at 15% 85%,
+              rgba(46, 125, 50, 0.04) 0%,
+              transparent 50%
+            ),
+            radial-gradient(
+              ellipse at 85% 15%,
+              rgba(255, 153, 51, 0.03) 0%,
+              transparent 50%
+            ),
+            linear-gradient(
+              180deg,
+              #f7fcf7 0%,
+              #ffffff 40%,
+              #ffffff 70%,
+              #f0f7f0 100%
+            ) !important;
+          pointer-events: none;
+          z-index: 0;
+        }
+        .id-card .tricolor-bar {
+          border-radius: 8px 8px 0 0 !important;
+          height: 3.8mm !important;
+          background: linear-gradient(
+            90deg,
+            #ff9933 0%,
+            #ff9933 33.33%,
+            #ffffff 33.33%,
+            #ffffff 66.66%,
+            #138808 66.66%,
+            #138808 100%
+          ) !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+        }
+        .id-card .tricolor-bar .chakra {
+          opacity: 0.4 !important;
+          display: flex !important;
+          align-items: center;
+          justify-content: center;
+          font-size: 4.2mm !important;
+          background: rgba(255, 255, 255, 0.3) !important;
+          border-radius: 50% !important;
+          backdrop-filter: blur(2px) !important;
+          color: #1a3c6e !important;
+        }
+        .id-card .watermark-farmer {
+          opacity: 0.04 !important;
+          display: block !important;
+        }
+        .id-card .watermark-text {
+          opacity: 0.025 !important;
+          display: block !important;
+          color: #1a3c6e !important;
+        }
+        .id-card .corner-leaf {
+          opacity: 0.07 !important;
+          display: block !important;
+        }
+        .side-badge {
+          display: block !important;
+          opacity: 0.5 !important;
+          border-color: #81c784 !important;
+          color: #2e7d32 !important;
+          background: rgba(255, 255, 255, 0.85) !important;
+        }
+        .card-inner {
+          background: rgba(255, 255, 255, 0.92) !important;
+          border: 0.5px solid rgba(255, 255, 255, 0.3) !important;
+          border-radius: 4px !important;
+        }
+        .inner-leaf-top {
+          opacity: 0.25 !important;
+          display: block !important;
+          font-size: 16px !important;
+        }
+        .farmer-id-footer {
+          opacity: 0.7 !important;
+          display: block !important;
+          font-size: 5px !important;
+          border-top: 0.5px solid #dce8dc !important;
+          padding-top: 0.3mm !important;
+          color: #1a3c6e !important;
+          text-align: center !important;
+          width: 100% !important;
+        }
+        .farmer-id-footer.no-border {
+          border-top: none !important;
+          padding-top: 0.1mm !important;
+        }
+        /* ===== LOGO PRINT STYLES ===== */
+        .card-logo {
+          width: 8.5mm !important;
+          height: 8.5mm !important;
+          background: linear-gradient(145deg, #ff9933, #f57c00) !important;
+          border: 1.5px solid #ffffff !important;
+          box-shadow: 0 1px 6px rgba(255, 153, 51, 0.4) !important;
+          border-radius: 50% !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          flex-shrink: 0 !important;
+          position: relative !important;
+        }
+        .card-logo .logo-ring {
+          border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
+          position: absolute !important;
+          inset: -2px !important;
+          border-radius: 50% !important;
+          pointer-events: none !important;
+        }
+        .card-logo .logo-inner {
+          position: relative !important;
+          width: 100% !important;
+          height: 100% !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          border-radius: 50% !important;
+          overflow: hidden !important;
+        }
+        .card-logo .logo-bg {
+          position: absolute !important;
+          inset: 0 !important;
+          border-radius: 50% !important;
+          background: radial-gradient(
+            ellipse at 30% 30%,
+            #ffcc80,
+            #f57c00
+          ) !important;
+        }
+        .card-logo .logo-farmer {
+          position: relative !important;
+          z-index: 1 !important;
+          width: 70% !important;
+          height: 70% !important;
+        }
+        .card-logo .logo-farmer svg {
+          width: 100% !important;
+          height: 100% !important;
+          display: block !important;
+        }
+        .card-logo .logo-leaf {
+          position: absolute !important;
+          bottom: -1mm !important;
+          right: -1mm !important;
+          font-size: 3.2mm !important;
+          opacity: 0.9 !important;
+          filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2)) !important;
+          z-index: 2 !important;
+          display: block !important;
+        }
+        .card-title-group .govt {
+          color: #4a6a4f !important;
+        }
+        .card-title-group .title {
+          color: #1a3c6e !important;
+        }
+        .card-title-group .title .highlight {
+          color: #f7931e !important;
+        }
+        .card-title-group .title .green-text {
+          color: #2e7d32 !important;
+        }
+        .detail-line .dl-value {
+          color: #1a202c !important;
+        }
+        .detail-line .dl-value.regional {
+          color: #1a3c6e !important;
+        }
+        .detail-line .dl-value.highlight-value {
+          color: #f7931e !important;
+        }
+        .card-right .uid-badge {
+          background: linear-gradient(135deg, #1a3c6e, #2a5a9a) !important;
+          color: white !important;
+        }
+        .photo-box {
+          border: 1.5px solid #b8d4b8 !important;
+          background: linear-gradient(145deg, #f2faf2, #e8f5e9) !important;
+        }
+        .photo-box img {
+          width: 100% !important;
+          height: 100% !important;
+          object-fit: cover !important;
+        }
+        .card-right .qr-wrap {
+          border: 0.5px solid #dce8dc !important;
+          background: white !important;
+        }
+        .card-right .qr-wrap img {
+          width: 12mm !important;
+          height: 12mm !important;
+          max-width: 12mm !important;
+          max-height: 12mm !important;
+        }
+        .card-back .land-table-mini th {
+          background: #eaf5ea !important;
+          color: #2e7d32 !important;
+          border: 0.5px solid #c8e0c8 !important;
+        }
+        .card-back .land-table-mini td {
+          border: 0.5px solid #c8e0c8 !important;
+          color: #1a202c !important;
+        }
+        .card-back .land-table-mini tr:nth-child(even) td {
+          background: #f7fcf7 !important;
+        }
+        .card-back .thumb-box .box {
+          border: 1px dashed #b8d4b8 !important;
+          background: rgba(248, 252, 248, 0.6) !important;
+        }
+        .card-back .thumb-box .box .line {
+          border-bottom: 1px solid #4a6a4f !important;
+        }
+        .divider-premium {
+          background: linear-gradient(
+            90deg,
+            #dce8dc 0%,
+            #a0c8a0 50%,
+            #dce8dc 100%
+          ) !important;
+        }
+        .divider-premium::after {
+          content: "🌱" !important;
+          background: white !important;
+          font-size: 5px !important;
+        }
+        .id-card .watermark-farmer,
+        .id-card .watermark-text,
+        .id-card .corner-leaf {
+          display: block !important;
+        }
+
+        .print-download-page {
+          display: flex !important;
+          flex-wrap: wrap !important;
+          justify-content: center !important;
+          align-items: center !important;
+          gap: 6mm !important;
+          padding: 8mm !important;
+          width: 100% !important;
+          background: white !important;
+        }
+        .print-download-page .id-card {
+          width: 85mm !important;
+          height: 54mm !important;
+          margin: 0 !important;
+          box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08) !important;
+          border: 1px solid #c8dcc8 !important;
+          transform: none !important;
+          border-radius: 8px !important;
+        }
+        @page {
+          margin: 0;
+          padding: 0;
+          size: A4 portrait;
+        }
+        body {
+          margin: 0;
+          padding: 0;
+          background: white !important;
+        }
+      }
+
+      /* ===== CONSENT MODAL ===== */
+      #consentOverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        backdrop-filter: blur(6px);
+      }
+      #consentModal {
+        background: white;
+        max-width: 720px;
+        width: 100%;
+        border-radius: 24px;
+        padding: 36px 42px;
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.3);
+        max-height: 90vh;
+        overflow-y: auto;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      #consentModal h2 {
+        color: #b22222;
+        font-size: 22px;
+        border-bottom: 3px solid #f7931e;
+        padding-bottom: 12px;
+        margin-bottom: 18px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      #consentModal .notice-text {
+        font-size: 14px;
+        line-height: 1.8;
+        color: #1a202c;
+        white-space: pre-line;
+        margin-bottom: 24px;
+        background: #f7fcf7;
+        padding: 16px 20px;
+        border-radius: 14px;
+        border-left: 4px solid #2e7d32;
+      }
+      #consentModal .notice-text strong {
+        color: #1a3c6e;
+      }
+      #consentModal .btn-group-modal {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        justify-content: center;
+      }
+      #consentModal .btn-modal {
+        padding: 12px 40px;
+        border: none;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 15px;
+        cursor: pointer;
+        transition: 0.3s;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        min-width: 160px;
+      }
+      #consentModal .btn-agree {
+        background: linear-gradient(135deg, #1a3c6e, #2a5a9a);
+        color: white;
+      }
+      #consentModal .btn-agree:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 24px rgba(26, 60, 110, 0.25);
+      }
+      #consentModal .btn-disagree {
+        background: #dc3545;
+        color: white;
+      }
+      #consentModal .btn-disagree:hover {
+        background: #c82333;
+        transform: scale(1.02);
+      }
+      #blockMessage {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        z-index: 9998;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 40px;
+        font-size: 22px;
+        color: #c0392b;
+      }
+      #blockMessage .emoji {
+        font-size: 64px;
+        margin-bottom: 20px;
+      }
+      #blockMessage p {
+        max-width: 600px;
+        line-height: 1.6;
+      }
+
+      /* ===== PAYMENT MODAL ===== */
+      #paymentOverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 9997;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        backdrop-filter: blur(4px);
+      }
+      #paymentModal {
+        background: white;
+        max-width: 500px;
+        width: 100%;
+        border-radius: 24px;
+        padding: 32px 30px;
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.25);
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      #paymentModal h2 {
+        color: #1a3c6e;
+        font-size: 22px;
+        margin-bottom: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+      #paymentModal .pay-amount {
+        font-size: 40px;
+        font-weight: 800;
+        color: #e67e22;
+        margin: 2px 0 8px;
+      }
+      #paymentModal .pay-desc {
+        color: #5a7a5f;
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 12px;
+      }
+      #paymentModal .upi-qr-box {
+        background: white;
+        padding: 12px;
+        border-radius: 16px;
+        display: inline-block;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+        margin: 4px 0 10px;
+        border: 1px solid #dce8dc;
+      }
+      #paymentModal .upi-qr-box img {
+        width: 200px;
+        height: 200px;
+        display: block;
+        border-radius: 8px;
+      }
+      #paymentModal .upi-id-box {
+        background: #eaf5ea;
+        padding: 8px 20px;
+        border-radius: 30px;
+        display: inline-block;
+        margin: 4px 0 6px;
+      }
+      #paymentModal .upi-id-box .upi-label {
+        font-size: 11px;
+        color: #5a7a5f;
+      }
+      #paymentModal .upi-id-box .upi-id {
+        font-size: 16px;
+        font-weight: 700;
+        color: #1a3c6e;
+      }
+      #paymentModal .upi-name {
+        font-size: 14px;
+        color: #1a202c;
+        margin: 4px 0 8px;
+        font-weight: 600;
+      }
+      #paymentModal .upi-instruction {
+        font-size: 13px;
+        color: #4a6a4f;
+        margin: 6px 0 4px;
+        line-height: 1.6;
+        text-align: left;
+        background: #f7fcf7;
+        padding: 12px 16px;
+        border-radius: 12px;
+        border: 1px solid #dce8dc;
+      }
+      .pay-btn-group {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 12px;
+      }
+      .btn-upi-confirm {
+        background: linear-gradient(135deg, #2e7d32, #43a047);
+        color: white;
+        padding: 12px 36px;
+        border: none;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 15px;
+        cursor: pointer;
+        transition: 0.3s;
+        box-shadow: 0 4px 16px rgba(46, 125, 50, 0.25);
+      }
+      .btn-upi-confirm:hover:not(:disabled) {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 28px rgba(46, 125, 50, 0.3);
+      }
+      .btn-upi-confirm:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        transform: none !important;
+        box-shadow: none !important;
+      }
+      .btn-cancel-pay {
+        background: #6b7a8f;
+        color: white;
+        padding: 12px 36px;
+        border: none;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 15px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      .btn-cancel-pay:hover {
+        background: #4a5568;
+      }
+      .payment-timer {
+        margin-top: 10px;
+        font-size: 20px;
+        font-weight: 800;
+        color: #1a3c6e;
+        letter-spacing: 1px;
+        font-variant-numeric: tabular-nums;
+      }
+      .payment-timer.warning {
+        color: #dc3545;
+        animation: blink 1s infinite;
+      }
+      .payment-timer.success {
+        color: #2e7d32;
+      }
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.3;
+        }
+      }
+
+      /* ===== TOAST ===== */
+      #toast {
+        position: fixed;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #2e7d32;
+        color: white;
+        padding: 16px 32px;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 15px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+        z-index: 10000;
+        display: none;
+        animation: slideUp 0.4s ease;
+        max-width: 90%;
+        text-align: center;
+      }
+      #toast.error {
+        background: #dc3545;
+      }
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateX(-50%) translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(-50%) translateY(0);
+        }
+      }
+
+      /* ===== PAYMENT STATUS ===== */
+      .payment-status {
+        display: none;
+        background: #d4edda;
+        color: #155724;
+        padding: 10px 18px;
+        border-radius: 12px;
+        margin-top: 12px;
+        font-weight: 600;
+        text-align: center;
+        border: 1px solid #c3e6cb;
+      }
+      .payment-status.show {
+        display: block;
+      }
+
+      /* ===== PAYMENT APPS ===== */
+      .payment-apps {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        margin: 6px 0 10px;
+        flex-wrap: wrap;
+      }
+      .payment-apps .app-icon {
+        font-weight: 700;
+        padding: 3px 14px;
+        border-radius: 20px;
+        background: #f7fcf7;
+        color: #1a202c;
+        font-size: 12px;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        border: 1px solid #dce8dc;
+      }
+      .payment-apps .app-icon.phonepe {
+        color: #5f259f;
+        border-color: #e0d6f0;
+      }
+      .payment-apps .app-icon.paytm {
+        color: #00baf2;
+        border-color: #d6f0fa;
+      }
+      .payment-apps .app-icon.gpay {
+        color: #1a73e8;
+        border-color: #d6e4fa;
+      }
+      .payment-apps .app-icon.navi {
+        color: #e55a2b;
+        border-color: #f5ddd6;
+      }
+
+      /* ===== RESPONSIVE ===== */
+      @media (max-width: 600px) {
+        #consentModal {
+          padding: 24px 18px;
+        }
+        #paymentModal {
+          padding: 24px 16px;
+        }
+        #paymentModal .upi-qr-box img {
+          width: 160px;
+          height: 160px;
+        }
+        .tool-header {
+          gap: 10px;
+        }
+        .tool-logo {
+          width: 42px;
+          height: 42px;
+        }
+        .tool-logo svg {
+          width: 26px;
+          height: 26px;
+        }
+        .tool-title-group h1 {
+          font-size: 18px;
+        }
+        .preview-section h2 {
+          font-size: 17px;
+        }
+      }
+
+      /* ===== SCROLLBAR ===== */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #eaf5ea;
+        border-radius: 8px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #a0c8a0;
+        border-radius: 8px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #81c784;
+      }
+    
+/* ===== Pro CSC Tools chrome (namespaced) ===== */
+.pcs-nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid #e5e7eb;box-shadow:0 1px 8px rgba(0,0,0,.05);font-family:'Inter',system-ui,sans-serif}
+.pcs-nav-in{max-width:1200px;margin:0 auto;padding:0 18px;height:64px;display:flex;align-items:center;justify-content:space-between}
+.pcs-brand{font-size:1.4rem;font-weight:900;color:#ab183d;display:flex;align-items:center;gap:8px;letter-spacing:-.5px;text-decoration:none}
+.pcs-brand i{color:#e0aa14}
+.pcs-links{display:flex;align-items:center;gap:24px;font-weight:600}
+.pcs-links a{color:#374151;transition:.2s;text-decoration:none}
+.pcs-links a:hover{color:#ab183d}
+.pcs-cta{background:#ab183d;color:#fff!important;padding:9px 18px;border-radius:999px;display:flex;align-items:center;gap:6px;box-shadow:0 4px 14px rgba(171,24,61,.3)}
+.pcs-cta:hover{background:#8f1433}
+.pcs-menu-btn{display:none;font-size:1.5rem;color:#ab183d;background:none;border:none;cursor:pointer}
+.pcs-mobile{display:none;flex-direction:column;background:#fff;border-bottom:1px solid #e5e7eb;padding:8px 18px;font-family:'Inter',sans-serif}
+.pcs-mobile.open{display:flex}
+.pcs-mobile a{padding:12px 4px;border-bottom:1px solid #f1f5f9;font-weight:600;color:#374151;text-decoration:none}
+.pcs-mobile a i{color:#ab183d;width:22px}
+.pcs-section{max-width:1100px;margin:0 auto;padding:46px 18px;font-family:'Inter',sans-serif}
+.pcs-section h2{font-size:1.9rem;font-weight:900;text-align:center;color:#1f2937;margin-bottom:6px}
+.pcs-section .pcs-sub{text-align:center;color:#6b7280;margin-bottom:28px}
+.pcs-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.pcs-step{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:22px 18px;box-shadow:0 4px 14px rgba(0,0,0,.04)}
+.pcs-step .pcs-num{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#ab183d,#d9304f);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:1.1rem;margin-bottom:12px}
+.pcs-step h3{font-size:1.05rem;margin-bottom:6px;color:#1f2937}
+.pcs-step p{font-size:.92rem;color:#6b7280}
+.pcs-faq{max-width:820px;margin:0 auto}
+.pcs-faq-item{background:#fff;border:1px solid #e5e7eb;border-radius:12px;margin-bottom:12px;overflow:hidden}
+.pcs-faq-q{padding:18px 20px;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:10px;color:#1f2937}
+.pcs-faq-q i{transition:.25s;color:#ab183d}
+.pcs-faq-item.open .pcs-faq-q i{transform:rotate(180deg)}
+.pcs-faq-a{max-height:0;overflow:hidden;transition:.3s;padding:0 20px;color:#6b7280}
+.pcs-faq-item.open .pcs-faq-a{max-height:360px;padding:0 20px 18px}
+.pcs-footer{background:#0f172a;color:#94a3b8;padding:48px 18px 22px;font-family:'Inter',sans-serif}
+.pcs-fgrid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:30px}
+.pcs-footer h3{color:#fff;font-size:1.3rem;font-weight:800;display:flex;align-items:center;gap:8px}
+.pcs-footer h3 i{color:#e0aa14}
+.pcs-footer h4{color:#fff;font-weight:700;margin-bottom:14px}
+.pcs-footer p{font-size:.9rem;margin-top:10px;line-height:1.7}
+.pcs-footer ul{list-style:none;padding:0;margin:0}
+.pcs-footer li{margin-bottom:9px;font-size:.9rem}
+.pcs-footer a{text-decoration:none;color:#94a3b8}
+.pcs-footer a:hover{color:#fff}
+.pcs-social{display:flex;gap:10px;margin-top:16px}
+.pcs-social a{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;transition:.2s}
+.pcs-social a:hover{background:#ab183d;color:#fff}
+.pcs-fbottom{text-align:center;font-size:.82rem;border-top:1px solid #1e293b;margin-top:30px;padding-top:20px;max-width:1200px;margin-left:auto;margin-right:auto}
+.pcs-wa{position:fixed;bottom:24px;right:24px;z-index:40;width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.7rem;text-decoration:none;box-shadow:0 8px 24px rgba(37,211,102,.45);animation:pcswaf 2.4s infinite}
+@keyframes pcswaf{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+/* paywall removed -> hide pay UI */
+#showPayBtn,#paymentOverlay,#paymentStatus{display:none!important}
+@media print{.pcs-nav,.pcs-mobile,.pcs-section,.pcs-footer,.pcs-wa{display:none!important}}
+@media(max-width:860px){.pcs-links{display:none}.pcs-menu-btn{display:block}.pcs-fgrid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.pcs-fgrid{grid-template-columns:1fr}}
+</style>
+  </head>
+  <body>
+<!-- ===== Pro CSC Tools NAV ===== -->
+<nav class="pcs-nav"><div class="pcs-nav-in">
+<a href="https://procsctools.in/" class="pcs-brand"><i class="fas fa-crown"></i> Pro CSC Tools</a>
+<div class="pcs-links">
+<a href="https://procsctools.in/">Home</a>
+<a href="https://procsctools.in/#tools">All Tools</a>
+<a href="https://procsctools.in/blog/">Blog</a>
+<a href="https://procsctools.in/about.html">About</a>
+<a href="https://procsctools.in/contact.html">Contact</a>
+<a href="https://wa.me/916387617678" class="pcs-cta"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+</div>
+<button class="pcs-menu-btn" id="pcsMenuBtn" aria-label="Menu"><i class="fas fa-bars"></i></button>
+</div>
+<div class="pcs-mobile" id="pcsMobile">
+<a href="https://procsctools.in/"><i class="fas fa-home"></i> Home</a>
+<a href="https://procsctools.in/#tools"><i class="fas fa-toolbox"></i> All Tools</a>
+<a href="https://procsctools.in/blog/"><i class="fas fa-newspaper"></i> Blog</a>
+<a href="https://procsctools.in/about.html"><i class="fas fa-circle-info"></i> About</a>
+<a href="https://procsctools.in/contact.html"><i class="fas fa-headset"></i> Contact</a>
+<a href="https://wa.me/916387617678"><i class="fab fa-whatsapp" style="color:#25d366"></i> WhatsApp</a>
+</div>
+</nav>
+    <!-- ===== CONSENT MODAL ===== -->
+    <div id="consentOverlay">
+      <div id="consentModal">
+        <h2>⚠️ Important Notice</h2>
+        <div class="notice-text">
+          <strong>This is NOT a government portal</strong>
+
+          <strong>For shopkeepers / service providers:</strong>
+          If you provide cards to farmers through this printing portal: • Tell
+          farmers clearly that this is not an official government card. • This
+          card is only for conveniently storing Farmer ID information. • Provide
+          it only after the farmer understands this and still wants it. • The
+          government may issue an official card in the future.
+
+          <strong>Caution:</strong> If the government issues an official card,
+          the card you provide will become invalid. If correct information is
+          not given, farmers may take legal action against you.
+
+          <strong>For farmers:</strong>
+          This is an unofficial card. Use it only for storing your information.
+
+          <em>I have understood all of the above</em>
+        </div>
+        <div class="btn-group-modal">
+          <button class="btn-modal btn-agree" id="agreeBtn">
+            ✅ I Understand
+          </button>
+          <button class="btn-modal btn-disagree" id="disagreeBtn">
+            ❌ I Do Not Agree
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== BLOCK MESSAGE ===== -->
+    <div id="blockMessage">
+      <div class="emoji">🚫</div>
+      <p><strong>Access Denied</strong></p>
+      <p>
+        You have not agreed to the terms. Please refresh the page and accept the
+        notice to use this tool.
+      </p>
+    </div>
+
+    <!-- ===== PAYMENT MODAL ===== -->
+    <div id="paymentOverlay">
+      <div id="paymentModal">
+        <h2>💳 Pay ₹29 via UPI</h2>
+        <div class="pay-amount">₹29.00</div>
+
+        <div class="payment-apps">
+          <span class="app-icon phonepe">📱 PhonePe</span>
+          <span class="app-icon paytm">📱 Paytm</span>
+          <span class="app-icon gpay">📱 GPay</span>
+          <span class="app-icon navi">📱 Navi</span>
+        </div>
+
+        <div class="upi-qr-box">
+          <img
+            id="upiQRImg"
+            src="https://api.qrserver.com/v1/create-qr-code/?data=upi://pay?pa=payments-disabled&pn=Pro%20CSC%20Tools&am=29&cu=INR&size=250x250&bgcolor=ffffff&color=1a3c6e&margin=10"
+            alt="UPI QR Code"
+          />
+        </div>
+
+        <div class="upi-name">👤 FARMER ID</div>
+        <div class="upi-id-box">
+          <span class="upi-label">UPI ID</span><br />
+          <span class="upi-id">payments-disabled</span>
+        </div>
+
+        <div class="upi-instruction">
+          <strong>1.</strong> Scan the QR code with any UPI app<br />
+          <strong>2.</strong> Pay ₹29 to <strong>payments-disabled</strong><br />
+          <strong>3.</strong> After payment, click the button below to unlock
+          download
+        </div>
+
+        <div class="payment-timer" id="paymentTimer">⏳ 5:00</div>
+
+        <div class="pay-btn-group">
+          <button class="btn-upi-confirm" id="upiConfirmBtn">
+            ✅ I have made the payment
+          </button>
+          <button class="btn-cancel-pay" id="cancelPayBtn">Cancel</button>
+        </div>
+        <p style="margin-top: 14px; font-size: 11px; color: #a0b8a0">
+          🔒 Payment verification is simulated. Clicking "I have made the
+          payment" will start a 3‑second verification. Download becomes
+          available only after verification.
+        </p>
+      </div>
+    </div>
+
+    <!-- ===== TOAST ===== -->
+    <div id="toast">
+      ✅ Payment Successful! Your premium card is being downloaded.
+    </div>
+
+    <!-- ============================================================
+    MAIN CONTENT
+    ============================================================ -->
+    <div class="tool-container no-print" id="inputForm">
+      <span class="leaf-deco l1">🌿</span>
+      <span class="leaf-deco l2">🌾</span>
+      <span class="leaf-deco l3">🍃</span>
+      <span class="leaf-deco l4">🌱</span>
+
+      <div class="tool-header">
+        <div class="tool-logo-wrap">
+          <div class="tool-logo">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10.5"
+                stroke="white"
+                stroke-width="1.2"
+                opacity="0.3"
+              />
+              <circle
+                cx="12"
+                cy="12"
+                r="8"
+                stroke="white"
+                stroke-width="0.8"
+                opacity="0.2"
+              />
+              <line
+                x1="12"
+                y1="3"
+                x2="12"
+                y2="7"
+                stroke="white"
+                stroke-width="0.8"
+                opacity="0.4"
+              />
+              <line
+                x1="12"
+                y1="17"
+                x2="12"
+                y2="21"
+                stroke="white"
+                stroke-width="0.8"
+                opacity="0.4"
+              />
+              <line
+                x1="3"
+                y1="12"
+                x2="7"
+                y2="12"
+                stroke="white"
+                stroke-width="0.8"
+                opacity="0.4"
+              />
+              <line
+                x1="17"
+                y1="12"
+                x2="21"
+                y2="12"
+                stroke="white"
+                stroke-width="0.8"
+                opacity="0.4"
+              />
+              <line
+                x1="5.6"
+                y1="5.6"
+                x2="8.4"
+                y2="8.4"
+                stroke="white"
+                stroke-width="0.6"
+                opacity="0.3"
+              />
+              <line
+                x1="15.6"
+                y1="15.6"
+                x2="18.4"
+                y2="18.4"
+                stroke="white"
+                stroke-width="0.6"
+                opacity="0.3"
+              />
+              <line
+                x1="5.6"
+                y1="18.4"
+                x2="8.4"
+                y2="15.6"
+                stroke="white"
+                stroke-width="0.6"
+                opacity="0.3"
+              />
+              <line
+                x1="15.6"
+                y1="8.4"
+                x2="18.4"
+                y2="5.6"
+                stroke="white"
+                stroke-width="0.6"
+                opacity="0.3"
+              />
+              <circle cx="12" cy="12" r="1.8" fill="white" opacity="0.8" />
+              <circle cx="12" cy="16" r="0.8" fill="white" opacity="0.15" />
+              <path
+                d="M10 16.5 L14 16.5 L13 18 L11 18 L10 16.5"
+                fill="white"
+                opacity="0.1"
+              />
+              <path
+                d="M17 6 L17.5 5 L18 6 L17.5 7 L17 6Z"
+                fill="white"
+                opacity="0.2"
+              />
+              <path
+                d="M18.5 5.5 L19 4.5 L19.5 5.5 L19 6.5 L18.5 5.5Z"
+                fill="white"
+                opacity="0.15"
+              />
+              <path
+                d="M16 5.5 L16.5 4.5 L17 5.5 L16.5 6.5 L16 5.5Z"
+                fill="white"
+                opacity="0.15"
+              />
+            </svg>
+          </div>
+          <div class="tool-logo-ring"></div>
+        </div>
+        <div class="tool-title-group">
+          <h1>
+            Kisan <span class="highlight">Pehcha</span
+            ><span class="green">an</span> Patra
+          </h1>
+          <div class="subhead">
+            🌾 Farmer ID Card Maker
+            <span class="tag">Premium</span>
+            <span class="tag" style="background: #fff3e0; color: #e67e22"
+              >🌿 Agri Stack</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="design-selector">
+        <div class="design-option active" data-design="design2" id="design2Opt">
+          <span class="design-icon">📇</span>
+          <h3>Premium + Land</h3>
+          <p>Front &amp; Back with land records</p>
+          <span class="badge green">⭐ Recommended</span>
+        </div>
+        <div class="design-option" data-design="design1" id="design1Opt">
+          <span class="design-icon">📄</span>
+          <h3>Premium Basic</h3>
+          <p>Front side only</p>
+          <span class="badge">Simple</span>
+        </div>
+      </div>
+
+      <div class="payment-status" id="paymentStatus">
+        ✅ Payment successful! Your premium card is being downloaded...
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Full Name (English) <span class="required">*</span></label>
+          <input
+            type="text"
+            id="nameEn"
+            placeholder="e.g. Venkata Subramaniam Reddy"
+            value="Venkata Subramaniam Reddy"
+          />
+        </div>
+        <div class="form-group">
+          <label
+            >पूर्ण नाव / Full Name (Regional)
+            <span class="required">*</span></label
+          >
+          <input
+            type="text"
+            id="nameRegional"
+            placeholder="e.g. वेकडे नूळमळीमंदू रेड्डी"
+            value="वेकडे नूळमळीमंदू रेड्डी"
+          />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Date of Birth <span class="required">*</span></label>
+          <input
+            type="text"
+            id="dob"
+            placeholder="DD/MM/YYYY"
+            value="14/03/1982"
+          />
+        </div>
+        <div class="form-group">
+          <label>Gender <span class="required">*</span></label>
+          <select id="gender">
+            <option value="Male / पुरुष" selected>Male / पुरुष</option>
+            <option value="Female / महिला">Female / महिला</option>
+            <option value="Other / अन्य">Other / अन्य</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Aadhaar (UID) <span class="required">*</span></label>
+          <input
+            type="text"
+            id="aadhaar"
+            placeholder="12-digit UID"
+            value="999955554444"
+            maxlength="12"
+          />
+        </div>
+        <div class="form-group">
+          <label>Farmer ID <span class="required">*</span></label>
+          <input
+            type="text"
+            id="farmerId"
+            placeholder="Farmer ID"
+            value="UP/2026/12345"
+          />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Mobile Number</label>
+          <input
+            type="text"
+            id="mobile"
+            placeholder="10-digit mobile"
+            value="7788990011"
+            maxlength="10"
+          />
+        </div>
+        <div class="form-group">
+          <label>Upload Photo</label>
+          <div
+            class="photo-upload-box"
+            onclick="document.getElementById('photoInput').click()"
+          >
+            <div class="farmer-illustration">
+              <svg
+                viewBox="0 0 200 140"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="160" cy="18" r="12" fill="#FFD54F" opacity="0.3" />
+                <circle cx="160" cy="18" r="8" fill="#FFCA28" opacity="0.2" />
+                <ellipse
+                  cx="40"
+                  cy="16"
+                  rx="22"
+                  ry="6"
+                  fill="white"
+                  opacity="0.15"
+                />
+                <ellipse
+                  cx="55"
+                  cy="14"
+                  rx="14"
+                  ry="5"
+                  fill="white"
+                  opacity="0.12"
+                />
+                <rect
+                  x="0"
+                  y="90"
+                  width="200"
+                  height="50"
+                  fill="#66BB6A"
+                  opacity="0.08"
+                />
+                <rect
+                  x="0"
+                  y="100"
+                  width="200"
+                  height="40"
+                  fill="#43A047"
+                  opacity="0.06"
+                />
+                <g opacity="0.08">
+                  <line
+                    x1="10"
+                    y1="95"
+                    x2="30"
+                    y2="85"
+                    stroke="#2E7D32"
+                    stroke-width="0.8"
+                  />
+                  <line
+                    x1="15"
+                    y1="100"
+                    x2="35"
+                    y2="90"
+                    stroke="#2E7D32"
+                    stroke-width="0.8"
+                  />
+                  <line
+                    x1="50"
+                    y1="92"
+                    x2="70"
+                    y2="82"
+                    stroke="#2E7D32"
+                    stroke-width="0.8"
+                  />
+                  <line
+                    x1="55"
+                    y1="97"
+                    x2="75"
+                    y2="87"
+                    stroke="#2E7D32"
+                    stroke-width="0.8"
+                  />
+                  <line
+                    x1="90"
+                    y1="94"
+                    x2="110"
+                    y2="84"
+                    stroke="#2E7D32"
+                    stroke-width="0.8"
+                  />
+                  <line
+                    x1="95"
+                    y1="99"
+                    x2="115"
+                    y2="89"
+                    stroke="#2E7D32"
+                    stroke-width="0.8"
+                  />
+                  <line
+                    x1="130"
+                    y1="90"
+                    x2="150"
+                    y2="80"
+                    stroke="#2E7D32"
+                    stroke-width="0.8"
+                  />
+                  <line
+                    x1="135"
+                    y1="95"
+                    x2="155"
+                    y2="85"
+                    stroke="#2E7D32"
+                    stroke-width="0.8"
+                  />
+                </g>
+                <g opacity="0.12">
+                  <ellipse cx="80" cy="88" rx="12" ry="6" fill="#1a3c6e" />
+                  <rect
+                    x="74"
+                    y="72"
+                    width="12"
+                    height="18"
+                    rx="3"
+                    fill="#1a3c6e"
+                  />
+                  <circle cx="80" cy="64" r="8" fill="#1a3c6e" />
+                  <ellipse cx="80" cy="58" rx="14" ry="4" fill="#1a3c6e" />
+                  <rect
+                    x="72"
+                    y="50"
+                    width="16"
+                    height="10"
+                    rx="3"
+                    fill="#1a3c6e"
+                    opacity="0.8"
+                  />
+                  <line
+                    x1="74"
+                    y1="76"
+                    x2="64"
+                    y2="86"
+                    stroke="#1a3c6e"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M58 90 L64 86 L66 88 L60 92 Z"
+                    fill="#1a3c6e"
+                    opacity="0.6"
+                  />
+                  <line
+                    x1="66"
+                    y1="88"
+                    x2="70"
+                    y2="92"
+                    stroke="#1a3c6e"
+                    stroke-width="1.5"
+                  />
+                  <line
+                    x1="86"
+                    y1="76"
+                    x2="94"
+                    y2="84"
+                    stroke="#1a3c6e"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    opacity="0.5"
+                  />
+                  <line
+                    x1="78"
+                    y1="90"
+                    x2="74"
+                    y2="102"
+                    stroke="#1a3c6e"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                  />
+                  <line
+                    x1="82"
+                    y1="90"
+                    x2="86"
+                    y2="102"
+                    stroke="#1a3c6e"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                  />
+                  <g opacity="0.15">
+                    <line
+                      x1="42"
+                      y1="94"
+                      x2="48"
+                      y2="84"
+                      stroke="#2E7D32"
+                      stroke-width="1.2"
+                    />
+                    <ellipse cx="44" cy="82" rx="3" ry="2" fill="#2E7D32" />
+                    <line
+                      x1="46"
+                      y1="96"
+                      x2="52"
+                      y2="86"
+                      stroke="#2E7D32"
+                      stroke-width="1.2"
+                    />
+                    <ellipse cx="48" cy="84" rx="3" ry="2" fill="#2E7D32" />
+                    <line
+                      x1="100"
+                      y1="92"
+                      x2="106"
+                      y2="82"
+                      stroke="#2E7D32"
+                      stroke-width="1.2"
+                    />
+                    <ellipse cx="102" cy="80" rx="3" ry="2" fill="#2E7D32" />
+                    <line
+                      x1="104"
+                      y1="94"
+                      x2="110"
+                      y2="84"
+                      stroke="#2E7D32"
+                      stroke-width="1.2"
+                    />
+                    <ellipse cx="106" cy="82" rx="3" ry="2" fill="#2E7D32" />
+                  </g>
+                </g>
+                <g opacity="0.06">
+                  <path
+                    d="M170 30 Q174 26 178 30"
+                    stroke="#1a3c6e"
+                    stroke-width="0.8"
+                    fill="none"
+                  />
+                  <path
+                    d="M182 28 Q185 25 188 28"
+                    stroke="#1a3c6e"
+                    stroke-width="0.8"
+                    fill="none"
+                  />
+                  <path
+                    d="M190 32 Q193 29 196 32"
+                    stroke="#1a3c6e"
+                    stroke-width="0.8"
+                    fill="none"
+                  />
+                </g>
+                <text
+                  x="100"
+                  y="128"
+                  font-size="8"
+                  fill="#2E7D32"
+                  opacity="0.08"
+                  text-anchor="middle"
+                  font-weight="300"
+                >
+                  🌾 किसान · Farmer
+                </text>
+              </svg>
+            </div>
+            <span class="placeholder" id="photoPlaceholder">
+              <span class="icon">🌾</span>
+              Click to upload photo
+              <span class="sub">(Farmer working in field)</span>
+            </span>
+            <input type="file" id="photoInput" accept="image/*" />
+            <img
+              id="photoPreview"
+              style="
+                display: none;
+                max-width: 100px;
+                max-height: 120px;
+                border-radius: 10px;
+                position: relative;
+                z-index: 2;
+              "
+              alt="Photo"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Address (English) <span class="required">*</span></label>
+          <input
+            type="text"
+            id="addressEn"
+            placeholder="Village, Tehsil, District - Pincode"
+            value="Gollapalli Agraharam Settlement, Penukonda, Anantapur - 515110"
+          />
+        </div>
+        <div class="form-group">
+          <label>Address (Regional) <span class="required">*</span></label>
+          <input
+            type="text"
+            id="addressRegional"
+            placeholder="स्थानीय भाषा में पता"
+            value="गेळूखेळू, अगूकाद, बीमेळोड, अलंबेडू - 515110"
+          />
+        </div>
+      </div>
+
+      <div
+        id="landInputArea"
+        style="
+          margin-top: 16px;
+          border-top: 1px solid #dce8dc;
+          padding-top: 16px;
+          display: block;
+        "
+      >
+        <div class="land-section-title">
+          <span class="icon">🌾</span> Land Records (Back Side)
+        </div>
+        <p class="land-subtitle">
+          Add survey numbers and area (ha) for each land holding.
+        </p>
+
+        <div id="landRows">
+          <div class="form-row land-row">
+            <div class="form-group">
+              <label>District</label
+              ><input type="text" class="land-district" value="Anantapur" />
+            </div>
+            <div class="form-group">
+              <label>Tehsil</label
+              ><input type="text" class="land-tehsil" value="Penukonda" />
+            </div>
+            <div class="form-group">
+              <label>Village</label
+              ><input type="text" class="land-village" value="गेळूखेळू" />
+            </div>
+            <div class="form-group">
+              <label>Survey No &amp; Area (ha)</label
+              ><input
+                type="text"
+                class="land-survey"
+                placeholder="e.g. 60 – 2.5"
+                value="60 – 2.5"
+              />
+            </div>
+          </div>
+          <div class="form-row land-row">
+            <div class="form-group">
+              <label>District</label
+              ><input type="text" class="land-district" value="Anantapur" />
+            </div>
+            <div class="form-group">
+              <label>Tehsil</label
+              ><input type="text" class="land-tehsil" value="Penukonda" />
+            </div>
+            <div class="form-group">
+              <label>Village</label
+              ><input type="text" class="land-village" value="गेळूखेळू" />
+            </div>
+            <div class="form-group">
+              <label>Survey No &amp; Area (ha)</label
+              ><input
+                type="text"
+                class="land-survey"
+                placeholder="e.g. 61 – 1.0"
+                value="61 – 1.0"
+              />
+            </div>
+          </div>
+          <div class="form-row land-row">
+            <div class="form-group">
+              <label>District</label
+              ><input type="text" class="land-district" value="சென்னை" />
+            </div>
+            <div class="form-group">
+              <label>Tehsil</label
+              ><input type="text" class="land-tehsil" value="தாம்பரம்" />
+            </div>
+            <div class="form-group">
+              <label>Village</label
+              ><input
+                type="text"
+                class="land-village"
+                value="பெரும்பாலாகத் தூரர்"
+              />
+            </div>
+            <div class="form-group">
+              <label>Survey No &amp; Area (ha)</label
+              ><input
+                type="text"
+                class="land-survey"
+                placeholder="e.g. 112 – 4.1"
+                value="112 – 4.1"
+              />
+            </div>
+          </div>
+        </div>
+        <button type="button" class="add-row-btn" onclick="addLandRow()">
+          + Add another land
+        </button>
+      </div>
+
+      <div class="btn-group">
+        <button class="btn btn-download download-ready" id="downloadBtn" onclick="handleDownload()">
+          💾 Download Card (Free)
+        </button>
+        <button class="btn btn-pay" id="showPayBtn">💳 Pay ₹29 via UPI</button>
+      </div>
+    </div>
+
+    <!-- ===== PREVIEW ===== -->
+    <div class="preview-section" id="previewSection">
+      <h2>
+        👁️ Live Preview
+        <span class="badge-preview">🌿 Front &amp; Back</span>
+      </h2>
+      <div class="card-preview-wrap" id="cardPreviewWrap"></div>
+    </div>
+
+    <!-- ============================================================
+    JAVASCRIPT
+    ============================================================ -->
+    <script>
+      // ============================================================
+      // CONSENT
+      // ============================================================
+      (function () {
+        const overlay = document.getElementById("consentOverlay");
+        const agree = document.getElementById("agreeBtn");
+        const disagree = document.getElementById("disagreeBtn");
+        const block = document.getElementById("blockMessage");
+
+        agree.addEventListener("click", function () {
+          overlay.style.display = "none";
+        });
+
+        disagree.addEventListener("click", function () {
+          overlay.style.display = "none";
+          block.style.display = "flex";
+          document
+            .querySelectorAll(
+              ".tool-container input, .tool-container button, .photo-upload-box, .design-option"
+            )
+            .forEach((el) => {
+              el.disabled = true;
+              el.style.opacity = "0.5";
+              el.style.pointerEvents = "none";
+            });
+          document.getElementById("previewSection").style.display = "none";
+        });
+      })();
+
+      // ============================================================
+      // PAYMENT STATE
+      // ============================================================
+      let isPaymentDone = true; // paywall removed - tool is free
+      let paymentTimerInterval = null;
+      let timerSeconds = 300;
+      let autoDownloadTriggered = false;
+      let isVerifying = false;
+
+      // ============================================================
+      // DOM REFS
+      // ============================================================
+      const nameEn = document.getElementById("nameEn");
+      const nameRegional = document.getElementById("nameRegional");
+      const dob = document.getElementById("dob");
+      const gender = document.getElementById("gender");
+      const aadhaar = document.getElementById("aadhaar");
+      const farmerId = document.getElementById("farmerId");
+      const mobile = document.getElementById("mobile");
+      const addressEn = document.getElementById("addressEn");
+      const addressRegional = document.getElementById("addressRegional");
+      const photoInput = document.getElementById("photoInput");
+      const photoPreview = document.getElementById("photoPreview");
+      const photoPlaceholder = document.getElementById("photoPlaceholder");
+      const downloadBtn = document.getElementById("downloadBtn");
+
+      const design1Opt = document.getElementById("design1Opt");
+      const design2Opt = document.getElementById("design2Opt");
+      const landInputArea = document.getElementById("landInputArea");
+
+      let currentPhotoData = null;
+      let currentDesign = "design2";
+
+      // ============================================================
+      // DESIGN TOGGLE
+      // ============================================================
+      design1Opt.addEventListener("click", function () {
+        design1Opt.classList.add("active");
+        design2Opt.classList.remove("active");
+        currentDesign = "design1";
+        landInputArea.style.display = "none";
+        updatePreview();
+      });
+
+      design2Opt.addEventListener("click", function () {
+        design2Opt.classList.add("active");
+        design1Opt.classList.remove("active");
+        currentDesign = "design2";
+        landInputArea.style.display = "block";
+        updatePreview();
+      });
+
+      // ============================================================
+      // LAND ROWS
+      // ============================================================
+      function addLandRow() {
+        const container = document.getElementById("landRows");
+        const row = document.createElement("div");
+        row.className = "form-row land-row";
+        row.innerHTML = `
+                <div class="form-group"><label>District</label><input type="text" class="land-district" /></div>
+                <div class="form-group"><label>Tehsil</label><input type="text" class="land-tehsil" /></div>
+                <div class="form-group"><label>Village</label><input type="text" class="land-village" /></div>
+                <div class="form-group">
+                    <label>Survey No &amp; Area (ha)</label>
+                    <input type="text" class="land-survey" placeholder="e.g. 112 – 4.1" />
+                    <button type="button" class="remove-row-btn" onclick="this.closest('.land-row').remove(); updatePreview();">✕</button>
+                </div>
+            `;
+        container.appendChild(row);
+        row
+          .querySelectorAll("input")
+          .forEach((inp) => inp.addEventListener("input", updatePreview));
+      }
+
+      document.querySelectorAll(".land-row").forEach((row) => {
+        const lastGroup = row.querySelector(".form-group:last-child");
+        if (lastGroup) {
+          const btn = document.createElement("button");
+          btn.type = "button";
+          btn.className = "remove-row-btn";
+          btn.textContent = "✕";
+          btn.onclick = function () {
+            row.remove();
+            updatePreview();
+          };
+          lastGroup.appendChild(btn);
+        }
+        row
+          .querySelectorAll("input")
+          .forEach((inp) => inp.addEventListener("input", updatePreview));
+      });
+
+      // ============================================================
+      // PHOTO UPLOAD
+      // ============================================================
+      photoInput.addEventListener("change", function (e) {
+        const file = this.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function (ev) {
+            currentPhotoData = ev.target.result;
+            photoPreview.src = currentPhotoData;
+            photoPreview.style.display = "block";
+            photoPlaceholder.innerHTML = "✅ Photo uploaded";
+            updatePreview();
+          };
+          reader.readAsDataURL(file);
+        } else {
+          currentPhotoData = null;
+          photoPreview.style.display = "none";
+          photoPlaceholder.innerHTML = `
+                    <span class="icon">🌾</span>
+                    Click to upload photo
+                    <span class="sub">(Farmer working in field)</span>
+                `;
+          updatePreview();
+        }
+      });
+
+      // ============================================================
+      // ALL INPUTS UPDATE PREVIEW
+      // ============================================================
+      const allInputs = [
+        nameEn,
+        nameRegional,
+        dob,
+        gender,
+        aadhaar,
+        farmerId,
+        mobile,
+        addressEn,
+        addressRegional,
+      ];
+      allInputs.forEach((inp) => inp.addEventListener("input", updatePreview));
+
+      document.addEventListener("input", function (e) {
+        if (e.target.closest(".land-row") || e.target.closest("#landRows")) {
+          updatePreview();
+        }
+      });
+
+      // ============================================================
+      // QR DATA
+      // ============================================================
+      function getQRData() {
+        const id = farmerId.value.trim() || "UNKNOWN";
+        const name = nameEn.value.trim() || "—";
+        const dist = document.querySelector(".land-district")?.value || "—";
+        const vil = document.querySelector(".land-village")?.value || "—";
+        return `FARMER:${id}|NAME:${name}|DIST:${dist}|VILLAGE:${vil}`;
+      }
+
+      function getQRImageURL(data) {
+        const encoded = encodeURIComponent(data);
+        return `https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=${encoded}&bgcolor=ffffff&color=1a3c6e&margin=4`;
+      }
+
+      // ============================================================
+      // GET LAND DATA
+      // ============================================================
+      function getLandData() {
+        const rows = document.querySelectorAll(".land-row");
+        const data = [];
+        rows.forEach((row) => {
+          const dist = row.querySelector(".land-district")?.value || "";
+          const teh = row.querySelector(".land-tehsil")?.value || "";
+          const vil = row.querySelector(".land-village")?.value || "";
+          const surv = row.querySelector(".land-survey")?.value || "";
+          if (dist.trim() || teh.trim() || vil.trim() || surv.trim()) {
+            data.push({
+              district: dist,
+              tehsil: teh,
+              village: vil,
+              survey: surv,
+            });
+          }
+        });
+        return data;
+      }
+
+      // ============================================================
+      // BUILD CARD HTML (with new eye-catching logo)
+      // ============================================================
+      function buildCardHTML(photoSrc, qrData, design, side) {
+        const defaultPhoto = photoSrc || "";
+        const isDesign2 = design === "design2";
+        const isBack = side === "back";
+
+        let photoHTML = "";
+        if (defaultPhoto) {
+          photoHTML = `<img src="${defaultPhoto}" alt="Photo">`;
+        } else {
+          photoHTML = `
+                    <div class="farmer-bg">
+                        <svg viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="100" cy="14" r="10" fill="#FFD54F" opacity="0.2"/>
+                            <rect x="0" y="100" width="120" height="40" fill="#66BB6A" opacity="0.06"/>
+                            <g opacity="0.06">
+                                <line x1="10" y1="105" x2="25" y2="95" stroke="#2E7D32" stroke-width="0.8"/>
+                                <line x1="30" y1="103" x2="45" y2="93" stroke="#2E7D32" stroke-width="0.8"/>
+                                <line x1="60" y1="104" x2="75" y2="94" stroke="#2E7D32" stroke-width="0.8"/>
+                                <line x1="80" y1="102" x2="95" y2="92" stroke="#2E7D32" stroke-width="0.8"/>
+                            </g>
+                            <g opacity="0.15">
+                                <ellipse cx="60" cy="100" rx="10" ry="5" fill="#1a3c6e"/>
+                                <rect x="55" y="86" width="10" height="15" rx="2" fill="#1a3c6e"/>
+                                <circle cx="60" cy="78" r="7" fill="#1a3c6e"/>
+                                <ellipse cx="60" cy="72" rx="12" ry="3.5" fill="#1a3c6e" opacity="0.8"/>
+                                <rect x="54" y="66" width="12" height="8" rx="2" fill="#1a3c6e" opacity="0.7"/>
+                                <line x1="55" y1="90" x2="48" y2="98" stroke="#1a3c6e" stroke-width="2.5"/>
+                                <path d="M44 102 L48 98 L50 100 L45 104 Z" fill="#1a3c6e" opacity="0.5"/>
+                                <line x1="65" y1="90" x2="70" y2="96" stroke="#1a3c6e" stroke-width="2" opacity="0.5"/>
+                                <line x1="58" y1="101" x2="55" y2="112" stroke="#1a3c6e" stroke-width="2.5"/>
+                                <line x1="62" y1="101" x2="65" y2="112" stroke="#1a3c6e" stroke-width="2.5"/>
+                                <g opacity="0.12">
+                                    <line x1="32" y1="104" x2="38" y2="96" stroke="#2E7D32" stroke-width="1"/>
+                                    <ellipse cx="34" cy="94" rx="2.5" ry="1.5" fill="#2E7D32"/>
+                                    <line x1="78" y1="103" x2="84" y2="95" stroke="#2E7D32" stroke-width="1"/>
+                                    <ellipse cx="80" cy="93" rx="2.5" ry="1.5" fill="#2E7D32"/>
+                                </g>
+                            </g>
+                            <text x="60" y="132" font-size="6" fill="#2E7D32" opacity="0.06" text-anchor="middle">🌾</text>
+                        </svg>
+                    </div>
+                    <div class="photo-placeholder-text">
+                        <span class="big">🌾</span>
+                        Farmer<br>Photo
+                    </div>
+                `;
+        }
+
+        const qrImgSrc = getQRImageURL(qrData);
+
+        let landRowsHTML = "";
+        if (isBack && isDesign2) {
+          const lands = getLandData();
+          if (lands.length > 0) {
+            landRowsHTML = `
+                        <div class="land-section">
+                            <div class="land-title">🌾 Land Holdings</div>
+                            <table class="land-table-mini">
+                                <thead><tr><th>District</th><th>Tehsil</th><th>Village</th><th>Survey No &amp; Area (ha)</th></tr></thead>
+                                <tbody>
+                                    ${lands
+                                      .map(
+                                        (l) =>
+                                          `<tr><td>${
+                                            l.district || "—"
+                                          }</td><td>${
+                                            l.tehsil || "—"
+                                          }</td><td>${
+                                            l.village || "—"
+                                          }</td><td>${
+                                            l.survey || "—"
+                                          }</td></tr>`
+                                      )
+                                      .join("")}
+                                </tbody>
+                            </table>
+                        </div>
+                    `;
+          } else {
+            landRowsHTML = `
+                        <div class="land-section">
+                            <div class="land-title" style="color:#a0b8a0; font-weight:400;">No land records added</div>
+                        </div>
+                    `;
+          }
+        }
+
+        // NEW EYE-CATCHING LOGO SVG - Farmer with hat, sickle & wheat
+        const logoSVG = `
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Sun rays -->
+                    <g opacity="0.3">
+                        <circle cx="72" cy="28" r="14" fill="#FFF8E1" />
+                        <circle cx="72" cy="28" r="10" fill="#FFE082" />
+                    </g>
+                    <!-- Farmer body - dark navy for contrast -->
+                    <!-- Head -->
+                    <circle cx="48" cy="42" r="10" fill="#1a3c6e" />
+                    <!-- Hat -->
+                    <ellipse cx="48" cy="35" rx="14" ry="4" fill="#1a3c6e" />
+                    <rect x="40" y="28" width="16" height="9" rx="2" fill="#1a3c6e" opacity="0.9" />
+                    <!-- Torso (Kurta) -->
+                    <rect x="40" y="52" width="16" height="20" rx="3" fill="#1a3c6e" />
+                    <!-- Collar detail -->
+                    <path d="M44 52 L48 56 L52 52" stroke="#2a5a9a" stroke-width="1.5" fill="none" />
+                    <!-- Legs -->
+                    <line x1="44" y1="72" x2="40" y2="88" stroke="#1a3c6e" stroke-width="5" stroke-linecap="round" />
+                    <line x1="52" y1="72" x2="56" y2="88" stroke="#1a3c6e" stroke-width="5" stroke-linecap="round" />
+                    <!-- Left arm holding sickle -->
+                    <line x1="40" y1="56" x2="28" y2="66" stroke="#1a3c6e" stroke-width="4" stroke-linecap="round" />
+                    <!-- Sickle -->
+                    <path d="M24 60 L30 68 L26 72 Z" fill="#1a3c6e" />
+                    <path d="M22 62 L28 70" stroke="#f7931e" stroke-width="1.5" />
+                    <!-- Right arm holding wheat -->
+                    <line x1="56" y1="56" x2="68" y2="64" stroke="#1a3c6e" stroke-width="4" stroke-linecap="round" />
+                    <!-- Wheat stalks -->
+                    <g stroke="#f7931e" stroke-width="2" fill="none">
+                        <path d="M68 64 L74 56" />
+                        <path d="M68 64 L72 54" />
+                        <path d="M68 64 L76 58" />
+                        <path d="M68 64 L78 62" />
+                        <path d="M68 64 L76 66" />
+                        <path d="M68 64 L72 70" />
+                    </g>
+                    <!-- Wheat grains -->
+                    <g fill="#ff9933">
+                        <circle cx="74" cy="55" r="2" />
+                        <circle cx="72" cy="53" r="2" />
+                        <circle cx="76" cy="57" r="2" />
+                        <circle cx="78" cy="61" r="2" />
+                        <circle cx="76" cy="65" r="2" />
+                        <circle cx="72" cy="69" r="2" />
+                    </g>
+                    <!-- Small decorative dots -->
+                    <circle cx="32" cy="78" r="3" fill="#ff9933" opacity="0.6" />
+                    <circle cx="68" cy="80" r="3" fill="#138808" opacity="0.6" />
+                    <!-- Ground line -->
+                    <path d="M20 92 L80 92" stroke="#4a6a4f" stroke-width="1" opacity="0.2" />
+                </svg>
+            `;
+
+        // ——— FRONT ———
+        const frontContent = `
+                <div class="card-body">
+                    <div class="card-left">
+                        <div class="card-header">
+                            <div class="card-logo">
+                                <span class="logo-ring"></span>
+                                <span class="logo-inner">
+                                    <span class="logo-bg"></span>
+                                    <span class="logo-farmer">${logoSVG}</span>
+                                </span>
+                                <span class="logo-leaf">🌿</span>
+                            </div>
+                            <div class="card-title-group">
+                                <div class="govt">भारत सरकार · GOVERNMENT OF INDIA</div>
+                                <div class="title">KISAN <span class="highlight">PEHCHAAN</span> <span class="green-text">PATRA</span></div>
+                                <div class="subtitle">Farmer Identity Card · किसान पहचान पत्र</div>
+                            </div>
+                        </div>
+
+                        <div class="divider-premium"></div>
+
+                        <div class="detail-line">
+                            <span class="dl-icon">👤</span>
+                            <span class="dl-label">Name</span>
+                            <span class="dl-value">${nameEn.value || "—"}</span>
+                        </div>
+                        <div class="detail-line">
+                            <span class="dl-icon">📝</span>
+                            <span class="dl-label">नाव</span>
+                            <span class="dl-value regional">${
+                              nameRegional.value || "—"
+                            }</span>
+                        </div>
+                        <div class="detail-line">
+                            <span class="dl-icon">📅</span>
+                            <span class="dl-label">DOB</span>
+                            <span class="dl-value">${dob.value || "—"}</span>
+                        </div>
+                        <div class="detail-line">
+                            <span class="dl-icon">⚤</span>
+                            <span class="dl-label">Gender</span>
+                            <span class="dl-value">${gender.value || "—"}</span>
+                        </div>
+                        <div class="detail-line">
+                            <span class="dl-icon">🆔</span>
+                            <span class="dl-label">UID</span>
+                            <span class="dl-value highlight-value">${
+                              aadhaar.value || "—"
+                            }</span>
+                        </div>
+                        <div class="detail-line">
+                            <span class="dl-icon">📱</span>
+                            <span class="dl-label">Mobile</span>
+                            <span class="dl-value">${mobile.value || "—"}</span>
+                        </div>
+
+                        <div class="divider-premium" style="margin:0.3mm 0 0.5mm;"></div>
+
+                        <div class="detail-line">
+                            <span class="dl-icon">📍</span>
+                            <span class="dl-label">Address</span>
+                            <span class="dl-value" style="font-size:5.6px;">${
+                              addressEn.value || "—"
+                            }</span>
+                        </div>
+                        <div class="detail-line">
+                            <span class="dl-icon">📍</span>
+                            <span class="dl-label">पत्ता</span>
+                            <span class="dl-value regional" style="font-size:5.6px;">${
+                              addressRegional.value || "—"
+                            }</span>
+                        </div>
+                    </div>
+                    <div class="card-right">
+                        <div class="photo-box">${photoHTML}</div>
+                        <div class="uid-badge">
+                            <span class="small">ID</span><br>
+                            ${farmerId.value || "—"}
+                        </div>
+                        <div class="qr-wrap">
+                            <img src="${qrImgSrc}" alt="QR" width="120" height="120" />
+                        </div>
+                    </div>
+                </div>
+                <div class="farmer-id-footer"><strong>फार्मर आईडी</strong></div>
+            `;
+
+        // ——— BACK ———
+        const backContent = `
+                <div class="card-body">
+                    <div class="card-left" style="justify-content: flex-start; padding-top:0.5mm;">
+                        <div class="card-header" style="margin-bottom:0.4mm;">
+                            <div class="card-logo" style="width:6.5mm;height:6.5mm;">
+                                <span class="logo-ring" style="inset:-1.5px;"></span>
+                                <span class="logo-inner">
+                                    <span class="logo-bg"></span>
+                                    <span class="logo-farmer">${logoSVG}</span>
+                                </span>
+                                <span class="logo-leaf" style="font-size:2.8mm;bottom:-0.5mm;right:-0.5mm;">🌿</span>
+                            </div>
+                            <div class="card-title-group">
+                                <div class="govt">भारत सरकार · GOVERNMENT OF INDIA</div>
+                                <div class="title">KISAN <span class="highlight">PEHCHAAN</span> <span class="green-text">PATRA</span></div>
+                                <div class="subtitle">Land Records · भूमि अभिलेख</div>
+                            </div>
+                        </div>
+
+                        <div class="detail-line">
+                            <span class="dl-icon">👤</span>
+                            <span class="dl-label">Name</span>
+                            <span class="dl-value">${nameEn.value || "—"}</span>
+                        </div>
+                        <div class="detail-line">
+                            <span class="dl-icon">🆔</span>
+                            <span class="dl-label">ID</span>
+                            <span class="dl-value highlight-value">${
+                              farmerId.value || "—"
+                            }</span>
+                        </div>
+
+                        ${landRowsHTML}
+
+                        <div class="thumb-sign-area">
+                            <div class="thumb-box">
+                                <div class="label">Thumb</div>
+                                <div class="box"><span class="icon">🖐️</span></div>
+                            </div>
+                            <div class="thumb-box">
+                                <div class="label">Signature</div>
+                                <div class="box" style="flex-direction:column;gap:1px;">
+                                    <div class="line"></div>
+                                    <div class="line-text">(Authorized)</div>
+                                </div>
+                            </div>
+                            <div class="thumb-box" style="flex:0.6;">
+                                <div class="label">QR</div>
+                                <div class="box" style="border-style:solid;border-color:#dce8dc;background:white;padding:1px;">
+                                    <img src="${qrImgSrc}" alt="QR" style="width:6mm;height:6mm;border-radius:2px;" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="margin-top:0.5mm; font-size:3.6px; color:#7a9a7f; border-top:0.5px solid #dce8dc; padding-top:0.4mm; text-align:center; letter-spacing:0.3px;">
+                            📋 For information storage only · सूचना भंडारण हेतु
+                        </div>
+                    </div>
+                    <div class="card-right" style="justify-content:center;gap:1mm;width:13mm;">
+                        <div class="photo-box" style="width:12mm;height:14mm;border-style:dashed;border-color:#b8d4b8;background:#f2faf2;font-size:3.8px;flex-direction:column;">
+                            <span style="font-size:12px;">🖐️</span>
+                            Thumb
+                        </div>
+                        <div style="font-size:4.2px;font-weight:700;color:#1a3c6e;text-align:center;background:#eaf5ea;padding:0.3mm 0.8mm;border-radius:3px;width:100%;border:0.5px solid #c8e0c8;">
+                            ${farmerId.value || "—"}
+                        </div>
+                        <div class="qr-wrap" style="border:none;padding:0;">
+                            <img src="${qrImgSrc}" alt="QR" width="120" height="120" />
+                        </div>
+                    </div>
+                </div>
+                <div class="farmer-id-footer no-border"><strong>फार्मर आईडी</strong></div>
+            `;
+
+        const content = isBack ? backContent : frontContent;
+        const sideLabel = isBack ? "BACK" : "FRONT";
+        const backClass = isBack ? "card-back" : "";
+
+        return `
+                <div class="id-card ${backClass}">
+                    <div class="tricolor-bar">
+                        <span class="chakra">🌱</span>
+                    </div>
+                    <div class="watermark-farmer">🌾</div>
+                    <div class="watermark-text">FARMER</div>
+                    <span class="corner-leaf tl">🌿</span>
+                    <span class="corner-leaf br">🌱</span>
+                    <div class="card-inner">
+                        <span class="inner-leaf-top left">🌿</span>
+                        <span class="inner-leaf-top right">🍃</span>
+                        ${content}
+                    </div>
+                    <div class="side-badge">${sideLabel}</div>
+                </div>
+            `;
+      }
+
+      // ============================================================
+      // UPDATE PREVIEW
+      // ============================================================
+      function updatePreview() {
+        const wrap = document.getElementById("cardPreviewWrap");
+        const qrData = getQRData();
+        const isDesign2 = currentDesign === "design2";
+
+        let html = "";
+        html += `
+                <div class="card-wrapper">
+                    <div class="card-side-label"><span class="dot front"></span> Front</div>
+                    ${buildCardHTML(
+                      currentPhotoData,
+                      qrData,
+                      currentDesign,
+                      "front"
+                    )}
+                </div>
+            `;
+
+        if (isDesign2) {
+          html += `
+                    <div class="card-wrapper">
+                        <div class="card-side-label"><span class="dot back"></span> Back · Land Records</div>
+                        ${buildCardHTML(
+                          currentPhotoData,
+                          qrData,
+                          currentDesign,
+                          "back"
+                        )}
+                    </div>
+                `;
+        } else {
+          html += `
+                    <div style="display:flex;align-items:center;justify-content:center;padding:30px;color:#7a9a7f;font-size:14px;border:2px dashed #dce8dc;border-radius:16px;min-height:120px;background:#f7fcf7;flex:1;text-align:center;">
+                        <div>
+                            <div style="font-size:32px;margin-bottom:6px;">🌾</div>
+                            Select <strong>"Premium + Land"</strong> to see back side with land records
+                        </div>
+                    </div>
+                `;
+        }
+
+        wrap.innerHTML = html;
+      }
+
+      // ============================================================
+      // PAYMENT LOGIC
+      // ============================================================
+      const showPayBtn = document.getElementById("showPayBtn");
+      const paymentOverlay = document.getElementById("paymentOverlay");
+      const cancelPayBtn = document.getElementById("cancelPayBtn");
+      const upiConfirmBtn = document.getElementById("upiConfirmBtn");
+      const paymentStatus = document.getElementById("paymentStatus");
+      const toast = document.getElementById("toast");
+      const timerDisplay = document.getElementById("paymentTimer");
+
+      function formatTime(sec) {
+        const mins = Math.floor(sec / 60);
+        const remainingSec = sec % 60;
+        return `${mins}:${remainingSec.toString().padStart(2, "0")}`;
+      }
+
+      function startTimer() {
+        timerSeconds = 300;
+        timerDisplay.textContent = `⏳ ${formatTime(timerSeconds)}`;
+        timerDisplay.classList.remove("warning", "success");
+
+        if (paymentTimerInterval) clearInterval(paymentTimerInterval);
+
+        paymentTimerInterval = setInterval(function () {
+          timerSeconds--;
+          if (timerSeconds <= 0) {
+            clearInterval(paymentTimerInterval);
+            paymentTimerInterval = null;
+            timerDisplay.textContent = "⏳ Time Expired";
+            timerDisplay.classList.add("warning");
+            upiConfirmBtn.disabled = true;
+            setTimeout(function () {
+              paymentOverlay.style.display = "none";
+              toast.textContent = "⏰ Payment timeout. Please try again.";
+              toast.className = "error";
+              toast.style.display = "block";
+              setTimeout(() => {
+                toast.style.display = "none";
+              }, 4000);
+            }, 2000);
+            return;
+          }
+          timerDisplay.textContent = `⏳ ${formatTime(timerSeconds)}`;
+          if (timerSeconds <= 30) {
+            timerDisplay.classList.add("warning");
+          }
+        }, 1000);
+      }
+
+      showPayBtn.addEventListener("click", function () {
+        if (isPaymentDone) {
+          toast.textContent =
+            "✅ Payment already done! Downloading premium card...";
+          toast.className = "";
+          toast.style.background = "#2e7d32";
+          toast.style.display = "block";
+          setTimeout(() => {
+            toast.style.display = "none";
+          }, 3000);
+          if (!autoDownloadTriggered) {
+            autoDownloadTriggered = true;
+            setTimeout(function () {
+              handleDownload();
+            }, 1000);
+          }
+          return;
+        }
+        if (paymentTimerInterval) clearInterval(paymentTimerInterval);
+        upiConfirmBtn.disabled = false;
+        upiConfirmBtn.textContent = "✅ I have made the payment";
+        isVerifying = false;
+        autoDownloadTriggered = false;
+        paymentOverlay.style.display = "flex";
+        startTimer();
+      });
+
+      cancelPayBtn.addEventListener("click", function () {
+        paymentOverlay.style.display = "none";
+        if (paymentTimerInterval) {
+          clearInterval(paymentTimerInterval);
+          paymentTimerInterval = null;
+        }
+        upiConfirmBtn.disabled = false;
+        upiConfirmBtn.textContent = "✅ I have made the payment";
+        isVerifying = false;
+      });
+
+      paymentOverlay.addEventListener("click", function (e) {
+        if (e.target === this) {
+          paymentOverlay.style.display = "none";
+          if (paymentTimerInterval) {
+            clearInterval(paymentTimerInterval);
+            paymentTimerInterval = null;
+          }
+          upiConfirmBtn.disabled = false;
+          upiConfirmBtn.textContent = "✅ I have made the payment";
+          isVerifying = false;
+        }
+      });
+
+      upiConfirmBtn.addEventListener("click", function () {
+        if (timerSeconds <= 0) {
+          toast.textContent = "⏰ Timer expired! Please try again.";
+          toast.className = "error";
+          toast.style.display = "block";
+          setTimeout(() => {
+            toast.style.display = "none";
+          }, 3000);
+          paymentOverlay.style.display = "none";
+          return;
+        }
+
+        if (isVerifying) return;
+        isVerifying = true;
+
+        upiConfirmBtn.disabled = true;
+        upiConfirmBtn.textContent = "⏳ Verifying payment...";
+
+        setTimeout(function () {
+          isPaymentDone = true;
+          paymentOverlay.style.display = "none";
+          if (paymentTimerInterval) {
+            clearInterval(paymentTimerInterval);
+            paymentTimerInterval = null;
+          }
+          paymentStatus.classList.add("show");
+          paymentStatus.innerHTML =
+            "✅ Payment verified! Your premium card is being downloaded...";
+
+          toast.textContent =
+            "✅ Payment Verified! Your premium card is being downloaded.";
+          toast.className = "";
+          toast.style.background = "#2e7d32";
+          toast.style.display = "block";
+          setTimeout(() => {
+            toast.style.display = "none";
+          }, 5000);
+
+          downloadBtn.disabled = false;
+          downloadBtn.innerHTML = "💾 Download Premium Card";
+          downloadBtn.classList.add("download-ready");
+
+          showPayBtn.textContent = "✅ Payment Done";
+          showPayBtn.style.background =
+            "linear-gradient(135deg, #2e7d32, #43a047)";
+          showPayBtn.disabled = true;
+          showPayBtn.style.opacity = "0.7";
+          showPayBtn.style.cursor = "default";
+          showPayBtn.style.animation = "none";
+
+          upiConfirmBtn.disabled = true;
+          upiConfirmBtn.textContent = "✅ Verified";
+
+          if (!autoDownloadTriggered) {
+            autoDownloadTriggered = true;
+            setTimeout(function () {
+              handleDownload();
+            }, 1500);
+          }
+
+          isVerifying = false;
+        }, 3000);
+      });
+
+      // ============================================================
+      // DOWNLOAD HANDLER
+      // ============================================================
+      function handleDownload() {
+        if (!isPaymentDone) {
+          toast.textContent = "⚠️ Please complete payment verification first.";
+          toast.className = "error";
+          toast.style.display = "block";
+          setTimeout(() => {
+            toast.style.display = "none";
+          }, 3000);
+          paymentOverlay.style.display = "flex";
+          return;
+        }
+        if (window._downloadInProgress) return;
+        window._downloadInProgress = true;
+        downloadPDF();
+        setTimeout(() => {
+          window._downloadInProgress = false;
+        }, 5000);
+      }
+
+      // ============================================================
+      // DOWNLOAD PDF
+      // ============================================================
+      function downloadPDF() {
+        const qrData = getQRData();
+        const isDesign2 = currentDesign === "design2";
+        let cardsHTML = "";
+
+        cardsHTML += buildCardHTML(
+          currentPhotoData,
+          qrData,
+          currentDesign,
+          "front"
+        );
+        if (isDesign2) {
+          cardsHTML += buildCardHTML(
+            currentPhotoData,
+            qrData,
+            currentDesign,
+            "back"
+          );
+        }
+
+        const title = "Farmer ID Card - Premium";
+        const html = generatePrintWindow(
+          cardsHTML,
+          "print-download-page",
+          title
+        );
+        const win = window.open("", "_blank", "width=800,height=600");
+        if (win) {
+          win.document.write(html);
+          win.document.close();
+          paymentStatus.innerHTML = "✅ Premium card downloaded successfully!";
+          downloadBtn.innerHTML = "💾 Download Again";
+        } else {
+          toast.textContent =
+            "⚠️ Please allow popups for this site to download the card.";
+          toast.className = "error";
+          toast.style.display = "block";
+          setTimeout(() => {
+            toast.style.display = "none";
+          }, 4000);
+          window._downloadInProgress = false;
+        }
+      }
+
+      // ============================================================
+      // GENERATE PRINT WINDOW
+      // ============================================================
+      function generatePrintWindow(cardsHTML, layoutClass, pageTitle) {
+        return `
+                <html>
+                <head><title>${pageTitle}</title>
+                <style>${getPrintStyles()}</style>
+                <style>
+                    .qr-wrap img { width: 12mm !important; height: 12mm !important; max-width:12mm; max-height:12mm; }
+                    .id-card { page-break-inside: avoid; break-inside: avoid; }
+                </style>
+                </head>
+                <body>
+                    <div class="${layoutClass}">${cardsHTML}</div>
+                    <script>
+                        window.onload = function() {
+                            var imgs = document.querySelectorAll('.qr-wrap img, .photo-box img');
+                            var total = imgs.length;
+                            if (total === 0) { window.print(); return; }
+                            var loaded = 0;
+                            imgs.forEach(function(img) {
+                                if (img.complete) { loaded++; }
+                                else { img.onload = function() { loaded++; if (loaded === total) window.print(); };
+                                        img.onerror = function() { loaded++; if (loaded === total) window.print(); }; }
+                            });
+                            if (loaded === total) window.print();
+                            setTimeout(function() { window.print(); }, 3000);
+                        };
+                    <\/script>
+                </body>
+                </html>
+            `;
+      }
+
+      // ============================================================
+      // PRINT STYLES
+      // ============================================================
+      function getPrintStyles() {
+        return `
+                * { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', Roboto, Arial, sans-serif; }
+                body { background: white; margin:0; padding:0; }
+
+                .id-card {
+                    width: 85mm;
+                    height: 54mm;
+                    background: #ffffff;
+                    border-radius: 8px;
+                    padding: 3.5mm 4.5mm;
+                    border: 1px solid #c8dcc8;
+                    position: relative;
+                    overflow: hidden;
+                    page-break-inside: avoid;
+                    break-inside: avoid;
+                    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+                }
+                .id-card::before {
+                    content: '';
+                    position: absolute;
+                    inset: 0;
+                    background: radial-gradient(ellipse at 15% 85%, rgba(46, 125, 50, 0.04) 0%, transparent 50%),
+                        radial-gradient(ellipse at 85% 15%, rgba(255, 153, 51, 0.03) 0%, transparent 50%),
+                        linear-gradient(180deg, #f7fcf7 0%, #ffffff 40%, #ffffff 70%, #f0f7f0 100%);
+                    pointer-events: none;
+                    z-index: 0;
+                }
+                .id-card .tricolor-bar {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    height: 3.8mm;
+                    background: linear-gradient(90deg, #ff9933 0%, #ff9933 33.33%, #ffffff 33.33%, #ffffff 66.66%, #138808 66.66%, #138808 100%);
+                    z-index: 5;
+                    border-radius: 8px 8px 0 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .id-card .tricolor-bar .chakra {
+                    position: absolute;
+                    width: 5mm;
+                    height: 5mm;
+                    opacity: 0.4;
+                    color: #1a3c6e;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 4.2mm;
+                    line-height: 1;
+                    background: rgba(255, 255, 255, 0.3);
+                    border-radius: 50%;
+                    backdrop-filter: blur(2px);
+                }
+                .id-card .watermark-farmer {
+                    position: absolute;
+                    bottom: 2mm;
+                    right: 3mm;
+                    font-size: 32px;
+                    opacity: 0.04;
+                    z-index: 0;
+                    pointer-events: none;
+                    transform: rotate(-6deg);
+                }
+                .id-card .watermark-text {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) rotate(-10deg);
+                    font-size: 24px;
+                    font-weight: 900;
+                    color: #1a3c6e;
+                    opacity: 0.025;
+                    letter-spacing: 6px;
+                    pointer-events: none;
+                    z-index: 0;
+                    white-space: nowrap;
+                }
+                .id-card .corner-leaf {
+                    position: absolute;
+                    font-size: 14px;
+                    opacity: 0.07;
+                    pointer-events: none;
+                    z-index: 1;
+                }
+                .id-card .corner-leaf.tl { top: 4mm; left: 4mm; transform: rotate(-20deg); }
+                .id-card .corner-leaf.br { bottom: 4mm; right: 4mm; transform: rotate(160deg); }
+                .card-inner {
+                    background: rgba(255,255,255,0.92);
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 4px;
+                    padding: 3mm 4mm;
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    z-index: 2;
+                    backdrop-filter: blur(1px);
+                    border: 0.5px solid rgba(255,255,255,0.3);
+                }
+                .card-body {
+                    display: flex;
+                    gap: 3.5mm;
+                    flex: 1;
+                    min-height: 0;
+                }
+                .inner-leaf-top {
+                    position: absolute;
+                    font-size: 16px;
+                    opacity: 0.25;
+                    pointer-events: none;
+                    z-index: 3;
+                    top: 2mm;
+                }
+                .inner-leaf-top.left { left: 2mm; }
+                .inner-leaf-top.right { right: 2mm; }
+                .farmer-id-footer {
+                    margin-top: 0.4mm;
+                    padding-top: 0.3mm;
+                    font-size: 5px;
+                    font-weight: 700;
+                    color: #1a3c6e;
+                    text-align: center;
+                    border-top: 0.5px solid #dce8dc;
+                    letter-spacing: 0.5px;
+                    opacity: 0.7;
+                    width: 100%;
+                    flex-shrink: 0;
+                }
+                .farmer-id-footer.no-border {
+                    border-top: none;
+                    padding-top: 0.1mm;
+                }
+                .card-left { flex:1; display:flex; flex-direction:column; justify-content:center; gap:0.4mm; position:relative; z-index:1; min-width:0; }
+                .card-header { display:flex; align-items:center; gap:2.5mm; margin-bottom:0.6mm; }
+                .card-logo {
+                    width: 8.5mm !important;
+                    height: 8.5mm !important;
+                    background: linear-gradient(145deg, #ff9933, #f57c00) !important;
+                    border: 1.5px solid #ffffff !important;
+                    box-shadow: 0 1px 6px rgba(255, 153, 51, 0.4) !important;
+                    border-radius: 50% !important;
+                    display: flex !important;
+                    align-items: center !important;
+                    justify-content: center !important;
+                    flex-shrink: 0 !important;
+                    position: relative !important;
+                }
+                .card-logo .logo-ring {
+                    border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
+                    position: absolute !important;
+                    inset: -2px !important;
+                    border-radius: 50% !important;
+                    pointer-events: none !important;
+                }
+                .card-logo .logo-inner {
+                    position: relative !important;
+                    width: 100% !important;
+                    height: 100% !important;
+                    display: flex !important;
+                    align-items: center !important;
+                    justify-content: center !important;
+                    border-radius: 50% !important;
+                    overflow: hidden !important;
+                }
+                .card-logo .logo-bg {
+                    position: absolute !important;
+                    inset: 0 !important;
+                    border-radius: 50% !important;
+                    background: radial-gradient(ellipse at 30% 30%, #ffcc80, #f57c00) !important;
+                }
+                .card-logo .logo-farmer {
+                    position: relative !important;
+                    z-index: 1 !important;
+                    width: 70% !important;
+                    height: 70% !important;
+                }
+                .card-logo .logo-farmer svg {
+                    width: 100% !important;
+                    height: 100% !important;
+                    display: block !important;
+                }
+                .card-logo .logo-leaf {
+                    position: absolute !important;
+                    bottom: -1mm !important;
+                    right: -1mm !important;
+                    font-size: 3.2mm !important;
+                    opacity: 0.9 !important;
+                    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2)) !important;
+                    z-index: 2 !important;
+                    display: block !important;
+                }
+                .card-title-group .govt { font-size:4.8px; font-weight:600; color:#4a6a4f; letter-spacing:0.6px; text-transform:uppercase; line-height:1.2; }
+                .card-title-group .title { font-size:9px; font-weight:800; color:#1a3c6e; letter-spacing:0.4px; line-height:1.1; }
+                .card-title-group .title .highlight { color:#f7931e; }
+                .card-title-group .title .green-text { color:#2e7d32; }
+                .card-title-group .subtitle { font-size:4.8px; color:#5a7a5f; font-weight:500; letter-spacing:0.3px; }
+                .divider-premium {
+                    display: flex; align-items:center; gap:2px; margin:0.6mm 0 0.8mm 0;
+                    border:none; height:1px;
+                    background: linear-gradient(90deg, #dce8dc 0%, #a0c8a0 50%, #dce8dc 100%);
+                    position:relative;
+                }
+                .divider-premium::after {
+                    content: '🌱';
+                    position: absolute; left:50%; transform:translateX(-50%) scale(0.8);
+                    background: white; padding:0 3px; font-size:5px; top:-2.5px;
+                }
+                .detail-line { display:flex; align-items:center; font-size:6px; line-height:1.3; gap:2px; padding:0.2mm 0; }
+                .detail-line .dl-icon { font-size:4.5px; opacity:0.5; min-width:3.5mm; text-align:center; flex-shrink:0; }
+                .detail-line .dl-label { font-weight:600; color:#4a6a4f; min-width:16%; flex-shrink:0; font-size:5px; text-transform:uppercase; letter-spacing:0.2px; opacity:0.7; }
+                .detail-line .dl-value { color:#1a202c; font-weight:600; word-break:break-word; font-size:6px; }
+                .detail-line .dl-value.regional { color:#1a3c6e; font-weight:700; }
+                .detail-line .dl-value.highlight-value { color:#f7931e; font-weight:700; }
+                .card-right {
+                    width: 16mm; display:flex; flex-direction:column; align-items:center; justify-content:center;
+                    gap:1mm; flex-shrink:0; position:relative; z-index:1;
+                }
+                .photo-box {
+                    width: 14mm; height:17mm; border:1.5px solid #b8d4b8; border-radius:5px;
+                    background: linear-gradient(145deg, #f2faf2, #e8f5e9);
+                    display:flex; align-items:center; justify-content:center; overflow:hidden;
+                    flex-shrink:0; position:relative; box-shadow: inset 0 2px 8px rgba(46,125,50,0.06);
+                }
+                .photo-box .farmer-bg { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; opacity:0.12; pointer-events:none; }
+                .photo-box .farmer-bg svg { width:100%; height:100%; }
+                .photo-box img { width:100%; height:100%; object-fit:cover; position:relative; z-index:2; }
+                .photo-box .photo-placeholder-text { display:none; }
+                .card-right .uid-badge {
+                    font-size:4.8px; font-weight:700; color:white; text-align:center;
+                    background: linear-gradient(135deg, #1a3c6e, #2a5a9a);
+                    padding:0.6mm 1.4mm; border-radius:4px; width:100%; line-height:1.2;
+                    letter-spacing:0.2px; box-shadow: 0 1px 6px rgba(26,60,110,0.12);
+                }
+                .card-right .uid-badge .small { font-weight:400; opacity:0.7; font-size:3.8px; }
+                .card-right .qr-wrap {
+                    width:100%; display:flex; justify-content:center; align-items:center;
+                    background:white; border-radius:4px; padding:0.5px 0; border:0.5px solid #dce8dc;
+                }
+                .card-right .qr-wrap img { display:block; width:12mm !important; height:12mm !important; max-width:12mm; max-height:12mm; border-radius:2px; background:white; }
+
+                .card-back .card-left { justify-content:flex-start; padding-top:0.5mm; }
+                .card-back .land-section { margin-top:0.6mm; border-top:0.5px solid #dce8dc; padding-top:0.6mm; }
+                .card-back .land-section .land-title { font-size:5px; font-weight:700; color:#1a3c6e; margin-bottom:0.3mm; display:flex; align-items:center; gap:2px; }
+                .card-back .land-table-mini { width:100%; border-collapse:collapse; font-size:5px; }
+                .card-back .land-table-mini th { background:#eaf5ea; font-weight:700; color:#2e7d32; padding:0.2mm 0.5mm; border:0.5px solid #c8e0c8; text-align:left; font-size:4.6px; text-transform:uppercase; letter-spacing:0.2px; }
+                .card-back .land-table-mini td { padding:0.2mm 0.5mm; border:0.5px solid #c8e0c8; color:#1a202c; font-size:4.8px; }
+                .card-back .land-table-mini tr:nth-child(even) td { background:#f7fcf7; }
+                .card-back .thumb-sign-area { display:flex; gap:2mm; margin-top:0.8mm; padding-top:0.6mm; border-top:0.5px solid #dce8dc; justify-content:space-between; }
+                .card-back .thumb-box { text-align:center; flex:1; }
+                .card-back .thumb-box .label { font-size:3.8px; font-weight:700; color:#4a6a4f; text-transform:uppercase; letter-spacing:0.2px; opacity:0.6; }
+                .card-back .thumb-box .box { width:100%; height:6.5mm; border:1px dashed #b8d4b8; border-radius:4px; background:rgba(248,252,248,0.6); display:flex; align-items:center; justify-content:center; font-size:10px; color:#a0c8a0; margin-top:0.3mm; }
+                .card-back .thumb-box .box .icon { font-size:14px; }
+                .card-back .thumb-box .box .line { width:70%; border-bottom:1px solid #4a6a4f; margin-top:1px; }
+                .card-back .thumb-box .box .line-text { font-size:3.2px; color:#7a9a7f; margin-top:0.5px; }
+                .side-badge {
+                    position: absolute; top:4mm; right:4.5mm;
+                    font-size:4.5px; font-weight:700; color:#2e7d32;
+                    background: rgba(255,255,255,0.85);
+                    padding:0.3mm 2mm; border-radius:3px;
+                    border:0.5px solid #81c784; z-index:6; opacity:0.5;
+                    letter-spacing:0.5px;
+                }
+
+                .print-download-page {
+                    display: flex !important;
+                    flex-wrap: wrap !important;
+                    justify-content: center !important;
+                    align-items: center !important;
+                    gap: 6mm !important;
+                    padding: 8mm !important;
+                    width: 100% !important;
+                    background: white !important;
+                }
+                .print-download-page .id-card {
+                    width: 85mm !important;
+                    height: 54mm !important;
+                    margin: 0 !important;
+                    box-shadow: 0 4px 24px rgba(0,0,0,0.08) !important;
+                    border: 1px solid #c8dcc8 !important;
+                    transform: none !important;
+                    border-radius: 8px !important;
+                }
+                @page { margin:0; padding:0; size: A4 portrait; }
+                body { margin:0; padding:0; background:white !important; }
+
+                /* ===== KEY FIX: exact color rendering for print ===== */
+                * {
+                    print-color-adjust: exact !important;
+                    -webkit-print-color-adjust: exact !important;
+                    color-adjust: exact !important;
+                }
+                .id-card,
+                .id-card *,
+                .card-logo,
+                .card-logo *,
+                .tricolor-bar,
+                .tricolor-bar *,
+                .card-inner,
+                .card-inner *,
+                .photo-box,
+                .photo-box *,
+                .qr-wrap,
+                .qr-wrap *,
+                .uid-badge,
+                .uid-badge * {
+                    print-color-adjust: exact !important;
+                    -webkit-print-color-adjust: exact !important;
+                    color-adjust: exact !important;
+                }
+            `;
+      }
+
+      // ============================================================
+      // INIT
+      // ============================================================
+      downloadBtn.disabled = true;
+      updatePreview();
+      console.log(
+        "✅ Premium Farmer ID Card with eye-catching farmer logo (renders in PDF)"
+      );
+      console.log("UPI QR: farmerid@nyes");
+
+      // Add a small helper to remind users about print color settings
+      console.log(
+        '💡 For best print results, ensure "Print backgrounds" is enabled in your browser print dialog.'
+      );
+    </script>
+  <!-- HOW TO USE -->
+<section class="pcs-section">
+<h2>📝 Farmer ID Card kaise banayein?</h2>
+<p class="pcs-sub">Sirf 5 aasan steps me apna card ready</p>
+<div class="pcs-steps">
+<div class="pcs-step"><div class="pcs-num">1</div><h3>Notice samjhein</h3><p>Yeh ek unofficial card hai — sirf apni Farmer ID info store karne ke liye. "I Understand" par click karein.</p></div>
+<div class="pcs-step"><div class="pcs-num">2</div><h3>Details bharein</h3><p>Naam, DOB, gender, Aadhaar, Farmer ID, mobile aur address daalein.</p></div>
+<div class="pcs-step"><div class="pcs-num">3</div><h3>Photo & land</h3><p>Farmer ki photo upload karein aur land/khasra details add karein.</p></div>
+<div class="pcs-step"><div class="pcs-num">4</div><h3>Design choose karein</h3><p>Card design select karein aur live preview (front & back) dekhein.</p></div>
+<div class="pcs-step"><div class="pcs-num">5</div><h3>Download / Print</h3><p>Free me card download karein ya direct print kar lein.</p></div>
+</div>
+</section>
+<!-- FAQ -->
+<section class="pcs-section" style="padding-top:10px">
+<h2>❓ Aksar Pooche Jane Wale Sawaal</h2>
+<p class="pcs-sub">Farmer ID Card ke baare me</p>
+<div class="pcs-faq">
+<div class="pcs-faq-item"><div class="pcs-faq-q">Kya yeh official government Farmer ID card hai? <i class="fas fa-chevron-down"></i></div><div class="pcs-faq-a"><p><b>Nahi.</b> Yeh ek <b>unofficial</b> card hai jo sirf aapki apni Farmer ID information ko card format me store/print karne ke liye hai. Yeh kisi government portal dwara issue nahi kiya jata. Official card ke liye apne state ke AgriStack portal par jayein.</p></div></div>
+<div class="pcs-faq-item"><div class="pcs-faq-q">Kya yeh tool free hai? <i class="fas fa-chevron-down"></i></div><div class="pcs-faq-a"><p>Haan, Pro CSC Tools par yeh tool 100% free hai — koi payment ya hidden charge nahi.</p></div></div>
+<div class="pcs-faq-item"><div class="pcs-faq-q">Kya card print kar sakte hain? <i class="fas fa-chevron-down"></i></div><div class="pcs-faq-a"><p>Haan, card download karke A4 ya PVC card size me print kar sakte hain.</p></div></div>
+<div class="pcs-faq-item"><div class="pcs-faq-q">Kya mobile par kaam karta hai? <i class="fas fa-chevron-down"></i></div><div class="pcs-faq-a"><p>Haan, yeh tool Android, iPhone, tablet aur desktop sabhi par fully responsive hai.</p></div></div>
+<div class="pcs-faq-item"><div class="pcs-faq-q">Kya meri di gayi jaankari safe hai? <i class="fas fa-chevron-down"></i></div><div class="pcs-faq-a"><p>Bilkul. Sab kuch aapke browser me hi process hota hai — koi data kisi server par store nahi hota.</p></div></div>
+</div>
+</section>
+<footer class="pcs-footer">
+<div class="pcs-fgrid">
+<div>
+<h3><i class="fas fa-crown"></i> Pro CSC Tools</h3>
+<p>Free, fast aur professional online tools CSC VLEs, kisano, students aur job seekers ke liye — poore India me.</p>
+<div class="pcs-social">
+<a href="https://facebook.com/procsctools" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+<a href="https://instagram.com/procsctools" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+<a href="https://youtube.com/@procsctools" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+<a href="https://t.me/procsctools" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+</div>
+</div>
+<div><h4>Popular Tools</h4><ul>
+<li><a href="https://procsctools.in/tools/farmer-id-card-print.html">Farmer ID Card</a></li>
+<li><a href="https://procsctools.in/tools/csc-farmer-registration.html">Farmer Registration</a></li>
+<li><a href="https://procsctools.in/tools/csc-id-card-maker.html">CSC ID Card Maker</a></li>
+<li><a href="https://procsctools.in/tools/online-bill-maker-for-small-shops.html">Online Bill Maker</a></li>
+</ul></div>
+<div><h4>Company</h4><ul>
+<li><a href="https://procsctools.in/about.html">About Us</a></li>
+<li><a href="https://procsctools.in/contact.html">Contact</a></li>
+<li><a href="https://procsctools.in/blog/">Blog</a></li>
+<li><a href="https://procsctools.in/privacy.html">Privacy Policy</a></li>
+<li><a href="https://procsctools.in/terms.html">Terms of Use</a></li>
+</ul></div>
+<div><h4>Get in Touch</h4><ul>
+<li><a href="mailto:Palcscuno@gmail.com"><i class="fas fa-envelope"></i> Palcscuno@gmail.com</a></li>
+<li><a href="https://wa.me/916387617678"><i class="fab fa-whatsapp" style="color:#25d366"></i> +91 63876 17678</a></li>
+</ul></div>
+</div>
+<div class="pcs-fbottom">&copy; 2026 Pro CSC Tools &bull; procsctools.in &bull; All rights reserved.</div>
+</footer><a href="https://wa.me/916387617678?text=Hello%20I%20need%20CSC%20help" class="pcs-wa" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<script>
+(function(){
+ var mb=document.getElementById('pcsMenuBtn'),mm=document.getElementById('pcsMobile');
+ if(mb&&mm){mb.addEventListener('click',function(){mm.classList.toggle('open');});mm.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mm.classList.remove('open');});});}
+ document.querySelectorAll('.pcs-faq-q').forEach(function(q){q.addEventListener('click',function(){q.parentElement.classList.toggle('open');});});
+ // paywall removed: ensure download is free & enabled
+ var d=document.getElementById('downloadBtn'); if(d){d.disabled=false;}
+ var p=document.getElementById('showPayBtn'); if(p){p.style.display='none';}
+})();
+</script>
+</body>
+</html>

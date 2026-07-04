@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Invoice &amp; GST Bill Generator - Free Online Bill Maker | Pro CSC Tools</title>
+<meta name="title" content="Invoice & GST Bill Generator - Free Online Bill Maker | Pro CSC Tools">
+<meta name="description" content="Create GST-ready invoices and bills online for free. Auto CGST/SGST/IGST calculation, company logo, item-wise billing and instant A4 PDF download. 100% free, no signup.">
+<meta name="keywords" content="gst invoice generator, bill generator, invoice maker, free invoice maker, gst bill kaise banaye, tax invoice format, online bill maker, csc invoice, gst bill format india, invoice generator online free">
+<meta name="author" content="Pro CSC Tools">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://procsctools.in/tools/gst-invoice-generator/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://procsctools.in/tools/gst-invoice-generator/">
+<meta property="og:title" content="Invoice & GST Bill Generator - Free Online Bill Maker">
+<meta property="og:description" content="Make GST-ready bills & invoices with auto tax calculation, company logo and A4 PDF download. Free, fast and easy.">
+<meta property="og:image" content="https://procsctools.in/images/invoice-generator.webp">
+<meta property="og:site_name" content="Pro CSC Tools">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Invoice & GST Bill Generator - Free Bill Maker">
+<meta name="twitter:description" content="Free GST invoice maker with auto CGST/SGST/IGST calculation, logo and A4 PDF download.">
+<meta name="twitter:image" content="https://procsctools.in/images/invoice-generator.webp">
+<meta name="theme-color" content="#ab183d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Invoice & GST Bill Generator","alternateName":"Pro CSC Tools GST Invoice Maker","url":"https://procsctools.in/tools/gst-invoice-generator/","description":"Free online GST invoice and bill generator with automatic CGST/SGST/IGST calculation, company logo, item-wise billing and A4 PDF download.","applicationCategory":"BusinessApplication","operatingSystem":"Windows, macOS, Linux, Android, iOS","browserRequirements":"Requires JavaScript","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"publisher":{"@type":"Organization","name":"Pro CSC Tools","url":"https://procsctools.in"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","ratingCount":"1876"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://procsctools.in/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://procsctools.in/#tools"},{"@type":"ListItem","position":3,"name":"GST Invoice Generator","item":"https://procsctools.in/tools/gst-invoice-generator/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"How to make a GST invoice with Pro CSC Tools","step":[{"@type":"HowToStep","name":"Add your business","text":"Enter your company name, address and GSTIN, and upload your logo."},{"@type":"HowToStep","name":"Add customer","text":"Fill the Bill To details along with invoice number and date."},{"@type":"HowToStep","name":"Add items","text":"Add each product or service with quantity and rate; totals calculate automatically."},{"@type":"HowToStep","name":"Set GST","text":"Choose the GST rate and intra-state or inter-state to auto-split CGST/SGST or IGST."},{"@type":"HowToStep","name":"Download PDF","text":"Click PDF to download a print-ready A4 GST invoice."}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is this GST invoice generator free?","acceptedAnswer":{"@type":"Answer","text":"Yes, it is completely free with unlimited invoices, no signup and no watermark."}},{"@type":"Question","name":"Does it calculate GST automatically?","acceptedAnswer":{"@type":"Answer","text":"Yes, choose a GST rate and the tool auto-splits CGST and SGST for intra-state or applies IGST for inter-state sales."}},{"@type":"Question","name":"Can I add my company logo?","acceptedAnswer":{"@type":"Answer","text":"Yes, you can upload your business logo and it will appear on the invoice."}},{"@type":"Question","name":"Can I download the invoice as PDF?","acceptedAnswer":{"@type":"Answer","text":"Yes, you can download a print-ready A4 PDF or print the invoice directly."}},{"@type":"Question","name":"Is my data safe?","acceptedAnswer":{"@type":"Answer","text":"Yes, everything runs in your browser. Your invoice data is never uploaded to any server."}},{"@type":"Question","name":"Can I use it on mobile?","acceptedAnswer":{"@type":"Answer","text":"Yes, the tool is fully mobile friendly and works on any phone, tablet or computer."}}]}
+</script>
+<style>
+:root{
+  --brand:#ab183d;--brand-dark:#8a0f2f;--brand-2:#d9304f;--gold:#e0aa14;
+  --navy:#0b2a5b;--green:#1f9d55;--green-d:#178047;--ink:#1f2430;--muted:#6b7280;--line:#e7e5ea;
+  --bg:#ffffff;--soft:#faf7f8;--wa:#25d366;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;color:var(--ink);background:#f6f7fb;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1280px;margin:0 auto;padding:0 22px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;border-radius:10px;padding:11px 18px;font-size:14.5px;transition:transform .15s,box-shadow .15s,background .15s;cursor:pointer;border:none;font-family:inherit}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:0 6px 16px rgba(171,24,61,.26)}
+.btn-primary:hover{background:var(--brand-dark);transform:translateY(-2px)}
+.btn-ghost{background:#fff;color:var(--brand);border:1.5px solid var(--line)}
+.btn-ghost:hover{border-color:var(--brand)}
+.btn-green{background:var(--green);color:#fff;box-shadow:0 5px 14px rgba(31,157,85,.28)}
+.btn-green:hover{background:var(--green-d);transform:translateY(-2px)}
+.btn-sm{padding:7px 12px;font-size:12.5px;border-radius:8px}
+.eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#fff;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);padding:6px 13px;border-radius:999px}
+
+/* NAV */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:9px;font-weight:900;font-size:20px;color:var(--brand);letter-spacing:-.02em}
+.logo i{color:var(--gold)}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{font-size:14.5px;font-weight:600;color:#3d4351}
+.nav-links a:hover{color:var(--brand)}
+.nav-cta{display:flex;align-items:center;gap:12px}
+.hamburger{display:none;font-size:22px;color:#3d4351;background:none;border:none;cursor:pointer}
+.mobile-menu{display:none;flex-direction:column;padding:8px 22px 16px;border-top:1px solid var(--line);background:#fff}
+.mobile-menu a{padding:11px 0;font-weight:600;border-bottom:1px solid var(--soft)}
+
+/* HERO */
+.hero{background:linear-gradient(120deg,#8a0f2f,#ab183d 48%,#d9304f);color:#fff;padding:34px 0 40px;text-align:center}
+.crumb{font-size:13px;color:#ffd7e2;margin-bottom:14px}
+.crumb a:hover{color:#fff;text-decoration:underline}
+.hero h1{font-size:38px;font-weight:900;letter-spacing:-.02em;margin-top:12px}
+.hero p{margin:12px auto 0;max-width:620px;font-size:16px;color:#ffe1ea}
+.hero-stats{margin-top:24px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.hstat{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:12px;padding:12px 22px;min-width:120px}
+.hstat .n{font-size:22px;font-weight:900}
+.hstat .l{font-size:12px;color:#ffdbe4;font-weight:600;margin-top:2px}
+
+/* APP LAYOUT */
+.app{padding:26px 0 60px}
+.app-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:22px;align-items:start}
+.panel{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.panel-head{display:flex;align-items:center;gap:10px;padding:16px 18px;border-bottom:1px solid var(--line)}
+.panel-head i{color:var(--brand)}
+.panel-head h2{font-size:16.5px;font-weight:800}
+.panel-body{padding:18px}
+
+/* FORM */
+.fieldset{border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:16px;background:#fcfbfd}
+.fs-title{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--navy);margin-bottom:12px}
+.fs-title i{color:var(--brand)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.row-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+.field{margin-bottom:10px}
+.field:last-child{margin-bottom:0}
+label{display:block;font-size:12px;font-weight:700;color:#4a5060;margin-bottom:5px}
+input,select,textarea{width:100%;border:1.5px solid var(--line);border-radius:9px;padding:9px 11px;font-size:14px;font-family:inherit;color:var(--ink);background:#fff;transition:border-color .15s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--brand)}
+textarea{resize:vertical;min-height:56px}
+.logo-drop{border:2px dashed #d9c2ca;border-radius:11px;padding:16px;text-align:center;cursor:pointer;color:#8a6b74;background:#fff;transition:border-color .15s,background .15s}
+.logo-drop:hover{border-color:var(--brand);background:#fdf3f6}
+.logo-drop i{font-size:22px;color:var(--brand)}
+.logo-drop p{font-size:12.5px;margin-top:6px}
+.logo-drop small{font-size:11px;color:#a99aa0}
+
+/* ITEMS TABLE */
+.items-head,.item-row{display:grid;grid-template-columns:1fr 62px 90px 90px 34px;gap:8px;align-items:center}
+.items-head{font-size:11px;font-weight:800;text-transform:uppercase;color:#8a8f9a;padding:0 2px 8px}
+.item-row{margin-bottom:9px}
+.item-row input{padding:8px 9px;font-size:13px}
+.item-amt{font-size:13.5px;font-weight:700;text-align:right;color:#2d3340;padding-right:2px}
+.del-item{width:32px;height:32px;border-radius:8px;border:1.5px solid #f0d3db;background:#fff;color:var(--brand);cursor:pointer;font-size:13px;display:flex;align-items:center;justify-content:center;transition:all .15s}
+.del-item:hover{background:var(--brand);color:#fff;border-color:var(--brand)}
+.tax-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+
+/* ACTION BAR */
+.action-bar{display:flex;gap:10px;flex-wrap:wrap;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;margin-bottom:16px;position:sticky;top:78px;z-index:20;box-shadow:0 4px 14px -8px rgba(0,0,0,.15)}
+.action-bar .btn{flex:1;min-width:120px}
+
+/* INVOICE PREVIEW (A4) */
+.preview-scroll{overflow:auto}
+#invoice{width:794px;min-height:1123px;margin:0 auto;background:#fff;color:#222;font-family:'Inter',Arial,sans-serif;padding:44px 46px;transform-origin:top center}
+.inv-top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;border-bottom:3px solid var(--brand);padding-bottom:18px}
+.inv-brand{display:flex;gap:14px;align-items:center}
+#invLogo{width:66px;height:66px;object-fit:contain;border-radius:8px;display:none}
+.inv-brand h3{font-size:22px;font-weight:900;color:var(--brand);letter-spacing:-.01em}
+.inv-brand .sub{font-size:12px;color:#555;margin-top:3px;white-space:pre-line;line-height:1.45}
+.inv-title{text-align:right}
+.inv-title h2{font-size:30px;font-weight:900;color:#1a1f2b;letter-spacing:.02em}
+.inv-title .badge{display:inline-block;margin-top:6px;font-size:11px;font-weight:700;color:var(--brand);background:#fbe9ef;padding:3px 9px;border-radius:6px}
+.inv-meta{display:flex;justify-content:space-between;gap:20px;margin-top:20px}
+.inv-box{flex:1}
+.inv-box .h{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:#8a8f9a;margin-bottom:5px}
+.inv-box .name{font-size:15px;font-weight:800;color:#1a1f2b}
+.inv-box .det{font-size:12.5px;color:#555;margin-top:3px;white-space:pre-line;line-height:1.5}
+.inv-info{text-align:right;font-size:12.5px;color:#444}
+.inv-info div{margin-bottom:4px}
+.inv-info b{color:#1a1f2b}
+table.items{width:100%;border-collapse:collapse;margin-top:22px}
+table.items thead th{background:var(--brand);color:#fff;font-size:12px;font-weight:700;text-align:left;padding:10px 12px}
+table.items thead th.r{text-align:right}
+table.items tbody td{padding:10px 12px;font-size:13px;border-bottom:1px solid #eee;color:#333}
+table.items tbody td.r{text-align:right}
+table.items tbody tr:nth-child(even){background:#faf7f8}
+.totals{display:flex;justify-content:flex-end;margin-top:16px}
+.totals-inner{width:290px}
+.totals-inner .t-row{display:flex;justify-content:space-between;font-size:13px;padding:6px 2px;color:#444}
+.totals-inner .t-row.grand{border-top:2px solid var(--brand);margin-top:6px;padding-top:10px;font-size:17px;font-weight:900;color:var(--brand)}
+.inv-note{margin-top:26px;font-size:12px;color:#555;border-top:1px dashed #ddd;padding-top:14px;white-space:pre-line;line-height:1.6}
+.inv-sign{margin-top:40px;display:flex;justify-content:space-between;align-items:flex-end}
+.inv-sign .line{width:190px;border-top:1px solid #999;text-align:center;font-size:12px;padding-top:6px;color:#555}
+.inv-foot{margin-top:30px;text-align:center;font-size:11px;color:#999;border-top:1px solid #eee;padding-top:12px}
+
+/* CONTENT SECTIONS */
+.content{background:#fff;border-top:1px solid var(--line)}
+.sec-head{text-align:center;max-width:640px;margin:0 auto 40px}
+.sec-head h2{font-size:30px;font-weight:900;letter-spacing:-.02em}
+.sec-head p{margin-top:10px;color:#5b6170;font-size:16px}
+section.pad{padding:66px 0}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:step}
+.step{position:relative;padding:26px 20px;border:1px dashed #e3c6d0;border-radius:14px;background:#fff}
+.step::before{counter-increment:step;content:counter(step);position:absolute;top:-17px;left:20px;width:36px;height:36px;background:var(--brand);color:#fff;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:900;box-shadow:0 8px 16px -6px rgba(171,24,61,.5)}
+.step h3{margin-top:8px;font-size:16px;font-weight:800}
+.step p{margin-top:7px;color:#5f6572;font-size:14px}
+.feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.feat{background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:22px}
+.feat .fi{width:42px;height:42px;border-radius:10px;background:#fbe9ef;color:var(--brand);display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:12px}
+.feat h3{font-size:15px;font-weight:800}
+.feat p{margin-top:6px;font-size:13.5px;color:#5f6572}
+.faq{max-width:820px;margin:0 auto}
+.qa{border:1px solid var(--line);border-radius:12px;margin-bottom:12px;background:#fff;overflow:hidden}
+.qa summary{list-style:none;cursor:pointer;padding:16px 18px;font-weight:700;font-size:15px;display:flex;justify-content:space-between;align-items:center}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary i{color:var(--brand);transition:transform .2s}
+.qa[open] summary i{transform:rotate(45deg)}
+.qa .ans{padding:0 18px 16px;color:#5f6572;font-size:14.5px;line-height:1.6}
+.cta{background:linear-gradient(120deg,#8a0f2f,#ab183d 45%,#d9304f);color:#fff;border-radius:22px;padding:46px 36px;text-align:center}
+.cta h2{font-size:30px;font-weight:900}
+.cta p{margin-top:10px;color:#ffe1ea;font-size:16px}
+.cta .btn{margin-top:22px}
+.btn-white{background:#fff;color:var(--brand)}
+.btn-white:hover{background:#fff5f8}
+
+/* FOOTER */
+footer{background:#0e1116;color:#9aa1ad;padding:52px 0 26px}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:32px}
+.foot-brand .logo{color:#fff;font-size:21px}
+.foot-brand p{margin-top:12px;font-size:14px;max-width:290px;line-height:1.6}
+.socials{margin-top:15px;display:flex;gap:9px}
+.socials a{width:37px;height:37px;border-radius:10px;background:#1b1f27;display:flex;align-items:center;justify-content:center;color:#c3c9d4;transition:all .15s}
+.socials a:hover{background:var(--brand);color:#fff}
+footer h4{color:#fff;font-size:14.5px;font-weight:800;margin-bottom:14px}
+footer ul{list-style:none}
+footer ul li{margin-bottom:9px;font-size:14px}
+footer ul li a:hover{color:#fff}
+footer .contact li{display:flex;align-items:center;gap:10px}
+footer .contact i{color:var(--gold);width:16px}
+.foot-bottom{border-top:1px solid #1c212b;margin-top:38px;padding-top:20px;text-align:center;font-size:13.5px;color:#7d838f}
+.foot-bottom i{color:var(--brand-2)}
+
+.wa-float{position:fixed;bottom:22px;right:22px;z-index:60;width:56px;height:56px;border-radius:50%;background:var(--wa);color:#fff;display:flex;align-items:center;justify-content:center;font-size:27px;box-shadow:0 10px 24px -6px rgba(37,211,102,.6);transition:transform .15s}
+.wa-float:hover{transform:scale(1.08)}
+
+@media(max-width:1040px){
+  .app-grid{grid-template-columns:1fr}
+  .preview-scroll{border:1px solid var(--line);border-radius:12px}
+  #invoice{width:794px;transform:scale(.62);margin:-210px auto 0}
+  .feat-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  .nav-links{display:none}.hamburger{display:block}.nav-cta .btn-ghost{display:none}
+  .hero h1{font-size:27px}.hero p{font-size:14.5px}
+  .sec-head h2{font-size:24px}
+  .steps{grid-template-columns:1fr}.feat-grid{grid-template-columns:1fr}
+  .row,.row-3,.tax-grid{grid-template-columns:1fr}
+  #invoice{transform:scale(.4);margin:-360px auto 0}
+  .cta{padding:34px 20px}.cta h2{font-size:23px}
+  .foot-grid{grid-template-columns:1fr}
+  section.pad{padding:48px 0}
+}
+@media print{
+  header,.hero,.form-col,.action-bar,.content,footer,.wa-float,.panel-head{display:none!important}
+  body{background:#fff}
+  .app,.app-grid,.panel,.panel-body,.preview-scroll{padding:0;margin:0;border:0;box-shadow:none;display:block}
+  #invoice{transform:none;width:100%;min-height:auto;box-shadow:none;padding:0}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header>
+  <div class="wrap nav">
+    <a href="/" class="logo"><i class="fas fa-crown"></i> Pro CSC Tools</a>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/#tools">All Tools</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="https://wa.me/916387617678" class="btn btn-ghost btn-sm"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <button class="hamburger" id="menuBtn" aria-label="Menu"><i class="fas fa-bars"></i></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/">Home</a><a href="/#tools">All Tools</a><a href="/blog/">Blog</a><a href="/about.html">About</a><a href="/contact.html">Contact</a>
+    <a href="https://wa.me/916387617678"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="crumb"><a href="/">Home</a> / <a href="/#tools">Tools</a> / GST Invoice Generator</div>
+    <span class="eyebrow"><i class="fas fa-file-invoice"></i> GST Bill / Invoice Maker</span>
+    <h1>Invoice &amp; GST Bill Generator</h1>
+    <p>Make GST-ready bills &amp; invoices instantly — auto CGST/SGST/IGST calculation, company logo, item-wise billing and print-ready A4 PDF. 100% free.</p>
+    <div class="hero-stats">
+      <div class="hstat"><div class="n">1,20,540</div><div class="l">Bills Created</div></div>
+      <div class="hstat"><div class="n">100%</div><div class="l">Free &amp; No Signup</div></div>
+      <div class="hstat"><div class="n">4.9★</div><div class="l">User Rating</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- APP -->
+<div class="app">
+  <div class="wrap app-grid">
+
+    <!-- FORM COLUMN -->
+    <div class="form-col">
+      <div class="panel">
+        <div class="panel-head"><i class="fas fa-pen-to-square"></i><h2>Fill Invoice Details</h2></div>
+        <div class="panel-body">
+
+          <!-- Business -->
+          <div class="fieldset">
+            <div class="fs-title"><i class="fas fa-store"></i> Your Business</div>
+            <div class="field">
+              <label>Business Logo (optional)</label>
+              <label class="logo-drop" for="logoInput">
+                <i class="fas fa-cloud-arrow-up"></i>
+                <p id="logoText">Click to upload logo</p>
+                <small>JPG / PNG · Max 2MB</small>
+              </label>
+              <input type="file" id="logoInput" accept="image/*" hidden>
+            </div>
+            <div class="field"><label>Business Name</label><input id="bizName" value="Pal CSC Center"></div>
+            <div class="field"><label>Address</label><textarea id="bizAddr">Main Market, Mandideep, MP - 462046</textarea></div>
+            <div class="row">
+              <div class="field"><label>GSTIN</label><input id="bizGst" value="23ABCDE1234F1Z5"></div>
+              <div class="field"><label>Phone</label><input id="bizPhone" value="+91 63876 17678"></div>
+            </div>
+          </div>
+
+          <!-- Customer -->
+          <div class="fieldset">
+            <div class="fs-title"><i class="fas fa-user"></i> Bill To (Customer)</div>
+            <div class="field"><label>Customer Name</label><input id="custName" value="Ramesh Kumar"></div>
+            <div class="field"><label>Address</label><textarea id="custAddr">Village Barkheda, Bhopal, MP</textarea></div>
+            <div class="row">
+              <div class="field"><label>GSTIN (optional)</label><input id="custGst" placeholder="e.g. 23XXXXX..."></div>
+              <div class="field"><label>Phone</label><input id="custPhone" value="98XXXXXX01"></div>
+            </div>
+          </div>
+
+          <!-- Invoice meta -->
+          <div class="fieldset">
+            <div class="fs-title"><i class="fas fa-hashtag"></i> Invoice Details</div>
+            <div class="row-3">
+              <div class="field"><label>Invoice No.</label><input id="invNo" value="INV-001"></div>
+              <div class="field"><label>Date</label><input type="date" id="invDate"></div>
+              <div class="field"><label>Due Date</label><input type="date" id="dueDate"></div>
+            </div>
+          </div>
+
+          <!-- Items -->
+          <div class="fieldset">
+            <div class="fs-title"><i class="fas fa-list"></i> Items / Services</div>
+            <div class="items-head"><div>Description</div><div>Qty</div><div>Rate (₹)</div><div style="text-align:right">Amount</div><div></div></div>
+            <div id="itemsWrap"></div>
+            <button class="btn btn-ghost btn-sm" id="addItem" style="margin-top:6px"><i class="fas fa-plus"></i> Add Item</button>
+          </div>
+
+          <!-- Tax -->
+          <div class="fieldset">
+            <div class="fs-title"><i class="fas fa-percent"></i> Tax &amp; Discount</div>
+            <div class="tax-grid">
+              <div class="field">
+                <label>GST Rate</label>
+                <select id="gstRate"><option value="0">No GST (0%)</option><option value="5">5%</option><option value="12">12%</option><option value="18" selected>18%</option><option value="28">28%</option></select>
+              </div>
+              <div class="field">
+                <label>Supply Type</label>
+                <select id="gstType"><option value="intra" selected>Intra-State (CGST + SGST)</option><option value="inter">Inter-State (IGST)</option></select>
+              </div>
+              <div class="field"><label>Discount (₹)</label><input type="number" id="discount" value="0" min="0"></div>
+              <div class="field"><label>Currency Symbol</label><input id="curSym" value="₹"></div>
+            </div>
+          </div>
+
+          <!-- Notes -->
+          <div class="fieldset" style="margin-bottom:0">
+            <div class="fs-title"><i class="fas fa-note-sticky"></i> Notes / Terms</div>
+            <div class="field"><textarea id="invNotes">Thank you for your business! Payment due within 7 days. Goods once sold will not be taken back.</textarea></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- PREVIEW COLUMN -->
+    <div class="preview-col">
+      <div class="action-bar">
+        <button class="btn btn-ghost" id="resetBtn"><i class="fas fa-rotate"></i> Refresh</button>
+        <button class="btn btn-green" id="pdfBtn"><i class="fas fa-file-pdf"></i> Download PDF</button>
+        <button class="btn btn-primary" id="printBtn"><i class="fas fa-print"></i> Print</button>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><i class="fas fa-eye"></i><h2>Live Invoice Preview</h2></div>
+        <div class="panel-body" style="background:#eef0f4">
+          <div class="preview-scroll">
+            <div id="invoice">
+              <div class="inv-top">
+                <div class="inv-brand">
+                  <img id="invLogo" alt="logo">
+                  <div>
+                    <h3 id="pName">Pal CSC Center</h3>
+                    <div class="sub" id="pBiz"></div>
+                  </div>
+                </div>
+                <div class="inv-title"><h2>INVOICE</h2><div class="badge" id="pTaxBadge">GST Invoice</div></div>
+              </div>
+              <div class="inv-meta">
+                <div class="inv-box">
+                  <div class="h">Bill To</div>
+                  <div class="name" id="pCustName">Ramesh Kumar</div>
+                  <div class="det" id="pCust"></div>
+                </div>
+                <div class="inv-info">
+                  <div>Invoice #: <b id="pInvNo">INV-001</b></div>
+                  <div>Date: <b id="pDate">—</b></div>
+                  <div>Due: <b id="pDue">—</b></div>
+                </div>
+              </div>
+              <table class="items">
+                <thead><tr><th style="width:44px">#</th><th>Description</th><th class="r">Qty</th><th class="r">Rate</th><th class="r">Amount</th></tr></thead>
+                <tbody id="pItems"></tbody>
+              </table>
+              <div class="totals"><div class="totals-inner" id="pTotals"></div></div>
+              <div class="inv-note" id="pNotes"></div>
+              <div class="inv-sign">
+                <div></div>
+                <div class="line">Authorised Signatory</div>
+              </div>
+              <div class="inv-foot">Generated with Pro CSC Tools · procsctools.in</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+  <section class="pad">
+    <div class="wrap">
+      <div class="sec-head"><h2>How to Make a GST Bill</h2><p>Create a professional GST invoice in a few simple steps.</p></div>
+      <div class="steps">
+        <div class="step"><h3>Add Your Business</h3><p>Enter your business name, address, GSTIN and upload your logo.</p></div>
+        <div class="step"><h3>Add Items &amp; GST</h3><p>List your products/services with qty &amp; rate, then choose the GST rate.</p></div>
+        <div class="step"><h3>Download or Print</h3><p>Get a print-ready A4 PDF or print your invoice directly — free.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad" style="background:var(--soft)">
+    <div class="wrap">
+      <div class="sec-head"><h2>Key Features</h2><p>Everything a CSC centre or small shop needs to bill customers.</p></div>
+      <div class="feat-grid">
+        <div class="feat"><div class="fi"><i class="fas fa-calculator"></i></div><h3>Auto GST Calc</h3><p>CGST/SGST or IGST split automatically for any slab.</p></div>
+        <div class="feat"><div class="fi"><i class="fas fa-image"></i></div><h3>Company Logo</h3><p>Add your business logo &amp; details for a pro look.</p></div>
+        <div class="feat"><div class="fi"><i class="fas fa-list-check"></i></div><h3>Item-wise Billing</h3><p>Add unlimited items with live total calculation.</p></div>
+        <div class="feat"><div class="fi"><i class="fas fa-file-pdf"></i></div><h3>Print-ready PDF</h3><p>Download a clean A4 PDF or print instantly.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad">
+    <div class="wrap">
+      <div class="sec-head"><h2>Frequently Asked Questions</h2></div>
+      <div class="faq">
+        <details class="qa" open><summary>Is this GST invoice generator free? <i class="fas fa-plus"></i></summary><div class="ans">Yes, it is completely free with unlimited invoices, no signup and no watermark.</div></details>
+        <details class="qa"><summary>Does it calculate GST automatically? <i class="fas fa-plus"></i></summary><div class="ans">Yes. Pick a GST rate and choose intra-state or inter-state — the tool auto-splits CGST + SGST or applies IGST.</div></details>
+        <details class="qa"><summary>Can I add my company logo? <i class="fas fa-plus"></i></summary><div class="ans">Yes, upload your business logo and it appears on the invoice header.</div></details>
+        <details class="qa"><summary>Can I download it as PDF? <i class="fas fa-plus"></i></summary><div class="ans">Yes, download a print-ready A4 PDF or use the Print button directly.</div></details>
+        <details class="qa"><summary>Is my data safe? <i class="fas fa-plus"></i></summary><div class="ans">Yes, everything runs in your browser. No invoice data is uploaded anywhere.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad" style="padding-top:0">
+    <div class="wrap">
+      <div class="cta">
+        <h2>Need Another Tool?</h2>
+        <p>Explore 25+ free tools for CSC VLEs, students &amp; shop owners.</p>
+        <a href="/#tools" class="btn btn-white"><i class="fas fa-grip"></i> Explore All Tools</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="/" class="logo"><i class="fas fa-crown"></i> Pro CSC Tools</a>
+        <p>Free online tools for CSC VLEs, students and shop owners in India — photos, PDFs, calculators and more.</p>
+        <div class="socials">
+          <a href="https://facebook.com/procsctools" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com/procsctools" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtube.com/@procsctools" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://t.me/procsctools" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+        </div>
+      </div>
+      <div><h4>Popular Tools</h4><ul>
+        <li><a href="/tools/passport.html">Passport Photo Maker</a></li>
+        <li><a href="/tools/gst-invoice-generator.html">GST Invoice Generator</a></li>
+        <li><a href="/tools/image-to-pdf.html">Image to PDF</a></li>
+        <li><a href="/tools/qr.html">QR Code Generator</a></li>
+      </ul></div>
+      <div><h4>Company</h4><ul>
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/#tools">All Tools</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/privacy.html">Privacy Policy</a></li>
+      </ul></div>
+      <div><h4>Get in Touch</h4><ul class="contact">
+        <li><i class="fas fa-envelope"></i> <a href="mailto:Palcscuno@gmail.com">Palcscuno@gmail.com</a></li>
+        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/916387617678">+91 63876 17678</a></li>
+      </ul></div>
+    </div>
+    <div class="foot-bottom">© 2026 Pro CSC Tools. All rights reserved. Made with <i class="fas fa-heart"></i> in India for all CSC VLEs.</div>
+  </div>
+</footer>
+
+<a href="https://wa.me/916387617678" class="wa-float" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+
+<script>
+// ---- mobile menu ----
+var mb=document.getElementById('menuBtn'),mm=document.getElementById('mobileMenu');
+if(mb){mb.addEventListener('click',function(){mm.style.display=mm.style.display==='flex'?'none':'flex';});}
+document.querySelectorAll('.mobile-menu a').forEach(function(a){a.addEventListener('click',function(){mm.style.display='none';});});
+
+// ---- helpers ----
+var $=function(id){return document.getElementById(id);};
+function fmt(n,sym){sym=sym||'₹';return sym+' '+(Number(n)||0).toLocaleString('en-IN',{minimumFractionDigits:2,maximumFractionDigits:2});}
+function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function fmtDate(v){if(!v)return '—';var d=new Date(v);if(isNaN(d))return '—';return d.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'});}
+
+// ---- items state ----
+var items=[];
+function addItem(desc,qty,rate){items.push({desc:desc||'',qty:qty==null?1:qty,rate:rate==null?0:rate});renderItems();render();}
+function renderItems(){
+  var w=$('itemsWrap');w.innerHTML='';
+  items.forEach(function(it,i){
+    var row=document.createElement('div');row.className='item-row';
+    var amt=(Number(it.qty)||0)*(Number(it.rate)||0);
+    row.innerHTML='<input data-i="'+i+'" data-k="desc" placeholder="Item / service" value="'+esc(it.desc)+'">'+
+      '<input data-i="'+i+'" data-k="qty" type="number" min="0" value="'+it.qty+'">'+
+      '<input data-i="'+i+'" data-k="rate" type="number" min="0" value="'+it.rate+'">'+
+      '<div class="item-amt">'+fmt(amt,$('curSym').value)+'</div>'+
+      '<button class="del-item" data-del="'+i+'" aria-label="Remove"><i class="fas fa-xmark"></i></button>';
+    w.appendChild(row);
+  });
+  w.querySelectorAll('input').forEach(function(inp){
+    inp.addEventListener('input',function(){
+      var i=+inp.getAttribute('data-i'),k=inp.getAttribute('data-k');
+      items[i][k]=(k==='desc')?inp.value:parseFloat(inp.value||0);
+      var amtEl=inp.parentElement.querySelector('.item-amt');
+      if(amtEl)amtEl.textContent=fmt((Number(items[i].qty)||0)*(Number(items[i].rate)||0),$('curSym').value);
+      render();
+    });
+  });
+  w.querySelectorAll('[data-del]').forEach(function(b){
+    b.addEventListener('click',function(){items.splice(+b.getAttribute('data-del'),1);renderItems();render();});
+  });
+}
+
+// ---- render invoice preview ----
+function render(){
+  var sym=$('curSym').value||'₹';
+  $('pName').textContent=$('bizName').value||'Your Business';
+  var biz=[];if($('bizAddr').value)biz.push($('bizAddr').value);
+  if($('bizGst').value)biz.push('GSTIN: '+$('bizGst').value);
+  if($('bizPhone').value)biz.push('Ph: '+$('bizPhone').value);
+  $('pBiz').textContent=biz.join('\n');
+  $('pCustName').textContent=$('custName').value||'Customer';
+  var cust=[];if($('custAddr').value)cust.push($('custAddr').value);
+  if($('custGst').value)cust.push('GSTIN: '+$('custGst').value);
+  if($('custPhone').value)cust.push('Ph: '+$('custPhone').value);
+  $('pCust').textContent=cust.join('\n');
+  $('pInvNo').textContent=$('invNo').value||'—';
+  $('pDate').textContent=fmtDate($('invDate').value);
+  $('pDue').textContent=fmtDate($('dueDate').value);
+  $('pNotes').textContent=$('invNotes').value||'';
+
+  var tb=$('pItems');tb.innerHTML='';var sub=0;
+  items.forEach(function(it,i){
+    var amt=(Number(it.qty)||0)*(Number(it.rate)||0);sub+=amt;
+    var tr=document.createElement('tr');
+    tr.innerHTML='<td>'+(i+1)+'</td><td>'+(esc(it.desc)||'—')+'</td><td class="r">'+(Number(it.qty)||0)+'</td><td class="r">'+fmt(it.rate,sym)+'</td><td class="r">'+fmt(amt,sym)+'</td>';
+    tb.appendChild(tr);
+  });
+  if(!items.length){tb.innerHTML='<tr><td colspan="5" style="text-align:center;color:#aaa;padding:18px">No items added</td></tr>';}
+
+  var disc=parseFloat($('discount').value||0);
+  var taxable=Math.max(0,sub-disc);
+  var rate=parseFloat($('gstRate').value||0);
+  var type=$('gstType').value;
+  var taxAmt=taxable*rate/100;
+  var grand=taxable+taxAmt;
+  $('pTaxBadge').textContent=rate>0?('GST Invoice · '+rate+'%'):'Bill / Cash Memo';
+
+  var t=$('pTotals');var h='';
+  h+='<div class="t-row"><span>Subtotal</span><span>'+fmt(sub,sym)+'</span></div>';
+  if(disc>0)h+='<div class="t-row"><span>Discount</span><span>- '+fmt(disc,sym)+'</span></div>';
+  if(rate>0){
+    if(type==='intra'){
+      h+='<div class="t-row"><span>CGST @ '+(rate/2)+'%</span><span>'+fmt(taxAmt/2,sym)+'</span></div>';
+      h+='<div class="t-row"><span>SGST @ '+(rate/2)+'%</span><span>'+fmt(taxAmt/2,sym)+'</span></div>';
+    }else{
+      h+='<div class="t-row"><span>IGST @ '+rate+'%</span><span>'+fmt(taxAmt,sym)+'</span></div>';
+    }
+  }
+  h+='<div class="t-row grand"><span>Total</span><span>'+fmt(grand,sym)+'</span></div>';
+  t.innerHTML=h;
+}
+
+// ---- logo upload ----
+$('logoInput').addEventListener('change',function(e){
+  var f=e.target.files[0];if(!f)return;
+  if(f.size>2*1024*1024){alert('Please upload an image under 2MB.');return;}
+  var r=new FileReader();r.onload=function(ev){var img=$('invLogo');img.src=ev.target.result;img.style.display='block';$('logoText').textContent=f.name;};r.readAsDataURL(f);
+});
+
+// ---- live bindings ----
+['bizName','bizAddr','bizGst','bizPhone','custName','custAddr','custGst','custPhone','invNo','invDate','dueDate','gstRate','gstType','discount','curSym','invNotes'].forEach(function(id){
+  var el=$(id);if(el){el.addEventListener('input',function(){if(id==='curSym')renderItems();render();});el.addEventListener('change',render);}
+});
+$('addItem').addEventListener('click',function(){addItem('',1,0);});
+
+// ---- actions ----
+$('printBtn').addEventListener('click',function(){window.print();});
+$('pdfBtn').addEventListener('click',function(){
+  var el=$('invoice');var prev=el.style.transform;el.style.transform='none';
+  var opt={margin:0,filename:($('invNo').value||'invoice')+'.pdf',image:{type:'jpeg',quality:.98},html2canvas:{scale:2,useCORS:true},jsPDF:{unit:'mm',format:'a4',orientation:'portrait'}};
+  html2pdf().set(opt).from(el).save().then(function(){el.style.transform=prev;}).catch(function(){el.style.transform=prev;});
+});
+$('resetBtn').addEventListener('click',function(){if(confirm('Reset all fields and items?'))location.reload();});
+
+// ---- init ----
+(function(){
+  var today=new Date();var due=new Date();due.setDate(due.getDate()+7);
+  $('invDate').value=today.toISOString().slice(0,10);
+  $('dueDate').value=due.toISOString().slice(0,10);
+  addItem('Aadhaar Print & Lamination',2,50);
+  addItem('PAN Card Application',1,200);
+  addItem('Passport Size Photo (8 copies)',1,80);
+})();
+</script>
+</body>
+</html>
