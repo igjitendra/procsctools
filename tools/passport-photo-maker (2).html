@@ -1,0 +1,1812 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 🚀 3. HTML META CACHE PREVENTION 🚀 -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <title>Passport Photo Maker – Pro CSC Tools | Auto Crop, Remove BG &amp; Print A4</title>
+    <meta name="description" content="Create official passport size photos online in seconds. Free AI background remover, international sizes (2x2 inch, 3.5x4.5 cm), and ready-to-print A4 sheets.">
+    <meta name="keywords" content="passport photo maker, auto crop passport photo, remove background passport photo, 3.5 x 4.5 cm photo maker, 2x2 inch passport photo, free passport photo generator, online csc tools">
+    <link rel="canonical" href="https://procsctools.in/tools/passport-photo-maker.html">
+    <meta name="author" content="Pro CSC Tools">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Free Passport Photo Maker Online | Auto Crop, Remove BG & Print A4">
+    <meta property="og:description" content="Create official passport size photos online in seconds. Free AI background remover, international sizes (2x2 inch, 3.5x4.5 cm), and ready-to-print A4 sheets.">
+    <meta property="og:url" content="https://procsctools.in/tools/passport-photo-maker.html">
+    <meta property="og:site_name" content="Pro CSC Tools">
+    <meta property="og:image" content="https://procsctools.in/images/free-passport-photo-maker.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Passport Photo Maker Online | Auto Crop, Remove BG & Print A4">
+    <meta name="twitter:description" content="Create official passport size photos online in seconds. Free AI background remover, international sizes (2x2 inch, 3.5x4.5 cm), and ready-to-print A4 sheets.">
+    <meta name="twitter:image" content="https://procsctools.in/images/free-passport-photo-maker.webp">
+
+    <link rel="icon" type="image/png" href="/assets/images/logo.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#8a0f2f">
+    <link rel="apple-touch-icon" href="/assets/images/icon-192.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script type="application/ld+json">
+        [{
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "Pro CSC Tools",
+                "alternateName": "Pro CSC Tools",
+                "url": "https://procsctools.in/",
+                "logo": "https://procsctools.in/assets/images/logo.png",
+                "sameAs": [
+                    "https://www.facebook.com/share/1M8xgrARJy",
+                    "https://www.youtube.com/@Pro CSC Tools24",
+                    "https://www.instagram.com/online_suru",
+                    "https://t.me/online_suru",
+                    "https://wa.me/916387617678"
+                ]
+            },
+            {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "Pro CSC Tools",
+                "url": "https://procsctools.in/",
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://procsctools.in/search?q={search_term_string}",
+                    "query-input": "required name=search_term_string"
+                }
+            },
+            {
+                "@context": "https://schema.org",
+                "@type": "SiteNavigationElement",
+                "name": [
+                    "Passport Photo Maker",
+                    "Remove Background",
+                    "WhatsApp Document Fixer",
+                    "Latest Jobs & Sarkari Yojana",
+                    "Admit Card",
+                    "Results"
+                ],
+                "url": [
+                    "https://procsctools.in/tools/passport-photo-maker.html",
+                    "https://procsctools.in/remove-bg",
+                    "https://procsctools.in/whatsapp-image-editor",
+                    "https://procsctools.in/category/Latest+Jobs",
+                    "https://procsctools.in/category/Admit+Card",
+                    "https://procsctools.in/category/Result"
+                ]
+            }
+        ]
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QL80Z3DZ8Z"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-QL80Z3DZ8Z');
+    </script>
+    
+    <style>
+        /* Logo Shimmer */
+
+        .logo-shimmer-container {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .logo-shimmer-container::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -150%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0) 100%);
+            transform: skewX(-25deg);
+            animation: shimmer 3.5s infinite;
+        }
+
+        @keyframes shimmer {
+            0% {
+                left: -150%;
+            }
+            50% {
+                left: 200%;
+            }
+            100% {
+                left: 200%;
+            }
+        }
+
+        .digital-clock {
+            font-family: 'Courier New', Courier, monospace;
+            letter-spacing: 1px;
+        }
+
+        /* Dropdown Setup */
+
+        @media (min-width: 1024px) {
+            .dropdown-parent:hover .dropdown-menu-content {
+                display: block;
+                animation: slideDown 0.3s ease-out forwards;
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .dropdown-menu-content {
+            display: none;
+        }
+
+        /* 🔥 Premium Scrolling Text (Marquee) CSS 🔥 */
+
+        .horizontal-marquee-container {
+            flex-grow: 1;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            margin: 0 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .horizontal-marquee-content {
+            display: inline-block;
+            padding-left: 100%;
+            animation: scroll-left 25s linear infinite;
+        }
+
+        .horizontal-marquee-container:hover .horizontal-marquee-content {
+            animation-play-state: paused;
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* ✨ Hover Shimmer Effect for Nav Links ✨ */
+
+        .hover-shimmer {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hover-shimmer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -150%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0) 100%);
+            transform: skewX(-25deg);
+            z-index: 1;
+            transition: none;
+        }
+
+        .hover-shimmer:hover::before {
+            animation: shimmer-fast 1s infinite;
+        }
+
+        @keyframes shimmer-fast {
+            0% {
+                left: -150%;
+            }
+            100% {
+                left: 200%;
+            }
+        }
+    </style>
+    
+
+    <style>#removeBgApiBtn{display:none !important;}</style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@graph":[
+    {"@type":"WebApplication","name":"Passport Photo Maker","url":"https://procsctools.in/tools/passport-photo-maker.html","applicationCategory":"MultimediaApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"publisher":{"@type":"Organization","name":"Pro CSC Tools","url":"https://procsctools.in"}},
+    {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://procsctools.in"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://procsctools.in/tools"},{"@type":"ListItem","position":3,"name":"Passport Photo Maker","item":"https://procsctools.in/tools/passport-photo-maker.html"}]},
+    {"@type":"HowTo","name":"Passport size photo kaise banaye","step":[{"@type":"HowToStep","name":"Photo upload karo"},{"@type":"HowToStep","name":"Size chuno aur auto crop karo"},{"@type":"HowToStep","name":"Background remove karo"},{"@type":"HowToStep","name":"A4 sheet print ya download karo"}]}
+    ]}
+    </script>
+</head>
+
+
+<body class="bg-slate-50 font-sans text-gray-800 antialiased flex flex-col min-h-screen">
+
+<style>
+.acbar{position:sticky;top:0;z-index:9999;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 16px;background:#fff;border-bottom:1px solid #e7e9ee;font-family:"Inter",system-ui,-apple-system,Arial,sans-serif;box-shadow:0 1px 2px rgba(16,23,34,.05);box-sizing:border-box;}
+.acbar *{box-sizing:border-box;}
+.acbar-brand{display:flex;align-items:center;gap:9px;text-decoration:none;color:#111722;font-weight:800;font-size:17px;white-space:nowrap;}
+.acbar-logo{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,#ab183d,#8a0f2f);display:flex;align-items:center;justify-content:center;color:#fff;font-size:15px;flex:0 0 auto;}
+.acbar-nav{display:flex;align-items:center;gap:6px;}
+.acbar-nav a{display:inline-flex;align-items:center;gap:6px;text-decoration:none;color:#37414f;font-weight:600;font-size:14px;padding:8px 12px;border-radius:9px;background:#f5f8fc;border:1px solid #e7e9ee;white-space:nowrap;}
+.acbar-nav a:hover{color:#ab183d;border-color:#ab183d;}
+@media (max-width:600px){.acbar{padding:8px 12px;gap:8px;}.acbar-brand{font-size:15px;gap:7px;}.acbar-logo{width:30px;height:30px;font-size:14px;}.acbar-nav{gap:5px;}.acbar-nav a{padding:9px 10px;font-size:13px;}.acbar-nav a span{display:none;}}
+</style>
+<header class="bg-white shadow-sm sticky top-0 z-50 no-print">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
+        <a href="https://procsctools.in" class="flex items-center gap-2">
+            <div class="w-9 h-9 rounded-lg flex items-center justify-center" style="background:linear-gradient(135deg,#ab183d,#8a0f2f)"><i class="fas fa-crown text-white"></i></div>
+            <span class="text-lg font-extrabold" style="color:#ab183d">Pro CSC Tools</span>
+        </a>
+        <nav class="hidden md:flex gap-5 text-sm font-semibold text-gray-700">
+            <a href="https://procsctools.in" class="hover:text-[#ab183d]">Home</a>
+            <a href="https://procsctools.in/tools" class="hover:text-[#ab183d]">All Tools</a>
+            <a href="https://procsctools.in/blog" class="hover:text-[#ab183d]">Blog</a>
+            <a href="https://procsctools.in/contact" class="hover:text-[#ab183d]">Contact</a>
+        </nav>
+    </div>
+</header>
+
+    <div class="bg-[#8a0f2f] text-white py-2 border-b border-[#8a0f2f]/50" style="display:none">
+        <div class="max-w-7xl mx-auto px-2 md:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center w-full gap-2 sm:gap-0">
+
+            <div class="flex items-center w-full sm:w-auto overflow-hidden">
+                <div class="flex-shrink-0">
+                    <span class="bg-red-600 px-2 py-0.5 rounded text-[10px] font-bold animate-pulse shadow-sm tracking-wider">LIVE</span>
+                </div>
+                <div class="horizontal-marquee-container">
+                    <span class="horizontal-marquee-content uppercase tracking-widest font-semibold text-[#f7d5de] text-[10px] md:text-xs">
+                        India's Fastest Updates & 100% Free Secure CSC Tools. Welcome to Pro CSC Tools - Get Latest Sarkari Result, Admit Card, and Jobs Notification!
+                    </span>
+                </div>
+            </div>
+
+            <div class="flex-shrink-0 flex justify-between w-full sm:w-auto gap-4 font-bold items-center px-1 sm:px-0 text-[10px] md:text-xs text-[#f0b8c6]">
+                <div class="flex gap-3 items-center">
+                    <span><i class="fa-regular fa-calendar-days mr-1"></i> 05 Jul 2026</span>
+                    <span id="live-clock" class="digital-clock"><i class="fa-regular fa-clock mr-1"></i> Loading...</span>
+                </div>
+                <a href="/admin" class="bg-orange-600 hover:bg-orange-700 text-white px-2 py-0.5 rounded text-[9px] md:text-[10px] font-bold shadow-sm flex items-center gap-1 transition-colors">
+                    <i class="fa-solid fa-lock"></i> ADMIN
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <section class="no-print text-white" style="background:linear-gradient(135deg,#ab183d,#8a0f2f)">
+    <div class="max-w-7xl mx-auto px-4 py-10 text-center">
+        <div class="text-xs opacity-80 mb-3"><a href="https://procsctools.in" class="underline">Home</a> / <a href="https://procsctools.in/tools" class="underline">Tools</a> / Passport Photo Maker</div>
+        <span class="inline-block text-xs font-bold tracking-wide px-3 py-1 rounded-full mb-3" style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3)">AUTO CROP · REMOVE BG · 100% FREE</span>
+        <h1 class="text-3xl md:text-4xl font-extrabold mb-3"><i class="fas fa-id-badge mr-3"></i>Passport Photo Maker</h1>
+        <p class="max-w-2xl mx-auto text-white/90">Official passport size photo (2x2 inch, 3.5x4.5 cm) online banao — auto crop, free AI background remover aur ready-to-print A4 sheet. 100% free aur secure.</p>
+    </div>
+</section>
+
+    
+    <main class="flex-grow">
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Pro CSC Tools Passport Photo Maker",
+                "url": "https://procsctools.in/tools/passport-photo-maker.html",
+                "description": "Create official passport size photos online in seconds. Free AI background remover, international sizes (2x2 inch, 3.5x4.5 cm), and ready-to-print A4 sheets.",
+                "applicationCategory": "PhotoEditingApplication",
+                "operatingSystem": "All",
+                "browserRequirements": "Requires JavaScript. Supports Chrome, Edge, Firefox, Safari.",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "INR"
+                },
+                "creator": {
+                    "@type": "Organization",
+                    "name": "Pro CSC Tools",
+                    "url": "https://procsctools.in/"
+                },
+                "featureList": [
+                    "AI Background Removal",
+                    "Automatic 3.5x4.5 cm Cropping",
+                    "International Photo Sizes (US, UK, India, OCI)",
+                    "A4 & 4x6 Sheet Generator",
+                    "High Quality 300 DPI Export",
+                    "Stable Windows Native Color Engine",
+                    "100% Mobile Responsive Layout"
+                ]
+            }
+        </script>
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+        <style>
+            .bg-checkerboard {
+                background-color: #f3f4f6;
+                background-image: linear-gradient(45deg, #e5e7eb 25%, transparent 25%), linear-gradient(-45deg, #e5e7eb 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #e5e7eb 75%), linear-gradient(-45deg, transparent 75%, #e5e7eb 75%);
+                background-size: 20px 20px;
+                background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+            }
+
+            :root {
+                --bg-color: transparent;
+                --manual-filter: none;
+            }
+
+            /* Cropper Styles */
+
+            .cropper-view-box {
+                border: 2px solid #ab183d !important;
+                border-radius: 4px !important;
+                background: var(--bg-color, transparent) !important;
+                outline: none !important;
+            }
+
+            .cropper-canvas {
+                background-color: transparent !important;
+            }
+
+            .cropper-line {
+                background-color: rgba(255, 255, 255, 0.4) !important;
+            }
+
+            .cropper-point {
+                background-color: #ffffff !important;
+                border: 2px solid #ab183d !important;
+                border-radius: 50% !important;
+                width: 12px !important;
+                height: 12px !important;
+                opacity: 1 !important;
+            }
+
+            /* 🔥 Apply Real-Time Filters to Cropper Images 🔥 */
+
+            .cropper-canvas img,
+            .cropper-view-box img {
+                filter: var(--manual-filter, none) !important;
+                transition: filter 0.1s;
+            }
+
+            /* Custom Scrollbar */
+
+            .custom-scrollbar::-webkit-scrollbar {
+                width: 8px;
+                height: 8px;
+            }
+
+            .custom-scrollbar::-webkit-scrollbar-track {
+                background: #f1f5f9;
+                border-radius: 10px;
+            }
+
+            .custom-scrollbar::-webkit-scrollbar-thumb {
+                background: #cbd5e1;
+                border-radius: 10px;
+            }
+
+            .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+                background: #94a3b8;
+            }
+
+            /* Premium iOS Style Toggle Switch */
+
+            .switch {
+                position: relative;
+                display: inline-block;
+                width: 36px;
+                height: 20px;
+            }
+
+            .switch input {
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+
+            .slider {
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #cbd5e1;
+                transition: .4s;
+                border-radius: 34px;
+            }
+
+            .slider:before {
+                position: absolute;
+                content: "";
+                height: 14px;
+                width: 14px;
+                left: 3px;
+                bottom: 3px;
+                background-color: white;
+                transition: .4s;
+                border-radius: 50%;
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+            }
+
+            input:checked+.slider {
+                background-color: #4F46E5;
+            }
+
+            input:checked+.slider:before {
+                transform: translateX(16px);
+            }
+
+            /* Premium Range Slider for Tuning */
+
+            .premium-slider {
+                -webkit-appearance: none;
+                width: 100%;
+                background: transparent;
+            }
+
+            .premium-slider::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                height: 16px;
+                width: 16px;
+                border-radius: 50%;
+                background: #4F46E5;
+                cursor: pointer;
+                margin-top: -6px;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+                border: 2px solid white;
+                transition: transform 0.1s;
+            }
+
+            .premium-slider::-webkit-slider-thumb:hover {
+                transform: scale(1.2);
+            }
+
+            .premium-slider::-webkit-slider-runnable-track {
+                width: 100%;
+                height: 4px;
+                cursor: pointer;
+                background: #e2e8f0;
+                border-radius: 2px;
+            }
+
+            .premium-slider:focus {
+                outline: none;
+            }
+        </style>
+
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-8">
+
+            <div class="text-center mb-8 no-print">
+                <h2 class="text-3xl md:text-4xl font-black text-[#8a0f2f] mb-2 tracking-tight">Make Passport Size Photo</h2>
+                <p class="text-gray-500 text-[15px] font-medium">Perfect passport size photos in seconds — crop, remove background &amp; print A4.</p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-8 items-start">
+
+                <div class="w-full lg:w-8/12 flex flex-col gap-8">
+
+                    <div id="upload-container" class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border-2 border-dashed border-[#ab183d] hover:border-[#8a0f2f] transition-all flex flex-col items-center justify-center min-h-[350px] relative no-print">
+
+                        <input type="file" id="image-upload" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10" accept="image/png, image/jpeg, image/webp">
+
+                        <div id="upload-content" class="text-center pointer-events-none w-full">
+                            <i class="fa-solid fa-cloud-arrow-up text-5xl text-[#ab183d] mb-4"></i>
+                            <p class="text-gray-600 font-medium text-lg mb-6">Select Or Drag & Drop Image Here</p>
+                            <button class="bg-[#0D9488] hover:bg-teal-700 text-white font-bold py-2.5 px-8 rounded transition-all shadow-md">Select Image</button>
+                            <p class="text-gray-400 text-xs mt-4">Supports JPG, PNG, WEBP (Max 5MB)</p>
+                        </div>
+
+                        <div id="editor-workspace" class="hidden w-full flex-col z-20">
+
+                            <div class="bg-white border border-gray-200 rounded-2xl p-4 md:p-5 w-full mb-4 shadow-sm">
+                                <div class="flex flex-col md:flex-row justify-between items-center gap-6 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+
+                                    <div class="flex flex-col items-center w-full md:w-1/3 px-2">
+                                        <span class="text-[11px] font-black text-[#4F46E5] uppercase tracking-widest mb-3 flex items-center gap-1.5"><i class="fas fa-robot"></i> AI Background</span>
+                                        <div class="flex flex-col gap-2 w-full max-w-[180px]">
+                                            <button id="removeBgApiBtn" onclick="removeBackgroundAPI()" class="w-full bg-[#4F46E5] hover:bg-[#8a0f2f] text-white font-bold py-2 rounded-lg shadow-sm transition-all text-xs uppercase tracking-wide flex items-center justify-center gap-2">
+                                        <i class="fas fa-cloud"></i> Pro Remove.bg
+                                    </button>
+                                            <button id="removeBgLocalBtn" onclick="removeBackgroundFromPhoto()" class="w-full bg-[#10B981] hover:bg-emerald-600 text-white font-bold py-2 rounded-lg shadow-sm transition-all text-xs uppercase tracking-wide flex items-center justify-center gap-2">
+                                        <i class="fas fa-microchip"></i> Free Local AI
+                                    </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex flex-col items-center w-full md:w-1/3 pt-4 md:pt-0 px-2">
+                                        <span class="text-[11px] font-black text-[#ab183d] uppercase tracking-widest mb-3 flex items-center gap-1.5"><i class="fas fa-palette"></i> Basic Colors</span>
+                                        <input type="hidden" id="bgType" value="solid"><input type="hidden" id="bgVal" value="transparent">
+                                        <div class="flex flex-wrap justify-center gap-2 items-center">
+                                            <div class="w-8 h-8 rounded-full cursor-pointer border border-gray-300 hover:scale-110 hover:border-[#ab183d] transition shadow-sm bg-[#3b82f6]" onclick="selectBg('solid', '#3b82f6', this)"></div>
+                                            <div class="w-8 h-8 rounded-full cursor-pointer border border-gray-300 hover:scale-110 hover:border-[#ab183d] transition shadow-sm bg-[#ffffff]" onclick="selectBg('solid', '#ffffff', this)"></div>
+                                            <div class="w-8 h-8 rounded-full cursor-pointer border border-gray-300 hover:scale-110 hover:border-[#ab183d] transition shadow-sm bg-[#ef4444]" onclick="selectBg('solid', '#ef4444', this)"></div>
+                                            <div class="w-8 h-8 rounded-full cursor-pointer border border-gray-300 hover:scale-110 hover:border-[#ab183d] transition shadow-sm bg-[#10b981]" onclick="selectBg('solid', '#10b981', this)"></div>
+                                            <div class="w-8 h-8 rounded-full cursor-pointer border border-gray-300 hover:scale-110 hover:border-[#ab183d] transition shadow-sm bg-[#64748b]" onclick="selectBg('solid', '#64748b', this)"></div>
+
+                                            <div class="relative w-8 h-8 rounded-full overflow-hidden border border-dashed border-gray-400 shadow-sm hover:scale-110 transition flex items-center justify-center bg-gray-50" title="Custom Solid Color">
+                                                <i class="fas fa-plus text-gray-500 text-xs pointer-events-none z-0 absolute"></i>
+                                                <input type="color" id="customSolid" class="absolute inset-0 w-full h-full cursor-pointer opacity-0 z-10" oninput="applyCustomSolid(this.value)">
+                                                <div id="solidColorWrapper" class="absolute inset-0 w-full h-full bg-transparent pointer-events-none z-0"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex flex-col items-center w-full md:w-1/3 pt-4 md:pt-0 px-2">
+                                        <span class="text-[11px] font-black text-rose-500 uppercase tracking-widest mb-3 flex items-center gap-1.5"><i class="fas fa-fill-drip"></i> Multi Colors</span>
+                                        <div class="flex flex-wrap justify-center gap-2 items-center">
+                                            <div class="w-8 h-8 rounded-full cursor-pointer border border-gray-300 hover:scale-110 hover:border-rose-500 transition shadow-sm" style="background: linear-gradient(to bottom, #60a5fa, #eff6ff);" onclick="selectBg('gradient', '#60a5fa,#eff6ff', this)"></div>
+                                            <div class="w-8 h-8 rounded-full cursor-pointer border border-gray-300 hover:scale-110 hover:border-rose-500 transition shadow-sm" style="background: linear-gradient(to bottom, #f87171, #fef2f2);" onclick="selectBg('gradient', '#f87171,#fef2f2', this)"></div>
+                                            <div class="w-8 h-8 rounded-full cursor-pointer border border-gray-300 hover:scale-110 hover:border-rose-500 transition shadow-sm" style="background: linear-gradient(to bottom, #34d399, #ecfdf5);" onclick="selectBg('gradient', '#34d399,#ecfdf5', this)"></div>
+                                            <div class="w-8 h-8 rounded-full cursor-pointer border border-gray-300 hover:scale-110 hover:border-rose-500 transition shadow-sm" style="background: linear-gradient(to bottom, #a78bfa, #f5f3ff);" onclick="selectBg('gradient', '#a78bfa,#f5f3ff', this)"></div>
+                                            <div class="w-8 h-8 rounded-full cursor-pointer border border-gray-300 hover:scale-110 hover:border-rose-500 transition shadow-sm" style="background: linear-gradient(to bottom, #fb923c, #fff7ed);" onclick="selectBg('gradient', '#fb923c,#fff7ed', this)"></div>
+
+                                            <div class="relative flex w-12 h-8 rounded-full overflow-hidden border border-dashed border-gray-400 shadow-sm hover:scale-110 transition" title="Custom Multi Color">
+                                                <input type="color" id="customGrad1" value="#ab183d" class="absolute left-0 top-0 w-1/2 h-full cursor-pointer opacity-0 z-10" oninput="applyCustomGradient()">
+                                                <div id="gradVis1" class="absolute left-0 top-0 w-1/2 h-full bg-[#ab183d] pointer-events-none z-0"></div>
+
+                                                <input type="color" id="customGrad2" value="#0ea5e9" class="absolute right-0 top-0 w-1/2 h-full cursor-pointer opacity-0 z-10" oninput="applyCustomGradient()">
+                                                <div id="gradVis2" class="absolute right-0 top-0 w-1/2 h-full bg-[#0ea5e9] pointer-events-none z-0"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="bg-white border border-gray-200 rounded-2xl p-4 md:p-5 w-full mb-4 shadow-sm flex flex-col md:flex-row gap-4 justify-between items-center">
+                                <div class="flex-1 w-full px-2">
+                                    <div class="flex justify-between items-center text-[10px] font-black text-gray-500 uppercase tracking-widest mb-2">
+                                        <span><i class="fas fa-sun text-yellow-500 mr-1"></i> Bright</span>
+                                        <span id="valBright" class="text-[#ab183d] bg-[#fbe9ee] px-1.5 py-0.5 rounded">100%</span>
+                                    </div>
+                                    <input type="range" id="tuneBrightness" min="50" max="150" value="100" class="premium-slider" oninput="applyManualFilters()">
+                                </div>
+                                <div class="hidden md:block w-px h-10 bg-gray-100"></div>
+                                <div class="flex-1 w-full px-2">
+                                    <div class="flex justify-between items-center text-[10px] font-black text-gray-500 uppercase tracking-widest mb-2">
+                                        <span><i class="fas fa-adjust text-gray-700 mr-1"></i> Contrast</span>
+                                        <span id="valContrast" class="text-[#ab183d] bg-[#fbe9ee] px-1.5 py-0.5 rounded">100%</span>
+                                    </div>
+                                    <input type="range" id="tuneContrast" min="50" max="150" value="100" class="premium-slider" oninput="applyManualFilters()">
+                                </div>
+                                <div class="hidden md:block w-px h-10 bg-gray-100"></div>
+                                <div class="flex-1 w-full px-2">
+                                    <div class="flex justify-between items-center text-[10px] font-black text-gray-500 uppercase tracking-widest mb-2">
+                                        <span><i class="fas fa-tint text-[#ab183d] mr-1"></i> Saturate</span>
+                                        <span id="valSaturate" class="text-[#ab183d] bg-[#fbe9ee] px-1.5 py-0.5 rounded">100%</span>
+                                    </div>
+                                    <input type="range" id="tuneSaturate" min="0" max="200" value="100" class="premium-slider" oninput="applyManualFilters()">
+                                </div>
+                            </div>
+
+                            <div class="w-full max-w-3xl mx-auto bg-checkerboard rounded-xl overflow-hidden shadow-inner relative flex items-center justify-center border border-gray-300 mb-4" style="height: 50vh; min-height: 300px;">
+                                <img id="cropperImage" src="" alt="Workspace" style="display: block; max-width: 100%;">
+                            </div>
+
+                            <div class="bg-white border border-gray-200 p-4 rounded-xl shadow-sm w-full mb-4">
+                                <div class="grid grid-cols-1 lg:flex lg:flex-wrap items-center justify-between gap-5">
+
+                                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2 w-full lg:w-auto">
+                                        <span class="text-[10px] font-black text-gray-500 uppercase tracking-widest shrink-0">Layout:</span>
+                                        <div class="flex flex-wrap w-full bg-gray-50 p-1 rounded-lg border border-gray-200 gap-1 sm:gap-0">
+                                            <button class="layout-btn active bg-[#ab183d] text-white shadow-md px-2 py-2 sm:py-1.5 text-[10px] sm:text-xs font-bold rounded-md transition-all flex-1 text-center" data-layout="a4">A4 (5)</button>
+                                            <button class="layout-btn text-gray-600 px-2 py-2 sm:py-1.5 text-[10px] sm:text-xs font-bold rounded-md hover:bg-gray-200 transition-all flex-1 text-center" data-layout="a4_6">A4 (6)</button>
+                                            <button class="layout-btn text-gray-600 px-2 py-2 sm:py-1.5 text-[10px] sm:text-xs font-bold rounded-md hover:bg-gray-200 transition-all flex-1 text-center" data-layout="4x6">4x6 (6)</button>
+                                            <button class="layout-btn text-gray-600 px-2 py-2 sm:py-1.5 text-[10px] sm:text-xs font-bold rounded-md hover:bg-gray-200 transition-all flex-1 text-center" data-layout="4x6_8">4x6 (8)</button>
+                                            <button class="layout-btn text-gray-600 px-2 py-2 sm:py-1.5 text-[10px] sm:text-xs font-bold rounded-md hover:bg-gray-200 transition-all flex-1 text-center" data-layout="single">One</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex flex-wrap md:flex-nowrap items-center justify-between gap-4 w-full lg:w-auto">
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-[10px] font-black text-gray-500 uppercase tracking-widest">Qty:</span>
+                                            <input type="number" id="numCopiesInline" value="5" min="1" max="36" class="w-14 h-9 text-center font-bold text-[#8a0f2f] bg-[#fbe9ee] border border-[#f0b8c6] rounded-md focus:outline-none focus:ring-2 focus:ring-[#d9304f]">
+                                        </div>
+
+                                        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2 w-full sm:w-auto flex-1">
+                                            <span class="text-[10px] font-black text-gray-500 uppercase tracking-widest">Size:</span>
+                                            <select id="countrySizeSelect" class="h-9 w-full sm:w-auto text-[11px] font-bold text-[#8a0f2f] bg-[#fbe9ee] border border-[#f0b8c6] rounded-md focus:outline-none focus:ring-2 focus:ring-[#d9304f] px-2" onchange="updatePassportSize()">
+                                        <option value="in_std" selected>IN India (Passport/Visa)</option>
+                                        <option value="in_oci">IN India (OCI / 2x2")</option>
+                                        <option value="us_std">US US (Visa/Passport)</option>
+                                        <option value="gb_std">GB UK / EU / AUS</option>
+                                        <option value="cn_std">CN China</option>
+                                        <option value="jp_std">JP Japan</option>
+                                        <option value="sg_std">SG Singapore</option>
+                                        <option value="ae_std">AE UAE</option>
+                                        <option value="custom" class="font-black text-[#8a0f2f]">Custom Size (mm)</option>
+                                    </select>
+
+                                            <div id="customSizeInputs" class="hidden items-center gap-1 w-full sm:w-auto bg-gray-50 p-1.5 rounded-md border border-gray-200 mt-2 sm:mt-0">
+                                                <input type="number" id="customW" placeholder="W" value="35" class="w-14 h-7 text-[11px] text-center font-bold border border-gray-300 rounded focus:ring-1 focus:ring-[#d9304f] outline-none" oninput="applyCustomSize()">
+                                                <span class="text-xs font-bold text-gray-400">x</span>
+                                                <input type="number" id="customH" placeholder="H" value="45" class="w-14 h-7 text-[11px] text-center font-bold border border-gray-300 rounded focus:ring-1 focus:ring-[#d9304f] outline-none" oninput="applyCustomSize()">
+                                                <span class="text-[9px] text-gray-500 font-bold ml-1">mm</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="relative w-full sm:w-auto">
+                                        <button id="advSettingsBtn" class="w-full justify-center flex items-center gap-2 bg-gray-900 text-white px-4 py-2.5 rounded-lg text-[10px] font-black uppercase tracking-wider hover:bg-black transition-all shadow-sm">
+                                    <i class="fas fa-cog"></i> Advanced Settings
+                                </button>
+
+                                        <div id="advSettingsPanel" class="hidden absolute right-0 sm:left-auto left-0 bottom-full mb-2 w-full sm:w-72 bg-white border border-gray-200 rounded-xl shadow-xl z-[50] p-5">
+                                            <h4 class="text-xs font-black text-gray-800 uppercase tracking-widest mb-4 pb-2 border-b border-gray-100">Configuration</h4>
+
+                                            <div class="space-y-4">
+                                                <div class="flex items-center justify-between">
+                                                    <div>
+                                                        <p class="text-[11px] font-black text-gray-800 flex items-center"><i class="fas fa-bolt text-yellow-500 w-4"></i> AI Photo Enhancer</p>
+                                                        <p class="text-[9px] text-gray-400 font-bold uppercase pl-4">Super Sharpness & Auto Relight</p>
+                                                    </div>
+                                                    <label class="switch"><input type="checkbox" id="aiEnhance"><span class="slider"></span></label>
+                                                </div>
+
+                                                <div class="flex items-center justify-between">
+                                                    <div>
+                                                        <p class="text-[11px] font-black text-gray-800 flex items-center"><i class="fas fa-border-style text-gray-500 w-4"></i> Photo Border</p>
+                                                        <p class="text-[9px] text-gray-400 font-bold uppercase pl-4">2px Black Stroke</p>
+                                                    </div>
+                                                    <label class="switch"><input type="checkbox" id="addBorderInline" checked><span class="slider"></span></label>
+                                                </div>
+
+                                                <div class="flex items-center justify-between">
+                                                    <div>
+                                                        <p class="text-[11px] font-black text-gray-800 flex items-center"><i class="fas fa-cut text-gray-500 w-4"></i> Cutting Guides</p>
+                                                        <p class="text-[9px] text-gray-400 font-bold uppercase pl-4">Premium Corner Marks (L-Shape)</p>
+                                                    </div>
+                                                    <label class="switch"><input type="checkbox" id="cuttingGuides" checked><span class="slider"></span></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="mt-4 flex justify-center">
+                                <button id="change-image-btn" class="text-red-500 font-bold text-sm hover:underline"><i class="fa-solid fa-trash mr-1"></i> Remove & Upload New Image</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="w-full mt-4 mb-4 block text-center mx-auto no-print" style="min-height: 100px; overflow: visible;">
+                        
+                        <!-- ad-top.php -->
+                        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="2624391425" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div>
+
+                    <div id="preview-workspace" class="hidden w-full flex-col z-20 no-print">
+
+                        <button id="generateBtnInline" onclick="executeLayoutGenerationInline()" class="w-full bg-green-600 hover:bg-green-700 text-white font-black py-4 rounded-xl shadow-lg transition-transform hover:-translate-y-1 flex items-center justify-center gap-2 text-sm uppercase tracking-wide">
+                    <i class="fa-solid fa-magic"></i> Generate Photo Preview
+                </button>
+
+                        <div id="inlinePreviewContainer" class="hidden mt-6 bg-white border border-gray-200 rounded-2xl p-6 md:p-8 shadow-sm flex-col items-center">
+                            <div class="flex items-center justify-between w-full mb-4 border-b border-gray-100 pb-3">
+                                <h3 class="font-black text-gray-800 uppercase tracking-wide"><i class="fas fa-eye text-[#ab183d] mr-2"></i> Live Preview</h3>
+                                <span class="text-[10px] font-bold text-green-600 bg-green-100 px-2 py-1 rounded uppercase tracking-widest">Ready to Download</span>
+                            </div>
+
+                            <div class="w-full bg-gray-100 p-4 rounded-xl border border-gray-300 shadow-inner flex justify-center custom-scrollbar overflow-auto max-h-[600px]" style="background-image: radial-gradient(#d7d7ec 1px, transparent 1px); background-size: 20px 20px;">
+                                <img id="inlinePreviewImg" class="shadow-2xl border border-gray-300 bg-white" src="" style="max-width:100%; object-fit:contain;">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full mt-6">
+                                <button onclick="printResultInline()" class="w-full py-3.5 bg-[#fbe9ee] hover:bg-[#fbe9ee] text-[#8a0f2f] font-black rounded-xl border border-[#f0b8c6] transition-colors shadow-sm flex items-center justify-center uppercase tracking-widest text-xs">
+                            <i class="fas fa-print mr-2 text-lg"></i> Direct Print
+                        </button>
+                                <button onclick="downloadFileInline('jpg')" class="w-full py-3.5 bg-gray-800 hover:bg-gray-900 text-white font-black rounded-xl transition-colors shadow-sm flex items-center justify-center uppercase tracking-widest text-xs">
+                            <i class="fas fa-file-image mr-2 text-lg"></i> Download JPG
+                        </button>
+                                <button onclick="downloadPDFInline()" class="w-full py-3.5 bg-rose-600 hover:bg-rose-700 text-white font-black rounded-xl transition-colors shadow-sm flex items-center justify-center uppercase tracking-widest text-xs">
+                            <i class="fas fa-file-pdf mr-2 text-lg"></i> Download PDF
+                        </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="dynamic-ad-box" class="hidden w-full mt-8 mb-8 block text-center mx-auto no-print" style="min-height: 100px; overflow: visible;">
+                        
+                        <!-- ad-top.php -->
+                        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="2624391425" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div>
+
+                    <!-- 🚀 FINAL PRO SEO & BRANDING SECTION START 🚀 -->
+                    <div class="flex flex-col gap-10 mt-4 no-print">
+
+                        <!-- 0. ORIGINAL BRANDING BOX (Restored for #1 Ranking) -->
+                        <div class="bg-[#fbe9ee] border border-[#f7d5de] rounded-xl p-6 text-center shadow-sm">
+                            <h2 class="text-[#8a0f2f] font-black text-xl md:text-2xl mb-2">Pro CSC Tools PASSPORT PHOTO MAKER</h2>
+                            <p class="text-gray-600 font-medium text-sm">Best Free Online Passport Photo Maker - Create 3.5CM X 4.5CM in Seconds</p>
+                            <!-- 🌟 Premium Visual Demo Section (Crystal Clear HD & Perfect Aspect Ratio) -->
+                            <div class="flex flex-wrap justify-center items-center gap-4 md:gap-8 mt-8 w-full max-w-5xl mx-auto no-print">
+
+                                <!-- Step 1: Original Image -->
+                                <div class="w-32 h-44 md:w-40 md:h-56 bg-white rounded-xl shadow border border-gray-200 flex flex-col p-2 hover:shadow-lg transition-all duration-300">
+                                    <div class="w-full h-[82%] overflow-hidden rounded bg-gray-50 flex items-center justify-center">
+                                        <img src="assets/images/passport-photo-kaise-banaye.webp" alt="Passport photo kaise banaye mobile se" class="w-full h-full object-contain">
+                                    </div>
+                                    <div class="w-full h-[18%] flex items-center justify-center text-[11px] md:text-sm font-extrabold text-gray-600 uppercase tracking-wider mt-1">
+                                        Original
+                                    </div>
+                                </div>
+
+                                <!-- Arrow 1 -->
+                                <i class="fa-solid fa-arrow-right text-[#ab183d] text-xl md:text-3xl"></i>
+
+                                <!-- Step 2: 3.5 x 4.5 Transparent -->
+                                <div class="w-32 h-44 md:w-40 md:h-56 bg-white rounded-xl shadow border border-gray-200 flex flex-col p-2 hover:shadow-lg transition-all duration-300">
+                                    <div class="w-full h-[82%] overflow-hidden rounded bg-white flex items-center justify-center">
+                                        <img src="assets/images/free-passport-photo-maker.webp" alt="Free online passport size photo maker" class="w-full h-full object-contain filter drop-shadow-md">
+                                    </div>
+                                    <div class="w-full h-[18%] flex items-center justify-center text-[11px] md:text-sm font-extrabold text-[#8a0f2f] uppercase tracking-wider mt-1">
+                                        3.5 x 4.5
+                                    </div>
+                                </div>
+
+                                <!-- Arrow 2 -->
+                                <i class="fa-solid fa-arrow-right text-[#ab183d] text-xl md:text-3xl"></i>
+
+                                <!-- Step 3: A4 Sheet with 6 Grid Photos (Fixed Blur & Kept Perfect Size) -->
+                                <div class="w-40 h-52 md:w-48 md:h-64 bg-white rounded-xl shadow border border-gray-200 p-2 flex flex-col hover:shadow-lg transition-all duration-300">
+                                    <!-- 6 Photos Grid Area (Centered & Locked to 3.5/4.5 Ratio) -->
+                                    <div class="w-full h-[82%] flex items-center justify-center p-1 md:p-1.5 bg-[#f8fafc] rounded border border-gray-200">
+                                        <div class="grid grid-cols-3 gap-1 md:gap-[6px] w-full">
+                                            <!-- 6 HD Photos with 1px border and perfect ratio -->
+                                            <div style="aspect-ratio: 3.5/4.5;" class="border border-gray-300 shadow-sm overflow-hidden bg-white"><img src="assets/images/passport-size-photo-a4-sheet.webp" class="w-full h-full object-cover"></div>
+                                            <div style="aspect-ratio: 3.5/4.5;" class="border border-gray-300 shadow-sm overflow-hidden bg-white"><img src="assets/images/passport-size-photo-a4-sheet.webp" class="w-full h-full object-cover"></div>
+                                            <div style="aspect-ratio: 3.5/4.5;" class="border border-gray-300 shadow-sm overflow-hidden bg-white"><img src="assets/images/passport-size-photo-a4-sheet.webp" class="w-full h-full object-cover"></div>
+                                            <div style="aspect-ratio: 3.5/4.5;" class="border border-gray-300 shadow-sm overflow-hidden bg-white"><img src="assets/images/passport-size-photo-a4-sheet.webp" class="w-full h-full object-cover"></div>
+                                            <div style="aspect-ratio: 3.5/4.5;" class="border border-gray-300 shadow-sm overflow-hidden bg-white"><img src="assets/images/passport-size-photo-a4-sheet.webp" class="w-full h-full object-cover"></div>
+                                            <div style="aspect-ratio: 3.5/4.5;" class="border border-gray-300 shadow-sm overflow-hidden bg-white"><img src="assets/images/passport-size-photo-a4-sheet.webp" class="w-full h-full object-cover"></div>
+                                        </div>
+                                    </div>
+                                    <div class="w-full h-[18%] flex items-center justify-center text-[11px] md:text-sm font-extrabold text-gray-700 uppercase tracking-wider mt-1">
+                                        A4 SHEET
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- 1. Features Highlight Section (With Keywords) -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition">
+                                <div class="w-12 h-12 bg-[#fbe9ee] text-[#ab183d] rounded-xl flex items-center justify-center text-xl mb-4"><i class="fas fa-layer-group"></i></div>
+                                <h3 class="text-lg font-black text-gray-900 mb-2">Create Passport Size Photo Online Free</h3>
+                                <p class="text-[14px] text-gray-600 leading-relaxed">Create repeated <strong>passport size photo</strong> layouts on a single A4 or 4x6 page. Perfect for CSC centers and home printing to save costs instantly.</p>
+                            </div>
+
+                            <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition">
+                                <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center text-xl mb-4"><i class="fas fa-crop-alt"></i></div>
+                                <h3 class="text-lg font-black text-gray-900 mb-2">Smart Spacing & Passport Size Photo Maker</h3>
+                                <p class="text-[14px] text-gray-600 leading-relaxed">Our advanced <strong>passport size photo maker</strong> automatically adds perfect spacing and premium L-shape corner marks for easy cutting.</p>
+                            </div>
+
+                            <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition">
+                                <div class="w-12 h-12 bg-[#fbe9ee] text-[#ab183d] rounded-xl flex items-center justify-center text-xl mb-4"><i class="fas fa-file-pdf"></i></div>
+                                <h3 class="text-lg font-black text-gray-900 mb-2">Download Print-Ready Formats</h3>
+                                <p class="text-[14px] text-gray-600 leading-relaxed">Now you can <strong>create passport size photo online free</strong> and download your sheet in high-quality PDF format for 100% accurate printing.</p>
+                            </div>
+
+                            <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition">
+                                <div class="w-12 h-12 bg-rose-50 text-rose-600 rounded-xl flex items-center justify-center text-xl mb-4"><i class="fas fa-user-astronaut"></i></div>
+                                <h3 class="text-lg font-black text-gray-900 mb-2">AI Passport Photo Maker Free</h3>
+                                <p class="text-[14px] text-gray-600 leading-relaxed">Change messy backgrounds to solid Blue, White, or custom colors in just one click using our integrated <strong>ai passport photo maker free</strong> engine.</p>
+                            </div>
+                        </div>
+
+                        <!-- 2. Privacy Alert Note -->
+                        <div class="bg-amber-50 border border-amber-200 p-6 rounded-2xl flex flex-col sm:flex-row items-start gap-4 shadow-sm">
+                            <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center flex-shrink-0 text-xl">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-black text-gray-900 text-lg mb-1">Privacy & Security Note</h3>
+                                <p class="text-[14px] text-gray-700 leading-relaxed">अगर आप सोच रहे हैं कि मोबाइल या कंप्यूटर से <strong>passport photo kaise banaen</strong>, तो यह टूल आपके लिए सबसे सुरक्षित है। आपकी फोटो पूरी तरह आपके ब्राउज़र में प्रोसेस होती है और हम कोई भी डेटा सर्वर पर स्टोर नहीं करते
+                                    हैं।</p>
+                            </div>
+                        </div>
+
+                        <!-- 3. Step-by-Step Guide -->
+                        <div id="guide-section" class="bg-white p-8 rounded-3xl border border-gray-200 shadow-sm">
+                            <h2 class="text-2xl font-black text-[#8a0f2f] mb-6 border-b border-gray-100 pb-4">Passport Size Photo Kaise Banaye Online - Guide</h2>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                                <div class="relative pt-6">
+                                    <span class="absolute left-0 top-0 text-5xl font-black text-gray-100 -z-10 leading-none">01</span>
+                                    <h4 class="font-bold text-gray-900 mb-2 text-md">Upload Photo</h4>
+                                    <p class="text-[13px] text-gray-600">Select a clear portrait image from your mobile or PC device to start the editing process.</p>
+                                </div>
+                                <div class="relative pt-6">
+                                    <span class="absolute left-0 top-0 text-5xl font-black text-gray-100 -z-10 leading-none">02</span>
+                                    <h4 class="font-bold text-gray-900 mb-2 text-md">Auto Crop Face</h4>
+                                    <p class="text-[13px] text-gray-600">Align your face properly using our automatic ratios tailored for standard official documents.</p>
+                                </div>
+                                <div class="relative pt-6">
+                                    <span class="absolute left-0 top-0 text-5xl font-black text-gray-100 -z-10 leading-none">03</span>
+                                    <h4 class="font-bold text-gray-900 mb-2 text-md">AI BG Change</h4>
+                                    <p class="text-[13px] text-gray-600">Use the background color bar to apply a clean white or professional blue color instantly.</p>
+                                </div>
+                                <div class="relative pt-6">
+                                    <span class="absolute left-0 top-0 text-5xl font-black text-gray-100 -z-10 leading-none">04</span>
+                                    <h4 class="font-bold text-gray-900 mb-2 text-md">Print Layout Sheet</h4>
+                                    <p class="text-[13px] text-gray-600">Choose A4 or 4x6 print grid sheet and export in ultra high-quality resolution.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 🌟 Premium Video Tutorial Box (Cinematic Look) -->
+                        <div class="bg-white p-6 md:p-8 rounded-3xl border border-gray-200 shadow-sm mb-6 w-full">
+                            <div class="flex flex-col items-center text-center gap-4">
+
+                                <!-- Title & Description (Moved to Top for better focus) -->
+                                <div class="w-full flex flex-col items-center mb-2">
+                                    <span class="text-[10px] font-black text-red-600 uppercase tracking-widest mb-2 bg-red-50 px-3 py-1 rounded-full shadow-sm"><i class="fab fa-youtube mr-1"></i> Video Tutorial</span>
+                                    <h3 class="text-2xl md:text-3xl font-black text-gray-900 mb-3 tracking-tight">Passport Size Photo Kaise Banaye?</h3>
+                                    <p class="text-[15px] text-gray-600 max-w-2xl leading-relaxed text-center">
+                                        इस वीडियो को ध्यान से देखें और सीखें कि कैसे आप बिना किसी सॉफ्टवेयर के, सिर्फ 2 मिनट में अपनी परफेक्ट पासपोर्ट साइज़ फोटो और A4 शीट तैयार कर सकते हैं।
+                                    </p>
+                                </div>
+
+                                <!-- Video Player (Expanded & Premium Size) -->
+                                <div class="w-full md:w-11/12 lg:w-5/6 xl:w-4/5 aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
+                                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/tF4qF4JufJU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- 4. FAQ Accordion Section -->
+                        <div>
+                            <h2 class="text-2xl font-black text-[#8a0f2f] mb-6 text-center">Online Passport Size Photo Maker FAQs</h2>
+                            <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm divide-y divide-gray-200">
+                                <details class="group p-5">
+                                    <summary class="flex justify-between items-center font-bold cursor-pointer list-none text-gray-800 text-[15px]">
+                                        मोबाइल या पीसी से passport photo kaise banaen?
+                                        <span class="transition group-open:rotate-180 text-gray-400"><i class="fas fa-chevron-down"></i></span>
+                                    </summary>
+                                    <div class="text-gray-600 text-[14px] mt-3 leading-relaxed">
+                                        हमारी वेबसाइट पर फोटो बनाना बेहद आसान है। बस अपनी फोटो अपलोड करें, क्रॉप बॉक्स से चेहरा सेट करें, AI बटन से बैकग्राउंड बदलें और A4 शीट जनरेट करके प्रिंट निकाल लें।
+                                    </div>
+                                </details>
+                                <details class="group p-5">
+                                    <summary class="flex justify-between items-center font-bold cursor-pointer list-none text-gray-800 text-[15px]">
+                                        How to generate Passport Size Photo A4 Sheet Online Free?
+                                        <span class="transition group-open:rotate-180 text-gray-400"><i class="fas fa-chevron-down"></i></span>
+                                    </summary>
+                                    <div class="text-gray-600 text-[14px] mt-3 leading-relaxed">
+                                        You can easily generate your <strong>Passport Size Photo A4 Sheet Online Free</strong> using our tool. Just upload your photo, select the A4 layout, and download the print-ready sheet in seconds without any hidden
+                                        cost.
+                                    </div>
+                                </details>
+                                <details class="group p-5">
+                                    <summary class="flex justify-between items-center font-bold cursor-pointer list-none text-gray-800 text-[15px]">
+                                        इंटरनेट पर passport size photo kaise banaye online बिल्कुल फ्री में?
+                                        <span class="transition group-open:rotate-180 text-gray-400"><i class="fas fa-chevron-down"></i></span>
+                                    </summary>
+                                    <div class="text-gray-600 text-[14px] mt-3 leading-relaxed">
+                                        Pro CSC Tools एक बेहतरीन <strong>free online passport photo maker</strong> प्रदान करता है, जहां आप बिना कोई पैसा दिए असीमित फोटो शीट तैयार कर सकते हैं।
+                                    </div>
+                                </details>
+                                <details class="group p-5">
+                                    <summary class="flex justify-between items-center font-bold cursor-pointer list-none text-gray-800 text-[15px]">
+                                        Which is the best free online passport photo maker for CSC center owners?
+                                        <span class="transition group-open:rotate-180 text-gray-400"><i class="fas fa-chevron-down"></i></span>
+                                    </summary>
+                                    <div class="text-gray-600 text-[14px] mt-3 leading-relaxed">
+                                        Pro CSC Tools is considered a top-tier <strong>passport size photo maker</strong> because it generates instant ready-to-print A4 grids with premium cutting guides and perfect alignment in seconds.
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- 🚀 FINAL PRO SEO & BRANDING SECTION END 🚀 -->
+                    <!-- 🌟 Updated Support & Help Banner (Matching Theme) -->
+                    <div class="bg-white p-6 md:p-8 rounded-3xl border border-gray-200 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6 mb-6">
+                        <div class="flex-1 flex gap-4 md:gap-6 items-center">
+                            <!-- New Matching Icon -->
+                            <div class="w-16 h-16 bg-[#242220] text-[#FACC15] rounded-2xl flex items-center justify-center text-3xl shadow-md flex-shrink-0">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div>
+                                <span class="text-[10px] font-black text-gray-500 uppercase tracking-widest">Online Support</span>
+                                <h3 class="text-xl md:text-2xl font-black text-gray-900 mt-1 mb-2">Need help preparing this file?</h3>
+                                <p class="text-[14px] text-gray-600 leading-relaxed">If your photo, signature, or document is not accepted, send your requirements on WhatsApp. We can help prepare the final file online.</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto shrink-0">
+                            <a href="https://wa.me/916387617678" target="_blank" class="bg-[#242220] hover:bg-black text-white font-bold py-3 px-6 rounded-xl transition-all shadow-md text-sm text-center flex items-center justify-center gap-2">
+            <i class="fab fa-whatsapp text-[#25D366] text-lg"></i> Get Online Help
+        </a>
+                            <a href="https://procsctools.in/csc-tools" class="bg-white border border-gray-300 hover:bg-gray-50 text-gray-800 font-bold py-3 px-6 rounded-xl transition-all shadow-sm text-sm text-center">
+            Use Related Tools
+        </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-4/12 flex flex-col gap-6 sticky top-24 no-print">
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                        <div class="text-center py-3 border-b border-gray-200 bg-gray-50">
+                            <span class="text-[13px] font-black text-red-600 tracking-wide uppercase"><span class="text-red-500 mr-1">●</span> Popular CSC Tools</span>
+                        </div>
+                        <div class="grid grid-cols-2 text-center text-[13px] font-medium text-gray-600">
+                            <a href="https://procsctools.in/pdf-to-jpg-converter" class="py-3 border-r border-b border-gray-200 hover:text-[#ab183d] hover:bg-slate-50 transition-colors">PDF To Images</a>
+                            <a href="https://procsctools.in/remove-bg" class="py-3 border-b border-gray-200 hover:text-[#ab183d] hover:bg-slate-50 transition-colors">Remove Background</a>
+                            <a href="https://procsctools.in/csc-tools" class="py-3 border-r border-b border-gray-200 font-bold text-gray-800 hover:text-[#ab183d] hover:bg-slate-50 transition-colors">Pro CSC Tools PDF Tool</a>
+                            <a href="https://procsctools.in/jpg-to-pdf" class="py-3 border-b border-gray-200 font-bold text-red-600 hover:bg-slate-50 transition-colors"><span class="mr-1">●</span> Images To PDF</a>
+                            <a href="https://procsctools.in/3x4-photo-maker" class="py-3 border-r border-gray-200 hover:text-[#ab183d] hover:bg-slate-50 transition-colors">3x4-photo-maker</a>
+                            <a href="https://procsctools.in/joint-photo-maker" class="py-3 hover:text-[#ab183d] hover:bg-slate-50 transition-colors">Joint Photo Maker</a>
+                        </div>
+                        <div class="text-center py-3 border-t border-gray-200 bg-gray-50">
+                            <span class="text-[13px] font-black text-red-600 tracking-wide uppercase"><span class="text-red-500 mr-1">●</span> Increase Image Quality</span>
+                        </div>
+                    </div>
+
+                    <div class="w-full mt-4 mb-8 block text-center mx-auto" style="min-height: 100px; overflow: visible;">
+                        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="2128490993" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <iframe id="bg-remover-frame" src="/bg-remover/" style="display:none;"></iframe>
+        <canvas id="hiddenCanvas" class="hidden"></canvas>
+
+        <script>
+            const fileInput = document.getElementById('image-upload');
+            const uploadContainer = document.getElementById('upload-container');
+            const uploadContent = document.getElementById('upload-content');
+            const editorWorkspace = document.getElementById('editor-workspace');
+            const previewWorkspace = document.getElementById('preview-workspace');
+            const cropperImage = document.getElementById('cropperImage');
+            const changeImageBtn = document.getElementById('change-image-btn');
+            const rootStyles = document.documentElement.style;
+
+            let cropper = null;
+            let currentLayoutType = 'a4';
+
+            // 🌐 INTERNATIONAL PASSPORT SIZES (Calculated at 300 DPI) 🌐
+            const COUNTRY_SIZES = {
+                'in_std': {
+                    w: 413,
+                    h: 531,
+                    ratio: 3.5 / 4.5
+                },
+                'in_oci': {
+                    w: 600,
+                    h: 600,
+                    ratio: 1 / 1
+                },
+                'us_std': {
+                    w: 600,
+                    h: 600,
+                    ratio: 1 / 1
+                },
+                'gb_std': {
+                    w: 413,
+                    h: 531,
+                    ratio: 3.5 / 4.5
+                },
+                'cn_std': {
+                    w: 390,
+                    h: 567,
+                    ratio: 33 / 48
+                },
+                'jp_std': {
+                    w: 413,
+                    h: 531,
+                    ratio: 3.5 / 4.5
+                },
+                'sg_std': {
+                    w: 413,
+                    h: 531,
+                    ratio: 3.5 / 4.5
+                },
+                'ae_std': {
+                    w: 508,
+                    h: 650,
+                    ratio: 4.3 / 5.5
+                }
+            };
+
+            let currentW = 413;
+            let currentH = 531;
+
+            function updatePassportSize() {
+                const val = document.getElementById('countrySizeSelect').value;
+                const customInputs = document.getElementById('customSizeInputs');
+
+                if (val === 'custom') {
+                    customInputs.classList.remove('hidden');
+                    customInputs.classList.add('flex');
+                    applyCustomSize();
+                } else {
+                    customInputs.classList.add('hidden');
+                    customInputs.classList.remove('flex');
+                    const sizeData = COUNTRY_SIZES[val];
+                    currentW = sizeData.w;
+                    currentH = sizeData.h;
+                    if (cropper) {
+                        cropper.setAspectRatio(sizeData.ratio);
+                    }
+                }
+            }
+
+            function applyCustomSize() {
+                const w_mm = parseFloat(document.getElementById('customW').value) || 35;
+                const h_mm = parseFloat(document.getElementById('customH').value) || 45;
+
+                currentW = Math.round((w_mm * 300) / 25.4);
+                currentH = Math.round((h_mm * 300) / 25.4);
+
+                const ratio = w_mm / h_mm;
+                if (cropper) {
+                    cropper.setAspectRatio(ratio);
+                }
+            }
+
+            const advBtn = document.getElementById('advSettingsBtn');
+            const advPanel = document.getElementById('advSettingsPanel');
+            advBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                advPanel.classList.toggle('hidden');
+            });
+            document.addEventListener('click', (e) => {
+                if (!advPanel.contains(e.target) && !advBtn.contains(e.target)) advPanel.classList.add('hidden');
+            });
+
+            uploadContainer.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                if (!editorWorkspace.classList.contains('flex')) uploadContainer.classList.add('border-[#8a0f2f]', 'bg-[#fbe9ee]');
+            });
+            uploadContainer.addEventListener('dragleave', () => {
+                uploadContainer.classList.remove('border-[#8a0f2f]', 'bg-[#fbe9ee]');
+            });
+            uploadContainer.addEventListener('drop', (e) => {
+                e.preventDefault();
+                uploadContainer.classList.remove('border-[#8a0f2f]', 'bg-[#fbe9ee]');
+                if (e.dataTransfer.files.length) {
+                    fileInput.files = e.dataTransfer.files;
+                    handleFile(fileInput.files[0]);
+                }
+            });
+            fileInput.addEventListener('change', function() {
+                if (this.files && this.files[0]) handleFile(this.files[0]);
+            });
+
+            function handleFile(file) {
+                if (!file.type.match('image.*')) return alert('Please select a valid image file (JPG, PNG, WEBP).');
+                if (file.size > 5 * 1024 * 1024) return alert('File is too large. Maximum size is 5MB.');
+
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    cropperImage.onload = function() {
+                        uploadContent.classList.add('hidden');
+                        editorWorkspace.classList.remove('hidden');
+                        editorWorkspace.classList.add('flex');
+                        previewWorkspace.classList.remove('hidden');
+                        previewWorkspace.classList.add('flex');
+                        fileInput.classList.add('hidden');
+                        uploadContainer.classList.remove('hover:border-[#8a0f2f]');
+
+                        if (cropper) cropper.destroy();
+
+                        const val = document.getElementById('countrySizeSelect').value;
+                        let initialRatio;
+                        if (val === 'custom') {
+                            const w_mm = parseFloat(document.getElementById('customW').value) || 35;
+                            const h_mm = parseFloat(document.getElementById('customH').value) || 45;
+                            initialRatio = w_mm / h_mm;
+                        } else {
+                            initialRatio = COUNTRY_SIZES[val].ratio;
+                        }
+
+                        cropper = new Cropper(cropperImage, {
+                            aspectRatio: initialRatio,
+                            viewMode: 1,
+                            dragMode: 'move',
+                            autoCropArea: 0.8,
+                            guides: true,
+                            center: true,
+                            cropBoxResizable: true,
+                            background: false
+                        });
+
+                        rootStyles.setProperty('--bg-color', 'transparent');
+                        document.getElementById('bgVal').value = 'transparent';
+                        resetManualFilters();
+
+                        document.getElementById('inlinePreviewContainer').classList.add('hidden');
+                        document.getElementById('inlinePreviewContainer').classList.remove('flex');
+                    }
+                    cropperImage.src = e.target.result;
+                }
+                reader.readAsDataURL(file);
+            }
+
+            function applyManualFilters() {
+                const b = document.getElementById('tuneBrightness').value;
+                const c = document.getElementById('tuneContrast').value;
+                const s = document.getElementById('tuneSaturate').value;
+
+                document.getElementById('valBright').innerText = b + '%';
+                document.getElementById('valContrast').innerText = c + '%';
+                document.getElementById('valSaturate').innerText = s + '%';
+
+                rootStyles.setProperty('--manual-filter', `brightness(${b}%) contrast(${c}%) saturate(${s}%)`);
+            }
+
+            function resetManualFilters() {
+                document.getElementById('tuneBrightness').value = 100;
+                document.getElementById('tuneContrast').value = 100;
+                document.getElementById('tuneSaturate').value = 100;
+                applyManualFilters();
+            }
+
+            function selectBg(type, val, element) {
+                document.getElementById('bgType').value = type;
+                document.getElementById('bgVal').value = val;
+                let bgStyle = val;
+                if (type === 'gradient') {
+                    const colors = val.split(',');
+                    bgStyle = `linear-gradient(to bottom, ${colors[0]}, ${colors[1]})`;
+                }
+                rootStyles.setProperty('--bg-color', bgStyle);
+                const viewbox = document.querySelector('.cropper-view-box');
+                const canvas = document.querySelector('.cropper-canvas');
+                if (viewbox) viewbox.style.background = bgStyle;
+                if (canvas) canvas.style.background = 'transparent';
+            }
+
+            function applyCustomSolid(colorValue) {
+                document.getElementById('solidColorWrapper').style.backgroundColor = colorValue;
+                selectBg('solid', colorValue, null);
+            }
+
+            function applyCustomGradient() {
+                const color1 = document.getElementById('customGrad1').value;
+                const color2 = document.getElementById('customGrad2').value;
+                document.getElementById('gradVis1').style.backgroundColor = color1;
+                document.getElementById('gradVis2').style.backgroundColor = color2;
+                selectBg('gradient', `${color1},${color2}`, null);
+            }
+
+            changeImageBtn.addEventListener('click', () => {
+                fileInput.value = '';
+                if (cropper) {
+                    cropper.destroy();
+                    cropper = null;
+                }
+                uploadContent.classList.remove('hidden');
+                editorWorkspace.classList.add('hidden');
+                editorWorkspace.classList.remove('flex');
+                previewWorkspace.classList.add('hidden');
+                previewWorkspace.classList.remove('flex');
+                fileInput.classList.remove('hidden');
+                uploadContainer.classList.add('hover:border-[#8a0f2f]');
+                rootStyles.setProperty('--bg-color', 'transparent');
+                document.getElementById('bgVal').value = 'transparent';
+                resetManualFilters();
+                document.getElementById('inlinePreviewContainer').classList.add('hidden');
+                document.getElementById('inlinePreviewContainer').classList.remove('flex');
+            });
+
+            function updateCropperWithTransparentImage(transparentBase64) {
+                cropperImage.src = transparentBase64;
+                cropper.destroy();
+
+                const val = document.getElementById('countrySizeSelect').value;
+                let currentRatio;
+                if (val === 'custom') {
+                    const w_mm = parseFloat(document.getElementById('customW').value) || 35;
+                    const h_mm = parseFloat(document.getElementById('customH').value) || 45;
+                    currentRatio = w_mm / h_mm;
+                } else {
+                    currentRatio = COUNTRY_SIZES[val].ratio;
+                }
+
+                cropper = new Cropper(cropperImage, {
+                    aspectRatio: currentRatio,
+                    viewMode: 1,
+                    dragMode: 'move',
+                    autoCropArea: 0.95,
+                    guides: true,
+                    center: true,
+                    background: false
+                });
+                setTimeout(() => {
+                    selectBg('solid', '#3b82f6', null);
+                }, 100);
+            }
+
+            function resetAIButtons(apiBtn, localBtn, originalLocalText, originalApiText) {
+                if (localBtn) localBtn.innerHTML = originalLocalText;
+                if (apiBtn) apiBtn.innerHTML = originalApiText;
+                if (apiBtn) apiBtn.disabled = false;
+                if (localBtn) localBtn.disabled = false;
+            }
+
+            // Pro API
+            async function removeBackgroundAPI() {
+                if (!cropper) return;
+                const apiBtn = document.getElementById('removeBgApiBtn');
+                const localBtn = document.getElementById('removeBgLocalBtn');
+                const originalApiText = apiBtn.innerHTML;
+                const originalLocalText = localBtn.innerHTML;
+
+                apiBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> API Working...';
+                apiBtn.disabled = true;
+                localBtn.disabled = true;
+
+                try {
+                    const dataUrl = cropperImage.src;
+                    const arr = dataUrl.split(',');
+                    const mime = arr[0].match(/:(.*?);/)[1];
+                    const bstr = atob(arr[1]);
+                    let n = bstr.length;
+                    const u8arr = new Uint8Array(n);
+                    while (n--) {
+                        u8arr[n] = bstr.charCodeAt(n);
+                    }
+                    const imageBlob = new Blob([u8arr], {
+                        type: mime
+                    });
+
+                    const formData = new FormData();
+                    formData.append('image_file', imageBlob, 'photo.png');
+
+                    const response = await fetch('/remove-bg-api', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    const data = await response.json();
+
+                    if (data.status === 'success') {
+                        updateCropperWithTransparentImage(data.image);
+                        apiBtn.innerHTML = `<i class="fas fa-check-circle mr-2"></i> BG Removed!`;
+                        apiBtn.classList.replace('bg-[#4F46E5]', 'bg-green-500');
+                        setTimeout(() => {
+                            apiBtn.classList.replace('bg-green-500', 'bg-[#4F46E5]');
+                            resetAIButtons(apiBtn, localBtn, originalLocalText, originalApiText);
+                        }, 3000);
+                    } else {
+                        alert("API Error: " + data.message);
+                        resetAIButtons(apiBtn, localBtn, originalLocalText, originalApiText);
+                    }
+                } catch (err) {
+                    console.error(err);
+                    alert("Connection Error. Trying Free Local AI instead.");
+                    resetAIButtons(apiBtn, localBtn, originalLocalText, originalApiText);
+                }
+            }
+
+            // Local AI
+            window.addEventListener('message', function(event) {
+                const data = event.data;
+                if (!data || !data.type) return;
+
+                const localBtn = document.getElementById('removeBgLocalBtn');
+                const apiBtn = document.getElementById('removeBgApiBtn');
+
+                if (data.type === 'REMOVE_BG_PROGRESS') {
+                    if (localBtn) localBtn.innerHTML = `<i class="fas fa-robot fa-spin mr-2"></i> AI: ${data.progress}%`;
+                }
+
+                if (data.type === 'REMOVE_BG_SUCCESS') {
+                    const transparentImageBase64 = data.payload.imageBase64;
+                    updateCropperWithTransparentImage(transparentImageBase64);
+
+                    if (localBtn) {
+                        localBtn.innerHTML = `<i class="fas fa-check-circle mr-2"></i> AI Success!`;
+                        localBtn.classList.replace('bg-[#10B981]', 'bg-green-600');
+                        setTimeout(() => {
+                            localBtn.classList.replace('bg-green-600', 'bg-[#10B981]');
+                            resetAIButtons(apiBtn, localBtn, '<i class="fas fa-microchip"></i> Free Local AI', '<i class="fas fa-cloud"></i> Pro Remove.bg');
+                        }, 3000);
+                    }
+                }
+
+                if (data.type === 'REMOVE_BG_ERROR') {
+                    alert("Error removing background: " + data.payload.error);
+                    resetAIButtons(apiBtn, localBtn, '<i class="fas fa-microchip"></i> Free Local AI', '<i class="fas fa-cloud"></i> Pro Remove.bg');
+                }
+            });
+
+            // Local AI background removal \u2014 100% browser me (@imgly/background-removal, koi server/folder nahi chahiye)
+            async function removeBackgroundFromPhoto() {
+                if (!cropper) return;
+                const apiBtn = document.getElementById('removeBgApiBtn');
+                const localBtn = document.getElementById('removeBgLocalBtn');
+
+                localBtn.innerHTML = '<i class="fas fa-robot fa-spin mr-2"></i> Loading AI...';
+                localBtn.disabled = true;
+                apiBtn.disabled = true;
+
+                // Speed ke liye image ko thoda chhota karo
+                const tempCanvas = document.createElement('canvas');
+                const MAX = 1024;
+                let width = cropperImage.naturalWidth;
+                let height = cropperImage.naturalHeight;
+                if (width > MAX || height > MAX) {
+                    if (width > height) { height = Math.round(height * MAX / width); width = MAX; }
+                    else { width = Math.round(width * MAX / height); height = MAX; }
+                }
+                tempCanvas.width = width;
+                tempCanvas.height = height;
+                tempCanvas.getContext('2d').drawImage(cropperImage, 0, 0, width, height);
+                const imageBase64 = tempCanvas.toDataURL('image/png');
+
+                try {
+                    const CDN = 'https://cdn.jsdelivr.net/npm/@imgly/background-removal@1.7.0';
+                    const mod = await import(CDN + '/+esm');
+                    const removeBackground = mod.removeBackground || (mod.default && mod.default.removeBackground);
+                    if (!removeBackground) throw new Error('AI library load nahi hui');
+
+                    const blob = await removeBackground(imageBase64, {
+                        publicPath: CDN + '/dist/',
+                        progress: function (key, current, total) {
+                            const p = total ? Math.round((current / total) * 100) : 0;
+                            localBtn.innerHTML = '<i class="fas fa-robot fa-spin mr-2"></i> AI: ' + p + '%';
+                        }
+                    });
+
+                    const reader = new FileReader();
+                    reader.onload = function () {
+                        updateCropperWithTransparentImage(reader.result);
+                        localBtn.innerHTML = '<i class="fas fa-check-circle mr-2"></i> AI Success!';
+                        localBtn.classList.replace('bg-[#10B981]', 'bg-green-600');
+                        setTimeout(function () {
+                            localBtn.classList.replace('bg-green-600', 'bg-[#10B981]');
+                            resetAIButtons(apiBtn, localBtn, '<i class="fas fa-microchip"></i> Free Local AI', '<i class="fas fa-cloud"></i> Pro Remove.bg');
+                        }, 3000);
+                    };
+                    reader.readAsDataURL(blob);
+                } catch (err) {
+                    console.error(err);
+                    alert('Local AI error: ' + (err && err.message ? err.message : err) + ' (Pehli baar AI model download hota hai, internet zaroori hai. Dobara try karein.)');
+                    resetAIButtons(apiBtn, localBtn, '<i class="fas fa-microchip"></i> Free Local AI', '<i class="fas fa-cloud"></i> Pro Remove.bg');
+                }
+            }
+
+            // Layout Button Logic
+            document.querySelectorAll('.layout-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.layout-btn').forEach(b => {
+                        b.classList.remove('active', 'bg-[#ab183d]', 'text-white', 'shadow-md');
+                        b.classList.add('text-gray-600');
+                    });
+                    this.classList.remove('text-gray-600');
+                    this.classList.add('active', 'bg-[#ab183d]', 'text-white', 'shadow-md');
+
+                    currentLayoutType = this.getAttribute('data-layout');
+
+                    const copiesInput = document.getElementById('numCopiesInline');
+                    if (currentLayoutType === 'a4') {
+                        copiesInput.max = 30;
+                        copiesInput.value = 5;
+                        copiesInput.disabled = false;
+                    } else if (currentLayoutType === 'a4_6') {
+                        copiesInput.max = 36;
+                        copiesInput.value = 6;
+                        copiesInput.disabled = false;
+                    } else if (currentLayoutType === '4x6') {
+                        copiesInput.max = 6;
+                        copiesInput.value = 6;
+                        copiesInput.disabled = false;
+                    } else if (currentLayoutType === '4x6_8') {
+                        copiesInput.max = 8;
+                        copiesInput.value = 8;
+                        copiesInput.disabled = false;
+                    } else {
+                        copiesInput.value = 1;
+                        copiesInput.disabled = true;
+                    }
+                });
+            });
+
+            function executeLayoutGenerationInline() {
+                if (!cropper) return;
+                const generateBtn = document.getElementById('generateBtnInline');
+                const originalText = generateBtn.innerHTML;
+
+                let adBox = document.getElementById('dynamic-ad-box');
+                if (adBox) {
+                    adBox.classList.remove('hidden');
+                }
+                generateBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Generating Layout...';
+                generateBtn.disabled = true;
+
+                setTimeout(() => {
+                    const requestedCopies = parseInt(document.getElementById('numCopiesInline').value) || 1;
+                    const addBorder = document.getElementById('addBorderInline').checked;
+                    const aiEnhance = document.getElementById('aiEnhance').checked;
+                    const guides = document.getElementById('cuttingGuides').checked;
+
+                    const bgType = document.getElementById('bgType').value;
+                    const bgVal = document.getElementById('bgVal').value;
+
+                    const sourceCanvas = cropper.getCroppedCanvas({
+                        imageSmoothingEnabled: true,
+                        imageSmoothingQuality: 'high',
+                        fillColor: 'transparent'
+                    });
+
+                    const photoCanvas = document.createElement('canvas');
+                    photoCanvas.width = currentW;
+                    photoCanvas.height = currentH;
+                    const pCtx = photoCanvas.getContext('2d');
+
+                    if (bgType === 'solid' && bgVal !== 'transparent') {
+                        pCtx.fillStyle = bgVal;
+                        pCtx.fillRect(0, 0, currentW, currentH);
+                    } else if (bgType === 'gradient') {
+                        const colors = bgVal.split(',');
+                        const gradient = pCtx.createLinearGradient(0, 0, 0, currentH);
+                        gradient.addColorStop(0, colors[0]);
+                        gradient.addColorStop(1, colors[1]);
+                        pCtx.fillStyle = gradient;
+                        pCtx.fillRect(0, 0, currentW, currentH);
+                    }
+
+                    const b = document.getElementById('tuneBrightness').value;
+                    const c = document.getElementById('tuneContrast').value;
+                    const s = document.getElementById('tuneSaturate').value;
+                    let finalFilter = `brightness(${b}%) contrast(${c}%) saturate(${s}%)`;
+
+                    if (aiEnhance) {
+                        finalFilter += ' contrast(1.1) saturate(1.1) brightness(1.05)';
+                    }
+
+                    pCtx.filter = finalFilter;
+                    pCtx.drawImage(sourceCanvas, 0, 0, currentW, currentH);
+                    pCtx.filter = 'none';
+
+                    if (addBorder) {
+                        pCtx.strokeStyle = "#000000";
+                        pCtx.lineWidth = 4;
+                        pCtx.strokeRect(2, 2, currentW - 4, currentH - 4);
+                    }
+
+                    const finalCanvas = document.getElementById('hiddenCanvas');
+                    const ctx = finalCanvas.getContext('2d');
+
+                    if (currentLayoutType === 'single') {
+                        finalCanvas.width = currentW;
+                        finalCanvas.height = currentH;
+                        ctx.fillStyle = "#ffffff";
+                        ctx.fillRect(0, 0, currentW, currentH);
+                        ctx.drawImage(photoCanvas, 0, 0);
+                    } else {
+                        let canvasW = 2480,
+                            canvasH = 3508,
+                            gapX = 40,
+                            gapY = 40,
+                            maxCols = 5,
+                            maxRows = 6;
+                        let offsetX = 100,
+                            offsetY = 60;
+                        let drawW = currentW,
+                            drawH = currentH;
+
+                        if (currentLayoutType === 'a4') {
+                            canvasW = 2480;
+                            canvasH = 3508;
+                            gapX = 40;
+                            gapY = 40;
+                            maxCols = 5;
+                            maxRows = 6;
+                        } else if (currentLayoutType === 'a4_6') {
+                            canvasW = 2480;
+                            canvasH = 3508;
+                            gapX = 30;
+                            gapY = 40;
+                            if (currentW === 413) {
+                                drawW = 370;
+                                drawH = 476;
+                            }
+                            maxCols = 6;
+                            maxRows = 6;
+                        } else if (currentLayoutType === '4x6') {
+                            canvasW = 1800;
+                            canvasH = 1200;
+                            gapX = 40;
+                            gapY = 40;
+                            maxCols = 3;
+                            maxRows = 2;
+                        } else if (currentLayoutType === '4x6_8') {
+                            canvasW = 1800;
+                            canvasH = 1200;
+                            gapX = 25;
+                            gapY = 30;
+                            maxCols = 4;
+                            maxRows = 2;
+                        }
+
+                        let baseMarginX = (currentLayoutType.includes('4x6')) ? 30 : 100;
+                        let availableW = canvasW - (baseMarginX * 2);
+                        let neededW = (maxCols * drawW) + ((maxCols - 1) * gapX);
+
+                        if (neededW > availableW && currentLayoutType !== 'a4_6') {
+                            maxCols = Math.floor((availableW + gapX) / (drawW + gapX));
+                            if (maxCols < 1) maxCols = 1;
+                        }
+
+                        const totalW = (maxCols * drawW) + ((maxCols - 1) * gapX);
+                        offsetX = (canvasW - totalW) / 2;
+
+                        if (currentLayoutType.includes('4x6')) {
+                            let availableH = canvasH - 40;
+                            let neededH = (maxRows * drawH) + ((maxRows - 1) * gapY);
+                            if (neededH > availableH) {
+                                maxRows = Math.floor((availableH + gapY) / (drawH + gapY));
+                                if (maxRows < 1) maxRows = 1;
+                            }
+                            const totalH = (maxRows * drawH) + ((maxRows - 1) * gapY);
+                            offsetY = (canvasH - totalH) / 2;
+                        } else {
+                            offsetY = 60;
+                        }
+
+                        finalCanvas.width = canvasW;
+                        finalCanvas.height = canvasH;
+                        ctx.fillStyle = "#ffffff";
+                        ctx.fillRect(0, 0, canvasW, canvasH);
+
+                        let printed = 0;
+                        for (let r = 0; r < maxRows; r++) {
+                            for (let c = 0; c < maxCols; c++) {
+                                if (printed >= requestedCopies) break;
+                                let x = offsetX + c * (drawW + gapX);
+                                let y = offsetY + r * (drawH + gapY);
+                                ctx.drawImage(photoCanvas, x, y, drawW, drawH);
+
+                                if (guides) {
+                                    ctx.strokeStyle = "#94A3B8";
+                                    ctx.lineWidth = 2;
+                                    ctx.setLineDash([]);
+                                    const mLen = 20;
+                                    const mGap = 5;
+
+                                    ctx.beginPath();
+                                    ctx.moveTo(x - mGap - mLen, y);
+                                    ctx.lineTo(x - mGap, y);
+                                    ctx.moveTo(x, y - mGap - mLen);
+                                    ctx.lineTo(x, y - mGap);
+                                    ctx.moveTo(x + drawW + mGap, y);
+                                    ctx.lineTo(x + drawW + mGap + mLen, y);
+                                    ctx.moveTo(x + drawW, y - mGap - mLen);
+                                    ctx.lineTo(x + drawW, y - mGap);
+                                    ctx.moveTo(x - mGap - mLen, y + drawH);
+                                    ctx.lineTo(x - mGap, y + drawH);
+                                    ctx.moveTo(x, y + drawH + mGap);
+                                    ctx.lineTo(x, y + drawH + mGap + mLen);
+                                    ctx.moveTo(x + drawW + mGap, y + drawH);
+                                    ctx.lineTo(x + drawW + mGap + mLen, y + drawH);
+                                    ctx.moveTo(x + drawW, y + drawH + mGap);
+                                    ctx.lineTo(x + drawW, y + drawH + mGap + mLen);
+                                    ctx.stroke();
+                                }
+
+                                printed++;
+                            }
+                        }
+                    }
+
+                    const dataUrl = finalCanvas.toDataURL('image/jpeg', 0.95);
+                    document.getElementById('inlinePreviewImg').src = dataUrl;
+
+                    const previewContainer = document.getElementById('inlinePreviewContainer');
+                    previewContainer.classList.remove('hidden');
+                    previewContainer.classList.add('flex');
+                    previewContainer.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+
+                    generateBtn.innerHTML = originalText;
+                    generateBtn.disabled = false;
+
+                }, 100);
+            }
+
+            function downloadFileInline(format) {
+                const finalCanvas = document.getElementById('hiddenCanvas');
+                const dataUrl = finalCanvas.toDataURL(`image/${format === 'jpg' ? 'jpeg' : 'png'}`, 1.0);
+                const a = document.createElement('a');
+                a.href = dataUrl;
+                let pSize = currentLayoutType.toUpperCase();
+                a.download = `Pro CSC Tools_${pSize}_Passport.${format}`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            }
+
+            function downloadPDFInline() {
+                if (!window.jspdf) {
+                    alert("System is loading the PDF engine, please wait a second and click again.");
+                    return;
+                }
+
+                const {
+                    jsPDF
+                } = window.jspdf;
+                let doc;
+
+                if (currentLayoutType === 'a4' || currentLayoutType === 'a4_6') {
+                    doc = new jsPDF({
+                        orientation: 'p',
+                        unit: 'mm',
+                        format: 'a4'
+                    });
+                } else if (currentLayoutType === '4x6' || currentLayoutType === '4x6_8') {
+                    doc = new jsPDF({
+                        orientation: 'l',
+                        unit: 'in',
+                        format: [6, 4]
+                    });
+                } else {
+                    const mmW = (currentW / 300) * 25.4;
+                    const mmH = (currentH / 300) * 25.4;
+                    doc = new jsPDF({
+                        orientation: 'p',
+                        unit: 'mm',
+                        format: [mmW, mmH]
+                    });
+                }
+
+                const imgData = document.getElementById('inlinePreviewImg').src;
+                if (!imgData || imgData === "") {
+                    alert("Please generate the layout first!");
+                    return;
+                }
+
+                const pdfW = doc.internal.pageSize.getWidth();
+                const pdfH = doc.internal.pageSize.getHeight();
+
+                doc.addImage(imgData, 'JPEG', 0, 0, pdfW, pdfH, undefined, 'FAST');
+                let pSize = currentLayoutType.toUpperCase();
+                doc.save(`Pro CSC Tools_${pSize}_Passport_Sheet.pdf`);
+            }
+
+            function printResultInline() {
+                const imgSrc = document.getElementById('inlinePreviewImg').src;
+                let pageCss = '@page { size: auto; margin: 0; }';
+                let imgCss = 'max-width: 100%; max-height: 100vh; object-fit: contain;';
+
+                if (currentLayoutType === 'a4' || currentLayoutType === 'a4_6') {
+                    pageCss = '@page { size: A4 portrait; margin: 0; }';
+                    imgCss = 'width: 210mm; height: 297mm; object-fit: contain;';
+                } else if (currentLayoutType === '4x6' || currentLayoutType === '4x6_8') {
+                    pageCss = '@page { size: 6in 4in landscape; margin: 0; }';
+                    imgCss = 'width: 6in; height: 4in; object-fit: contain;';
+                }
+
+                let iframe = document.getElementById('printFrame');
+                if (!iframe) {
+                    iframe = document.createElement('iframe');
+                    iframe.id = 'printFrame';
+                    iframe.style.position = 'absolute';
+                    iframe.style.top = '-10000px';
+                    iframe.style.left = '-10000px';
+                    iframe.style.width = '0px';
+                    iframe.style.height = '0px';
+                    iframe.style.border = 'none';
+                    document.body.appendChild(iframe);
+                }
+
+                const doc = iframe.contentWindow.document;
+                doc.open();
+                doc.write(`
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <title>Print Passport Photo - Pro CSC Tools</title>
+                <style>
+                    ${pageCss}
+                    html, body { 
+                        margin: 0; padding: 0; width: 100%; height: 100%; 
+                        display: flex; justify-content: center; align-items: flex-start; 
+                        background: #fff; overflow: hidden; 
+                    }
+                    img { display: block; ${imgCss} }
+                </style>
+            </head>
+            <body>
+                <img src="${imgSrc}" onload="setTimeout(() => { window.focus(); window.print(); }, 500);" />
+                <a href="https://wa.me/916387617678" class="no-print fixed bottom-5 right-5 w-14 h-14 rounded-full flex items-center justify-center text-white text-2xl shadow-lg z-50" style="background:#25d366" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+</body>
+            </html>
+        `);
+                doc.close();
+            }
+        </script>
+
+    </main>
+    
+<style>
+.acfoot{background:#0e1420;color:#aeb6c2;font-family:"Inter",system-ui,-apple-system,Arial,sans-serif;margin-top:28px;}
+.acfoot *{box-sizing:border-box;}
+.acfoot-in{max-width:1140px;margin:0 auto;padding:48px 20px 30px;display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:34px;}
+.acfoot-brand a.b{display:flex;align-items:center;gap:9px;color:#fff;text-decoration:none;font-weight:800;font-size:18px;}
+.acfoot-logo{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,#ab183d,#8a0f2f);display:flex;align-items:center;justify-content:center;color:#fff;font-size:15px;}
+.acfoot-brand p{font-size:14px;line-height:1.7;margin:14px 0;max-width:300px;}
+.acfoot-social{display:flex;gap:10px;}
+.acfoot-social a{width:38px;height:38px;border-radius:9px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;}
+.acfoot-social a:hover{background:#ab183d;}
+.acfoot h4{color:#fff;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin:0 0 14px;}
+.acfoot-col a{display:block;color:#aeb6c2;text-decoration:none;font-size:14px;padding:6px 0;}
+.acfoot-col a:hover{color:#fff;}
+.acfoot-ci{display:flex;gap:9px;font-size:14px;padding:6px 0;color:#aeb6c2;}
+.acfoot-ci i{color:#5e9fe8;margin-top:3px;}
+.acfoot-bottom{border-top:1px solid rgba(255,255,255,.09);}
+.acfoot-bottom div{max-width:1140px;margin:0 auto;padding:16px 20px;font-size:12.5px;color:#8b95a4;line-height:1.7;}
+@media (max-width:900px){.acfoot-in{grid-template-columns:1fr 1fr;}}
+@media (max-width:600px){.acfoot-in{grid-template-columns:1fr;gap:26px;}}
+</style>
+<footer class="bg-gray-900 text-white py-10 mt-8 no-print">
+    <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-3 gap-8">
+        <div>
+            <h3 class="font-bold text-lg mb-3"><i class="fas fa-crown" style="color:#e0aa14"></i> Pro CSC Tools</h3>
+            <p class="text-sm text-gray-400">CSC VLE, students aur shop owners ke liye free online tools — aapki UI, aapki bhasha me.</p>
+            <div class="flex gap-4 mt-4 text-lg">
+                <a href="https://facebook.com/procsctools" class="text-gray-400 hover:text-white" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://instagram.com/procsctools" class="text-gray-400 hover:text-white" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com/@procsctools" class="text-gray-400 hover:text-white" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://t.me/procsctools" class="text-gray-400 hover:text-white" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+        <div>
+            <h4 class="font-semibold mb-3">Tools</h4>
+            <ul class="space-y-2 text-sm text-gray-400">
+                <li><a href="https://procsctools.in/tools/gst-invoice-generator.html" class="hover:text-white">GST Invoice</a></li>
+                <li><a href="https://procsctools.in/tools/csc-stamp-maker.html" class="hover:text-white">Stamp Maker</a></li>
+                <li><a href="https://procsctools.in/tools/multiple-id-card-print.html" class="hover:text-white">ID Card Print</a></li>
+                <li><a href="https://procsctools.in/tools" class="hover:text-white">All Tools</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="font-semibold mb-3">Contact</h4>
+            <p class="text-sm text-gray-400">Email: <a href="mailto:Palcscuno@gmail.com" class="hover:text-white">Palcscuno@gmail.com</a></p>
+            <p class="text-sm text-gray-400 mt-2">WhatsApp: <a href="https://wa.me/916387617678" class="hover:text-white">+91 63876 17678</a></p>
+        </div>
+    </div>
+    <div class="border-t border-gray-800 mt-8 pt-6 text-center text-xs text-gray-500 px-5">© 2026 Pro CSC Tools. All Rights Reserved. · <strong>Disclaimer:</strong> Utility tool for photo formatting. Ye private initiative hai, UIDAI ya Government of India se affiliated nahi hai.</div>
+</footer>
+</body>
+
+</html>
