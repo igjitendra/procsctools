@@ -2,33 +2,37 @@
 <html lang="en">
 
 <head>
-    <!-- Pro CSC Tools: AdSense + Verification -->
-    <meta name="google-adsense-account" content="ca-pub-6791318178265120">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6791318178265120" crossorigin="anonymous"></script>
-
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
-    
-    <!-- Banner Ads -->
-    
-    
-    <title>CSC Billing Software | Pro CSC Tools | Complete Billing Solution for CSC VLE</title>
-    <link rel="canonical" href="https://procsctools.in/csc-billing-software">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QL80Z3DZ8Z"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QL80Z3DZ8Z');</script>
+    <title>CSC Billing Software Online Free - GST Bill & Invoice | Pro CSC Tools</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Complete offline billing software for CSC VLE - Manage services, customers, GST billing, reports, and data backup. Professional invoice generator with QR code payments.">
-    <meta name="keywords" content="CSC billing software, VLE billing system, GST billing software, offline billing, CSC center software, invoice generator, QR code billing">
+    <meta name="description" content="Free CSC billing software for VLEs & shop owners - create GST bills, manage services & customers, track reports, add UPI QR to invoices. Works 100% offline in browser.">
+    <meta name="keywords" content="csc billing software, csc billing software free, vle billing software, gst bill kaise banaye, csc center billing software, invoice generator online, billing software for csc">
     <meta name="author" content="Pro CSC Tools">
     <meta name="robots" content="index, follow">
 
     <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="Pro CSC Tools - Complete Offline Billing Solution">
-    <meta property="og:description" content="Professional billing software for Common Service Centers with GST, reports, customer management, and QR code payments">
+    <meta property="og:title" content="CSC Billing Software Online Free - Pro CSC Tools">
+    <meta property="og:description" content="Free GST billing software for CSC centers - bills, invoices, customers, reports and UPI QR payments. Runs offline in your browser.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://procsctools.in/csc-billing-software">
+    <meta property="og:url" content="https://procsctools.in/tools/csc-billing-software.html">
+    <meta property="og:image" content="https://procsctools.in/images/csc-billing-software.webp">
+    <meta property="og:site_name" content="Pro CSC Tools">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CSC Billing Software Online Free - Pro CSC Tools">
+    <meta name="twitter:description" content="Free GST billing software for CSC centers - bills, invoices, customers, reports and UPI QR payments.">
+    <meta name="twitter:image" content="https://procsctools.in/images/csc-billing-software.webp">
+    <link rel="canonical" href="https://procsctools.in/tools/csc-billing-software.html">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>if(window.tailwind){tailwind.config={theme:{extend:{fontFamily:{sans:["Inter","sans-serif"]},colors:{brand:"#ab183d"}}}}}</script>
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -37,7 +41,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
     <!-- Google Fonts for better typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- AdSense (replace ca-pub-XXXXXXXXXXXXXXXX with real ID after approval) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
 
     <style>
         /* Custom styles for advanced features */
@@ -47,12 +54,12 @@
             --bg-secondary: #f3f4f6;
             --text-primary: #111827;
             --text-secondary: #4b5563;
-            --accent-primary: #2563eb;
-            --accent-secondary: #1e40af;
+            --accent-primary: #ab183d;
+            --accent-secondary: #8a0f2f;
             /* Invoice Template Variables */
-            --invoice-primary: #2563eb;
-            --invoice-secondary: #1e40af;
-            --invoice-border: 2px solid #2563eb;
+            --invoice-primary: #ab183d;
+            --invoice-secondary: #8a0f2f;
+            --invoice-border: 2px solid #ab183d;
             --invoice-border-radius: 12px;
             --invoice-header-bg: #f8fafc;
             --invoice-font-size: 14px;
@@ -60,7 +67,7 @@
         }
 
         * {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Inter', sans-serif;
         }
 
         .dark-mode {
@@ -68,8 +75,8 @@
             --bg-secondary: #111827;
             --text-primary: #f9fafb;
             --text-secondary: #d1d5db;
-            --accent-primary: #3b82f6;
-            --accent-secondary: #60a5fa;
+            --accent-primary: #c41d47;
+            --accent-secondary: #d9304f;
         }
 
         body {
@@ -91,7 +98,7 @@
         }
 
         .gradient-primary {
-            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            background: linear-gradient(135deg, #ab183d 0%, #8a0f2f 100%);
         }
 
         .gradient-success {
@@ -181,15 +188,15 @@
         /* Tab styles */
 
         .tab-active {
-            border-bottom: 3px solid #2563eb;
-            color: #2563eb;
+            border-bottom: 3px solid #ab183d;
+            color: #ab183d;
             font-weight: 600;
             background-color: rgba(37, 99, 235, 0.1);
         }
 
         .dark-mode .tab-active {
-            border-bottom-color: #60a5fa;
-            color: #60a5fa;
+            border-bottom-color: #d9304f;
+            color: #d9304f;
             background-color: rgba(96, 165, 250, 0.1);
         }
 
@@ -238,12 +245,12 @@
         }
 
         ::-webkit-scrollbar-thumb {
-            background: #2563eb;
+            background: #ab183d;
             border-radius: 4px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background: #1e40af;
+            background: #8a0f2f;
         }
 
         /* Print styles */
@@ -322,7 +329,7 @@
 
         .spinner {
             border: 3px solid #f3f3f3;
-            border-top: 3px solid #2563eb;
+            border-top: 3px solid #ab183d;
             border-radius: 50%;
             width: 40px;
             height: 40px;
@@ -459,7 +466,7 @@
         }
 
         .btn-print {
-            background: #2563eb;
+            background: #ab183d;
         }
 
         .btn-pdf {
@@ -516,50 +523,46 @@
 
         .template-preview.selected {
             border-color: var(--invoice-primary);
-            background: #f0f9ff;
+            background: #fbe9ee;
         }
     </style>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"SoftwareApplication","name":"CSC Billing Software","applicationCategory":"BusinessApplication","operatingSystem":"Any","description":"Free offline CSC billing software to create GST bills and invoices, manage customers and services, track reports and add UPI QR payments.","url":"https://procsctools.in/tools/csc-billing-software.html","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"publisher":{"@type":"Organization","name":"Pro CSC Tools"}}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://procsctools.in"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://procsctools.in/#tools"},{"@type":"ListItem","position":3,"name":"CSC Billing Software","item":"https://procsctools.in/tools/csc-billing-software.html"}]}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is this CSC billing software free?","acceptedAnswer":{"@type":"Answer","text":"Yes, it is 100% free. There is no subscription, no login and no hidden charges. Everything runs in your browser."}},{"@type":"Question","name":"Does the CSC billing software work offline?","acceptedAnswer":{"@type":"Answer","text":"Yes. After the page loads once, all data is stored locally in your browser so you can create bills without internet."}},{"@type":"Question","name":"Can I add my own UPI QR code on the bill?","acceptedAnswer":{"@type":"Answer","text":"Yes. Upload your own UPI QR image in settings and it will appear on every invoice automatically so customers can pay you."}},{"@type":"Question","name":"Does it support GST billing?","acceptedAnswer":{"@type":"Answer","text":"Yes, you can add GST/tax to bills, manage services with prices and print or download professional GST invoices as PDF."}},{"@type":"Question","name":"Is my customer data safe?","acceptedAnswer":{"@type":"Answer","text":"Yes. Your data never leaves your device - it is saved only in your browser localStorage. You can also back up and restore data anytime."}}]}
+    </script>
 </head>
 
 <body class="min-h-screen antialiased">
-<!-- PCT-CHROME-START -->
-<style id="pct-chrome">
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
-.pct-header,.pct-footer,.pct-ad{font-family:"Inter",Arial,sans-serif;box-sizing:border-box}
-.pct-header{background:#fff;border-bottom:1px solid #eee;box-shadow:0 2px 10px rgba(0,0,0,.06);padding:10px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;position:relative;z-index:9999}
-.pct-logo{font-size:22px;font-weight:800;color:#ab183d;text-decoration:none;white-space:nowrap}
-.pct-nav{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
-.pct-nav a{color:#374151;text-decoration:none;font-weight:500;font-size:15px}
-.pct-nav a:hover{color:#ab183d}
-.pct-menu-btn{display:none;background:none;border:0;font-size:26px;color:#ab183d;cursor:pointer;line-height:1}
-.pct-footer{background:#111827;color:#fff;padding:40px 20px 24px;margin-top:48px}
-.pct-footer-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:26px}
-.pct-footer h3{font-size:20px;font-weight:800;margin:0 0 12px;color:#fff}
-.pct-footer h4{font-size:16px;font-weight:600;margin:0 0 12px;color:#fff}
-.pct-footer p{color:#9ca3af;font-size:14px;line-height:1.6;margin:0}
-.pct-footer a{color:#9ca3af;text-decoration:none;display:block;margin-bottom:8px;font-size:14px}
-.pct-footer a:hover{color:#fff}
-.pct-copy{max-width:1100px;margin:26px auto 0;border-top:1px solid #1f2937;padding-top:18px;text-align:center;color:#9ca3af;font-size:13px}
-.pct-ad{margin:18px auto;text-align:center;max-width:1100px;min-height:50px;overflow:hidden}
-@media(max-width:768px){.pct-menu-btn{display:block}.pct-nav{display:none;width:100%;flex-direction:column;align-items:flex-start;gap:12px;padding-top:10px}.pct-nav.open{display:flex}}
-</style>
 
-<header class="pct-header">
-  <a href="/" class="pct-logo">Pro CSC Tools</a>
-  <button class="pct-menu-btn" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu">&#9776;</button>
-  <nav class="pct-nav">
-    <a href="/">Home</a>
-    <a href="/csc-billing-software">Csc Billing</a>
-    <a href="/csc-manager">Csc Work</a>
-    <a href="/#tools">Tools</a>
-    <a href="/blog">Blog</a>
-    <a href="/about">About Us</a>
-    <a href="/contact">Contact</a>
-  </nav>
-</header>
-<div class="pct-ad"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6791318178265120" data-ad-slot="7017392570" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
-<!-- PCT-CHROME-END -->
-
+    <!-- ===== Pro CSC Tools NAV ===== -->
+    <nav class="pcs-nav no-print fixed top-0 w-full z-50 backdrop-blur-lg bg-white/90 border-b border-gray-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
+            <a href="https://procsctools.in" class="flex items-center text-xl font-extrabold text-[#ab183d]"><i class="fas fa-crown mr-1 text-[#e0aa14]"></i> Pro CSC Tools</a>
+            <div class="hidden md:flex items-center gap-7 text-sm font-semibold text-gray-700">
+                <a href="https://procsctools.in" class="hover:text-[#ab183d] transition">Home</a>
+                <a href="https://procsctools.in/#tools" class="hover:text-[#ab183d] transition">All Tools</a>
+                <a href="https://procsctools.in/blog/" class="hover:text-[#ab183d] transition">Blog</a>
+                <a href="https://procsctools.in/about.html" class="hover:text-[#ab183d] transition">About</a>
+                <a href="https://procsctools.in/contact.html" class="hover:text-[#ab183d] transition">Contact</a>
+                <a href="https://wa.me/916387617678" class="bg-[#25d366] text-white px-3 py-1.5 rounded-lg text-xs"><i class="fab fa-whatsapp mr-1"></i>WhatsApp</a>
+            </div>
+            <button id="pcsMenuBtn" class="md:hidden text-2xl text-gray-700" aria-label="Menu"><i class="fas fa-bars"></i></button>
+        </div>
+        <div id="pcsMobileMenu" class="hidden md:hidden bg-white border-t border-gray-200 px-4 py-3 space-y-1 text-sm font-semibold text-gray-700">
+            <a href="https://procsctools.in" data-close-mobile class="block py-1">Home</a>
+            <a href="https://procsctools.in/#tools" data-close-mobile class="block py-1">All Tools</a>
+            <a href="https://procsctools.in/blog/" data-close-mobile class="block py-1">Blog</a>
+            <a href="https://procsctools.in/about.html" data-close-mobile class="block py-1">About</a>
+            <a href="https://procsctools.in/contact.html" data-close-mobile class="block py-1">Contact</a>
+            <a href="https://wa.me/916387617678" data-close-mobile class="block py-1 text-[#25d366]"><i class="fab fa-whatsapp mr-1"></i>WhatsApp</a>
+        </div>
+    </nav>
+    <div class="h-16 no-print"></div>
 
     <!-- Main Container -->
     <div class="container mx-auto px-4 py-4 max-w-7xl">
@@ -571,9 +574,8 @@
                     <i class="fas fa-store-alt text-3xl md:text-4xl"></i>
                 </div>
                 <div>
-                    <h1 class="text-2xl md:text-4xl font-bold">CSC Billing Software
-                    </h1>
-                    <p class="text-blue-100 text-sm md:text-base">by <span class="font-bold">Pro CSC Tools</span> - Complete billing solution for CSC VLE</p>
+                    <h1 class="text-2xl md:text-4xl font-bold">CSC Billing System</h1>
+                    <p class="text-[#f7d5de] text-sm md:text-base">Complete billing solution with QR code payments</p>
                 </div>
             </div>
             <div class="flex items-center gap-3 mt-4 md:mt-0">
@@ -581,23 +583,14 @@
                     <i class="fas fa-moon mr-2"></i>
                     <span class="hidden md:inline">Dark Mode</span>
                 </button>
-
-                <!-- Animated Pro CSC Tools Badge - Clickable -->
-                <a href="https://procsctools.in" target="_blank" class="smart-badge" title="Visit Pro CSC Tools">
-                    <div class="badge-text">
-                        <i class="fas fa-crown"></i>
-                        <span class="font-bold">Pro CSC Tools</span>
-                        <i class="fas fa-external-link-alt text-xs"></i>
-                    </div>
-                </a>
             </div>
         </div>
 
         <!-- ==================== STATS DASHBOARD ==================== -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 md:gap-4 mb-6 no-print">
             <div class="card p-4 flex items-center">
-                <div class="w-10 h-10 md:w-12 md:h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <i class="fas fa-rupee-sign text-xl md:text-2xl text-blue-600"></i>
+                <div class="w-10 h-10 md:w-12 md:h-12 bg-[#f7d5de] rounded-lg flex items-center justify-center">
+                    <i class="fas fa-rupee-sign text-xl md:text-2xl text-[#ab183d]"></i>
                 </div>
                 <div class="ml-3">
                     <p class="text-xs md:text-sm text-gray-500">Today's Income</p>
@@ -670,7 +663,9 @@
                 <button class="tab-btn px-3 md:px-6 py-2 md:py-3 rounded-lg text-sm md:text-base transition flex items-center" data-tab="reports">
                     <i class="fas fa-chart-bar mr-1 md:mr-2"></i>Reports
                 </button>
-
+                <button class="tab-btn px-3 md:px-6 py-2 md:py-3 rounded-lg text-sm md:text-base transition flex items-center" data-tab="settings">
+                    <i class="fas fa-cog mr-1 md:mr-2"></i>Settings
+                </button>
                 <button class="tab-btn px-3 md:px-6 py-2 md:py-3 rounded-lg text-sm md:text-base transition flex items-center" data-tab="data">
                     <i class="fas fa-database mr-1 md:mr-2"></i>Data
                 </button>
@@ -686,11 +681,11 @@
                 <div class="lg:col-span-2">
                     <div class="card p-6">
                         <h2 class="text-xl font-bold mb-4 flex items-center">
-                            <i class="fas fa-bolt text-blue-600 mr-2"></i>Quick Actions
+                            <i class="fas fa-bolt text-[#ab183d] mr-2"></i>Quick Actions
                         </h2>
                         <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-                            <button onclick="newBill()" class="p-4 border-2 border-blue-200 rounded-xl text-center hover:bg-blue-50 transition group">
-                                <i class="fas fa-plus-circle text-3xl text-blue-600 mb-2 group-hover:scale-110 transition"></i>
+                            <button onclick="newBill()" class="p-4 border-2 border-[#f7d5de] rounded-xl text-center hover:bg-[#fbe9ee] transition group">
+                                <i class="fas fa-plus-circle text-3xl text-[#ab183d] mb-2 group-hover:scale-110 transition"></i>
                                 <p class="text-sm font-medium">New Bill</p>
                             </button>
                             <button onclick="switchTab('customers')" class="p-4 border-2 border-green-200 rounded-xl text-center hover:bg-green-50 transition group">
@@ -711,7 +706,7 @@
                     <!-- Recent Activity -->
                     <div class="card p-6 mt-6">
                         <h2 class="text-xl font-bold mb-4 flex items-center">
-                            <i class="fas fa-clock text-blue-600 mr-2"></i>Recent Bills
+                            <i class="fas fa-clock text-[#ab183d] mr-2"></i>Recent Bills
                         </h2>
                         <div id="recentBillsList" class="space-y-3">
                             <p class="text-gray-500 text-center py-8">No bills generated yet</p>
@@ -757,20 +752,20 @@
         <div id="profile-tab" class="tab-content hidden">
             <div class="card p-6">
                 <h2 class="text-2xl font-bold mb-6 flex items-center">
-                    <i class="fas fa-store text-blue-600 mr-3"></i>CSC Center Profile
+                    <i class="fas fa-store text-[#ab183d] mr-3"></i>CSC Center Profile
                 </h2>
 
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     <!-- Logo Upload -->
                     <div class="lg:col-span-1">
-                        <div class="border-2 border-dashed border-blue-300 rounded-xl p-6 text-center">
+                        <div class="border-2 border-dashed border-[#f0b8c6] rounded-xl p-6 text-center">
                             <div class="flex justify-center mb-4">
                                 <img id="logoPreview" class="w-32 h-32 object-cover rounded-lg border hidden" alt="Logo">
                                 <div id="logoPlaceholder" class="w-32 h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-400">
                                     <i class="fas fa-upload text-4xl"></i>
                                 </div>
                             </div>
-                            <button onclick="document.getElementById('logoInput').click()" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm">
+                            <button onclick="document.getElementById('logoInput').click()" class="bg-[#ab183d] text-white px-4 py-2 rounded-lg hover:bg-[#8a0f2f] transition text-sm">
                                 <i class="fas fa-cloud-upload-alt mr-2"></i>Upload Logo
                             </button>
                             <input type="file" id="logoInput" accept="image/*" class="hidden" onchange="handleLogoUpload(event)">
@@ -783,27 +778,27 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div>
                                 <label class="block text-sm font-medium mb-2">Center Name <span class="text-red-500">*</span></label>
-                                <input type="text" id="centerName" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500">
+                                <input type="text" id="centerName" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#d9304f]">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium mb-2">VLE Name <span class="text-red-500">*</span></label>
-                                <input type="text" id="vleName" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500">
+                                <input type="text" id="vleName" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#d9304f]">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium mb-2">CSC ID <span class="text-red-500">*</span></label>
-                                <input type="text" id="cscId" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500">
+                                <input type="text" id="cscId" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#d9304f]">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium mb-2">Mobile <span class="text-red-500">*</span></label>
-                                <input type="tel" id="centerMobile" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500" maxlength="10">
+                                <input type="tel" id="centerMobile" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#d9304f]" maxlength="10">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium mb-2">Email</label>
-                                <input type="email" id="centerEmail" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500">
+                                <input type="email" id="centerEmail" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#d9304f]">
                             </div>
                             <div class="md:col-span-2">
                                 <label class="block text-sm font-medium mb-2">Address <span class="text-red-500">*</span></label>
-                                <textarea id="centerAddress" rows="3" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"></textarea>
+                                <textarea id="centerAddress" rows="3" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#d9304f]"></textarea>
                             </div>
                         </div>
 
@@ -818,26 +813,26 @@
                 <!-- QR Code Upload Section -->
                 <div class="mt-8 border-t pt-6">
                     <h3 class="text-xl font-bold mb-4 flex items-center">
-                        <i class="fas fa-qrcode text-blue-600 mr-2"></i>QR Code for Payments
+                        <i class="fas fa-qrcode text-[#ab183d] mr-2"></i>QR Code for Payments
                     </h3>
                     <p class="text-sm text-gray-600 mb-4">Upload your UPI QR code. This will appear on every bill automatically.</p>
 
                     <div class="flex flex-col md:flex-row items-center gap-8">
-                        <div class="border-2 border-dashed border-blue-300 rounded-xl p-6 text-center">
+                        <div class="border-2 border-dashed border-[#f0b8c6] rounded-xl p-6 text-center">
                             <div class="flex justify-center mb-4">
                                 <img id="qrPreview" class="qr-large rounded-lg border hidden" alt="QR Code">
                                 <div id="qrPlaceholder" class="w-32 h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-400">
                                     <i class="fas fa-qrcode text-4xl"></i>
                                 </div>
                             </div>
-                            <button onclick="document.getElementById('qrInput').click()" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm">
+                            <button onclick="document.getElementById('qrInput').click()" class="bg-[#ab183d] text-white px-4 py-2 rounded-lg hover:bg-[#8a0f2f] transition text-sm">
                                 <i class="fas fa-cloud-upload-alt mr-2"></i>Upload QR Code
                             </button>
                             <input type="file" id="qrInput" accept="image/*" class="hidden" onchange="handleQRUpload(event)">
                             <p class="text-xs text-gray-500 mt-2">Upload your UPI QR code (PNG/JPG)</p>
                         </div>
 
-                        <div class="flex-1 bg-blue-50 p-4 rounded-lg">
+                        <div class="flex-1 bg-[#fbe9ee] p-4 rounded-lg">
                             <h4 class="font-semibold mb-2">Benefits of QR Code:</h4>
                             <ul class="text-sm space-y-1 text-gray-600">
                                 <li><i class="fas fa-check text-green-600 mr-2"></i>Customers can pay instantly</li>
@@ -856,7 +851,7 @@
             <div class="card p-6">
                 <div class="flex flex-col md:flex-row justify-between items-center mb-6">
                     <h2 class="text-2xl font-bold flex items-center">
-                        <i class="fas fa-cogs text-blue-600 mr-3"></i>Service Management
+                        <i class="fas fa-cogs text-[#ab183d] mr-3"></i>Service Management
                     </h2>
                     <button onclick="openServiceModal()" class="gradient-success text-white px-6 py-2 rounded-lg hover:shadow-lg transition flex items-center mt-3 md:mt-0">
                         <i class="fas fa-plus mr-2"></i>Add Service
@@ -865,16 +860,16 @@
 
                 <!-- Category Filter -->
                 <div class="mb-4 flex gap-2 overflow-x-auto pb-2">
-                    <button onclick="filterServicesByCategory('all')" class="category-filter active px-4 py-2 bg-blue-600 text-white rounded-lg text-sm">All</button>
-                    <button onclick="filterServicesByCategory('Government')" class="category-filter px-4 py-2 border rounded-lg text-sm hover:bg-blue-50">Government</button>
-                    <button onclick="filterServicesByCategory('Banking')" class="category-filter px-4 py-2 border rounded-lg text-sm hover:bg-blue-50">Banking</button>
-                    <button onclick="filterServicesByCategory('Insurance')" class="category-filter px-4 py-2 border rounded-lg text-sm hover:bg-blue-50">Insurance</button>
-                    <button onclick="filterServicesByCategory('Recharge')" class="category-filter px-4 py-2 border rounded-lg text-sm hover:bg-blue-50">Recharge</button>
+                    <button onclick="filterServicesByCategory('all')" class="category-filter active px-4 py-2 bg-[#ab183d] text-white rounded-lg text-sm">All</button>
+                    <button onclick="filterServicesByCategory('Government')" class="category-filter px-4 py-2 border rounded-lg text-sm hover:bg-[#fbe9ee]">Government</button>
+                    <button onclick="filterServicesByCategory('Banking')" class="category-filter px-4 py-2 border rounded-lg text-sm hover:bg-[#fbe9ee]">Banking</button>
+                    <button onclick="filterServicesByCategory('Insurance')" class="category-filter px-4 py-2 border rounded-lg text-sm hover:bg-[#fbe9ee]">Insurance</button>
+                    <button onclick="filterServicesByCategory('Recharge')" class="category-filter px-4 py-2 border rounded-lg text-sm hover:bg-[#fbe9ee]">Recharge</button>
                 </div>
 
                 <!-- Search -->
                 <div class="mb-6">
-                    <input type="text" id="serviceSearch" placeholder="Search services..." class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500">
+                    <input type="text" id="serviceSearch" placeholder="Search services..." class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#d9304f]">
                 </div>
 
                 <!-- Services Grid -->
@@ -886,12 +881,12 @@
         <div id="customers-tab" class="tab-content hidden">
             <div class="card p-6">
                 <h2 class="text-2xl font-bold mb-6 flex items-center">
-                    <i class="fas fa-users text-blue-600 mr-3"></i>Customer Database
+                    <i class="fas fa-users text-[#ab183d] mr-3"></i>Customer Database
                 </h2>
 
                 <!-- Search -->
                 <div class="mb-6">
-                    <input type="text" id="customerSearch" placeholder="Search by name or mobile..." class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500">
+                    <input type="text" id="customerSearch" placeholder="Search by name or mobile..." class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#d9304f]">
                 </div>
 
                 <!-- Customers List -->
@@ -911,7 +906,7 @@
                         <!-- Mobile Number Search -->
                         <div class="mb-4">
                             <label class="block text-sm font-medium mb-2">Mobile Number</label>
-                            <input type="tel" id="billMobile" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500" placeholder="Enter mobile number" maxlength="10" onchange="searchCustomerByMobile()">
+                            <input type="tel" id="billMobile" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#d9304f]" placeholder="Enter mobile number" maxlength="10" onchange="searchCustomerByMobile()">
                         </div>
 
                         <!-- Customer Info -->
@@ -942,7 +937,7 @@
                                 <input type="number" id="billCustomPrice" placeholder="Custom Price" class="p-3 border rounded-lg">
                             </div>
 
-                            <button onclick="addServiceToBill()" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition">
+                            <button onclick="addServiceToBill()" class="w-full bg-[#ab183d] text-white py-3 rounded-lg hover:bg-[#8a0f2f] transition">
                                 <i class="fas fa-plus mr-2"></i>Add to Bill
                             </button>
                         </div>
@@ -1031,7 +1026,7 @@
 
                 <!-- Search -->
                 <div class="mb-6">
-                    <input type="text" id="historySearch" placeholder="Search bills..." class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500">
+                    <input type="text" id="historySearch" placeholder="Search bills..." class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#d9304f]">
                 </div>
 
                 <!-- Bills List -->
@@ -1049,7 +1044,7 @@
                             <input type="date" id="reportStartDate" class="p-3 border rounded-lg">
                             <span>to</span>
                             <input type="date" id="reportEndDate" class="p-3 border rounded-lg">
-                            <button onclick="generateReport()" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+                            <button onclick="generateReport()" class="bg-[#ab183d] text-white px-6 py-3 rounded-lg hover:bg-[#8a0f2f]">
                                 Generate Report
                             </button>
                         </div>
@@ -1080,7 +1075,7 @@
         <div id="settings-tab" class="tab-content hidden">
             <div class="card p-6">
                 <h2 class="text-2xl font-bold mb-6 flex items-center">
-                    <i class="fas fa-palette text-blue-600 mr-3"></i>Invoice Settings
+                    <i class="fas fa-palette text-[#ab183d] mr-3"></i>Invoice Settings
                 </h2>
 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -1092,7 +1087,7 @@
                         <div class="mb-6">
                             <label class="block text-sm font-medium mb-2">Primary Color</label>
                             <div class="flex gap-3 flex-wrap">
-                                <div class="color-option selected" style="background: #2563eb;" onclick="setInvoiceColor('#2563eb', 'primary')" data-color="#2563eb"></div>
+                                <div class="color-option selected" style="background: #ab183d;" onclick="setInvoiceColor('#ab183d', 'primary')" data-color="#ab183d"></div>
                                 <div class="color-option" style="background: #059669;" onclick="setInvoiceColor('#059669', 'primary')" data-color="#059669"></div>
                                 <div class="color-option" style="background: #dc2626;" onclick="setInvoiceColor('#dc2626', 'primary')" data-color="#dc2626"></div>
                                 <div class="color-option" style="background: #7c3aed;" onclick="setInvoiceColor('#7c3aed', 'primary')" data-color="#7c3aed"></div>
@@ -1138,7 +1133,7 @@
                             <h3 class="text-lg font-bold mb-4">Header Background</h3>
                             <select id="headerBg" class="w-full p-2 border rounded-lg" onchange="updateInvoiceStyle()">
                                 <option value="#f8fafc">Light Gray</option>
-                                <option value="#eff6ff">Light Blue</option>
+                                <option value="#fbe9ee">Light Blue</option>
                                 <option value="#ecfdf5">Light Green</option>
                                 <option value="#fef2f2">Light Red</option>
                                 <option value="#faf5ff">Light Purple</option>
@@ -1165,7 +1160,7 @@
                         <!-- Template 1 -->
                         <div class="template-preview selected" onclick="selectTemplate(1)">
                             <div class="flex items-center gap-3">
-                                <div class="w-12 h-12 bg-blue-600 rounded-lg"></div>
+                                <div class="w-12 h-12 bg-[#ab183d] rounded-lg"></div>
                                 <div>
                                     <h4 class="font-bold">Professional Template</h4>
                                     <p class="text-sm text-gray-600">Blue theme with border</p>
@@ -1242,7 +1237,7 @@
                 <div class="card p-6">
                     <h2 class="text-xl font-bold mb-4">Backup Data</h2>
                     <p class="text-gray-600 mb-4">Download all your data as JSON file</p>
-                    <button onclick="backupData()" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 w-full">
+                    <button onclick="backupData()" class="bg-[#ab183d] text-white px-6 py-3 rounded-lg hover:bg-[#8a0f2f] w-full">
                         <i class="fas fa-download mr-2"></i>Download Backup
                     </button>
                 </div>
@@ -1299,7 +1294,7 @@
 
             <div class="flex justify-end gap-3 mt-6">
                 <button onclick="closeServiceModal()" class="px-6 py-2 border rounded-lg">Cancel</button>
-                <button onclick="saveService()" class="bg-blue-600 text-white px-6 py-2 rounded-lg">Save</button>
+                <button onclick="saveService()" class="bg-[#ab183d] text-white px-6 py-2 rounded-lg">Save</button>
             </div>
             <input type="hidden" id="editingServiceId">
         </div>
@@ -1340,10 +1335,7 @@
             </div>
         </div>
     </div>
-    
-    <!-- Banner Ads -->
-    
-    
+
     <!-- Toast Container -->
     <div id="toastContainer" class="fixed bottom-5 right-5 z-50 space-y-2"></div>
 
@@ -1369,7 +1361,7 @@
             lastBillNumber: 0,
             darkMode: false,
             invoiceSettings: {
-                primaryColor: '#2563eb',
+                primaryColor: '#ab183d',
                 showBorder: true,
                 borderWidth: '2px',
                 borderRadius: '12px',
@@ -1558,22 +1550,22 @@
             });
 
             // Service search
-            document.getElementById('serviceSearch') ? .addEventListener('input', function() {
+            document.getElementById('serviceSearch')?.addEventListener('input', function() {
                 renderServices(this.value);
             });
 
             // Customer search
-            document.getElementById('customerSearch') ? .addEventListener('input', function() {
+            document.getElementById('customerSearch')?.addEventListener('input', function() {
                 renderCustomers(this.value);
             });
 
             // History search
-            document.getElementById('historySearch') ? .addEventListener('input', function() {
+            document.getElementById('historySearch')?.addEventListener('input', function() {
                 renderBillsHistory(this.value);
             });
 
             // Bill service select
-            document.getElementById('billServiceSelect') ? .addEventListener('change', function() {
+            document.getElementById('billServiceSelect')?.addEventListener('change', function() {
                 const selected = this.options[this.selectedIndex];
                 if (selected && selected.value) {
                     const price = selected.dataset.price;
@@ -1655,14 +1647,14 @@
             document.getElementById(tabName + '-tab').classList.remove('hidden');
 
             document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('tab-active', 'bg-blue-50');
+                btn.classList.remove('tab-active', 'bg-[#fbe9ee]');
             });
 
             const activeBtn = Array.from(document.querySelectorAll('.tab-btn')).find(btn =>
                 btn.dataset.tab === tabName
             );
             if (activeBtn) {
-                activeBtn.classList.add('tab-active', 'bg-blue-50');
+                activeBtn.classList.add('tab-active', 'bg-[#fbe9ee]');
             }
 
             // Refresh data when switching tabs
@@ -1839,10 +1831,10 @@
         function filterServicesByCategory(category) {
             currentCategory = category;
             document.querySelectorAll('.category-filter').forEach(btn => {
-                btn.classList.remove('bg-blue-600', 'text-white');
+                btn.classList.remove('bg-[#ab183d]', 'text-white');
                 btn.classList.add('border');
             });
-            event.target.classList.add('bg-blue-600', 'text-white');
+            event.target.classList.add('bg-[#ab183d]', 'text-white');
             event.target.classList.remove('border');
             renderServices(document.getElementById('serviceSearch').value);
         }
@@ -1875,10 +1867,10 @@
                         <div>
                             <h4 class="font-semibold">${service.name}</h4>
                             <p class="text-sm text-gray-500">${service.category}</p>
-                            <p class="text-blue-600 font-bold mt-2">₹${service.price}</p>
+                            <p class="text-[#ab183d] font-bold mt-2">₹${service.price}</p>
                         </div>
                         <div class="flex gap-2">
-                            <button onclick="openServiceModal('${service.id}')" class="text-blue-600 hover:text-blue-800 p-2">
+                            <button onclick="openServiceModal('${service.id}')" class="text-[#ab183d] hover:text-[#8a0f2f] p-2">
                                 <i class="fas fa-edit"></i>
                             </button>
                             <button onclick="deleteService('${service.id}')" class="text-red-600 hover:text-red-800 p-2">
@@ -1960,7 +1952,7 @@
                         <p class="font-semibold">${customer.name}</p>
                         <p class="text-sm text-gray-500">${customer.mobile}</p>
                     </div>
-                    <button onclick="useCustomer('${customer.mobile}')" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm">
+                    <button onclick="useCustomer('${customer.mobile}')" class="bg-[#ab183d] text-white px-4 py-2 rounded-lg text-sm">
                         Use for Bill
                     </button>
                 </div>
@@ -2405,7 +2397,7 @@
                 <head>
                     <title>Bill - ${lastGeneratedBill?.billNumber || 'CSC Bill'}</title>
                     <style>
-                        body { font-family: 'Poppins', Arial, sans-serif; padding: 10px; background: white; margin: 0; }
+                        body { font-family: 'Inter', Arial, sans-serif; padding: 10px; background: white; margin: 0; }
                         .print-header { text-align: center; margin-bottom: 15px; border-bottom: 2px dashed ${settings.primaryColor}; padding-bottom: 10px; }
                         .print-header h1 { color: ${settings.primaryColor}; font-size: 24px; margin-bottom: 5px; }
                         .print-details { background: ${settings.headerBg}; padding: 10px; border-radius: 8px; margin-bottom: 15px; }
@@ -2440,7 +2432,7 @@
 
         function downloadPDFFromModal() {
             const element = document.getElementById('printBillContainer');
-            const billNumber = lastGeneratedBill ? .billNumber || 'CSC-Bill';
+            const billNumber = lastGeneratedBill ?.billNumber || 'CSC-Bill';
 
             const opt = {
                 margin: [0.3, 0.3, 0.3, 0.3],
@@ -2465,9 +2457,9 @@
         }
 
         function shareWhatsAppFromModal() {
-            const billNumber = lastGeneratedBill ? .billNumber || 'CSC-Bill';
-            const customerName = lastGeneratedBill ? .customerName || 'Customer';
-            const total = lastGeneratedBill ? .total || 0;
+            const billNumber = lastGeneratedBill ?.billNumber || 'CSC-Bill';
+            const customerName = lastGeneratedBill ?.customerName || 'Customer';
+            const total = lastGeneratedBill ?.total || 0;
 
             const text = `*Pro CSC Tools - Bill*\n\nBill No: ${billNumber}\nCustomer: ${customerName}\nTotal: ₹${total}\nPayment: ${lastGeneratedBill?.paymentMode || 'Cash'}\n\nScan QR code on bill to pay\n\nVisit: https://procsctools.in`;
 
@@ -2573,7 +2565,7 @@
                     <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
                         <div class="flex-1">
                             <div class="flex items-center gap-3 mb-2">
-                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
+                                <span class="bg-[#f7d5de] text-[#8a0f2f] px-3 py-1 rounded-full text-sm font-semibold">
                                     ${bill.billNumber}
                                 </span>
                                 <span class="text-gray-500 text-sm">
@@ -2587,7 +2579,7 @@
                         </div>
                         <div class="mt-3 md:mt-0 flex items-center gap-3">
                             <p class="text-xl font-bold" style="color: ${appState.invoiceSettings.primaryColor};">₹${bill.total}</p>
-                            <button onclick="viewBill('${bill.id}')" class="text-blue-600 hover:text-blue-800 p-2" title="View">
+                            <button onclick="viewBill('${bill.id}')" class="text-[#ab183d] hover:text-[#8a0f2f] p-2" title="View">
                                 <i class="fas fa-eye"></i>
                             </button>
                             <button onclick="printBillFromHistory('${bill.id}')" class="text-green-600 hover:text-green-800 p-2" title="Print">
@@ -2774,7 +2766,7 @@
                         <span>${name}</span>
                         <div>
                             <span class="font-semibold">${data.quantity}</span>
-                            <span class="text-blue-600 ml-2">₹${data.revenue}</span>
+                            <span class="text-[#ab183d] ml-2">₹${data.revenue}</span>
                         </div>
                     </div>
                 `).join('');
@@ -2851,7 +2843,7 @@
                 case 1:
                     appState.invoiceSettings = {
                         ...appState.invoiceSettings,
-                        primaryColor: '#2563eb',
+                        primaryColor: '#ab183d',
                         showBorder: true,
                         borderWidth: '2px',
                         borderRadius: '12px',
@@ -3029,7 +3021,7 @@
             const colors = {
                 success: 'bg-green-500',
                 error: 'bg-red-500',
-                info: 'bg-blue-500',
+                info: 'bg-[#d9304f]',
                 warning: 'bg-yellow-500'
             };
 
@@ -3046,31 +3038,95 @@
             }, 3000);
         }
     </script>
+    <!-- ===== Pro CSC Tools: supporting content ===== -->
+    <section class="pcs-content no-print" style="max-width:1120px;margin:40px auto 0;padding:0 16px;font-family:'Inter',sans-serif;color:#1f2937;">
+        <div style="background:linear-gradient(135deg,#fbe9ee,#fff);border:1px solid #f0b8c6;border-radius:20px;padding:28px 22px;">
+            <h2 style="font-size:26px;font-weight:800;color:#8a0f2f;margin:0 0 10px;">Free CSC Billing Software Online for VLEs &amp; Shops</h2>
+            <p style="font-size:15px;line-height:1.7;color:#374151;">This <strong>CSC billing software</strong> lets Common Service Center operators, students and small shop owners create professional GST bills and invoices in seconds \u2014 completely free and 100% offline in your browser. Manage your services and prices, save customers, track daily income, add your own UPI QR code to every bill, and download or print clean invoices. No login, no subscription, no data upload \u2014 sab kuch aapke device par surakshit rehta hai.</p>
+        </div>
 
-<!-- PCT-FOOTER-START -->
-<div class="pct-ad"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6791318178265120" data-ad-slot="7017392570" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
-<footer class="pct-footer">
-  <div class="pct-footer-grid">
-    <div>
-      <h3>Pro CSC Tools</h3>
-      <p>India's Most Trusted Platform for CSC VLEs &ndash; Government Document, ID Card, PDF &amp; Online Tools.</p>
-    </div>
-    <div>
-      <h4>Quick Links</h4>
-      <a href="/">Home</a><a href="/#tools">Tools</a><a href="/about">About Us</a><a href="/contact">Contact</a>
-    </div>
-    <div>
-      <h4>Popular Tools</h4>
-      <a href="/resume-builder">Resume Maker</a><a href="/image-to-pdf">Image to PDF</a><a href="/image-resizer">Image Resizer</a><a href="/age-calculator">Age Calculator</a>
-    </div>
-    <div>
-      <h4>Legal</h4>
-      <a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Service</a><a href="/disclaimer">Disclaimer</a><a href="/contact">Contact</a>
-    </div>
-  </div>
-  <div class="pct-copy">&copy; 2026 Pro CSC Tools. All rights reserved. Made with &#10084;&#65039; in India for All CSC VLEs.</div>
-</footer>
-<!-- PCT-FOOTER-END -->
+        <h2 style="font-size:22px;font-weight:800;color:#ab183d;margin:34px 0 14px;"><i class="fas fa-list-check" style="margin-right:8px;"></i>How to Use the CSC Billing Software</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;">
+            <div style="background:#fff;border:1px solid #f0b8c6;border-radius:14px;padding:18px;"><div style="font-weight:800;color:#ab183d;font-size:15px;">1. Add Your Services</div><p style="font-size:14px;color:#4b5563;margin-top:6px;line-height:1.6;">Go to Services and add each service (PAN, Aadhaar, print, etc.) with its price. Ye ek baar set karo.</p></div>
+            <div style="background:#fff;border:1px solid #f0b8c6;border-radius:14px;padding:18px;"><div style="font-weight:800;color:#ab183d;font-size:15px;">2. Upload UPI QR</div><p style="font-size:14px;color:#4b5563;margin-top:6px;line-height:1.6;">In Settings, upload your own UPI QR image. Wo har bill par automatically print hoga.</p></div>
+            <div style="background:#fff;border:1px solid #f0b8c6;border-radius:14px;padding:18px;"><div style="font-weight:800;color:#ab183d;font-size:15px;">3. Create a Bill</div><p style="font-size:14px;color:#4b5563;margin-top:6px;line-height:1.6;">Open Billing, pick customer &amp; services, add GST if needed, choose payment mode and generate.</p></div>
+            <div style="background:#fff;border:1px solid #f0b8c6;border-radius:14px;padding:18px;"><div style="font-weight:800;color:#ab183d;font-size:15px;">4. Print or Download PDF</div><p style="font-size:14px;color:#4b5563;margin-top:6px;line-height:1.6;">Print the invoice or save as PDF, and share on WhatsApp directly to your customer.</p></div>
+            <div style="background:#fff;border:1px solid #f0b8c6;border-radius:14px;padding:18px;"><div style="font-weight:800;color:#ab183d;font-size:15px;">5. Backup Your Data</div><p style="font-size:14px;color:#4b5563;margin-top:6px;line-height:1.6;">Use Backup to export a file, and Restore it anytime on any device. Data kabhi lost nahi hoga.</p></div>
+        </div>
+
+        <h2 style="font-size:22px;font-weight:800;color:#ab183d;margin:34px 0 14px;"><i class="fas fa-circle-question" style="margin-right:8px;"></i>Why Use This CSC Center Billing Software</h2>
+        <ul style="font-size:15px;line-height:1.8;color:#374151;padding-left:20px;">
+            <li><strong>100% free &amp; offline</strong> \u2014 no monthly fees like paid billing software; works without internet after loading.</li>
+            <li><strong>GST invoice generator</strong> \u2014 add tax, generate professional bills and download PDF instantly.</li>
+            <li><strong>Customer &amp; service management</strong> \u2014 saved customers and service prices speed up daily billing.</li>
+            <li><strong>UPI QR payments</strong> \u2014 your own QR on every bill so customers pay you instantly.</li>
+            <li><strong>Daily reports</strong> \u2014 track cash, UPI and card income and grow your CSC center.</li>
+            <li><strong>Private &amp; safe</strong> \u2014 data stays in your browser; nothing is uploaded to any server.</li>
+        </ul>
+        <p style="font-size:15px;line-height:1.7;color:#374151;">Perfect for <strong>CSC VLEs</strong>, mobile/CSC shops, cyber cafes, stationery stores and small businesses who want a simple <strong>billing software for CSC center</strong> without buying costly desktop software. GST bill kaise banaye ya invoice generator online free chahiye \u2014 ye tool sab kuch ek jagah deta hai.</p>
+
+        <h2 style="font-size:22px;font-weight:800;color:#ab183d;margin:34px 0 14px;"><i class="fas fa-comments" style="margin-right:8px;"></i>Frequently Asked Questions</h2>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+            <details style="background:#fff;border:1px solid #f0b8c6;border-radius:12px;padding:14px 16px;"><summary style="font-weight:700;color:#8a0f2f;cursor:pointer;">Is this CSC billing software free?</summary><p style="font-size:14px;color:#4b5563;margin-top:8px;line-height:1.6;">Yes, it is 100% free. No subscription, no login, no hidden charges. Everything runs in your browser.</p></details>
+            <details style="background:#fff;border:1px solid #f0b8c6;border-radius:12px;padding:14px 16px;"><summary style="font-weight:700;color:#8a0f2f;cursor:pointer;">Does the billing software work offline?</summary><p style="font-size:14px;color:#4b5563;margin-top:8px;line-height:1.6;">Yes. After the page loads once, all your data is saved locally in the browser, so you can create bills even without internet.</p></details>
+            <details style="background:#fff;border:1px solid #f0b8c6;border-radius:12px;padding:14px 16px;"><summary style="font-weight:700;color:#8a0f2f;cursor:pointer;">Can I add my own UPI QR code on the bill?</summary><p style="font-size:14px;color:#4b5563;margin-top:8px;line-height:1.6;">Yes. Upload your own UPI QR image in Settings and it will appear on every invoice automatically so customers can pay you directly.</p></details>
+            <details style="background:#fff;border:1px solid #f0b8c6;border-radius:12px;padding:14px 16px;"><summary style="font-weight:700;color:#8a0f2f;cursor:pointer;">Does it support GST billing?</summary><p style="font-size:14px;color:#4b5563;margin-top:8px;line-height:1.6;">Yes, add GST/tax to bills, manage services with prices, and print or download professional GST invoices as PDF.</p></details>
+            <details style="background:#fff;border:1px solid #f0b8c6;border-radius:12px;padding:14px 16px;"><summary style="font-weight:700;color:#8a0f2f;cursor:pointer;">Is my customer data safe?</summary><p style="font-size:14px;color:#4b5563;margin-top:8px;line-height:1.6;">Yes. Your data never leaves your device \u2014 it is stored only in your browser. You can also back up and restore it anytime.</p></details>
+            <details style="background:#fff;border:1px solid #f0b8c6;border-radius:12px;padding:14px 16px;"><summary style="font-weight:700;color:#8a0f2f;cursor:pointer;">Can I use it on mobile?</summary><p style="font-size:14px;color:#4b5563;margin-top:8px;line-height:1.6;">Absolutely. The tool is fully responsive and works on any Android or iOS phone browser as well as desktop.</p></details>
+        </div>
+    </section>
+
+    <!-- ===== Pro CSC Tools FOOTER ===== -->
+    <footer class="pcs-footer no-print" style="background:#0f172a;color:#94a3b8;margin-top:48px;padding:56px 16px 32px;font-family:'Inter',sans-serif;">
+        <div style="max-width:1120px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:32px;">
+            <div>
+                <a href="https://procsctools.in" style="display:flex;align-items:center;font-size:20px;font-weight:800;color:#fff;text-decoration:none;margin-bottom:12px;"><i class="fas fa-crown" style="color:#e0aa14;margin-right:6px;"></i> Pro CSC Tools</a>
+                <p style="font-size:14px;line-height:1.6;">Free online tools for CSC VLEs, students and shop owners in India \u2014 billing, photos, PDFs, calculators and more.</p>
+                <div style="display:flex;gap:16px;margin-top:16px;font-size:18px;">
+                    <a href="https://facebook.com/procsctools" aria-label="Facebook" style="color:#94a3b8;"><i class="fab fa-facebook"></i></a>
+                    <a href="https://instagram.com/procsctools" aria-label="Instagram" style="color:#94a3b8;"><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com/@procsctools" aria-label="YouTube" style="color:#94a3b8;"><i class="fab fa-youtube"></i></a>
+                    <a href="https://t.me/procsctools" aria-label="Telegram" style="color:#94a3b8;"><i class="fab fa-telegram"></i></a>
+                    <a href="https://twitter.com/procsctools" aria-label="Twitter" style="color:#94a3b8;"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 style="color:#fff;font-weight:700;margin-bottom:12px;">Popular Tools</h4>
+                <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+                    <li><a href="https://procsctools.in/tools/csc-billing-software.html" style="color:#94a3b8;text-decoration:none;">CSC Billing Software</a></li>
+                    <li><a href="https://procsctools.in/tools/gst-invoice-generator.html" style="color:#94a3b8;text-decoration:none;">GST Invoice Generator</a></li>
+                    <li><a href="https://procsctools.in/tools/passport-photo-maker.html" style="color:#94a3b8;text-decoration:none;">Passport Photo Maker</a></li>
+                    <li><a href="https://procsctools.in/#tools" style="color:#94a3b8;text-decoration:none;">All Tools</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="color:#fff;font-weight:700;margin-bottom:12px;">Company</h4>
+                <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+                    <li><a href="https://procsctools.in/about.html" style="color:#94a3b8;text-decoration:none;">About Us</a></li>
+                    <li><a href="https://procsctools.in/contact.html" style="color:#94a3b8;text-decoration:none;">Contact</a></li>
+                    <li><a href="https://procsctools.in/privacy.html" style="color:#94a3b8;text-decoration:none;">Privacy Policy</a></li>
+                    <li><a href="https://procsctools.in/terms.html" style="color:#94a3b8;text-decoration:none;">Terms</a></li>
+                    <li><a href="https://procsctools.in/disclaimer.html" style="color:#94a3b8;text-decoration:none;">Disclaimer</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="color:#fff;font-weight:700;margin-bottom:12px;">Get in Touch</h4>
+                <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+                    <li><a href="mailto:Palcscuno@gmail.com" style="color:#94a3b8;text-decoration:none;"><i class="fas fa-envelope" style="margin-right:8px;"></i>Palcscuno@gmail.com</a></li>
+                    <li><a href="https://wa.me/916387617678" style="color:#94a3b8;text-decoration:none;"><i class="fab fa-whatsapp" style="margin-right:8px;"></i>+91 63876 17678</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="max-width:1120px;margin:32px auto 0;padding-top:24px;border-top:1px solid #1e293b;text-align:center;font-size:13px;">\u00a9 2026 Pro CSC Tools. All rights reserved. Made with love in India for all CSC VLEs.</div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/916387617678" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" class="no-print" style="position:fixed;bottom:20px;right:20px;width:56px;height:56px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:0 4px 14px rgba(0,0,0,.25);z-index:9999;text-decoration:none;"><i class="fab fa-whatsapp"></i></a>
+    <script>
+    (function(){var b=document.getElementById('pcsMenuBtn'),m=document.getElementById('pcsMobileMenu');if(b&&m){b.addEventListener('click',function(){m.classList.toggle('hidden');});document.querySelectorAll('[data-close-mobile]').forEach(function(a){a.addEventListener('click',function(){m.classList.add('hidden');});});}})();
+    window.addEventListener('load',function(){try{document.querySelectorAll('ins.adsbygoogle').forEach(function(){(window.adsbygoogle=window.adsbygoogle||[]).push({});});}catch(e){}});
+    </script>
+
 </body>
 
 </html>
