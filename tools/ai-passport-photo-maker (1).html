@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Passport Photo Maker – Pro CSC Tools</title>
+    <meta name="description" content="AI Passport Photo Maker – Instantly generate passport-ready photos using Google AI Studio. Prompts auto-copy with one click." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg: #f4f6fb;
+            --surface: #ffffff;
+            --surface2: #eef0f8;
+            --border: rgba(0, 0, 0, 0.08);
+            --border-hover: #d9304f;
+            --text-primary: #12122a;
+            --text-secondary: #5a5a7a;
+            --accent: #ab183d;
+            --accent-light: #fbe9ee;
+            --accent-glow: rgba(171, 24, 61, 0.25);
+            --accent-text: #8a0f2f;
+            --green: #1d9e75;
+            --green-light: #e1f5ee;
+            --green-text: #0f6e56;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --radius-pill: 60px;
+            --font: 'Inter', system-ui, -apple-system, sans-serif;
+            --shadow-soft: 0 8px 30px rgba(0, 0, 0, 0.04);
+            --shadow-hover: 0 12px 40px rgba(171, 24, 61, 0.12);
+            --transition: all 0.25s cubic-bezier(0.2, 0, 0, 1);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0c0c1a;
+                --surface: #18182e;
+                --surface2: #22223e;
+                --border: rgba(255, 255, 255, 0.08);
+                --text-primary: #ececf9;
+                --text-secondary: #9b9bbf;
+                --accent-light: #5c0f22;
+                --accent-text: #f0b8c6;
+                --green-light: #0d4f40;
+                --green-text: #a3e6d2;
+                --shadow-soft: 0 8px 30px rgba(0, 0, 0, 0.6);
+                --shadow-hover: 0 12px 40px rgba(171, 24, 61, 0.25);
+                --accent-glow: rgba(171, 24, 61, 0.4);
+            }
+        }
+
+        body {
+            font-family: var(--font);
+            background: var(--bg);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 2rem 1rem 3rem;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 620px;
+            animation: fadeUp 0.6s ease both;
+        }
+
+        @keyframes fadeUp {
+            0% {
+                opacity: 0;
+                transform: translateY(18px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* --- Language Toggle --- */
+
+        .lang-toggle {
+            display: flex;
+            background: var(--surface2);
+            border-radius: var(--radius-pill);
+            padding: 5px;
+            margin-bottom: 2rem;
+            border: 0.5px solid var(--border);
+            backdrop-filter: blur(4px);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .lang-btn {
+            flex: 1;
+            padding: 10px 0;
+            border: none;
+            background: transparent;
+            border-radius: var(--radius-pill);
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            font-family: var(--font);
+            transition: var(--transition);
+            letter-spacing: 0.3px;
+        }
+
+        .lang-btn.active {
+            background: var(--accent);
+            color: #fff;
+            box-shadow: 0 4px 12px var(--accent-glow);
+        }
+
+        .lang-btn:hover:not(.active) {
+            color: var(--text-primary);
+        }
+
+        /* --- Hero --- */
+
+        .hero {
+            text-align: center;
+            margin-bottom: 2.2rem;
+        }
+
+        .site-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            background: var(--accent-light);
+            color: var(--accent-text);
+            padding: 8px 22px;
+            border-radius: var(--radius-pill);
+            margin-bottom: 16px;
+            letter-spacing: 0.02em;
+            border: 0.5px solid var(--border);
+            transition: var(--transition);
+            text-decoration: none;
+            backdrop-filter: blur(4px);
+        }
+
+        .site-badge:hover {
+            background: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+            transform: scale(1.02);
+            box-shadow: 0 6px 18px var(--accent-glow);
+        }
+
+        .hero h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            letter-spacing: -0.3px;
+        }
+
+        .hero h1 .icon {
+            font-size: 30px;
+        }
+
+        .hero p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            max-width: 460px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* --- Photo Cards --- */
+
+        .cards {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-bottom: 1.5rem;
+        }
+
+        .photo-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 18px 22px;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            text-align: left;
+            width: 100%;
+            font-family: var(--font);
+            box-shadow: var(--shadow-soft);
+            backdrop-filter: blur(2px);
+        }
+
+        .photo-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: var(--radius-lg);
+            background: linear-gradient(135deg, var(--accent-light), transparent 60%);
+            opacity: 0;
+            transition: var(--transition);
+            pointer-events: none;
+        }
+
+        .photo-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .photo-card:hover::after {
+            opacity: 1;
+        }
+
+        .photo-card:focus-visible {
+            outline: 3px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        .photo-card.copied {
+            border-color: var(--green);
+            background: var(--green-light);
+            box-shadow: 0 0 0 4px rgba(29, 158, 117, 0.15);
+        }
+
+        .photo-card.copied::after {
+            opacity: 0;
+        }
+
+        .avatar {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            flex-shrink: 0;
+            transition: var(--transition);
+        }
+
+        .av-male {
+            background: #fbe9ee;
+        }
+
+        .av-female {
+            background: #fde7ef;
+        }
+
+        .av-hijab {
+            background: #e5f3d9;
+        }
+
+        .photo-card:hover .avatar {
+            transform: scale(1.04);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .av-male {
+                background: #0f3b6b;
+            }
+            .av-female {
+                background: #6a1f3a;
+            }
+            .av-hijab {
+                background: #1e4a0a;
+            }
+        }
+
+        .card-body {
+            flex: 1;
+            min-width: 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 4px;
+            letter-spacing: -0.2px;
+        }
+
+        .card-desc {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin-bottom: 4px;
+        }
+
+        .copy-hint {
+            font-size: 11px;
+            color: var(--text-secondary);
+            opacity: 0.7;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .copy-hint::before {
+            content: '⏎';
+            font-size: 13px;
+            opacity: 0.6;
+        }
+
+        .copy-badge {
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%) scale(0.9);
+            font-size: 12px;
+            padding: 5px 16px;
+            border-radius: var(--radius-pill);
+            background: var(--green);
+            color: #fff;
+            font-weight: 600;
+            opacity: 0;
+            transition: var(--transition);
+            white-space: nowrap;
+            box-shadow: 0 4px 12px rgba(29, 158, 117, 0.3);
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        .photo-card.copied .copy-badge {
+            opacity: 1;
+            transform: translateY(-50%) scale(1);
+        }
+
+        /* --- Action Buttons --- */
+
+        .action-row {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 1.8rem;
+        }
+
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 11px 24px;
+            border-radius: var(--radius-pill);
+            border: 1px solid var(--border);
+            background: var(--surface);
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-primary);
+            cursor: pointer;
+            font-family: var(--font);
+            transition: var(--transition);
+            text-decoration: none;
+            box-shadow: var(--shadow-soft);
+            backdrop-filter: blur(4px);
+        }
+
+        .action-btn:hover {
+            background: var(--surface2);
+            border-color: var(--border-hover);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .action-btn svg {
+            flex-shrink: 0;
+            transition: var(--transition);
+        }
+
+        .action-btn:hover svg {
+            transform: scale(1.1);
+        }
+
+        /* --- Guide Box --- */
+
+        .guide-box {
+            background: var(--surface);
+            border-radius: var(--radius-lg);
+            padding: 22px 26px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-soft);
+            backdrop-filter: blur(2px);
+            transition: var(--transition);
+        }
+
+        .guide-box:hover {
+            border-color: var(--border-hover);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .guide-title {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .guide-steps {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .guide-step {
+            display: flex;
+            gap: 12px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            align-items: flex-start;
+            padding: 6px 8px;
+            border-radius: var(--radius-md);
+            transition: var(--transition);
+        }
+
+        .guide-step:hover {
+            background: var(--surface2);
+        }
+
+        .step-label {
+            font-weight: 700;
+            color: var(--text-primary);
+            white-space: nowrap;
+            flex-shrink: 0;
+            min-width: 100px;
+            letter-spacing: -0.2px;
+        }
+
+        /* --- Toast --- */
+
+        .toast {
+            position: fixed;
+            bottom: 32px;
+            left: 50%;
+            transform: translateX(-50%) translateY(80px);
+            background: var(--green);
+            color: #fff;
+            padding: 14px 32px;
+            border-radius: var(--radius-pill);
+            font-size: 14px;
+            font-weight: 600;
+            font-family: var(--font);
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.2, 0, 0, 1);
+            z-index: 9999;
+            pointer-events: none;
+            white-space: nowrap;
+            box-shadow: 0 8px 30px rgba(29, 158, 117, 0.4);
+            backdrop-filter: blur(8px);
+            border: 0.5px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* --- Footer --- */
+
+        .footer {
+            text-align: center;
+            margin-top: 2.2rem;
+            font-size: 12px;
+            color: var(--text-secondary);
+            opacity: 0.7;
+        }
+
+        .footer a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .footer a:hover {
+            color: var(--border-hover);
+            text-decoration: underline;
+        }
+
+        /* --- Related Tools Section --- */
+
+        .related-tools {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px 40px;
+            background: var(--bg);
+            border-radius: var(--radius-lg);
+            margin-top: 40px;
+        }
+
+        .related-tools .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .related-tools .section-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: var(--radius-pill);
+            background: var(--accent);
+            color: #fff;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        .related-tools h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+
+        .related-tools h2 span {
+            color: var(--accent);
+        }
+
+        .related-tools .subtitle {
+            color: var(--text-secondary);
+            font-size: 16px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .tool-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 24px 20px;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: var(--shadow-soft);
+            text-align: center;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--border-hover);
+        }
+
+        .tool-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin: 0 auto 14px;
+            background: var(--accent-light);
+            color: var(--accent);
+        }
+
+        .tool-card h3 {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+
+        .tool-card p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        @media (max-width: 500px) {
+            .tools-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+            .related-tools h2 {
+                font-size: 24px;
+            }
+            .tool-card {
+                padding: 16px;
+            }
+            .tool-icon {
+                width: 44px;
+                height: 44px;
+                font-size: 20px;
+            }
+            .tool-card h3 {
+                font-size: 13px;
+            }
+            .tool-card p {
+                font-size: 11px;
+            }
+        }
+
+        /* --- responsive --- */
+
+        @media (max-width: 500px) {
+            body {
+                padding: 1.2rem 0.6rem 2rem;
+            }
+            .hero h1 {
+                font-size: 22px;
+                flex-wrap: wrap;
+            }
+            .photo-card {
+                padding: 14px 16px;
+                gap: 12px;
+            }
+            .avatar {
+                width: 44px;
+                height: 44px;
+                font-size: 22px;
+            }
+            .card-title {
+                font-size: 14px;
+            }
+            .card-desc {
+                font-size: 12px;
+            }
+            .action-btn {
+                padding: 9px 16px;
+                font-size: 12px;
+            }
+            .guide-box {
+                padding: 18px 16px;
+            }
+            .step-label {
+                min-width: 80px;
+            }
+            .copy-badge {
+                right: 12px;
+                font-size: 10px;
+                padding: 4px 12px;
+            }
+            .toast {
+                font-size: 12px;
+                padding: 10px 20px;
+                white-space: normal;
+                max-width: 90%;
+            }
+        }
+
+        /* Font Awesome CDN for icons */
+
+        .fa {
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+        }
+    </style>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>if(window.tailwind){tailwind.config={theme:{extend:{fontFamily:{sans:["Inter","sans-serif"]},colors:{brand:"#ab183d"}}}}}</script>
+    <style>@media print{.no-print{display:none!important}}</style>
+    <link rel="canonical" href="https://procsctools.in/tools/ai-passport-photo-maker.html" />
+    <meta property="og:url" content="https://procsctools.in/tools/ai-passport-photo-maker.html" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QL80Z3DZ8Z"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QL80Z3DZ8Z');</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@graph":[
+    {"@type":"WebApplication","name":"AI Passport Photo Maker","url":"https://procsctools.in/tools/ai-passport-photo-maker.html","applicationCategory":"MultimediaApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"publisher":{"@type":"Organization","name":"Pro CSC Tools","url":"https://procsctools.in"}},
+    {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://procsctools.in"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://procsctools.in/tools"},{"@type":"ListItem","position":3,"name":"AI Passport Photo Maker","item":"https://procsctools.in/tools/ai-passport-photo-maker.html"}]},
+    {"@type":"HowTo","name":"AI passport photo kaise banaye","step":[{"@type":"HowToStep","name":"Card chuno (male/female)"},{"@type":"HowToStep","name":"Prompt auto-copy hoga aur AI Studio khulega"},{"@type":"HowToStep","name":"Apni photo upload karke prompt paste karo"},{"@type":"HowToStep","name":"Passport photo generate aur download karo"}]}
+    ]}
+    </script>
+</head>
+
+<body>
+    <nav class="pcs-nav no-print fixed top-0 w-full z-50 backdrop-blur-lg bg-white/85 border-b border-gray-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
+            <a href="https://procsctools.in" class="flex items-center text-xl font-extrabold text-[#ab183d]"><i class="fas fa-crown mr-1 text-[#e0aa14]"></i> Pro CSC Tools</a>
+            <div class="hidden md:flex items-center gap-7 text-sm font-semibold text-gray-700">
+                <a href="https://procsctools.in" class="hover:text-[#ab183d] transition">Home</a>
+                <a href="https://procsctools.in/#tools" class="hover:text-[#ab183d] transition">Tools</a>
+                <a href="https://procsctools.in/blog/" class="hover:text-[#ab183d] transition">Blog</a>
+                <a href="https://procsctools.in/about.html" class="hover:text-[#ab183d] transition">About</a>
+                <a href="https://procsctools.in/contact.html" class="hover:text-[#ab183d] transition">Contact</a>
+            </div>
+            <button id="menuBtn" class="md:hidden text-2xl text-gray-700" aria-label="Menu"><i class="fas fa-bars"></i></button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-200 px-4 py-3 space-y-1 text-sm font-semibold text-gray-700">
+            <a href="https://procsctools.in" data-close-mobile class="block py-1">Home</a>
+            <a href="https://procsctools.in/#tools" data-close-mobile class="block py-1">Tools</a>
+            <a href="https://procsctools.in/blog/" data-close-mobile class="block py-1">Blog</a>
+            <a href="https://procsctools.in/about.html" data-close-mobile class="block py-1">About</a>
+            <a href="https://procsctools.in/contact.html" data-close-mobile class="block py-1">Contact</a>
+        </div>
+    </nav>
+    <div class="h-16 no-print"></div>
+
+    <div class="container">
+
+        <!-- Language Toggle -->
+        <div class="lang-toggle" role="group" aria-label="Language selector">
+            <button class="lang-btn active" id="btn-en" onclick="setLang('en')">English</button>
+            <button class="lang-btn" id="btn-hi" onclick="setLang('hi')">हिन्दी</button>
+        </div>
+
+        <!-- Hero -->
+        <div class="hero">
+            
+            <h1>
+                <span class="icon">🪪</span>
+                <span id="txt-title">AI Passport Photo Maker</span>
+            </h1>
+            <p id="txt-subtitle">Click a card to auto-copy the prompt and open Google AI Studio instantly.</p>
+        </div>
+
+        <!-- Cards -->
+        <div class="cards" role="list">
+
+            <button class="photo-card" id="card-male" onclick="copyAndOpen('male')" aria-label="Male Passport Photo — click to copy prompt">
+        <div class="avatar av-male" aria-hidden="true">👨</div>
+        <div class="card-body">
+          <div class="card-title" id="txt-male-label">Male Passport Photo</div>
+          <div class="card-desc" id="txt-male-desc">Automatically generate a natural passport photo meeting official standards.</div>
+          <div class="copy-hint" id="txt-male-hint">Click → Prompt copies & AI Studio opens</div>
+        </div>
+        <div class="copy-badge" id="badge-male" aria-live="polite">✓ Copied!</div>
+      </button>
+
+            <button class="photo-card" id="card-female" onclick="copyAndOpen('female')" aria-label="Female Passport Photo — click to copy prompt">
+        <div class="avatar av-female" aria-hidden="true">👩</div>
+        <div class="card-body">
+          <div class="card-title" id="txt-female-label">Female Passport Photo</div>
+          <div class="card-desc" id="txt-female-desc">Create a passport headshot from any photo, ears will be clearly visible.</div>
+          <div class="copy-hint" id="txt-female-hint">Click → Prompt copies & AI Studio opens</div>
+        </div>
+        <div class="copy-badge" id="badge-female" aria-live="polite">✓ Copied!</div>
+      </button>
+
+            <button class="photo-card" id="card-hijab" onclick="copyAndOpen('hijab')" aria-label="Hijab Passport Photo — click to copy prompt">
+        <div class="avatar av-hijab" aria-hidden="true">🧕</div>
+        <div class="card-body">
+          <div class="card-title" id="txt-hijab-label">Hijab Passport Photo</div>
+          <div class="card-desc" id="txt-hijab-desc">Create passport-perfect facial headshots from any photo wearing a hijab.</div>
+          <div class="copy-hint" id="txt-hijab-hint">Click → Prompt copies & AI Studio opens</div>
+        </div>
+        <div class="copy-badge" id="badge-hijab" aria-live="polite">✓ Copied!</div>
+      </button>
+
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-row">
+            <a class="action-btn" href="https://procsctools.in/images/ai-passport-photo-maker.webp" target="_blank" rel="noopener">
+        <i class="fas fa-images" style="font-size:16px;"></i>
+        <span id="txt-btn-demo">View Demo Photos</span>
+      </a>
+        </div>
+
+        <!-- Guide Box -->
+        <div class="guide-box">
+            <div class="guide-title">
+                <span aria-hidden="true">🚀</span>
+                <span id="txt-guide-heading">How to Use &amp; Guidelines</span>
+            </div>
+            <ol class="guide-steps">
+                <li class="guide-step">
+                    <span class="step-label" id="txt-s1l">1. Login:</span>
+                    <span id="txt-s1">Access AI Studio with your Google account. Connect Google Drive if prompted for storage.</span>
+                </li>
+                <li class="guide-step">
+                    <span class="step-label" id="txt-s2l">2. Select Type:</span>
+                    <span id="txt-s2">Click a photo category card above — the prompt will auto-copy to clipboard.</span>
+                </li>
+                <li class="guide-step">
+                    <span class="step-label" id="txt-s3l">3. Paste:</span>
+                    <span id="txt-s3">In AI Studio, Paste (Ctrl+V) the prompt into the chat box.</span>
+                </li>
+                <li class="guide-step">
+                    <span class="step-label" id="txt-s4l">4. Settings:</span>
+                    <span id="txt-s4">On the right sidebar, select Aspect Ratio: 4:5.</span>
+                </li>
+                <li class="guide-step">
+                    <span class="step-label" id="txt-s5l">5. Upload:</span>
+                    <span id="txt-s5">Click the '+' or Upload icon below the box to add your photo.</span>
+                </li>
+                <li class="guide-step">
+                    <span class="step-label" id="txt-s6l">6. Generate:</span>
+                    <span id="txt-s6">Click the Run button. Wait 15 seconds for your HD passport photo!</span>
+                </li>
+            </ol>
+        </div>
+
+        <!-- Related Tools Section -->
+        <section class="related-tools">
+            <div class="section-header">
+                <div class="section-badge">🔗 More Free Tools</div>
+                <h2>Explore Our <span>Related Tools</span></h2>
+                <p class="subtitle">Discover powerful and free online tools to enhance, convert, and manage your images and documents effortlessly.</p>
+            </div>
+
+            <div class="tools-grid">
+                <!-- Tool 1 -->
+                <a href="https://procsctools.in/tools/photo-quality-enhancer.html" class="tool-card">
+                    <div class="tool-icon"><i class="fas fa-magic"></i></div>
+                    <h3>Photo Quality Enhancer</h3>
+                    <p>Instantly enhance blurry or low-quality images with AI-powered tools.</p>
+                </a>
+
+                <!-- Tool 2 -->
+                <a href="https://procsctools.in/tools/jpg-to-webp-converter.html" class="tool-card">
+                    <div class="tool-icon"><i class="fas fa-exchange-alt"></i></div>
+                    <h3>JPG to WebP Converter</h3>
+                    <p>Convert multiple JPG images into WebP format quickly and efficiently.</p>
+                </a>
+
+                <!-- Tool 3 -->
+                <a href="https://procsctools.in/tools/signature-resizer.html" class="tool-card">
+                    <div class="tool-icon"><i class="fas fa-signature"></i></div>
+                    <h3>Signature Resizer</h3>
+                    <p>Resize your signature image perfectly for forms and documents.</p>
+                </a>
+
+                <!-- Tool 4 -->
+                <a href="https://procsctools.in/tools/photo-signature-joiner.html" class="tool-card">
+                    <div class="tool-icon"><i class="fas fa-object-group"></i></div>
+                    <h3>Photo + Signature Joiner</h3>
+                    <p>Merge your photo and signature into a single image instantly.</p>
+                </a>
+
+                <!-- Tool 5 -->
+                <a href="https://procsctools.in/tools/background-remover.html" class="tool-card">
+                    <div class="tool-icon"><i class="fas fa-cut"></i></div>
+                    <h3>Background Remover</h3>
+                    <p>Remove image backgrounds in one click with high accuracy.</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="pcs-footer no-print bg-gray-900 text-gray-400 pt-14 pb-8 mt-16">
+            <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8">
+                <div>
+                    <a href="https://procsctools.in" class="flex items-center text-xl font-extrabold text-white mb-3"><i class="fas fa-crown mr-1 text-[#e0aa14]"></i> Pro CSC Tools</a>
+                    <p class="text-sm">Free online tools for CSC VLEs, students and shop owners in India — photos, PDFs, calculators and more.</p>
+                    <div class="flex gap-4 mt-4 text-lg">
+                        <a href="https://facebook.com/procsctools" class="hover:text-white" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://instagram.com/procsctools" class="hover:text-white" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@procsctools" class="hover:text-white" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://t.me/procsctools" class="hover:text-white" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-3">Popular Tools</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="https://procsctools.in/tools/passport-photo-maker.html" class="hover:text-white">Passport Photo Maker</a></li>
+                        <li><a href="https://procsctools.in/tools/ai-passport-photo-maker.html" class="hover:text-white">AI Passport Photo Maker</a></li>
+                        <li><a href="https://procsctools.in/tools/photo-signature-joiner.html" class="hover:text-white">Photo + Signature Joiner</a></li>
+                        <li><a href="https://procsctools.in/tools" class="hover:text-white">All Tools</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-3">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="https://procsctools.in/about.html" class="hover:text-white">About Us</a></li>
+                        <li><a href="https://procsctools.in/contact.html" class="hover:text-white">Contact</a></li>
+                        <li><a href="https://procsctools.in/privacy.html" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="https://procsctools.in/terms.html" class="hover:text-white">Terms</a></li>
+                        <li><a href="https://procsctools.in/disclaimer.html" class="hover:text-white">Disclaimer</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-3">Get in Touch</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="mailto:Palcscuno@gmail.com" class="hover:text-white"><i class="fas fa-envelope mr-2"></i>Palcscuno@gmail.com</a></li>
+                        <li><a href="https://wa.me/916387617678" class="hover:text-white"><i class="fab fa-whatsapp mr-2"></i>+91 63876 17678</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 mt-10 pt-6 border-t border-gray-800 text-center text-sm">© 2026 Pro CSC Tools. All rights reserved. Made with love in India for all CSC VLEs.</div>
+        </footer>
+
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script>
+        var currentLang = 'hi';
+
+        var prompts = {
+            male: "Generate a professional male passport photo. Requirements: Plain white or very light gray background, face centered and looking straight at camera with neutral expression, both ears visible, proper even lighting with no shadows on face, shoulders and upper chest visible, formal attire preferred and same face, high resolution output. Aspect ratio 4:5. The photo must meet official government passport photo standards.",
+            female: "Generate a professional female passport photo. Requirements: Plain white or very light gray background, face centered and looking straight at camera, both ears clearly visible, hair neatly styled away from face, neutral expression with mouth closed, proper even lighting with no shadows on face, shoulders visible, high resolution. Aspect ratio 4:5. Must meet official passport standards.",
+            hijab: "Generate a professional passport photo of a female person wearing a hijab. Requirements: Plain white or very light gray background, full face completely visible and centered, hijab neatly and securely framing the face showing the entire face clearly, neutral expression, proper even lighting with no shadows on face, shoulders visible, high resolution output. Aspect ratio 4:5. Must meet official passport standards for religious head coverings."
+        };
+
+        var content = {
+            en: {
+                'txt-title': 'AI Passport Photo Maker',
+                'txt-subtitle': 'Click a card to auto-copy the prompt and open Google AI Studio instantly.',
+                'txt-male-label': 'Male Passport Photo',
+                'txt-male-desc': 'Automatically generate a natural passport photo meeting official standards.',
+                'txt-male-hint': 'Click → Prompt copies & AI Studio opens',
+                'txt-female-label': 'Female Passport Photo',
+                'txt-female-desc': 'Create a passport headshot from any photo, ears will be clearly visible.',
+                'txt-female-hint': 'Click → Prompt copies & AI Studio opens',
+                'txt-hijab-label': 'Hijab Passport Photo',
+                'txt-hijab-desc': 'Create passport-perfect facial headshots from any photo wearing a hijab.',
+                'txt-hijab-hint': 'Click → Prompt copies & AI Studio opens',
+                'txt-btn-usage': 'View Usage Guide',
+                'txt-btn-demo': 'View Demo Photos',
+                'txt-guide-heading': 'How to Use & Guidelines',
+                'txt-s1l': '1. Login:',
+                'txt-s1': 'Access AI Studio with your Google account. Connect Google Drive if prompted for storage.',
+                'txt-s2l': '2. Select Type:',
+                'txt-s2': 'Click a photo category card above — the prompt will auto-copy to clipboard.',
+                'txt-s3l': '3. Paste:',
+                'txt-s3': 'In AI Studio, Paste (Ctrl+V) the prompt into the chat box.',
+                'txt-s4l': '4. Settings:',
+                'txt-s4': 'On the right sidebar, select Aspect Ratio: 4:5.',
+                'txt-s5l': '5. Upload:',
+                'txt-s5': "Click the '+' or Upload icon below the box to add your photo.",
+                'txt-s6l': '6. Generate:',
+                'txt-s6': 'Click the Run button. Wait 15 seconds for your HD passport photo!',
+                'badge': '✓ Copied!',
+                'toast': '✓ Prompt copied! Opening AI Studio...'
+            },
+            hi: {
+                'txt-title': 'AI Passport Photo Maker',
+                'txt-subtitle': 'Card click karein — prompt auto-copy hoga aur Google AI Studio khulega',
+                'txt-male-label': 'Male Passport Photo',
+                'txt-male-desc': 'Official standards ke anusaar natural passport photo automatically generate karta hai.',
+                'txt-male-hint': 'Click karein → Prompt copy + AI Studio open',
+                'txt-female-label': 'Female Passport Photo',
+                'txt-female-desc': 'Kisi bhi photo se passport headshot banata hai, kaanon ke saath.',
+                'txt-female-hint': 'Click karein → Prompt copy + AI Studio open',
+                'txt-hijab-label': 'Hijab Passport Photo',
+                'txt-hijab-desc': 'Hijab pehne kisi bhi photo se passport-perfect facial headshot banata hai.',
+                'txt-hijab-hint': 'Click karein → Prompt copy + AI Studio open',
+                'txt-btn-usage': 'Usage Guide Dekhein',
+                'txt-btn-demo': 'Demo Photos Dekhein',
+                'txt-guide-heading': 'Kaise Use Karein & Guidelines',
+                'txt-s1l': '1. Login:',
+                'txt-s1': 'Apne Google account se AI Studio mein jaayein. Storage ke liye Google Drive connect karein.',
+                'txt-s2l': '2. Type Chunein:',
+                'txt-s2': 'Upar diye gaye photo category card par click karein — Prompt auto-copy ho jaayega.',
+                'txt-s3l': '3. Paste Karein:',
+                'txt-s3': 'AI Studio mein chat box mein Paste (Ctrl+V) karein.',
+                'txt-s4l': '4. Settings:',
+                'txt-s4': 'Right sidebar mein Aspect Ratio: 4:5 select karein.',
+                'txt-s5l': '5. Upload Karein:',
+                'txt-s5': "Box ke neeche '+' ya Upload icon click karein aur apni photo add karein.",
+                'txt-s6l': '6. Generate Karein:',
+                'txt-s6': 'Run button click karein. Sirf 15 second mein HD passport photo taiyaar!',
+                'badge': '✓ Copy ho gaya!',
+                'toast': '✓ Prompt copy ho gaya! AI Studio khul raha hai...'
+            }
+        };
+
+        function setLang(l) {
+            currentLang = l;
+            document.getElementById('btn-en').classList.toggle('active', l === 'en');
+            document.getElementById('btn-hi').classList.toggle('active', l === 'hi');
+            document.documentElement.lang = l === 'hi' ? 'hi' : 'en';
+            var c = content[l];
+            Object.keys(c).forEach(function(key) {
+                if (key === 'badge' || key === 'toast') return;
+                var el = document.getElementById(key);
+                if (el) el.textContent = c[key];
+            });
+            ['male', 'female', 'hijab'].forEach(function(type) {
+                var badge = document.getElementById('badge-' + type);
+                if (badge) badge.textContent = c['badge'];
+            });
+        }
+
+        function copyAndOpen(type) {
+            var prompt = prompts[type];
+            var c = content[currentLang];
+
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(prompt).catch(function() {
+                    fallbackCopy(prompt);
+                });
+            } else {
+                fallbackCopy(prompt);
+            }
+
+            var card = document.getElementById('card-' + type);
+            card.classList.add('copied');
+            setTimeout(function() {
+                card.classList.remove('copied');
+            }, 2600);
+
+            showToast(c['toast']);
+
+            setTimeout(function() {
+                window.open('https://aistudio.google.com/prompts/new_chat', '_blank', 'noopener,noreferrer');
+            }, 500);
+        }
+
+        function fallbackCopy(text) {
+            var ta = document.createElement('textarea');
+            ta.value = text;
+            ta.style.position = 'fixed';
+            ta.style.left = '-9999px';
+            ta.style.top = '-9999px';
+            document.body.appendChild(ta);
+            ta.focus();
+            ta.select();
+            try {
+                document.execCommand('copy');
+            } catch (e) {}
+            document.body.removeChild(ta);
+        }
+
+        var toastTimer;
+
+        function showToast(msg) {
+            var t = document.getElementById('toast');
+            t.textContent = msg;
+            t.classList.add('show');
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(function() {
+                t.classList.remove('show');
+            }, 3400);
+        }
+
+        // Init
+        setLang('hi');
+    </script>
+    <a href="https://wa.me/916387617678" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" class="no-print fixed bottom-5 right-5 z-50 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg text-2xl"><i class="fab fa-whatsapp"></i></a>
+    <script>
+    (function(){var b=document.getElementById('menuBtn'),m=document.getElementById('mobileMenu');if(b&&m){b.addEventListener('click',function(){m.classList.toggle('hidden');});document.querySelectorAll('[data-close-mobile]').forEach(function(a){a.addEventListener('click',function(){m.classList.add('hidden');});});}})();
+    window.addEventListener('load',function(){try{document.querySelectorAll('ins.adsbygoogle').forEach(function(){(window.adsbygoogle=window.adsbygoogle||[]).push({});});}catch(e){}});
+    </script>
+</body>
+
+</html>

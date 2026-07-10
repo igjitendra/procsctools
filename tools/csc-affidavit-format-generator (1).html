@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+
+    <!-- =========================== SEO META TAGS =========================== -->
+
+    <title>CSC Affidavit Format Generator – Create Stamp Paper Affidavit Online Free | Pro CSC Tools</title>
+
+    <meta name="title" content="CSC Affidavit Format Generator – Create Stamp Paper Affidavit Online Free">
+
+    <meta name="description" content="Generate professional affidavit formats online for Name Change, Address Change, Marriage, DOB Correction, Income, Gap Certificate, Self Declaration and more. Print-ready stamp paper affidavit generator with Notary, QR Code, Barcode and Digital Signature support.">
+
+    <meta name="keywords" content="CSC Affidavit Format Generator, affidavit generator, affidavit format online, stamp paper affidavit, notary affidavit, name change affidavit, address proof affidavit, marriage affidavit, income affidavit, self affidavit, gap certificate affidavit, affidavit maker online, legal affidavit format, Pro CSC Tools">
+
+    <meta name="author" content="Pro CSC Tools">
+
+    <meta name="robots" content="index, follow, max-image-preview:large">
+
+    <meta name="language" content="English">
+
+    <link rel="canonical" href="https://procsctools.in/tools/csc-affidavit-format-generator.html">
+
+    <!-- Open Graph -->
+
+    <meta property="og:type" content="website">
+
+    <meta property="og:title" content="CSC Affidavit Format Generator - Stamp Paper Affidavit Online">
+
+    <meta property="og:description" content="Create professional affidavit formats online with stamp paper layout, QR Code, Barcode, Digital Signature and Notary Ready PDF.">
+
+    <meta property="og:url" content="https://procsctools.in/tools/csc-affidavit-format-generator.html">
+
+    <meta property="og:image" content="https://procsctools.in/images/csc-affidavit-generator.webp">
+
+    <meta property="og:site_name" content="Pro CSC Tools">
+
+    <!-- Twitter -->
+
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="twitter:title" content="CSC Affidavit Format Generator">
+
+    <meta name="twitter:description" content="Create affidavit formats online for Name Change, Marriage, Income, Address Proof and more.">
+
+    <meta name="twitter:image" content="https://procsctools.in/images/csc-affidavit-generator.webp">
+
+    <!-- =========================== WEB APPLICATION SCHEMA =========================== -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "CSC Affidavit Format Generator",
+            "url": "https://procsctools.in/tools/csc-affidavit-format-generator.html",
+            "description": "Professional online affidavit generator for creating notary-ready affidavit formats on stamp paper.",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Windows, Android, iOS, macOS",
+            "browserRequirements": "Requires JavaScript",
+            "isAccessibleForFree": true,
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "INR"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "Pro CSC Tools",
+                "url": "https://procsctools.in"
+            },
+            "featureList": [
+                "General Affidavit",
+                "Name Change Affidavit",
+                "Marriage Affidavit",
+                "Income Affidavit",
+                "Address Proof Affidavit",
+                "Gap Certificate Affidavit",
+                "DOB Correction Affidavit",
+                "Property Affidavit",
+                "QR Code",
+                "Barcode",
+                "Digital Signature",
+                "Notary Space",
+                "Advocate Details",
+                "Stamp Paper Layout",
+                "PDF Download",
+                "Print Ready"
+            ]
+        }
+    </script>
+
+    <!-- =========================== BREADCRUMB SCHEMA =========================== -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://procsctools.in/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "CSC Tools",
+                    "item": "https://procsctools.in/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "CSC Affidavit Format Generator",
+                    "item": "https://procsctools.in/tools/csc-affidavit-format-generator.html"
+                }
+            ]
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            .affidavit-print-area,
+            .affidavit-print-area * {
+                visibility: visible;
+            }
+            .affidavit-print-area {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                margin: 0;
+                padding: 0.5in;
+                background: white;
+            }
+            .no-print,
+            .no-print *,
+            .stamp-image-container {
+                display: none !important;
+            }
+            @page {
+                size: A4;
+                margin: 0.5in;
+            }
+        }
+
+        .form-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+            height: calc(100vh - 140px);
+            position: sticky;
+            top: 80px;
+        }
+
+        .preview-container {
+            background: #f3f4f6;
+            border-radius: 12px;
+            padding: 20px;
+            height: calc(100vh - 140px);
+            position: sticky;
+            top: 80px;
+            overflow-y: auto;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .a4-paper {
+            background: white;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        @media (max-width: 1024px) {
+            .a4-paper {
+                max-width: 100%;
+                min-height: auto;
+            }
+            .form-container,
+            .preview-container {
+                height: auto;
+                min-height: 500px;
+                position: relative;
+                top: 0;
+            }
+        }
+
+        .form-input {
+            transition: all 0.3s ease;
+            border: 2px solid #e5e7eb;
+        }
+
+        .form-input:focus {
+            border-color: #ab183d;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+            outline: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #ab183d 0%, #8a0f2f 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.4);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.4);
+        }
+
+        .slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 4px;
+            border-radius: 5px;
+            background: #e5e7eb;
+            outline: none;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #ab183d;
+            cursor: pointer;
+            border: 2px solid white;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .stamp-card {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .stamp-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .stamp-card.active {
+            border-color: #ab183d;
+            background: #fbe9ee;
+            transform: scale(1.02);
+        }
+
+        .toast {
+            animation: slideInRight 0.3s ease, fadeOut 0.3s ease 2.7s;
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        .affidavit-content {
+            line-height: 1.6;
+            font-size: 11pt;
+            text-align: justify;
+        }
+
+        .affidavit-content h1 {
+            font-size: 16pt;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .signature-line {
+            border-top: 1px solid #000;
+            width: 200px;
+            margin-top: 40px;
+            padding-top: 8px;
+        }
+
+        .faq-item {
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            background: #f8fafc;
+        }
+
+        @media (max-width: 1280px) {
+            .affidavit-content {
+                font-size: 10pt;
+            }
+        }
+
+        .stamp-bg-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        #stampImageContainer {
+            position: relative;
+        }
+
+        #stampSpaceDiv {
+            transition: height 0.3s ease;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease both;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .slide-up {
+            animation: slideUp 0.4s ease both;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QL80Z3DZ8Z"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QL80Z3DZ8Z');</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"HowTo","name":"Affidavit format kaise banaye online","step":[{"@type":"HowToStep","name":"Affidavit type chuno"},{"@type":"HowToStep","name":"Details bharo"},{"@type":"HowToStep","name":"Stamp paper aur language select karo"},{"@type":"HowToStep","name":"Print ya PDF download karo"}]}
+    </script>
+</head>
+
+<body class="bg-gradient-to-br from-gray-50 to-gray-100">
+
+    
+
+    <!-- Crown Nav -->
+    <header class="bg-white shadow-sm sticky top-0 z-40 no-print">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex flex-wrap justify-between items-center gap-3">
+                <a href="https://procsctools.in" class="flex items-center gap-2">
+                    <div class="w-9 h-9 rounded-lg flex items-center justify-center" style="background:linear-gradient(135deg,#ab183d,#8a0f2f)"><i class="fas fa-crown text-white"></i></div>
+                    <span class="text-lg font-extrabold" style="color:#ab183d">Pro CSC Tools</span>
+                </a>
+                <div class="flex gap-2 items-center">
+                    <div class="flex bg-gray-100 rounded-lg p-1">
+                        <button onclick="setLanguage('english')" id="lang-en" class="px-3 py-1 rounded-lg text-xs font-medium transition-all bg-[#ab183d] text-white">EN</button>
+                        <button onclick="setLanguage('hindi')" id="lang-hi" class="px-3 py-1 rounded-lg text-xs font-medium transition-all text-gray-600">हिंदी</button>
+                    </div>
+                    <button onclick="downloadPDF()" class="btn-primary text-white px-3 py-1.5 rounded-lg flex items-center gap-1 text-sm"><i class="fas fa-download text-xs"></i> PDF</button>
+                    <button onclick="printAffidavit()" class="bg-gray-600 hover:bg-gray-700 text-white px-3 py-1.5 rounded-lg flex items-center gap-1 text-sm"><i class="fas fa-print text-xs"></i> Print</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Maroon Hero -->
+    <section class="no-print text-white" style="background:linear-gradient(135deg,#ab183d,#8a0f2f)">
+        <div class="container mx-auto px-4 py-8 text-center">
+            <div class="text-xs opacity-80 mb-3"><a href="https://procsctools.in" class="underline">Home</a> / <a href="https://procsctools.in/tools" class="underline">Tools</a> / CSC Affidavit Format Generator</div>
+            <span class="inline-block text-xs font-bold px-3 py-1 rounded-full mb-3" style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3)">STAMP PAPER · NOTARY READY · 100% FREE</span>
+            <h1 class="text-3xl md:text-4xl font-extrabold mb-3"><i class="fas fa-file-signature mr-3"></i>CSC Affidavit Format Generator</h1>
+            <p class="max-w-2xl mx-auto text-white/90">Name change, address, marriage, DOB correction, income, gap certificate aur self-declaration affidavit online banao — stamp paper layout, notary-ready, print + PDF. 100% free.</p>
+        </div>
+    </section>
+
+    <!-- Main Container -->
+    <div class="container mx-auto px-4 py-4">
+        <div class="flex flex-col lg:flex-row gap-6">
+
+            <!-- LEFT SIDE - Form Section -->
+            <div class="lg:w-2/5">
+                <div class="form-container p-5">
+                    <h2 class="text-lg font-bold mb-4 text-gray-800 flex items-center gap-2 sticky top-0 bg-white pb-2">
+                        <i class="fas fa-edit text-[#ab183d] text-sm"></i> Affidavit Details
+                    </h2>
+
+                    <!-- Stamp Paper Selection -->
+                    <div class="mb-4">
+                        <label class="block text-xs font-semibold text-gray-700 mb-2">Select Stamp Paper Value</label>
+                        <div class="grid grid-cols-4 gap-2">
+                            <div onclick="selectStamp('10')" id="stamp-10" class="stamp-card bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg p-2 text-center">
+                                <i class="fas fa-stamp text-green-600 text-lg"></i>
+                                <p class="text-sm font-bold text-green-800">₹10</p>
+                            </div>
+                            <div onclick="selectStamp('20')" id="stamp-20" class="stamp-card bg-gradient-to-br from-[#fbe9ee] to-[#f7d5de] rounded-lg p-2 text-center">
+                                <i class="fas fa-stamp text-[#ab183d] text-lg"></i>
+                                <p class="text-sm font-bold text-[#8a0f2f]">₹20</p>
+                            </div>
+                            <div onclick="selectStamp('50')" id="stamp-50" class="stamp-card bg-gradient-to-br from-purple-50 to-pink-100 rounded-lg p-2 text-center">
+                                <i class="fas fa-stamp text-purple-600 text-lg"></i>
+                                <p class="text-sm font-bold text-purple-800">₹50</p>
+                            </div>
+                            <div onclick="selectStamp('100')" id="stamp-100" class="stamp-card bg-gradient-to-br from-amber-50 to-yellow-100 rounded-lg p-2 text-center">
+                                <i class="fas fa-stamp text-amber-600 text-lg"></i>
+                                <p class="text-sm font-bold text-amber-800">₹100</p>
+                            </div>
+                        </div>
+                        <div class="mt-3 flex gap-2">
+                            <button onclick="document.getElementById('customStampUpload').click()" class="flex-1 text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 py-2 rounded-lg transition">
+                                <i class="fas fa-upload"></i> Upload Custom
+                            </button>
+                            <button onclick="removeStamp()" class="flex-1 text-xs text-red-600 hover:text-red-700 py-2 rounded-lg transition">
+                                <i class="fas fa-times-circle"></i> Remove
+                            </button>
+                        </div>
+                        <input type="file" id="customStampUpload" accept="image/*" class="hidden" onchange="uploadCustomStamp()">
+                    </div>
+
+                    <!-- Stamp Top Space Control -->
+                    <div class="mb-4">
+                        <label class="block text-xs font-semibold text-gray-700 mb-1">
+                            Stamp Top Space: <span id="stampTopValue">1.0</span> inches
+                        </label>
+                        <input type="range" id="stampTopSpace" class="slider" min="0.5" max="3" step="0.1" value="1.0" oninput="adjustStampTopSpace()">
+                    </div>
+
+                    <!-- Affidavit Type Selection -->
+                    <div class="mb-3">
+                        <label class="block text-xs font-semibold text-gray-700 mb-1">Select Affidavit Type</label>
+                        <select id="affidavitType" onchange="changeAffidavitType()" class="form-input w-full rounded-lg p-2 text-sm bg-gray-50">
+                            <option value="name_change">📝 Name Change Affidavit</option>
+                            <option value="address_change">🏠 Address Change Affidavit</option>
+                            <option value="dob_correction">🎂 DOB Correction Affidavit</option>
+                            <option value="education_correction">🎓 Education Certificate Correction</option>
+                            <option value="passport_correction">🛂 Passport Details Correction</option>
+                            <option value="marriage">💍 Marriage Affidavit</option>
+                            <option value="general">📄 General Affidavit</option>
+                            <option value="custom">✨ Custom Affidavit</option>
+                        </select>
+                    </div>
+
+                    <!-- Form Fields -->
+                    <div class="space-y-2">
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 mb-1">Name of Deponent</label>
+                            <input type="text" id="deponentName" oninput="updatePreview()" class="form-input w-full rounded-lg p-2 text-sm" placeholder="Enter full name">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 mb-1">Father / Husband Name</label>
+                            <input type="text" id="fatherName" oninput="updatePreview()" class="form-input w-full rounded-lg p-2 text-sm" placeholder="Father's or Husband's name">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 mb-1">Mother Name</label>
+                            <input type="text" id="motherName" oninput="updatePreview()" class="form-input w-full rounded-lg p-2 text-sm" placeholder="Mother's name">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 mb-1">Full Address</label>
+                            <textarea id="address" rows="2" oninput="updatePreview()" class="form-input w-full rounded-lg p-2 text-sm" placeholder="Complete postal address"></textarea>
+                        </div>
+                        <div id="incorrectInfoGroup" style="display: none;">
+                            <label class="block text-xs font-semibold text-gray-700 mb-1">Incorrect Information</label>
+                            <textarea id="incorrectInfo" rows="1" oninput="updatePreview()" class="form-input w-full rounded-lg p-2 text-sm" placeholder="Enter incorrect information"></textarea>
+                        </div>
+                        <div id="correctInfoGroup" style="display: none;">
+                            <label class="block text-xs font-semibold text-gray-700 mb-1">Correct Information</label>
+                            <textarea id="correctInfo" rows="1" oninput="updatePreview()" class="form-input w-full rounded-lg p-2 text-sm" placeholder="Enter correct information"></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 mb-1">Verified at (Place/City)</label>
+                            <input type="text" id="verifiedPlace" oninput="updatePreview()" class="form-input w-full rounded-lg p-2 text-sm" placeholder="e.g., New Delhi, Mumbai, Lucknow">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 mb-1">Additional Notes</label>
+                            <textarea id="additionalNotes" rows="2" oninput="updatePreview()" class="form-input w-full rounded-lg p-2 text-sm" placeholder="Any additional information"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="mt-4 grid grid-cols-2 gap-2 sticky bottom-0 bg-white pt-2">
+                        <button onclick="autoFillExample()" class="btn-secondary text-white px-3 py-2 rounded-lg flex items-center justify-center gap-1 text-sm">
+                            <i class="fas fa-magic text-xs"></i> Auto Fill
+                        </button>
+                        <button onclick="resetForm()" class="bg-gray-200 text-gray-700 px-3 py-2 rounded-lg hover:bg-gray-300 flex items-center justify-center gap-1 text-sm">
+                            <i class="fas fa-undo-alt text-xs"></i> Reset
+                        </button>
+                    </div>
+
+                    <div class="mt-3 p-2 bg-[#fbe9ee] rounded-lg">
+                        <div class="flex gap-1 text-xs text-[#8a0f2f]">
+                            <i class="fas fa-shield-alt text-xs mt-0.5"></i>
+                            <span>Stamp visible in preview only | Not in PDF/Print</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT SIDE - A4 Paper Preview -->
+            <div class="lg:w-3/5">
+                <div class="preview-container">
+                    <div class="a4-paper">
+                        <div id="affidavitContent" class="bg-white" style="min-height: 297mm;">
+                            <div id="stampImageContainer" class="stamp-image-container no-print" style="display: none;">
+                                <img id="stampPaperImage" class="stamp-bg-image" alt="Stamp Paper">
+                            </div>
+                            <div id="stampSpaceDiv" style="height: 0px;"></div>
+                            <div id="affidavitTextContainer" class="p-6">
+                                <div id="affidavitText" class="affidavit-content"></div>
+                            </div>
+                            <div class="text-center pb-4 text-gray-400 text-xs no-print">
+                                Generated by Pro CSC Tools - CSC Affidavit Format Generator
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How to Use Section -->
+    <div class="container mx-auto px-4 py-8 no-print">
+        <div class="bg-white rounded-xl shadow-lg p-6">
+            <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+                <i class="fas fa-info-circle text-[#ab183d] text-2xl"></i> How to Use This Affidavit Generator
+            </h2>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-[#f7d5de] rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="text-2xl font-bold text-[#ab183d]">1</span>
+                    </div>
+                    <h3 class="font-semibold mb-2">Select Stamp Paper</h3>
+                    <p class="text-sm text-gray-600">Choose stamp value (₹10/₹20/₹50/₹100) or upload custom stamp image</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-[#f7d5de] rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="text-2xl font-bold text-[#ab183d]">2</span>
+                    </div>
+                    <h3 class="font-semibold mb-2">Choose Affidavit Type</h3>
+                    <p class="text-sm text-gray-600">Select from 8+ affidavit types including name change, address change, etc.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-[#f7d5de] rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="text-2xl font-bold text-[#ab183d]">3</span>
+                    </div>
+                    <h3 class="font-semibold mb-2">Fill Your Details</h3>
+                    <p class="text-sm text-gray-600">Enter personal information, address, and verification place</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-[#f7d5de] rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="text-2xl font-bold text-[#ab183d]">4</span>
+                    </div>
+                    <h3 class="font-semibold mb-2">Download or Print</h3>
+                    <p class="text-sm text-gray-600">Get PDF or print directly for notary attestation</p>
+                </div>
+            </div>
+            <div class="mt-6 p-4 bg-amber-50 rounded-lg border border-amber-200">
+                <div class="flex gap-3">
+                    <i class="fas fa-gavel text-amber-600 text-xl"></i>
+                    <div>
+                        <p class="text-sm text-amber-800 font-semibold">Legal Note:</p>
+                        <p class="text-xs text-amber-700">This tool generates affidavit format for reference. Please get it notarized from a licensed notary public or oath commissioner on actual stamp paper as per your state's regulations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="container mx-auto px-4 py-10 no-print">
+        <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8">
+
+            <!-- Heading -->
+            <h2 class="text-3xl font-bold mb-8 text-gray-800 flex items-center gap-3">
+                <i class="fas fa-question-circle text-[#ab183d] text-3xl animate-pulse"></i> FAQs – Quick Answers
+            </h2>
+
+            <!-- FAQ Items -->
+            <div class="space-y-4">
+
+                <!-- Item -->
+                <div class="faq-item border rounded-xl overflow-hidden transition-all duration-300 hover:shadow-md">
+                    <button onclick="toggleFAQ(this)" class="w-full flex justify-between items-center p-4 text-left font-semibold text-lg">
+                    What is an affidavit and when is it needed?
+                    <i class="fas fa-chevron-down transition-transform"></i>
+                </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-4">
+                        <p class="text-gray-600 text-sm py-3">
+                            An affidavit is a written sworn statement of fact made under oath. It is used for name change, address proof, DOB correction, marriage registration, passport, and legal processes.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item -->
+                <div class="faq-item border rounded-xl overflow-hidden transition-all duration-300 hover:shadow-md">
+                    <button onclick="toggleFAQ(this)" class="w-full flex justify-between items-center p-4 text-left font-semibold text-lg">
+                    Is this affidavit generator free?
+                    <i class="fas fa-chevron-down transition-transform"></i>
+                </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-4">
+                        <p class="text-gray-600 text-sm py-3">
+                            Yes! 100% free. No login, no hidden charges. Generate unlimited affidavits instantly.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item -->
+                <div class="faq-item border rounded-xl overflow-hidden transition-all duration-300 hover:shadow-md">
+                    <button onclick="toggleFAQ(this)" class="w-full flex justify-between items-center p-4 text-left font-semibold text-lg">
+                    Do I need stamp paper?
+                    <i class="fas fa-chevron-down transition-transform"></i>
+                </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-4">
+                        <p class="text-gray-600 text-sm py-3">
+                            Yes. Use ₹10–₹100 non-judicial stamp paper depending on your state. This tool is only for preview.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item -->
+                <div class="faq-item border rounded-xl overflow-hidden transition-all duration-300 hover:shadow-md">
+                    <button onclick="toggleFAQ(this)" class="w-full flex justify-between items-center p-4 text-left font-semibold text-lg">
+                    Is it legally valid?
+                    <i class="fas fa-chevron-down transition-transform"></i>
+                </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-4">
+                        <p class="text-gray-600 text-sm py-3">
+                            Yes, format is valid. But you must print on stamp paper and get notarized.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- JS for Toggle -->
+    <script>
+        function toggleFAQ(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector("i");
+
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                icon.classList.remove("rotate-180");
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.classList.add("rotate-180");
+            }
+        }
+    </script>
+
+    <!-- Related Tools Section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+
+        <!-- Heading -->
+        <div class="text-center mb-14">
+
+            <span class="inline-block px-5 py-2 rounded-full bg-[#ab183d] text-white font-semibold text-sm shadow-md mb-4">
+        🔗 More Free Tools
+    </span>
+
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
+                Explore Our <span class="text-[#ab183d]">Related Tools</span>
+            </h2>
+
+            <p class="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+                Discover powerful and free online tools to enhance, convert, and manage your images and documents effortlessly.
+            </p>
+
+        </div>
+
+        <!-- Tools Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+
+            <!-- Tool Card -->
+            <a href="/photo-quality-enhancer-online-free.html" aria-label="Photo Quality Enhancer Tool" class="group bg-white/95 backdrop-blur border border-gray-100 rounded-2xl p-6 shadow-md hover:shadow-2xl hover:-translate-y-2 transition duration-300 ease-in-out">
+
+                <div class="w-14 h-14 bg-gradient-to-br from-pink-100 to-pink-200 text-pink-600 rounded-2xl flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition">
+                    <i class="fas fa-magic"></i>
+                </div>
+
+                <h3 class="font-bold text-gray-800 group-hover:text-[#ab183d] transition">
+                    Photo Quality Enhancer
+                </h3>
+
+                <p class="text-sm text-gray-500 mt-2">
+                    Instantly enhance blurry or low-quality images with AI-powered tools.
+                </p>
+            </a>
+
+            <!-- Tool Card -->
+            <a href="/jpg-to-webp-converter-bulk-free.html" aria-label="JPG to WebP Converter Tool" class="group bg-white/95 backdrop-blur border border-gray-100 rounded-2xl p-6 shadow-md hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+                <div class="w-14 h-14 bg-gradient-to-br from-[#fbe9ee] to-[#f0b8c6] text-[#ab183d] rounded-2xl flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition">
+                    <i class="fas fa-exchange-alt"></i>
+                </div>
+
+                <h3 class="font-bold text-gray-800 group-hover:text-[#ab183d] transition">
+                    JPG to WebP Converter
+                </h3>
+
+                <p class="text-sm text-gray-500 mt-2">
+                    Convert multiple JPG images into WebP format quickly and efficiently.
+                </p>
+            </a>
+
+            <!-- Tool Card -->
+            <a href="/signature-resizer.html" aria-label="Resize Signature Tool" class="group bg-white/95 backdrop-blur border border-gray-100 rounded-2xl p-6 shadow-md hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+                <div class="w-14 h-14 bg-gradient-to-br from-[#fbe9ee] to-[#f0b8c6] text-[#ab183d] rounded-2xl flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition">
+                    <i class="fas fa-signature"></i>
+                </div>
+
+                <h3 class="font-bold text-gray-800 group-hover:text-[#ab183d] transition">
+                    Signature Resizer
+                </h3>
+
+                <p class="text-sm text-gray-500 mt-2">
+                    Resize your signature image perfectly for forms and documents.
+                </p>
+            </a>
+
+            <!-- Tool Card -->
+            <a href="/photo-signature-joiner.html" aria-label="Photo Signature Joiner Tool" class="group bg-white/95 backdrop-blur border border-gray-100 rounded-2xl p-6 shadow-md hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+                <div class="w-14 h-14 bg-gradient-to-br from-teal-100 to-teal-200 text-teal-600 rounded-2xl flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition">
+                    <i class="fas fa-object-group"></i>
+                </div>
+
+                <h3 class="font-bold text-gray-800 group-hover:text-[#ab183d] transition">
+                    Photo + Signature Joiner
+                </h3>
+
+                <p class="text-sm text-gray-500 mt-2">
+                    Merge your photo and signature into a single image instantly.
+                </p>
+            </a>
+
+            <!-- Tool Card -->
+            <a href="/free-background-remover-tool.html" aria-label="Background Remover Tool" class="group bg-white/95 backdrop-blur border border-gray-100 rounded-2xl p-6 shadow-md hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+                <div class="w-14 h-14 bg-gradient-to-br from-orange-100 to-orange-200 text-orange-600 rounded-2xl flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition">
+                    <i class="fas fa-cut"></i>
+                </div>
+
+                <h3 class="font-bold text-gray-800 group-hover:text-[#ab183d] transition">
+                    Background Remover
+                </h3>
+
+                <p class="text-sm text-gray-500 mt-2">
+                    Remove image backgrounds in one click with high accuracy.
+                </p>
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-gray-900 text-white pt-12 pb-6 no-print">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="font-bold text-lg mb-3"><i class="fas fa-crown" style="color:#e0aa14"></i> Pro CSC Tools</h3>
+                <p class="text-sm text-gray-400">CSC VLE, students aur shop owners ke liye free online tools — aapki UI, aapki bhasha me.</p>
+                <div class="flex gap-4 mt-4 text-lg">
+                    <a href="https://facebook.com/procsctools" class="text-gray-400 hover:text-white" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://instagram.com/procsctools" class="text-gray-400 hover:text-white" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com/@procsctools" class="text-gray-400 hover:text-white" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://t.me/procsctools" class="text-gray-400 hover:text-white" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-3">Tools</h4>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li><a href="https://procsctools.in/tools/agreement-format-generator.html" class="hover:text-white">Agreement Format</a></li>
+                    <li><a href="https://procsctools.in/tools/self-declaration-form.html" class="hover:text-white">Self-Declaration</a></li>
+                    <li><a href="https://procsctools.in/tools/csc-stamp-maker.html" class="hover:text-white">Stamp Maker</a></li>
+                    <li><a href="https://procsctools.in/tools" class="hover:text-white">All Tools</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-3">Contact</h4>
+                <p class="text-sm text-gray-400">Email: <a href="mailto:Palcscuno@gmail.com" class="hover:text-white">Palcscuno@gmail.com</a></p>
+                <p class="text-sm text-gray-400 mt-2">WhatsApp: <a href="https://wa.me/916387617678" class="hover:text-white">+91 63876 17678</a></p>
+            </div>
+        </div>
+        <div class="text-center text-xs pt-8 border-t border-gray-800 mt-6 text-gray-500 px-5">© 2026 Pro CSC Tools. All Rights Reserved. · <strong>Disclaimer:</strong> Utility tool for document formatting. Ye private initiative hai, kisi government body se affiliated nahi hai. Users ke paas documents ka legal right hona chahiye.</div>
+    </footer>
+
+    <div id="toast" class="fixed bottom-5 right-5 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg hidden z-50 text-sm">
+        <i class="fas fa-check-circle mr-2"></i>
+        <span id="toastMessage"></span>
+    </div>
+
+    <script>
+        const stampImages = {
+            '10': 'https://smartcsctool.com/images/stamp-10.webp',
+            '20': 'https://smartcsctool.com/images/stamp-20.webp',
+            '50': 'https://smartcsctool.com/images/stamp-50.webp',
+            '100': 'https://smartcsctool.com/images/stamp-100.webp'
+        };
+
+        let customStampData = null;
+        let currentLanguage = 'english';
+        let currentAffidavitType = 'name_change';
+        let currentStampValue = null;
+
+        const templates = {
+            english: {
+                name_change: {
+                    title: "AFFIDAVIT FOR NAME CHANGE",
+                    body: "I, {name}, son/daughter/wife of {father}, resident of {address}, do hereby solemnly affirm and state on oath as under:\n\n1. That my original name as recorded in my educational certificates and other documents is {incorrect}.\n\n2. That I wish to change my name from {incorrect} to {correct} for personal and professional reasons.\n\n3. That I have relinquished all rights and claims associated with my previous name {incorrect}.\n\n4. That I have published a public notice regarding this name change in the leading newspapers, namely '[Newspaper Name]' and '[Newspaper Name]'.\n\n5. That I shall use the name {correct} for all future purposes and dealings.\n\n6. That I have no intention to defraud or deceive anyone through this name change.\n\nI, the above named deponent, do hereby verify that the contents of this affidavit are true and correct to the best of my knowledge and belief. No part of it is false and nothing material has been concealed therefrom."
+                },
+                address_change: {
+                    title: "AFFIDAVIT FOR ADDRESS CHANGE",
+                    body: "I, {name}, son/daughter/wife of {father}, do hereby solemnly affirm and declare as under:\n\n1. That my previous residential address was {incorrect}.\n\n2. That I have permanently shifted to my current address: {address}.\n\n3. That I am residing at the said address since [Date of shifting].\n\n4. That I am making this affidavit for the purpose of updating my address in various official records including Aadhaar, Voter ID, Passport, Bank Accounts, etc.\n\n5. That I have valid address proof documents for my current address.\n\nI, the above named deponent, do hereby verify that the contents of this affidavit are true and correct to the best of my knowledge and belief. No part of it is false and nothing material has been concealed therefrom."
+                },
+                dob_correction: {
+                    title: "AFFIDAVIT FOR DATE OF BIRTH CORRECTION",
+                    body: "I, {name}, son/daughter/wife of {father}, resident of {address}, do hereby solemnly affirm and declare as under:\n\n1. That my correct date of birth is {correct}.\n\n2. That due to a clerical/typographical error, my date of birth has been incorrectly recorded as {incorrect} in certain documents.\n\n3. That I possess valid documentary evidence supporting my correct date of birth, including Birth Certificate/School Leaving Certificate/Passport.\n\n4. That I request the concerned authorities to correct my date of birth from {incorrect} to {correct} in all official records.\n\n5. That I am making this affidavit to support my application for date of birth correction.\n\nI, the above named deponent, do hereby verify that the contents of this affidavit are true and correct to the best of my knowledge and belief. No part of it is false and nothing material has been concealed therefrom."
+                },
+                education_correction: {
+                    title: "AFFIDAVIT FOR EDUCATION CERTIFICATE CORRECTION",
+                    body: "I, {name}, son/daughter/wife of {father}, resident of {address}, do hereby solemnly affirm and declare as under:\n\n1. That I possess an educational certificate from [Board/University Name] wherein an error has occurred.\n\n2. That the certificate incorrectly shows: {incorrect}.\n\n3. That the correct information should be: {correct}.\n\n4. That this error occurred due to administrative/clerical mistake at the time of issuance.\n\n5. That I request the concerned educational board/university to make the necessary correction in my certificate.\n\nI, the above named deponent, do hereby verify that the contents of this affidavit are true and correct to the best of my knowledge and belief. No part of it is false and nothing material has been concealed therefrom."
+                },
+                passport_correction: {
+                    title: "AFFIDAVIT FOR PASSPORT DETAILS CORRECTION",
+                    body: "I, {name}, son/daughter/wife of {father}, resident of {address}, do hereby solemnly affirm and declare as under:\n\n1. That I am the holder of Passport Number [Passport Number] issued from [Passport Office].\n\n2. That there is an error in my passport regarding: {incorrect}.\n\n3. That the correct information that should be reflected is: {correct}.\n\n4. That I request the Passport Office to make the necessary correction in my passport.\n\nI, the above named deponent, do hereby verify that the contents of this affidavit are true and correct to the best of my knowledge and belief. No part of it is false and nothing material has been concealed therefrom."
+                },
+                marriage: {
+                    title: "MARRIAGE AFFIDAVIT",
+                    body: "I, {name}, son/daughter/wife of {father}, resident of {address}, do hereby solemnly affirm and declare as under:\n\n1. That I am legally married to {correct} (Spouse Name).\n\n2. That our marriage was solemnized on [Date of Marriage] as per [Hindu/Muslim/Christian/Special Marriage Act] rites and customs.\n\n3. That both parties are of legal age and consenting to this marriage.\n\n4. That there is no legal impediment to this marriage.\n\n5. That neither party has any spouse living at the time of marriage.\n\n6. That we are living together as husband and wife since the date of marriage.\n\nI, the above named deponent, do hereby verify that the contents of this affidavit are true and correct to the best of my knowledge and belief. No part of it is false and nothing material has been concealed therefrom."
+                },
+                general: {
+                    title: "GENERAL AFFIDAVIT",
+                    body: "I, {name}, son/daughter/wife of {father}, resident of {address}, do hereby solemnly affirm and declare as under:\n\n{additional}\n\nI, the above named deponent, do hereby verify that the contents of this affidavit are true and correct to the best of my knowledge and belief. No part of it is false and nothing material has been concealed therefrom."
+                },
+                custom: {
+                    title: "CUSTOM AFFIDAVIT",
+                    body: "I, {name}, son/daughter/wife of {father}, resident of {address}, do hereby solemnly affirm and declare as under:\n\n{additional}\n\nI, the above named deponent, do hereby verify that the contents of this affidavit are true and correct to the best of my knowledge and belief. No part of it is false and nothing material has been concealed therefrom."
+                }
+            },
+            hindi: {
+                name_change: {
+                    title: "नाम परिवर्तन हलफनामा",
+                    body: "मैं, {name}, पुत्र/पुत्री/पत्नी {father}, निवासी {address}, शपथपूर्वक घोषित करता/करती हूं कि:\n\n1. कि मेरे शैक्षिक प्रमाण पत्रों एवं अन्य दस्तावेजों में मेरा मूल नाम {incorrect} दर्ज है।\n\n2. कि मैं व्यक्तिगत एवं व्यावसायिक कारणों से अपना नाम {incorrect} से बदलकर {correct} करना चाहता/चाहती हूं।\n\n3. कि मैंने प्रमुख समाचार पत्रों में इस नाम परिवर्तन की सूचना प्रकाशित करवा दी है।\n\n4. कि मैं भविष्य के सभी कार्यों में {correct} नाम का ही प्रयोग करूंगा/करूंगी।\n\n5. कि इस नाम परिवर्तन से किसी को कोई हानि नहीं होगी।\n\nमैं उपरोक्त घोषणा करता/करती हूं कि यह हलफनामा मेरी जानकारी और विश्वास के अनुसार सत्य एवं सही है।"
+                },
+                address_change: {
+                    title: "पता परिवर्तन हलफनामा",
+                    body: "मैं, {name}, पुत्र/पुत्री/पत्नी {father}, निवासी {address}, शपथपूर्वक घोषित करता/करती हूं कि:\n\n1. कि मेरा पिछला पता {incorrect} था।\n\n2. कि मैं स्थायी रूप से अपने वर्तमान पते {address} पर आ गया/गई हूं।\n\n3. कि मैं आधार, वोटर आईडी, पासपोर्ट, बैंक खातों में पता अद्यतन करने हेतु यह हलफनामा दे रहा/रही हूं।\n\nमैं उपरोक्त घोषणा करता/करती हूं कि यह हलफनामा मेरी जानकारी और विश्वास के अनुसार सत्य एवं सही है।"
+                },
+                dob_correction: {
+                    title: "जन्म तिथि सुधार हलफनामा",
+                    body: "मैं, {name}, पुत्र/पुत्री/पत्नी {father}, निवासी {address}, शपथपूर्वक घोषित करता/करती हूं कि:\n\n1. कि मेरी सही जन्म तिथि {correct} है।\n\n2. कि कुछ दस्तावेजों में त्रुटिवश मेरी जन्म तिथि {incorrect} दर्ज हो गई है।\n\n3. कि मेरे पास अपनी सही जन्म तिथि के प्रमाण हैं।\n\nमैं उपरोक्त घोषणा करता/करती हूं कि यह हलफनामा मेरी जानकारी और विश्वास के अनुसार सत्य एवं सही है।"
+                },
+                education_correction: {
+                    title: "शैक्षिक प्रमाण पत्र सुधार हलफनामा",
+                    body: "मैं, {name}, पुत्र/पुत्री/पत्नी {father}, निवासी {address}, शपथपूर्वक घोषित करता/करती हूं कि:\n\n1. कि मेरे शैक्षिक प्रमाण पत्र में त्रुटि है: {incorrect}।\n\n2. कि सही जानकारी {correct} होनी चाहिए।\n\n3. कि यह त्रुटि प्रशासनिक/लेखन संबंधी गलती के कारण हुई है।\n\nमैं उपरोक्त घोषणा करता/करती हूं कि यह हलफनामा मेरी जानकारी और विश्वास के अनुसार सत्य एवं सही है।"
+                },
+                passport_correction: {
+                    title: "पासपोर्ट विवरण सुधार हलफनामा",
+                    body: "मैं, {name}, पुत्र/पुत्री/पत्नी {father}, निवासी {address}, शपथपूर्वक घोषित करता/करती हूं कि:\n\n1. कि मेरे पासपोर्ट में {incorrect} में त्रुटि है।\n\n2. कि सही जानकारी {correct} है।\n\n3. कि मैं पासपोर्ट कार्यालय से सुधार का अनुरोध करता/करती हूं।\n\nमैं उपरोक्त घोषणा करता/करती हूं कि यह हलफनामा मेरी जानकारी और विश्वास के अनुसार सत्य एवं सही है।"
+                },
+                marriage: {
+                    title: "विवाह हलफनामा",
+                    body: "मैं, {name}, पुत्र/पुत्री/पत्नी {father}, निवासी {address}, शपथपूर्वक घोषित करता/करती हूं कि:\n\n1. कि मेरा विवाह {correct} से [तिथि] को हुआ है।\n\n2. कि दोनों पक्ष विधिक आयु के हैं।\n\n3. कि इस विवाह में कोई विधिक बाधा नहीं है।\n\n4. कि विवाह के समय दोनों पक्ष अविवाहित थे।\n\nमैं उपरोक्त घोषणा करता/करती हूं कि यह हलफनामा मेरी जानकारी और विश्वास के अनुसार सत्य एवं सही है।"
+                },
+                general: {
+                    title: "सामान्य हलफनामा",
+                    body: "मैं, {name}, पुत्र/पुत्री/पत्नी {father}, निवासी {address}, शपथपूर्वक घोषित करता/करती हूं कि:\n\n{additional}\n\nमैं उपरोक्त घोषणा करता/करती हूं कि यह हलफनामा मेरी जानकारी और विश्वास के अनुसार सत्य एवं सही है।"
+                },
+                custom: {
+                    title: "कस्टम हलफनामा",
+                    body: "मैं, {name}, पुत्र/पुत्री/पत्नी {father}, निवासी {address}, शपथपूर्वक घोषित करता/करती हूं कि:\n\n{additional}\n\nमैं उपरोक्त घोषणा करता/करती हूं कि यह हलफनामा मेरी जानकारी और विश्वास के अनुसार सत्य एवं सही है।"
+                }
+            }
+        };
+
+        function getCurrentDate() {
+            return new Date().toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+        }
+
+        function uploadCustomStamp() {
+            const file = document.getElementById('customStampUpload').files[0];
+            if (!file) return;
+            if (file.size > 2 * 1024 * 1024) {
+                showToast('File size should be less than 2MB', 'error');
+                return;
+            }
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                customStampData = e.target.result;
+                currentStampValue = 'custom';
+                document.getElementById('stampPaperImage').src = customStampData;
+                document.getElementById('stampImageContainer').style.display = 'block';
+                ['10', '20', '50', '100'].forEach(v => document.getElementById(`stamp-${v}`).classList.remove('active'));
+                adjustStampTopSpace();
+                showToast('Custom stamp uploaded successfully');
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function selectStamp(value) {
+            currentStampValue = value;
+            customStampData = null;
+            ['10', '20', '50', '100'].forEach(v => {
+                const el = document.getElementById(`stamp-${v}`);
+                if (el) v === value ? el.classList.add('active') : el.classList.remove('active');
+            });
+            document.getElementById('stampPaperImage').src = stampImages[value];
+            document.getElementById('stampImageContainer').style.display = 'block';
+            adjustStampTopSpace();
+            showToast(`₹${value} Stamp Paper selected`);
+        }
+
+        function removeStamp() {
+            currentStampValue = null;
+            customStampData = null;
+            ['10', '20', '50', '100'].forEach(v => document.getElementById(`stamp-${v}`)?.classList.remove('active'));
+            document.getElementById('stampImageContainer').style.display = 'none';
+            document.getElementById('stampTopSpace').value = '1.0';
+            document.getElementById('stampTopValue').innerText = '1.0';
+            document.getElementById('stampSpaceDiv').style.height = '0px';
+            showToast('Stamp paper removed');
+        }
+
+        function adjustStampTopSpace() {
+            const value = parseFloat(document.getElementById('stampTopSpace').value);
+            document.getElementById('stampTopValue').innerText = value;
+            if (currentStampValue) document.getElementById('stampSpaceDiv').style.height = (value * 96) + 'px';
+            else document.getElementById('stampSpaceDiv').style.height = '0px';
+        }
+
+        function updatePreview() {
+            const name = document.getElementById('deponentName').value || '[Name]';
+            const father = document.getElementById('fatherName').value || '[Father/Husband Name]';
+            const mother = document.getElementById('motherName').value || '[Mother Name]';
+            const address = document.getElementById('address').value || '[Address]';
+            const incorrect = document.getElementById('incorrectInfo').value || '[Incorrect Information]';
+            const correct = document.getElementById('correctInfo').value || '[Correct Information]';
+            const verifiedPlace = document.getElementById('verifiedPlace').value || '[Place/City]';
+            const additional = document.getElementById('additionalNotes').value || '';
+
+            const template = templates[currentLanguage][currentAffidavitType];
+            let bodyText = template.body;
+
+            bodyText = bodyText.replace(/{name}/g, name);
+            bodyText = bodyText.replace(/{father}/g, father);
+            bodyText = bodyText.replace(/{mother}/g, mother);
+            bodyText = bodyText.replace(/{address}/g, address);
+            bodyText = bodyText.replace(/{incorrect}/g, incorrect);
+            bodyText = bodyText.replace(/{correct}/g, correct);
+            bodyText = bodyText.replace(/{additional}/g, additional);
+
+            const paragraphs = bodyText.split('\n\n');
+            let formattedHtml = `<h2 class="text-center font-bold text-lg mb-4">${template.title}</h2>`;
+
+            paragraphs.forEach(para => {
+                if (para.trim()) {
+                    const lines = para.split('\n');
+                    let paraHtml = '<div class="mb-3">';
+                    lines.forEach(line => {
+                        if (line.trim()) {
+                            if (line.match(/^\d+\./)) paraHtml += `<div class="ml-4 mb-1 text-sm">${line}</div>`;
+                            else paraHtml += `<div class="mb-1 text-sm">${line}</div>`;
+                        }
+                    });
+                    paraHtml += '</div>';
+                    formattedHtml += paraHtml;
+                }
+            });
+
+            formattedHtml += `
+                <div class="mt-4">
+                    <div class="mb-1 text-sm">I, the above named deponent, do hereby verify that the contents of this affidavit are true and correct to the best of my knowledge and belief.</div>
+                    <div class="mb-1 text-sm">Verified at ${verifiedPlace} on this ${getCurrentDate()}.</div>
+                </div>
+                <div class="flex justify-between mt-6 pt-3">
+                    <div><div class="signature-line"></div><div class="text-xs mt-1">Deponent Signature</div></div>
+                    <div><div class="signature-line"></div><div class="text-xs mt-1">Notary / Oath Commissioner</div></div>
+                </div>
+                <div class="mt-3 text-xs">
+                    <div>Witness 1: __________________</div>
+                    <div class="mt-1">Witness 2: __________________</div>
+                </div>
+            `;
+
+            document.getElementById('affidavitText').innerHTML = formattedHtml;
+        }
+
+        function changeAffidavitType() {
+            currentAffidavitType = document.getElementById('affidavitType').value;
+            const correctionTypes = ['name_change', 'address_change', 'dob_correction', 'education_correction', 'passport_correction'];
+            if (correctionTypes.includes(currentAffidavitType)) {
+                document.getElementById('incorrectInfoGroup').style.display = 'block';
+                document.getElementById('correctInfoGroup').style.display = 'block';
+            } else {
+                document.getElementById('incorrectInfoGroup').style.display = 'none';
+                document.getElementById('correctInfoGroup').style.display = 'none';
+            }
+            updatePreview();
+        }
+
+        function setLanguage(lang) {
+            currentLanguage = lang;
+            document.getElementById('lang-en').classList.toggle('bg-[#ab183d]', lang === 'english');
+            document.getElementById('lang-en').classList.toggle('text-white', lang === 'english');
+            document.getElementById('lang-hi').classList.toggle('bg-[#ab183d]', lang === 'hindi');
+            document.getElementById('lang-hi').classList.toggle('text-white', lang === 'hindi');
+            updatePreview();
+            showToast(`Language changed to ${lang === 'english' ? 'English' : 'हिंदी'}`);
+        }
+
+        function autoFillExample() {
+            document.getElementById('deponentName').value = 'Krishna Kumar Thakur';
+            document.getElementById('fatherName').value = 'Ramdas Kumar Thakur';
+            document.getElementById('motherName').value = 'Madhu Bai Thakur';
+            document.getElementById('address').value = 'H.No. 257, Sheetal Town Phase 1st Colony, New Mandideep - 462026';
+            document.getElementById('incorrectInfo').value = 'Krishna Thakur';
+            document.getElementById('correctInfo').value = 'Krishna Kumar Thakur';
+            document.getElementById('verifiedPlace').value = 'New Mandideep';
+            document.getElementById('additionalNotes').value = 'I declare that I have changed my name for professional reasons and have published the same in newspapers.';
+            updatePreview();
+            showToast('Example data filled successfully');
+        }
+
+        function resetForm() {
+            if (confirm('Are you sure you want to reset all fields?')) {
+                document.getElementById('deponentName').value = '';
+                document.getElementById('fatherName').value = '';
+                document.getElementById('motherName').value = '';
+                document.getElementById('address').value = '';
+                document.getElementById('incorrectInfo').value = '';
+                document.getElementById('correctInfo').value = '';
+                document.getElementById('verifiedPlace').value = '';
+                document.getElementById('additionalNotes').value = '';
+                removeStamp();
+                updatePreview();
+                showToast('Form reset successfully');
+            }
+        }
+
+        function printAffidavit() {
+            const affidavitText = document.getElementById('affidavitText').innerHTML;
+            const stampTopSpace = document.getElementById('stampSpaceDiv').style.height;
+            const printHtml = `<!DOCTYPE html><html><head><title>Affidavit</title><style>
+                body { font-family: 'Inter', Arial, sans-serif; padding: 0.5in; margin: 0; }
+                .affidavit-content { line-height: 1.6; font-size: 12pt; text-align: justify; }
+                .affidavit-content h1 { font-size: 16pt; font-weight: bold; text-align: center; margin-bottom: 15px; }
+                .signature-line { border-top: 1px solid #000; width: 200px; margin-top: 40px; padding-top: 8px; }
+                @page { size: A4; margin: 0.5in; }
+            </style></head><body><div style="height: ${stampTopSpace};"></div><div class="affidavit-content">${affidavitText}</div>    <a href="https://wa.me/916387617678" class="no-print fixed bottom-5 right-5 w-14 h-14 rounded-full flex items-center justify-center text-white text-2xl shadow-lg z-50" style="background:#25d366" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+</body></html>`;
+            const printWindow = window.open('', '_blank');
+            printWindow.document.write(printHtml);
+            printWindow.document.close();
+            printWindow.print();
+            showToast('Print dialog opened');
+        }
+
+        function downloadPDF() {
+            const affidavitText = document.getElementById('affidavitText').cloneNode(true);
+            const stampTopSpace = document.getElementById('stampSpaceDiv').style.height;
+            const pdfContainer = document.createElement('div');
+            pdfContainer.style.padding = '20px';
+            pdfContainer.style.backgroundColor = 'white';
+            const spacer = document.createElement('div');
+            spacer.style.height = stampTopSpace;
+            pdfContainer.appendChild(spacer);
+            pdfContainer.appendChild(affidavitText);
+            const opt = {
+                margin: [0.5, 0.5, 0.5, 0.5],
+                filename: `affidavit_${currentAffidavitType}_${Date.now()}.pdf`,
+                image: {
+                    type: 'jpeg',
+                    quality: 0.98
+                },
+                html2canvas: {
+                    scale: 2
+                },
+                jsPDF: {
+                    unit: 'in',
+                    format: 'a4',
+                    orientation: 'portrait'
+                }
+            };
+            showToast('Generating PDF...');
+            html2pdf().set(opt).from(pdfContainer).save().then(() => showToast('PDF downloaded successfully')).catch(() => showToast('Error generating PDF', 'error'));
+        }
+
+        function showToast(message, type = 'success') {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMessage').innerText = message;
+            toast.classList.remove('hidden', 'bg-green-500', 'bg-red-500');
+            toast.classList.add(type === 'success' ? 'bg-green-500' : 'bg-red-500');
+            toast.classList.remove('hidden');
+            setTimeout(() => toast.classList.add('hidden'), 3000);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            updatePreview();
+            adjustStampTopSpace();
+        });
+    </script>
+</body>
+
+</html>
