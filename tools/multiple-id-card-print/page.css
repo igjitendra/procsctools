@@ -1,0 +1,232 @@
+
+        /* Custom Print Styles - CRITICAL for exact dimensions */
+
+        .print-grid {
+            display: grid;
+            gap: 5mm;
+            padding: 10mm;
+            background: white;
+            width: 210mm;
+            min-height: 297mm;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+
+        .print-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            aspect-ratio: var(--card-ratio, 1.585);
+        }
+
+        .print-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        .card-number-badge {
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            background: rgba(37, 99, 235, 0.9);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 10px;
+            font-weight: bold;
+            z-index: 10;
+        }
+
+        .card-type-badge {
+            position: absolute;
+            top: 4px;
+            right: 4px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 8px;
+            z-index: 10;
+        }
+
+        /* Print-specific styles */
+
+        @media print {
+            @page {
+                size: A4 portrait;
+                margin: 0;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+                background: white;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .print-grid {
+                box-shadow: none;
+                page-break-after: avoid;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .print-card {
+                page-break-inside: avoid;
+                break-inside: avoid;
+                border: 1px solid #ddd;
+            }
+            .card-number-badge,
+            .card-type-badge {
+                display: none;
+            }
+        }
+
+        /* Card preview in editor */
+
+        .card-preview-item {
+            transition: all 0.2s ease;
+            border: 2px solid transparent;
+        }
+
+        .card-preview-item:hover {
+            border-color: #3b82f6;
+            transform: translateY(-2px);
+        }
+
+        .card-preview-item.selected {
+            border-color: #3b82f6;
+            background: #eff6ff;
+        }
+
+        /* Image transformation controls */
+
+        .transform-controls {
+            background: #f9fafb;
+            border-radius: 8px;
+            padding: 10px;
+        }
+
+        .transform-btn {
+            width: 32px;
+            height: 32px;
+            border-radius: 6px;
+            background: white;
+            border: 1px solid #e5e7eb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .transform-btn:hover {
+            background: #3b82f6;
+            color: white;
+            border-color: #3b82f6;
+        }
+
+        /* Upload placeholder */
+
+        .upload-placeholder {
+            aspect-ratio: 85.6/54;
+            background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+            border: 2px dashed #9ca3af;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            min-height: 100px;
+        }
+
+        .upload-placeholder:hover {
+            border-color: #3b82f6;
+            background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+        }
+
+        .upload-placeholder i {
+            font-size: 2rem;
+            color: #6b7280;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Dimension input group */
+
+        .dimension-input {
+            width: 70px;
+            padding: 4px;
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        /* Loading spinner */
+
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #3b82f6;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Home button */
+
+        .home-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .home-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 25px -5px rgba(37, 99, 235, 0.4);
+        }
+
+        /* Website header */
+
+        .website-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        /* Editor image preview */
+
+        .editor-image-preview {
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .editor-image-preview:hover {
+            border-color: #3b82f6;
+        }
+    

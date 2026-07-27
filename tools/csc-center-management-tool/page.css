@@ -1,0 +1,487 @@
+
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #c084fc;
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a855f7;
+        }
+        
+        /* Dark Mode Styles - Fixed */
+        body.dark-mode {
+            background-color: #111827 !important;
+            color: #f3f4f6 !important;
+        }
+        
+        body.dark-mode .bg-white {
+            background-color: #1f2937 !important;
+            color: #f3f4f6 !important;
+        }
+        
+        body.dark-mode .text-gray-600,
+        body.dark-mode .text-gray-700,
+        body.dark-mode .text-gray-800,
+        body.dark-mode .text-gray-900 {
+            color: #e5e7eb !important;
+        }
+        
+        body.dark-mode .border-gray-200,
+        body.dark-mode .border-gray-300 {
+            border-color: #374151 !important;
+        }
+        
+        body.dark-mode .bg-gray-50,
+        body.dark-mode .bg-gray-100 {
+            background-color: #374151 !important;
+        }
+        
+        body.dark-mode .text-gray-500 {
+            color: #9ca3af !important;
+        }
+        
+        body.dark-mode input,
+        body.dark-mode select,
+        body.dark-mode textarea {
+            background-color: #374151 !important;
+            border-color: #4b5563 !important;
+            color: #f3f4f6 !important;
+        }
+        
+        body.dark-mode input::placeholder,
+        body.dark-mode textarea::placeholder {
+            color: #9ca3af !important;
+        }
+        
+        body.dark-mode .bg-purple-50,
+        body.dark-mode .bg-indigo-50,
+        body.dark-mode .bg-green-50,
+        body.dark-mode .bg-yellow-50,
+        body.dark-mode .bg-red-50,
+        body.dark-mode .bg-blue-50 {
+            background-color: #2d3748 !important;
+        }
+        
+        body.dark-mode .text-purple-600,
+        body.dark-mode .text-indigo-600,
+        body.dark-mode .text-green-600,
+        body.dark-mode .text-yellow-600,
+        body.dark-mode .text-red-600,
+        body.dark-mode .text-blue-600 {
+            color: #a78bfa !important;
+        }
+        
+        /* Dark Mode Toggle Button */
+        #darkModeToggle {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        #darkModeToggle:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Pro CSC Tools Badge Animation */
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        
+        @keyframes glow {
+            0% {
+                box-shadow: 0 0 5px rgba(168, 85, 247, 0.5);
+            }
+            50% {
+                box-shadow: 0 0 20px rgba(168, 85, 247, 0.8);
+            }
+            100% {
+                box-shadow: 0 0 5px rgba(168, 85, 247, 0.5);
+            }
+        }
+        
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .smart-csc-badge {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 30px -5px rgba(102, 126, 234, 0.5);
+            cursor: pointer;
+            animation: float 3s ease-in-out infinite, glow 2s ease-in-out infinite;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .smart-csc-badge:hover {
+            transform: translateX(-50%) scale(1.05);
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+            animation: float 1.5s ease-in-out infinite;
+        }
+        
+        .smart-csc-badge i {
+            animation: spin 5s linear infinite;
+        }
+        
+        .smart-csc-badge:hover i {
+            animation: spin 2s linear infinite;
+        }
+        
+        /* Animations */
+        @keyframes slideIn {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .animate-slideIn {
+            animation: slideIn 0.5s ease forwards;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+        
+        .animate-pulse-slow {
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        /* Card Hover Effects */
+        .dashboard-card {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .dashboard-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Financial Card */
+        .financial-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .financial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 30px -10px rgba(102, 126, 234, 0.5);
+        }
+        
+        /* Table Responsive */
+        .table-responsive {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        /* Status Badges */
+        .status-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: inline-block;
+        }
+        
+        .status-pending {
+            background-color: #fef3c7;
+            color: #92400e;
+        }
+        
+        .status-inprocess {
+            background-color: #dbeafe;
+            color: #1e40af;
+        }
+        
+        .status-completed {
+            background-color: #d1fae5;
+            color: #065f46;
+        }
+        
+        body.dark-mode .status-pending {
+            background-color: #92400e;
+            color: #fef3c7;
+        }
+        
+        body.dark-mode .status-inprocess {
+            background-color: #1e40af;
+            color: #dbeafe;
+        }
+        
+        body.dark-mode .status-completed {
+            background-color: #065f46;
+            color: #d1fae5;
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(5px);
+            overflow-y: auto;
+        }
+        
+        .modal-content {
+            animation: slideIn 0.3s ease;
+            margin: 20px auto;
+            max-width: 600px;
+            width: 90%;
+        }
+        
+        /* Service Card */
+        .service-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background: #f9fafb;
+        }
+        
+        body.dark-mode .service-card {
+            background: #374151;
+            border-color: #4b5563;
+        }
+        
+        /* Slip Design */
+        .service-slip {
+            max-width: 400px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        body.dark-mode .service-slip {
+            background: #1f2937;
+            color: #f3f4f6;
+        }
+        
+        .slip-header {
+            text-align: center;
+            border-bottom: 2px dashed #a855f7;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .slip-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px dotted #e5e7eb;
+        }
+        
+        body.dark-mode .slip-row {
+            border-bottom-color: #4b5563;
+        }
+        
+        /* Category Card */
+        .category-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .service-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px;
+            background: rgba(255,255,255,0.1);
+            margin-top: 5px;
+            border-radius: 5px;
+        }
+        
+        /* Toast Notifications */
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 2000;
+            animation: slideInRight 0.3s ease;
+        }
+        
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        /* Sidebar transition */
+        #sidebar {
+            transition: all 0.3s ease;
+        }
+        
+        @media (max-width: 768px) {
+            #sidebar {
+                width: 70px;
+            }
+            #sidebar .nav-item span {
+                display: none;
+            }
+            #darkModeToggle span {
+                display: none;
+            }
+            .smart-csc-badge {
+                font-size: 0.9rem;
+                padding: 8px 15px;
+                top: 10px;
+            }
+        }
+        
+        /* Print Styles */
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            .print-only {
+                display: block !important;
+            }
+            .service-slip {
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+        }
+        
+        /* Expense Form */
+        .expense-input {
+            transition: all 0.3s ease;
+        }
+        
+        .expense-input:focus {
+            border-color: #a855f7;
+            box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.2);
+        }
+        
+        /* Profit Badge */
+        .profit-badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+        
+        .profit-positive {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+        }
+        
+        .profit-negative {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            color: white;
+        }
+        
+        /* Calendar Customization */
+        .flatpickr-calendar {
+            font-family: 'Inter', sans-serif !important;
+            border-radius: 10px !important;
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.2) !important;
+        }
+        
+        .flatpickr-day.selected {
+            background: #a855f7 !important;
+            border-color: #a855f7 !important;
+        }
+        
+        .flatpickr-day.today {
+            border-color: #a855f7 !important;
+        }
+        
+        .flatpickr-months .flatpickr-month {
+            background: #a855f7 !important;
+            color: white !important;
+        }
+        
+        .flatpickr-current-month .flatpickr-monthDropdown-months {
+            color: white !important;
+        }
+        
+        .flatpickr-weekdays {
+            background: #f3f4f6 !important;
+        }
+        
+        body.dark-mode .flatpickr-calendar {
+            background: #1f2937 !important;
+            color: white !important;
+        }
+        
+        /* PDF Button */
+        .pdf-button {
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .pdf-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -5px rgba(220, 38, 38, 0.5);
+        }
+    

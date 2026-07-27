@@ -1,0 +1,480 @@
+
+        /* Custom styles for advanced features */
+
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f3f4f6;
+            --text-primary: #111827;
+            --text-secondary: #4b5563;
+            --accent-primary: #ab183d;
+            --accent-secondary: #8a0f2f;
+            /* Invoice Template Variables */
+            --invoice-primary: #ab183d;
+            --invoice-secondary: #8a0f2f;
+            --invoice-border: 2px solid #ab183d;
+            --invoice-border-radius: 12px;
+            --invoice-header-bg: #f8fafc;
+            --invoice-font-size: 14px;
+            --invoice-show-border: true;
+        }
+
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .dark-mode {
+            --bg-primary: #1f2937;
+            --bg-secondary: #111827;
+            --text-primary: #f9fafb;
+            --text-secondary: #d1d5db;
+            --accent-primary: #c41d47;
+            --accent-secondary: #d9304f;
+        }
+
+        body {
+            background-color: var(--bg-secondary);
+            color: var(--text-primary);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .card {
+            background-color: var(--bg-primary);
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transform: translateY(-2px);
+        }
+
+        .gradient-primary {
+            background: linear-gradient(135deg, #ab183d 0%, #8a0f2f 100%);
+        }
+
+        .gradient-success {
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+        }
+
+        .gradient-warning {
+            background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+        }
+
+        .gradient-danger {
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+        }
+
+        /* Animated Badge Styles */
+
+        .smart-badge {
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1, #96c93d);
+            background-size: 300% 300%;
+            animation: gradientFlow 5s ease infinite;
+            padding: 8px 16px;
+            border-radius: 30px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .smart-badge:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .smart-badge::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient( 45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transform: rotate(45deg);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes gradientFlow {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes shine {
+            0% {
+                left: -50%;
+                top: -50%;
+            }
+            100% {
+                left: 150%;
+                top: 150%;
+            }
+        }
+
+        .badge-text {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .badge-text i {
+            font-size: 1.2rem;
+            filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2));
+        }
+
+        /* Tab styles */
+
+        .tab-active {
+            border-bottom: 3px solid #ab183d;
+            color: #ab183d;
+            font-weight: 600;
+            background-color: rgba(37, 99, 235, 0.1);
+        }
+
+        .dark-mode .tab-active {
+            border-bottom-color: #d9304f;
+            color: #d9304f;
+            background-color: rgba(96, 165, 250, 0.1);
+        }
+
+        /* Toast animation */
+
+        .toast {
+            animation: slideIn 0.3s ease, fadeOut 0.3s ease 2.7s;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        /* Modal backdrop */
+
+        .modal-backdrop {
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+        }
+
+        /* Custom scrollbar */
+
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #ab183d;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #8a0f2f;
+        }
+
+        /* Print styles */
+
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            .print-area {
+                background: white;
+                color: black;
+                padding: 10px;
+                max-height: 100vh;
+                overflow: hidden;
+            }
+            body * {
+                visibility: hidden;
+            }
+            .bill-print-container,
+            .bill-print-container * {
+                visibility: visible;
+            }
+            .bill-print-container {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                background: white;
+                page-break-inside: avoid;
+                page-break-after: avoid;
+                page-break-before: avoid;
+            }
+        }
+
+        /* Bill container with dynamic border */
+
+        .bill-container {
+            border: var(--invoice-show-border) ? var(--invoice-border): none;
+            border-radius: var(--invoice-border-radius);
+            padding: 15px;
+            background: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: var(--invoice-font-size);
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        /* Single page bill */
+
+        .single-page-bill {
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 10px;
+        }
+
+        /* QR Code styles */
+
+        .qr-preview {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .qr-large {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+        }
+
+        /* Loading spinner */
+
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #ab183d;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Auto-fill highlight */
+
+        .auto-fill-highlight {
+            background-color: rgba(37, 99, 235, 0.1);
+            transition: background-color 0.3s;
+        }
+
+        /* Print Layout Styles */
+
+        .print-layout {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 16px;
+            page-break-inside: avoid;
+        }
+
+        .print-header {
+            text-align: center;
+            margin-bottom: 15px;
+            border-bottom: 2px dashed var(--invoice-primary);
+            padding-bottom: 10px;
+        }
+
+        .print-header h1 {
+            color: var(--invoice-primary);
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .print-details {
+            background: var(--invoice-header-bg);
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .print-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            page-break-inside: avoid;
+        }
+
+        .print-table th {
+            background: var(--invoice-primary);
+            color: white;
+            padding: 8px;
+            font-weight: 600;
+            font-size: 13px;
+        }
+
+        .print-table td {
+            padding: 6px 8px;
+            border: 1px solid #e2e8f0;
+            font-size: 12px;
+        }
+
+        .print-table tr:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        .print-total {
+            text-align: right;
+            font-size: 16px;
+            font-weight: bold;
+            color: var(--invoice-primary);
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 2px dashed var(--invoice-primary);
+        }
+
+        .print-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px solid #e2e8f0;
+            font-size: 10px;
+            color: #64748b;
+        }
+
+        .qr-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .qr-text {
+            font-size: 9px;
+            line-height: 1.2;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .action-btn {
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            color: white;
+            font-size: 13px;
+        }
+
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-print {
+            background: #ab183d;
+        }
+
+        .btn-pdf {
+            background: #dc2626;
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+        }
+
+        .btn-copy {
+            background: #6b7280;
+        }
+
+        .btn-new {
+            background: #059669;
+        }
+
+        /* Color picker styles */
+
+        .color-option {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .color-option:hover {
+            transform: scale(1.1);
+        }
+
+        .color-option.selected {
+            border-color: #000;
+            transform: scale(1.1);
+        }
+
+        /* Template preview */
+
+        .template-preview {
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .template-preview:hover {
+            border-color: var(--invoice-primary);
+            transform: translateY(-2px);
+        }
+
+        .template-preview.selected {
+            border-color: var(--invoice-primary);
+            background: #fbe9ee;
+        }
+    

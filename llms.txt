@@ -1,0 +1,75 @@
+# Pro CSC Tools
+
+> Free browser-based utilities for CSC VLEs, students, shops and Indian small businesses.
+
+Canonical site: https://procsctools.in/
+Tool directory: https://procsctools.in/tools/
+Blog: https://procsctools.in/blog/
+Contact: https://procsctools.in/contact/
+
+## Tool categories
+
+### Document & PDF Tools
+- [Word to PDF Converter – DOCX to PDF Free](https://procsctools.in/tools/word-to-pdf-converter/)
+- [Add Watermark to PDF Online Free](https://procsctools.in/tools/add-watermark-to-pdf/)
+- [GST Invoice Generator India – Free PDF Bill](https://procsctools.in/tools/gst-invoice-generator/)
+- [Image to PDF Converter – JPG/PNG to PDF](https://procsctools.in/tools/image-to-pdf/)
+- [JPG to PDF Converter with A4 & Margins](https://procsctools.in/tools/jpg-to-pdf/)
+- [Merge PDF Online – Combine PDF Files Free](https://procsctools.in/tools/merge-pdf/)
+- [PDF to JPG Converter Online Free](https://procsctools.in/tools/pdf-to-jpg/)
+- [Salary Slip Generator India – Payslip PDF](https://procsctools.in/tools/salary-slip-generator/)
+- [Split PDF Online – Extract PDF Pages Free](https://procsctools.in/tools/split-pdf/)
+
+### Image & Photo Tools
+- [AI Studio Passport Photo Prompt Tool](https://procsctools.in/tools/ai-passport-photo-maker/)
+- [Background Remover Online – Remove Image BG](https://procsctools.in/tools/background-remover/)
+- [Color Picker & Palette Generator Online Free](https://procsctools.in/tools/color-picker/)
+- [CSC WhatsApp Image Print Tool Online Free](https://procsctools.in/tools/csc-whatsapp-image-print-tool/)
+- [Photo Enhancer Online Free](https://procsctools.in/tools/photo-enhancer/)
+- [Image Compressor to KB – JPG PNG WebP](https://procsctools.in/tools/image-compressor/)
+- [Image Converter Online Free](https://procsctools.in/tools/image-converter/)
+- [Image Cropper Online Free](https://procsctools.in/tools/image-cropper/)
+- [Image Resizer in KB & Pixels Online](https://procsctools.in/tools/image-resizer/)
+- [PAN Photo & Signature Resizer NSDL/UTI](https://procsctools.in/tools/pan-card-photo-sign-resizer/)
+- [AI Passport Photo Generator Prompts](https://procsctools.in/tools/ai-passport-photo-generator/)
+- [Passport Photo Maker 35x45mm & A4 Print](https://procsctools.in/tools/passport-photo-maker/)
+- [Photo Name & Date Joiner Online Free](https://procsctools.in/tools/photo-name-date-joiner/)
+- [Photo & Signature Joiner Online Free](https://procsctools.in/tools/photo-signature-joiner/)
+- [Signature Resizer 10KB–20KB Online](https://procsctools.in/tools/signature-resizer/)
+
+### Calculators
+- [Age Calculator by Date of Birth – Exact Age](https://procsctools.in/tools/age-calculator/)
+- [Date Difference Calculator – Days Between Dates](https://procsctools.in/tools/date-difference-calculator/)
+- [CGPA to Percentage & GPA Calculator](https://procsctools.in/tools/gpa-cgpa-calculator/)
+- [GST Calculator India – CGST SGST IGST](https://procsctools.in/tools/gst-calculator/)
+- [Loan EMI Calculator Online Free](https://procsctools.in/tools/loan-emi-calculator/)
+- [Percentage Calculator – Increase, Decrease & Percent](https://procsctools.in/tools/percentage-calculator/)
+
+### CSC & Business Tools
+- [Cover Letter Generator Online Free](https://procsctools.in/tools/cover-letter-generator/)
+- [CSC Affidavit Format Generator Online Free](https://procsctools.in/tools/csc-affidavit-format-generator/)
+- [Free CSC Billing Software & GST Bill Maker](https://procsctools.in/tools/csc-billing-software/)
+- [CSC Farmer Registration & ID Portal 2026](https://procsctools.in/tools/csc-farmer-registration/)
+- [CSC ID Card Maker Online Free](https://procsctools.in/tools/csc-id-card-maker/)
+- [CSC Center Management Tool Online](https://procsctools.in/tools/csc-center-management-tool/)
+- [Farmer ID Card Maker Online Free](https://procsctools.in/tools/farmer-id-card-maker/)
+- [Invoice Generator & Bill Maker Online](https://procsctools.in/tools/invoice-generator/)
+- [Marriage Biodata Maker Online Free](https://procsctools.in/tools/marriage-biodata-maker/)
+- [Multiple ID Card Print on A4](https://procsctools.in/tools/multiple-id-card-print/)
+- [Notebook Name Sticker Maker Online](https://procsctools.in/tools/notebook-name-sticker/)
+- [Online Bill Maker for Small Shops Online Free](https://procsctools.in/tools/online-bill-maker-small-shops/)
+- [Strong Password Generator Online Free](https://procsctools.in/tools/password-generator/)
+- [QR Code Generator – UPI, WiFi, URL & Logo](https://procsctools.in/tools/qr-code-generator/)
+- [CSC Resume Maker & CV Builder Online Free](https://procsctools.in/tools/resume-builder/)
+- [Self Declaration Form Online (Hindi/English)](https://procsctools.in/tools/self-declaration-form/)
+- [Typing Speed Test Online Free](https://procsctools.in/tools/typing-speed-test/)
+- [WhatsApp Business Tools Online Free](https://procsctools.in/tools/whatsapp-ultimate-tool/)
+
+### Other Utilities
+
+## Policies
+- [Privacy Policy](https://procsctools.in/privacy-policy/)
+- [Terms of Use](https://procsctools.in/terms-of-use/)
+- [Disclaimer](https://procsctools.in/disclaimer/)
+
+Last updated: 2026-07-27

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+<head>
+<!-- Pro CSC Tools: AdSense + Verification -->
+<meta content="ca-pub-6791318178265120" name="google-adsense-account"/>
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6791318178265120"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0" name="viewport"/>
+<!-- Primary Meta Tags - SEO Optimized -->
+<title>CGPA to Percentage &amp; GPA Calculator | Pro CSC Tools</title>
+<meta content="GPA &amp; CGPA Calculator Pro - Accurate College Grade Calculator" name="title"/>
+<meta content="Calculate GPA and CGPA, convert CGPA to percentage and track semester grades using 10-point, 4-point and customizable grading scales." name="description"/>
+<meta content="gpa calculator, cgpa calculator, college grade calculator, semester gpa calculator, cumulative gpa calculator, percentage calculator, grade tracker, student grade calculator, university marks calculator, sgpa calculator" name="keywords"/>
+<meta content="Pro CSC Tools" name="author"/>
+<meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/>
+<meta content="English" name="language"/>
+<!-- Canonical URL -->
+<link href="https://procsctools.in/tools/gpa-cgpa-calculator/" rel="canonical"/>
+<!-- Open Graph / Facebook -->
+<meta content="website" property="og:type"/>
+<meta content="https://procsctools.in/tools/gpa-cgpa-calculator/" property="og:url"/>
+<meta content="CGPA to Percentage &amp; GPA Calculator | Pro CSC Tools" property="og:title"/>
+<meta content="Calculate GPA and CGPA, convert CGPA to percentage and track semester grades using 10-point, 4-point and customizable grading scales." property="og:description"/>
+<meta content="https://procsctools.in/images/pro-csc-tools-social.jpg" property="og:image"/>
+<!-- Twitter -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="CGPA to Percentage &amp; GPA Calculator | Pro CSC Tools" name="twitter:title"/>
+<meta content="Calculate GPA and CGPA, convert CGPA to percentage and track semester grades using 10-point, 4-point and customizable grading scales." name="twitter:description"/>
+<!-- Preconnect for faster loading -->
+<link href="https://cdn.tailwindcss.com" rel="preconnect"/>
+<link href="https://cdn.jsdelivr.net" rel="preconnect"/>
+<!-- Stylesheets -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- Fixed PDF Libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .print-only {
+                display: block !important;
+            }
+        }
+
+        .toast-message {
+            animation: slideIn 0.3s ease, fadeOut 0.3s ease 2.7s;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        .subject-item {
+            transition: all 0.3s ease;
+        }
+
+        .subject-item:hover {
+            transform: translateX(5px);
+            background-color: #f8fafc;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.5);
+        }
+
+        /* PDF Preview Styles */
+
+        .pdf-preview {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+<meta content="Pro CSC Tools" property="og:site_name"/><meta content="en_IN" property="og:locale"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="CGPA to Percentage &amp; GPA Calculator" property="og:image:alt"/><meta content="https://procsctools.in/images/pro-csc-tools-social.jpg" name="twitter:image"/><meta content="CGPA to Percentage &amp; GPA Calculator" name="twitter:image:alt"/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://procsctools.in/#organization","name":"Pro CSC Tools","url":"https://procsctools.in/","logo":{"@type":"ImageObject","url":"https://procsctools.in/logo.png"}},{"@type":"WebSite","@id":"https://procsctools.in/#website","url":"https://procsctools.in/","name":"Pro CSC Tools","publisher":{"@id":"https://procsctools.in/#organization"},"inLanguage":["en-IN","hi-IN"]},{"@type":"WebApplication","@id":"https://procsctools.in/tools/gpa-cgpa-calculator/#application","name":"CGPA to Percentage & GPA Calculator","url":"https://procsctools.in/tools/gpa-cgpa-calculator/","description":"Calculate GPA and CGPA, convert CGPA to percentage and track semester grades using 10-point, 4-point and customizable grading scales.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires a modern web browser with JavaScript enabled","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"provider":{"@id":"https://procsctools.in/#organization"},"inLanguage":["en-IN","hi-IN"]},{"@type":"BreadcrumbList","@id":"https://procsctools.in/tools/gpa-cgpa-calculator/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://procsctools.in/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://procsctools.in/tools/"},{"@type":"ListItem","position":3,"name":"CGPA to Percentage & GPA Calculator","item":"https://procsctools.in/tools/gpa-cgpa-calculator/"}]},{"@type":"WebPage","@id":"https://procsctools.in/tools/gpa-cgpa-calculator/#webpage","url":"https://procsctools.in/tools/gpa-cgpa-calculator/","name":"CGPA to Percentage & GPA Calculator","description":"Calculate GPA and CGPA, convert CGPA to percentage and track semester grades using 10-point, 4-point and customizable grading scales.","dateModified":"2026-07-27","isPartOf":{"@id":"https://procsctools.in/#website"},"mainEntity":{"@id":"https://procsctools.in/tools/gpa-cgpa-calculator/#application"},"inLanguage":["en-IN","hi-IN"]}]}</script><style data-seo-enhancements="true">.seo-related-tools{max-width:1120px;margin:48px auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px;background:#fff}.seo-related-tools ul{display:flex;flex-wrap:wrap;gap:12px;list-style:none;padding:0}.seo-related-tools a{display:inline-block;padding:10px 14px;border:1px solid #d8dee8;border-radius:8px;color:#8f1635;font-weight:700}.seo-related-tools a:focus-visible{outline:3px solid #e0aa14;outline-offset:3px}@media(min-width:800px){main>section:not(:first-child),footer{content-visibility:auto;contain-intrinsic-size:1px 800px}}</style><meta content="2026-07-27" name="date-modified"/><style data-depth-seo="true">.seo-depth-content{max-width:1000px;margin:48px auto;padding:28px;background:#fff;border:1px solid #e5e7eb;border-radius:12px;line-height:1.7}.seo-depth-content h2,.seo-depth-content h3{color:#172033}.seo-depth-content li{margin:.55rem 0}@media(max-width:700px){.seo-depth-content{margin:32px 16px;padding:20px}}</style></head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-indigo-950 min-h-screen py-8 px-4 transition-colors">
+<!-- PCT-CHROME-START -->
+<style id="pct-chrome">
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+.pct-header,.pct-footer,.pct-ad{font-family:"Inter",Arial,sans-serif;box-sizing:border-box}
+.pct-header{background:#fff;border-bottom:1px solid #eee;box-shadow:0 2px 10px rgba(0,0,0,.06);padding:10px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;position:relative;z-index:9999}
+.pct-logo{font-size:22px;font-weight:800;color:#ab183d;text-decoration:none;white-space:nowrap}
+.pct-nav{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.pct-nav a{color:#374151;text-decoration:none;font-weight:500;font-size:15px}
+.pct-nav a:hover{color:#ab183d}
+.pct-menu-btn{display:none;background:none;border:0;font-size:26px;color:#ab183d;cursor:pointer;line-height:1}
+.pct-footer{background:#111827;color:#fff;padding:40px 20px 24px;margin-top:48px}
+.pct-footer-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:26px}
+.pct-footer h3{font-size:20px;font-weight:800;margin:0 0 12px;color:#fff}
+.pct-footer h4{font-size:16px;font-weight:600;margin:0 0 12px;color:#fff}
+.pct-footer p{color:#9ca3af;font-size:14px;line-height:1.6;margin:0}
+.pct-footer a{color:#9ca3af;text-decoration:none;display:block;margin-bottom:8px;font-size:14px}
+.pct-footer a:hover{color:#fff}
+.pct-copy{max-width:1100px;margin:26px auto 0;border-top:1px solid #1f2937;padding-top:18px;text-align:center;color:#9ca3af;font-size:13px}
+.pct-ad{margin:18px auto;text-align:center;max-width:1100px;min-height:50px;overflow:hidden}
+@media(max-width:768px){.pct-menu-btn{display:block}.pct-nav{display:none;width:100%;flex-direction:column;align-items:flex-start;gap:12px;padding-top:10px}.pct-nav.open{display:flex}}
+</style>
+<header class="pct-header">
+<a class="pct-logo" href="/">Pro CSC Tools</a>
+<button aria-label="Menu" class="pct-menu-btn" onclick="this.nextElementSibling.classList.toggle('open')">☰</button>
+<nav class="pct-nav">
+<a href="/">Home</a>
+<a href="/tools/csc-billing-software/">Csc Billing</a>
+<a href="/tools/csc-center-management-tool/">Csc Work</a>
+<a href="/#tools">Tools</a>
+<a href="/blog">Blog</a>
+<a href="/about">About Us</a>
+<a href="/contact/">Contact</a>
+</nav>
+</header>
+<div class="pct-ad"><ins class="adsbygoogle" data-ad-client="ca-pub-6791318178265120" data-ad-format="auto" data-ad-slot="7017392570" data-full-width-responsive="true" style="display:block"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+<!-- PCT-CHROME-END -->
+<!-- Back Button with Breadcrumb -->
+<div class="fixed top-6 left-6 z-50 no-print">
+<nav class="flex items-center text-sm bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg">
+<a class="text-gray-600 hover:text-indigo-600 transition flex items-center" href="/">
+<i class="fas fa-home mr-1"></i> Home
+      </a>
+<span class="mx-2 text-gray-400">/</span>
+<span class="text-indigo-600 font-semibold">GPA Calculator</span>
+</nav>
+</div>
+<div class="max-w-7xl mx-auto">
+<!-- Header with Stats -->
+<header class="text-center mb-8 no-print">
+<h1 class="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 mb-4">
+                GPA &amp; CGPA Calculator Pro
+            </h1>
+<p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-lg">
+                Advanced academic tracker used by <span class="font-bold text-indigo-600">50,000+</span> students. Calculate semester GPA, overall CGPA, and track your progress with interactive charts.
+                <span class="font-semibold">100% Free</span> 📊
+            </p>
+<!-- Stats Counter -->
+<div class="flex justify-center gap-6 mt-4 text-sm text-gray-500">
+<div class="flex items-center">
+<i class="fas fa-calculator text-indigo-500 mr-2"></i>
+<span>127,893+ Calculations</span>
+</div>
+<div class="flex items-center">
+<i class="fas fa-star text-yellow-500 mr-2"></i>
+<span>4.9/5 Rating</span>
+</div>
+<div class="flex items-center">
+<i class="fas fa-users text-indigo-500 mr-2"></i>
+<span>Active Users</span>
+</div>
+</div>
+<!-- Quick Action Buttons - Fixed IDs -->
+<div class="flex justify-center gap-3 mt-6">
+<button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition flex items-center" id="saveProgressBtn">
+<i class="fas fa-save mr-2"></i> Save Progress
+        </button>
+<button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition flex items-center" id="loadProgressBtn">
+<i class="fas fa-folder-open mr-2"></i> Load Data
+        </button>
+<button class="bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition flex items-center" id="resetProgressBtn">
+<i class="fas fa-undo mr-2"></i> Reset
+        </button>
+</div>
+</header>
+<div class="grid lg:grid-cols-12 gap-6">
+<!-- Sidebar - Controls & Tools -->
+<aside class="lg:col-span-3 space-y-4 no-print">
+<!-- Quick Guide -->
+<div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-5">
+<h3 class="font-semibold mb-3 flex items-center">
+<i class="fas fa-info-circle text-indigo-500 mr-2"></i> Quick Guide
+                    </h3>
+<ul class="text-sm space-y-2 text-gray-600 dark:text-gray-300">
+<li>• Add subjects with credits &amp; grades</li>
+<li>• Multiple semesters supported</li>
+<li>• Auto-saves your progress</li>
+<li>• Click Calculate to see results</li>
+<li>• Use Goal Planner to predict</li>
+</ul>
+</div>
+<!-- Goal Planner -->
+<div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-5">
+<h3 class="font-semibold mb-3 flex items-center">
+<i class="fas fa-bullseye text-indigo-500 mr-2"></i> Goal Planner
+                    </h3>
+<input class="w-full mb-2 px-3 py-2 border rounded dark:bg-gray-700 focus:ring-2 focus:ring-indigo-300" id="targetCgpa" placeholder="Target CGPA (e.g., 8.5)" step="0.01" type="number"/>
+<input class="w-full mb-2 px-3 py-2 border rounded dark:bg-gray-700 focus:ring-2 focus:ring-indigo-300" id="futureCredits" placeholder="Future Credits" type="number"/>
+<button class="w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700 transition transform hover:scale-105" id="calcGoal">
+            Calculate Required GPA
+          </button>
+<div class="mt-3 p-3 bg-indigo-50 dark:bg-indigo-900 rounded text-sm font-medium hidden" id="goalResult"></div>
+</div>
+<!-- Grading Scale -->
+<div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-5">
+<h3 class="font-semibold mb-3 flex items-center">
+<i class="fas fa-star text-indigo-500 mr-2"></i> Grading Scale
+                    </h3>
+<div class="space-y-1 text-sm" id="gradeScale"></div>
+<button class="mt-3 text-indigo-600 text-sm hover:underline flex items-center" id="editScaleBtn">
+<i class="fas fa-edit mr-1"></i> Customize Scale
+          </button>
+</div>
+<!-- Export Options - Fixed Button IDs -->
+<div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-5">
+<h3 class="font-semibold mb-3">Export Options</h3>
+<button class="w-full mb-2 bg-purple-600 text-white py-2 rounded hover:bg-purple-700 transition flex items-center justify-center" id="downloadPdfBtn">
+<i class="fas fa-file-pdf mr-2"></i> Download PDF
+          </button>
+<button class="w-full mb-2 bg-gray-600 text-white py-2 rounded hover:bg-gray-700 transition flex items-center justify-center" id="printBtn">
+<i class="fas fa-print mr-2"></i> Print
+          </button>
+<button class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition flex items-center justify-center" id="copyResultsBtn">
+<i class="fas fa-copy mr-2"></i> Copy Results
+          </button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="lg:col-span-9 space-y-6">
+<!-- Semesters Container -->
+<div class="space-y-6" id="semestersList"></div>
+<!-- Add Semester Button -->
+<button class="w-full py-3 border-2 border-dashed border-indigo-300 rounded-lg text-indigo-600 hover:bg-indigo-50 transition flex items-center justify-center no-print" id="addSemester">
+<i class="fas fa-plus-circle mr-2"></i> Add New Semester
+        </button>
+<!-- Calculate Button -->
+<button class="w-full py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition flex items-center justify-center no-print" id="calculateBtn">
+<i class="fas fa-calculator mr-2"></i> Calculate GPA &amp; CGPA
+        </button>
+<!-- Results Panel -->
+<div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 hidden" id="resultsPanel">
+<div class="flex justify-between items-center mb-6">
+<h2 class="text-2xl font-bold">Your Academic Summary</h2>
+<span class="text-sm bg-green-100 text-green-800 px-3 py-1 rounded-full">Live Results</span>
+</div>
+<!-- Stats Cards -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+<div class="p-4 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-900 dark:to-purple-900 rounded-lg">
+<p class="text-sm text-gray-600 dark:text-gray-300">Overall CGPA</p>
+<p class="text-3xl font-bold" id="cgpa">0.00</p>
+<p class="text-xs mt-1" id="cgpaGrade"></p>
+</div>
+<div class="p-4 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900 dark:to-emerald-900 rounded-lg">
+<p class="text-sm text-gray-600 dark:text-gray-300">Total Credits</p>
+<p class="text-2xl font-bold" id="totalCredits">0</p>
+</div>
+<div class="p-4 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900 dark:to-cyan-900 rounded-lg">
+<p class="text-sm text-gray-600 dark:text-gray-300">Percentage</p>
+<p class="text-2xl font-bold" id="percentage">0%</p>
+</div>
+<div class="p-4 bg-gradient-to-br from-yellow-50 to-amber-50 dark:from-yellow-900 dark:to-amber-900 rounded-lg">
+<p class="text-sm text-gray-600 dark:text-gray-300">Semesters</p>
+<p class="text-2xl font-bold" id="semesterCount">0</p>
+</div>
+</div>
+<!-- Charts -->
+<div class="grid lg:grid-cols-2 gap-6 mb-6">
+<div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+<h3 class="font-semibold mb-3">SGPA Trend</h3>
+<canvas id="trendChart"></canvas>
+</div>
+<div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+<h3 class="font-semibold mb-3">Grade Distribution</h3>
+<canvas id="gradeDistChart"></canvas>
+</div>
+</div>
+<!-- History Table -->
+<div class="mt-6">
+<h3 class="font-semibold mb-3">Semester-wise Breakdown</h3>
+<div class="overflow-x-auto">
+<table class="w-full text-sm" id="historyTable">
+<thead class="bg-gray-100 dark:bg-gray-700">
+<tr>
+<th class="p-3 text-left">Semester</th>
+<th class="p-3 text-center">SGPA</th>
+<th class="p-3 text-center">Credits</th>
+<th class="p-3 text-center">CGPA</th>
+<th class="p-3 text-center">Grade Points</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-200 dark:divide-gray-600" id="historyTableBody"></tbody>
+</table>
+</div>
+</div>
+<!-- Subject-wise Details -->
+<div class="mt-6">
+<h3 class="font-semibold mb-3">Subject Details</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm max-h-60 overflow-y-auto p-2" id="subjectDetails"></div>
+</div>
+</div>
+<!-- Tips & Tricks -->
+<div class="bg-indigo-50 dark:bg-indigo-900/30 p-4 rounded-lg no-print">
+<h3 class="font-semibold flex items-center text-indigo-800 dark:text-indigo-200">
+<i class="fas fa-lightbulb text-yellow-500 mr-2"></i> Pro Tips
+                    </h3>
+<ul class="text-sm text-indigo-700 dark:text-indigo-300 mt-2 space-y-1">
+<li>• Click on any subject to edit grades directly</li>
+<li>• Use "Save Progress" to store your data locally</li>
+<li>• Try Goal Planner to see what GPA you need</li>
+<li>• Export results as PDF for your records</li>
+</ul>
+</div>
+<section aria-labelledby="seo-depth-title" class="seo-depth-content"><h2 id="seo-depth-title">How to Get the Best Result from CGPA to Percentage &amp; GPA Calculator</h2><p>CGPA to Percentage &amp; GPA Calculator gives a quick result for everyday calculations while keeping the working process easy to understand. The supporting content covers the meaning of each input, the calculation mode and the result users commonly need for Indian education, finance, eligibility or business tasks.</p><h3>Recommended workflow</h3><ol><li>Enter values exactly as shown in the source document or notification.</li><li>Choose the correct inclusive, exclusive, date or grading mode before calculating.</li><li>Check the displayed breakdown instead of copying only the final number.</li></ol><h3>Accuracy and submission checks</h3><p>Calculator results are informational. Tax, loan, admission and eligibility decisions should be verified against the latest official rules or the relevant institution’s formula.</p><p>This page is specifically optimized for “cgpa to percentage &amp; gpa calculator” intent. It avoids unrelated keyword repetition and links to closely related tools so users can complete the next step of the same task.</p></section><section aria-labelledby="related-tools-title" class="seo-related-tools" id="related-tools"><h2 id="related-tools-title">Related Pro CSC Tools</h2><p>Continue your work with these useful online tools:</p><ul><li><a href="/tools/age-calculator/">Age Calculator by Date of Birth – Exact Age</a></li><li><a href="/tools/csc-center-management-tool/">CSC Center Management Tool Online</a></li><li><a href="/tools/date-difference-calculator/">Date Difference Calculator – Days Between Dates</a></li><li><a href="/tools/gst-calculator/">GST Calculator India – CGST SGST IGST</a></li></ul></section></main>
+</div>
+<!-- How to Use Section -->
+<div class="mt-12 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg no-print">
+<h2 class="text-2xl font-bold mb-6 flex items-center">
+<i class="fas fa-question-circle text-indigo-500 mr-3"></i> How to Calculate GPA &amp; CGPA?
+            </h2>
+<div class="grid md:grid-cols-3 gap-6">
+<div class="text-center p-4">
+<div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+<span class="text-2xl font-bold text-indigo-600">1</span>
+</div>
+<h3 class="font-semibold mb-2">Add Subjects</h3>
+<p class="text-gray-600 dark:text-gray-300 text-sm">Enter subject names, credits, and select grades for each semester</p>
+</div>
+<div class="text-center p-4">
+<div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+<span class="text-2xl font-bold text-indigo-600">2</span>
+</div>
+<h3 class="font-semibold mb-2">Calculate</h3>
+<p class="text-gray-600 dark:text-gray-300 text-sm">Click Calculate button to get SGPA, CGPA, percentage instantly</p>
+</div>
+<div class="text-center p-4">
+<div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+<span class="text-2xl font-bold text-indigo-600">3</span>
+</div>
+<h3 class="font-semibold mb-2">Analyze</h3>
+<p class="text-gray-600 dark:text-gray-300 text-sm">View charts, grade distribution, and track your academic progress</p>
+</div>
+</div>
+</div>
+<!-- FAQ Section -->
+<div class="mt-8 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg no-print">
+<h2 class="text-2xl font-bold mb-6 flex items-center">
+<i class="fas fa-star text-indigo-500 mr-3"></i> Frequently Asked Questions
+            </h2>
+<div class="grid md:grid-cols-2 gap-4">
+<div class="border rounded-lg p-4">
+<h3 class="font-semibold mb-2">How is GPA calculated?</h3>
+<p class="text-sm text-gray-600 dark:text-gray-300">GPA = (Sum of (Grade Points × Credit Hours)) ÷ Total Credit Hours</p>
+</div>
+<div class="border rounded-lg p-4">
+<h3 class="font-semibold mb-2">How to convert CGPA to percentage?</h3>
+<p class="text-sm text-gray-600 dark:text-gray-300">Multiply CGPA by 9.5. Example: 8.2 CGPA × 9.5 = 77.9%</p>
+</div>
+<div class="border rounded-lg p-4">
+<h3 class="font-semibold mb-2">Can I save my data?</h3>
+<p class="text-sm text-gray-600 dark:text-gray-300">Yes! Click "Save Progress" to store data in your browser. Load it anytime.</p>
+</div>
+<div class="border rounded-lg p-4">
+<h3 class="font-semibold mb-2">Is this calculator free?</h3>
+<p class="text-sm text-gray-600 dark:text-gray-300">Absolutely free with no limits. Create unlimited semesters and subjects.</p>
+</div>
+</div>
+</div>
+<!-- Related Tools -->
+<div class="mt-8 bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-xl shadow-lg no-print">
+<h2 class="text-xl font-bold mb-4 flex items-center">
+<i class="fas fa-tools text-indigo-600 mr-3"></i> Related Academic Tools
+            </h2>
+<div class="flex flex-wrap gap-3">
+<a class="bg-white px-4 py-2 rounded-full text-sm hover:bg-indigo-600 hover:text-white transition" href="/">Percentage Calculator</a>
+<a class="bg-white px-4 py-2 rounded-full text-sm hover:bg-indigo-600 hover:text-white transition" href="/">Grade Calculator</a>
+<a class="bg-white px-4 py-2 rounded-full text-sm hover:bg-indigo-600 hover:text-white transition" href="/">SGPA Calculator</a>
+<a class="bg-white px-4 py-2 rounded-full text-sm hover:bg-indigo-600 hover:text-white transition" href="/">Marks to Percentage</a>
+<a class="bg-white px-4 py-2 rounded-full text-sm hover:bg-indigo-600 hover:text-white transition" href="/">CGPA to % Converter</a>
+</div>
+</div>
+</div>
+<!-- PDF Preview Container (Hidden) -->
+<div id="pdfPreview" style="position: fixed; left: -9999px; top: 0; width: 800px; background: white; padding: 30px; z-index: -1;"></div>
+<!-- Toast Container -->
+<div class="fixed bottom-5 right-5 z-50 space-y-2 no-print" id="toastContainer"></div>
+<script src="page.js"></script>
+<!-- Footer -->
+<footer class="mt-12 py-6 border-t border-gray-200 dark:border-gray-700 no-print">
+<div class="container mx-auto px-4 text-center text-gray-600 dark:text-gray-300 text-sm">
+<p>© 2026 Pro CSC Tools. All rights reserved. |
+                <a class="text-indigo-600 hover:underline" href="/privacy-policy/">Privacy</a> |
+                <a class="text-indigo-600 hover:underline" href="/terms-of-use/">Terms</a> |
+                <a class="text-indigo-600 hover:underline" href="/contact/">Contact</a>
+</p>
+</div>
+</footer>
+<!-- PCT-FOOTER-START -->
+<div class="pct-ad"><ins class="adsbygoogle" data-ad-client="ca-pub-6791318178265120" data-ad-format="auto" data-ad-slot="7017392570" data-full-width-responsive="true" style="display:block"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+<footer class="pct-footer">
+<div class="pct-footer-grid">
+<div>
+<h3>Pro CSC Tools</h3>
+<p>India's Most Trusted Platform for CSC VLEs – Government Document, ID Card, PDF &amp; Online Tools.</p>
+</div>
+<div>
+<h4>Quick Links</h4>
+<a href="/">Home</a><a href="/#tools">Tools</a><a href="/about">About Us</a><a href="/contact/">Contact</a>
+</div>
+<div>
+<h4>Popular Tools</h4>
+<a href="/tools/resume-builder/">Resume Maker</a><a href="/tools/image-to-pdf/">Image to PDF</a><a href="/tools/image-resizer/">Image Resizer</a><a href="/tools/age-calculator/">Age Calculator</a>
+</div>
+<div>
+<h4>Legal</h4>
+<a href="/privacy-policy/">Privacy Policy</a><a href="/terms-of-use/">Terms of Service</a><a href="/disclaimer">Disclaimer</a><a href="/contact/">Contact</a>
+</div>
+</div>
+<div class="pct-copy">© 2026 Pro CSC Tools. All rights reserved. Made with ❤️ in India for All CSC VLEs.</div>
+</footer>
+<!-- PCT-FOOTER-END -->
+</body>
+</html>

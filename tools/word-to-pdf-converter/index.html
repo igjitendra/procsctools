@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<!-- Pro CSC Tools: AdSense + Verification -->
+<meta content="ca-pub-6791318178265120" name="google-adsense-account"/>
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6791318178265120"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0" name="viewport"/>
+<!-- Primary Meta Tags - SEO Optimized -->
+<title>Word to PDF Converter – DOCX to PDF Free | Pro CSC Tools</title>
+<meta content="Word to PDF Converter | Free Online DOC to PDF Converter" name="title"/>
+<meta content="Convert Word DOC and DOCX documents to PDF online while preserving readable formatting. Free Word to PDF converter with instant browser download." name="description"/>
+<meta content="word to pdf, doc to pdf, convert word to pdf, word to pdf converter, online pdf converter, docx to pdf, microsoft word to pdf, free pdf converter" name="keywords"/>
+<meta content="Pro CSC Tools" name="author"/>
+<meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/>
+<meta content="1 day" name="revisit-after"/>
+<meta content="English" name="language"/>
+<!-- Canonical URL -->
+<link href="https://procsctools.in/tools/word-to-pdf-converter/" rel="canonical"/>
+<!-- Open Graph / Facebook Meta Tags -->
+<meta content="website" property="og:type"/>
+<meta content="https://procsctools.in/tools/word-to-pdf-converter/" property="og:url"/>
+<meta content="Word to PDF Converter – DOCX to PDF Free | Pro CSC Tools" property="og:title"/>
+<meta content="Convert Word DOC and DOCX documents to PDF online while preserving readable formatting. Free Word to PDF converter with instant browser download." property="og:description"/>
+<meta content="https://procsctools.in/images/pro-csc-tools-social.jpg" property="og:image"/>
+<meta content="Pro CSC Tools" property="og:site_name"/>
+<!-- Twitter Meta Tags -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://procsctools.in/Word%20to%20PDF.html" name="twitter:url"/>
+<meta content="Word to PDF Converter – DOCX to PDF Free | Pro CSC Tools" name="twitter:title"/>
+<meta content="Convert Word DOC and DOCX documents to PDF online while preserving readable formatting. Free Word to PDF converter with instant browser download." name="twitter:description"/>
+<meta content="https://procsctools.in/images/pro-csc-tools-social.jpg" name="twitter:image"/>
+<!-- Preconnect for faster loading -->
+<link href="https://cdn.tailwindcss.com" rel="preconnect"/>
+<link href="https://cdnjs.cloudflare.com" rel="preconnect"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<!-- Google Fonts -->
+<!-- PDF.js for preview -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+<!-- Mammoth.js for Word to HTML conversion -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.2/mammoth.browser.min.js"></script>
+<!-- jsPDF for PDF generation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<!-- html2pdf.js fallback -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<!-- Schema Markup -->
+<!-- FAQ Schema -->
+<!-- Breadcrumb Schema -->
+<style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        :root {
+            --primary-color: #f91a2d;
+            --text-color: #333;
+            --bg-color: #f8f9fa;
+            --card-bg: #fff;
+            --border-color: #e0e0e0;
+            --secondary-text: #666;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --hover-bg: #f1f3ff;
+        }
+
+        .dark-mode {
+            --primary-color: #5d7dff;
+            --text-color: #f0f0f0;
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --border-color: #333;
+            --secondary-text: #aaa;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            --hover-bg: #2a2a3a;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .upload-area {
+            border: 3px dashed var(--primary-color);
+            background-color: var(--card-bg);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .upload-area:hover {
+            transform: scale(1.02);
+            background-color: var(--hover-bg);
+        }
+
+        .upload-area.dragover {
+            background-color: var(--hover-bg);
+            border-color: #0056b3;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #ff4757 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(249, 26, 45, 0.5);
+        }
+
+        .btn-primary:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .preview-container {
+            max-height: 400px;
+            overflow-y: auto;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+        }
+
+        .toast-message {
+            animation: slideIn 0.3s ease, fadeOut 0.3s ease 2.7s;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid var(--primary-color);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .theme-toggle {
+            background: var(--border-color);
+            border: none;
+            color: var(--text-color);
+            font-size: 20px;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .theme-toggle:hover {
+            background-color: var(--hover-bg);
+        }
+
+        .file-info {
+            background-color: var(--hover-bg);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: linear-gradient(90deg, var(--primary-color), #ff6b81);
+            transition: width 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+        }
+    </style>
+<meta content="en_IN" property="og:locale"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="Word to PDF Converter – DOCX to PDF Free" property="og:image:alt"/><meta content="Word to PDF Converter – DOCX to PDF Free" name="twitter:image:alt"/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://procsctools.in/#organization","name":"Pro CSC Tools","url":"https://procsctools.in/","logo":{"@type":"ImageObject","url":"https://procsctools.in/logo.png"}},{"@type":"WebSite","@id":"https://procsctools.in/#website","url":"https://procsctools.in/","name":"Pro CSC Tools","publisher":{"@id":"https://procsctools.in/#organization"},"inLanguage":["en-IN","hi-IN"]},{"@type":"WebApplication","@id":"https://procsctools.in/tools/word-to-pdf-converter/#application","name":"Word to PDF Converter – DOCX to PDF Free","url":"https://procsctools.in/tools/word-to-pdf-converter/","description":"Convert Word DOC and DOCX documents to PDF online while preserving readable formatting. Free Word to PDF converter with instant browser download.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires a modern web browser with JavaScript enabled","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"provider":{"@id":"https://procsctools.in/#organization"},"inLanguage":["en-IN","hi-IN"]},{"@type":"BreadcrumbList","@id":"https://procsctools.in/tools/word-to-pdf-converter/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://procsctools.in/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://procsctools.in/tools/"},{"@type":"ListItem","position":3,"name":"Word to PDF Converter – DOCX to PDF Free","item":"https://procsctools.in/tools/word-to-pdf-converter/"}]},{"@type":"WebPage","@id":"https://procsctools.in/tools/word-to-pdf-converter/#webpage","url":"https://procsctools.in/tools/word-to-pdf-converter/","name":"Word to PDF Converter – DOCX to PDF Free","description":"Convert Word DOC and DOCX documents to PDF online while preserving readable formatting. Free Word to PDF converter with instant browser download.","dateModified":"2026-07-27","isPartOf":{"@id":"https://procsctools.in/#website"},"mainEntity":{"@id":"https://procsctools.in/tools/word-to-pdf-converter/#application"},"inLanguage":["en-IN","hi-IN"]}]}</script><style data-seo-enhancements="true">.seo-related-tools{max-width:1120px;margin:48px auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px;background:#fff}.seo-related-tools ul{display:flex;flex-wrap:wrap;gap:12px;list-style:none;padding:0}.seo-related-tools a{display:inline-block;padding:10px 14px;border:1px solid #d8dee8;border-radius:8px;color:#8f1635;font-weight:700}.seo-related-tools a:focus-visible{outline:3px solid #e0aa14;outline-offset:3px}@media(min-width:800px){main>section:not(:first-child),footer{content-visibility:auto;contain-intrinsic-size:1px 800px}}</style><meta content="2026-07-27" name="date-modified"/><style data-depth-seo="true">.seo-depth-content{max-width:1000px;margin:48px auto;padding:28px;background:#fff;border:1px solid #e5e7eb;border-radius:12px;line-height:1.7}.seo-depth-content h2,.seo-depth-content h3{color:#172033}.seo-depth-content li{margin:.55rem 0}@media(max-width:700px){.seo-depth-content{margin:32px 16px;padding:20px}}</style></head>
+<body>
+<!-- PCT-CHROME-START -->
+<style id="pct-chrome">
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+.pct-header,.pct-footer,.pct-ad{font-family:"Inter",Arial,sans-serif;box-sizing:border-box}
+.pct-header{background:#fff;border-bottom:1px solid #eee;box-shadow:0 2px 10px rgba(0,0,0,.06);padding:10px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;position:relative;z-index:9999}
+.pct-logo{font-size:22px;font-weight:800;color:#ab183d;text-decoration:none;white-space:nowrap}
+.pct-nav{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.pct-nav a{color:#374151;text-decoration:none;font-weight:500;font-size:15px}
+.pct-nav a:hover{color:#ab183d}
+.pct-menu-btn{display:none;background:none;border:0;font-size:26px;color:#ab183d;cursor:pointer;line-height:1}
+.pct-footer{background:#111827;color:#fff;padding:40px 20px 24px;margin-top:48px}
+.pct-footer-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:26px}
+.pct-footer h3{font-size:20px;font-weight:800;margin:0 0 12px;color:#fff}
+.pct-footer h4{font-size:16px;font-weight:600;margin:0 0 12px;color:#fff}
+.pct-footer p{color:#9ca3af;font-size:14px;line-height:1.6;margin:0}
+.pct-footer a{color:#9ca3af;text-decoration:none;display:block;margin-bottom:8px;font-size:14px}
+.pct-footer a:hover{color:#fff}
+.pct-copy{max-width:1100px;margin:26px auto 0;border-top:1px solid #1f2937;padding-top:18px;text-align:center;color:#9ca3af;font-size:13px}
+.pct-ad{margin:18px auto;text-align:center;max-width:1100px;min-height:50px;overflow:hidden}
+@media(max-width:768px){.pct-menu-btn{display:block}.pct-nav{display:none;width:100%;flex-direction:column;align-items:flex-start;gap:12px;padding-top:10px}.pct-nav.open{display:flex}}
+</style>
+<header class="pct-header">
+<a class="pct-logo" href="/">Pro CSC Tools</a>
+<button aria-label="Menu" class="pct-menu-btn" onclick="this.nextElementSibling.classList.toggle('open')">☰</button>
+<nav class="pct-nav">
+<a href="/">Home</a>
+<a href="/tools/csc-billing-software/">Csc Billing</a>
+<a href="/tools/csc-center-management-tool/">Csc Work</a>
+<a href="/#tools">Tools</a>
+<a href="/blog">Blog</a>
+<a href="/about">About Us</a>
+<a href="/contact/">Contact</a>
+</nav>
+</header>
+<div class="pct-ad"><ins class="adsbygoogle" data-ad-client="ca-pub-6791318178265120" data-ad-format="auto" data-ad-slot="7017392570" data-full-width-responsive="true" style="display:block"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+<!-- PCT-CHROME-END -->
+<!-- Navigation Bar with Breadcrumbs -->
+<nav class="bg-[var(--card-bg)] shadow-sm sticky top-0 z-50 border-b border-[var(--border-color)]">
+<div class="container mx-auto px-4 py-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-4">
+<a class="text-xl font-bold text-[var(--primary-color)]" href="/">
+<i class="fas fa-cogs mr-2"></i>Pro CSC Tools
+                    </a>
+<!-- Breadcrumbs -->
+<ol class="hidden md:flex items-center space-x-2 text-sm">
+<li>
+<a class="text-[var(--secondary-text)] hover:text-[var(--primary-color)]" href="/">
+<i class="fas fa-home"></i>
+</a>
+</li>
+<li class="text-[var(--secondary-text)]">/</li>
+<li aria-current="page" class="text-[var(--primary-color)] font-semibold">
+                            Word to PDF
+                        </li>
+</ol>
+</div>
+<!-- Header Actions -->
+<div class="flex items-center gap-3">
+<!-- Theme Toggle -->
+<button aria-label="Toggle dark mode" class="theme-toggle" id="theme-toggle">
+<i class="fas fa-moon"></i>
+</button>
+<!-- Language Dropdown -->
+<div class="language-dropdown relative">
+<button class="language-toggle flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-[var(--hover-bg)]">
+<i class="fas fa-globe"></i>
+<span class="hidden md:inline">English</span>
+<i class="fas fa-chevron-down text-xs"></i>
+</button>
+<ul class="language-menu absolute right-0 mt-2 bg-[var(--card-bg)] border border-[var(--border-color)] rounded-lg shadow-lg hidden">
+<li><a class="block px-4 py-2 hover:bg-[var(--hover-bg)]" href="#">English</a></li>
+<li><a class="block px-4 py-2 hover:bg-[var(--hover-bg)]" href="#">हिन्दी</a></li>
+<li><a class="block px-4 py-2 hover:bg-[var(--hover-bg)]" href="#">मराठी</a></li>
+</ul>
+</div>
+<!-- Share Buttons -->
+<div class="hidden md:flex items-center gap-2">
+<button class="text-green-600 hover:text-green-700" onclick="shareOnWhatsApp()">
+<i class="fab fa-whatsapp text-xl"></i>
+</button>
+<button class="text-blue-600 hover:text-blue-700" onclick="shareOnFacebook()">
+<i class="fab fa-facebook text-xl"></i>
+</button>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<!-- Main Container -->
+<div class="container mx-auto px-4 py-8">
+<!-- Header Section -->
+<div class="text-center mb-8">
+<h1 class="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary-color)] to-orange-500 mb-4">
+                Word to PDF Converter
+            </h1>
+<p class="text-lg text-[var(--secondary-text)] max-w-3xl mx-auto">
+                Convert Word documents to PDF online <span class="font-bold text-[var(--primary-color)]">free</span>. No registration, no watermark, <span class="font-semibold">100% secure</span>. Trusted by <span class="font-bold">25,000+</span> users.
+            </p>
+<!-- Stats Counter -->
+<div class="flex justify-center gap-6 mt-4">
+<div class="flex items-center text-sm text-[var(--secondary-text)]">
+<i class="fas fa-file-pdf text-[var(--primary-color)] mr-2"></i>
+<span>45,892+ PDFs Created</span>
+</div>
+<div class="flex items-center text-sm text-[var(--secondary-text)]">
+<i class="fas fa-star text-yellow-500 mr-2"></i>
+<span>4.7/5 Rating</span>
+</div>
+<div class="flex items-center text-sm text-[var(--secondary-text)]">
+<i class="fas fa-shield-alt text-green-500 mr-2"></i>
+<span>100% Secure</span>
+</div>
+</div>
+</div>
+<!-- Main Tool Section -->
+<div class="bg-[var(--card-bg)] rounded-2xl shadow-lg p-6 md:p-8 border border-[var(--border-color)]">
+<!-- Upload Area -->
+<div class="upload-area rounded-2xl p-8 md:p-12 text-center mb-6" id="uploadArea">
+<input accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" class="hidden" id="fileInput" type="file"/>
+<div class="mb-4">
+<i class="fas fa-file-word text-6xl text-[var(--primary-color)] mb-4"></i>
+<h2 class="text-2xl font-bold mb-2">Drop your Word file here</h2>
+<p class="text-[var(--secondary-text)] mb-4">or click to browse</p>
+<button class="btn-primary text-white px-8 py-3 rounded-full inline-flex items-center" id="browseBtn">
+<i class="fas fa-upload mr-2"></i>
+                        Choose File
+                    </button>
+</div>
+<p class="text-sm text-[var(--secondary-text)] mt-4">
+<i class="fas fa-lock mr-1"></i> Files are processed locally - 100% secure
+                </p>
+</div>
+<!-- File Info (Hidden initially) -->
+<div class="file-info p-4 rounded-lg mb-6 hidden" id="fileInfo">
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<i class="fas fa-file-word text-2xl text-[var(--primary-color)] mr-3"></i>
+<div>
+<p class="font-semibold" id="fileName"></p>
+<p class="text-sm text-[var(--secondary-text)]" id="fileSize"></p>
+</div>
+</div>
+<button class="text-red-500 hover:text-red-600" id="removeFile">
+<i class="fas fa-times"></i>
+</button>
+</div>
+</div>
+<!-- Conversion Progress (Hidden initially) -->
+<div class="mb-6 hidden" id="progressSection">
+<div class="flex justify-between text-sm mb-2">
+<span>Converting...</span>
+<span id="progressPercentage">0%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2.5">
+<div class="progress-bar rounded-full h-2.5" id="progressBar" style="width: 0%"></div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-wrap gap-4 justify-center mb-8">
+<button class="btn-primary text-white px-8 py-3 rounded-full inline-flex items-center" disabled="" id="convertBtn">
+<i class="fas fa-sync-alt mr-2"></i>
+                    Convert to PDF
+                </button>
+<button class="bg-green-600 text-white px-8 py-3 rounded-full inline-flex items-center hover:bg-green-700 transition hidden" id="downloadBtn">
+<i class="fas fa-download mr-2"></i>
+                    Download PDF
+                </button>
+<button class="bg-gray-200 text-gray-700 px-8 py-3 rounded-full inline-flex items-center hover:bg-gray-300 transition" id="resetBtn">
+<i class="fas fa-undo mr-2"></i>
+                    Reset
+                </button>
+</div>
+<!-- PDF Preview Section -->
+<div class="hidden" id="previewSection">
+<h3 class="text-xl font-bold mb-4 flex items-center">
+<i class="fas fa-eye text-[var(--primary-color)] mr-2"></i> PDF Preview
+                </h3>
+<div class="preview-container rounded-lg p-4" id="pdfPreview">
+<!-- PDF preview will be rendered here -->
+</div>
+</div>
+</div>
+<!-- How It Works Section -->
+<div class="mt-12 bg-[var(--card-bg)] p-8 rounded-xl shadow-lg border border-[var(--border-color)]">
+<h2 class="text-2xl font-bold mb-6 flex items-center">
+<i class="fas fa-magic text-[var(--primary-color)] mr-3"></i> How to Convert Word to PDF?
+            </h2>
+<div class="grid md:grid-cols-3 gap-6">
+<div class="text-center p-4">
+<div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+<span class="text-2xl font-bold text-[var(--primary-color)]">1</span>
+</div>
+<h3 class="font-semibold mb-2">Upload Word File</h3>
+<p class="text-[var(--secondary-text)] text-sm">Click or drag &amp; drop your DOC or DOCX file</p>
+</div>
+<div class="text-center p-4">
+<div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+<span class="text-2xl font-bold text-[var(--primary-color)]">2</span>
+</div>
+<h3 class="font-semibold mb-2">Click Convert</h3>
+<p class="text-[var(--secondary-text)] text-sm">We'll convert your file to PDF instantly</p>
+</div>
+<div class="text-center p-4">
+<div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+<span class="text-2xl font-bold text-[var(--primary-color)]">3</span>
+</div>
+<h3 class="font-semibold mb-2">Download PDF</h3>
+<p class="text-[var(--secondary-text)] text-sm">Save your converted PDF file</p>
+</div>
+</div>
+</div>
+<!-- Features Section -->
+<div class="mt-8 grid md:grid-cols-2 gap-6">
+<div class="bg-[var(--card-bg)] p-6 rounded-xl shadow-lg border border-[var(--border-color)]">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+<i class="fas fa-shield-alt text-green-600 text-xl"></i>
+</div>
+<div>
+<h3 class="font-bold mb-2">100% Secure</h3>
+<p class="text-[var(--secondary-text)] text-sm">Files are processed locally in your browser. Never uploaded to any server.</p>
+</div>
+</div>
+</div>
+<div class="bg-[var(--card-bg)] p-6 rounded-xl shadow-lg border border-[var(--border-color)]">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+<i class="fas fa-bolt text-blue-600 text-xl"></i>
+</div>
+<div>
+<h3 class="font-bold mb-2">Lightning Fast</h3>
+<p class="text-[var(--secondary-text)] text-sm">Convert documents in seconds with our optimized engine.</p>
+</div>
+</div>
+</div>
+<div class="bg-[var(--card-bg)] p-6 rounded-xl shadow-lg border border-[var(--border-color)]">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+<i class="fas fa-check-circle text-purple-600 text-xl"></i>
+</div>
+<div>
+<h3 class="font-bold mb-2">No Registration</h3>
+<p class="text-[var(--secondary-text)] text-sm">No signup, no email required. Start converting immediately.</p>
+</div>
+</div>
+</div>
+<div class="bg-[var(--card-bg)] p-6 rounded-xl shadow-lg border border-[var(--border-color)]">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
+<i class="fas fa-water text-yellow-600 text-xl"></i>
+</div>
+<div>
+<h3 class="font-bold mb-2">No Watermark</h3>
+<p class="text-[var(--secondary-text)] text-sm">Clean PDF files without any watermarks or ads.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- FAQ Section -->
+<div class="mt-8 bg-[var(--card-bg)] p-8 rounded-xl shadow-lg border border-[var(--border-color)]">
+<h2 class="text-2xl font-bold mb-6 flex items-center">
+<i class="fas fa-question-circle text-[var(--primary-color)] mr-3"></i> Frequently Asked Questions
+            </h2>
+<div class="space-y-4">
+<div class="border border-[var(--border-color)] rounded-lg p-4">
+<h3 class="font-semibold text-lg mb-2">How to convert Word to PDF online?</h3>
+<p class="text-[var(--secondary-text)]">Simply upload your Word document, click the "Convert to PDF" button, and download your PDF file. It takes only seconds and is completely free.</p>
+</div>
+<div class="border border-[var(--border-color)] rounded-lg p-4">
+<h3 class="font-semibold text-lg mb-2">Is this Word to PDF converter really free?</h3>
+<p class="text-[var(--secondary-text)]">Yes, it's 100% free with no hidden charges. You can convert unlimited Word documents without any registration or watermark.</p>
+</div>
+<div class="border border-[var(--border-color)] rounded-lg p-4">
+<h3 class="font-semibold text-lg mb-2">Is it safe to upload my documents?</h3>
+<p class="text-[var(--secondary-text)]">Absolutely! All conversion happens locally in your browser. Your files are never uploaded to any server, ensuring complete privacy and security.</p>
+</div>
+<div class="border border-[var(--border-color)] rounded-lg p-4">
+<h3 class="font-semibold text-lg mb-2">What Word formats are supported?</h3>
+<p class="text-[var(--secondary-text)]">We support both .DOC and .DOCX formats. Any Microsoft Word document can be converted to PDF.</p>
+</div>
+</div>
+</div>
+<!-- Related Tools -->
+<div class="mt-8 bg-gradient-to-r from-red-50 to-pink-50 p-6 rounded-xl shadow-lg border border-[var(--border-color)]">
+<h2 class="text-xl font-bold mb-4 flex items-center">
+<i class="fas fa-tools text-[var(--primary-color)] mr-3"></i> Popular PDF Tools
+            </h2>
+<div class="flex flex-wrap gap-3">
+<a class="bg-white px-4 py-2 rounded-full text-sm hover:bg-[var(--primary-color)] hover:text-white transition" href="/">PDF to Word</a>
+<a class="bg-white px-4 py-2 rounded-full text-sm hover:bg-[var(--primary-color)] hover:text-white transition" href="/">Merge PDF</a>
+<a class="bg-white px-4 py-2 rounded-full text-sm hover:bg-[var(--primary-color)] hover:text-white transition" href="/">Split PDF</a>
+<a class="bg-white px-4 py-2 rounded-full text-sm hover:bg-[var(--primary-color)] hover:text-white transition" href="/">Compress PDF</a>
+<a class="bg-white px-4 py-2 rounded-full text-sm hover:bg-[var(--primary-color)] hover:text-white transition" href="/">PDF to JPG</a>
+</div>
+</div>
+</div>
+<!-- Toast Container -->
+<div class="fixed bottom-5 right-5 z-50 space-y-2" id="toast-container"></div>
+<!-- Footer -->
+<footer class="bg-[var(--card-bg)] mt-12 py-6 border-t border-[var(--border-color)]">
+<div class="container mx-auto px-4 text-center text-[var(--secondary-text)]">
+<p>© 2026 Pro CSC Tools. All rights reserved. |
+                <a class="text-[var(--primary-color)] hover:underline" href="/privacy-policy/">Privacy Policy</a> |
+                <a class="text-[var(--primary-color)] hover:underline" href="/terms-of-use/">Terms of Use</a> |
+                <a class="text-[var(--primary-color)] hover:underline" href="/contact/">Contact</a>
+</p>
+</div>
+</footer>
+<script src="page.js"></script>
+<!-- PCT-FOOTER-START -->
+<div class="pct-ad"><ins class="adsbygoogle" data-ad-client="ca-pub-6791318178265120" data-ad-format="auto" data-ad-slot="7017392570" data-full-width-responsive="true" style="display:block"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+<footer class="pct-footer">
+<div class="pct-footer-grid">
+<div>
+<h3>Pro CSC Tools</h3>
+<p>India's Most Trusted Platform for CSC VLEs – Government Document, ID Card, PDF &amp; Online Tools.</p>
+</div>
+<div>
+<h4>Quick Links</h4>
+<a href="/">Home</a><a href="/#tools">Tools</a><a href="/about">About Us</a><a href="/contact/">Contact</a>
+</div>
+<div>
+<h4>Popular Tools</h4>
+<a href="/tools/resume-builder/">Resume Maker</a><a href="/tools/image-to-pdf/">Image to PDF</a><a href="/tools/image-resizer/">Image Resizer</a><a href="/tools/age-calculator/">Age Calculator</a>
+</div>
+<div>
+<h4>Legal</h4>
+<a href="/privacy-policy/">Privacy Policy</a><a href="/terms-of-use/">Terms of Service</a><a href="/disclaimer">Disclaimer</a><a href="/contact/">Contact</a>
+</div>
+</div>
+<div class="pct-copy">© 2026 Pro CSC Tools. All rights reserved. Made with ❤️ in India for All CSC VLEs.</div>
+</footer>
+<!-- PCT-FOOTER-END -->
+</body>
+</html>

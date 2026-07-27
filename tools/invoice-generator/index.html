@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-QL80Z3DZ8Z"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-QL80Z3DZ8Z');
+    </script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" name="viewport"/>
+<!-- Primary SEO -->
+<title>Invoice Generator &amp; Bill Maker Online | Pro CSC Tools</title>
+<meta content="Create professional GST invoices &amp; bills online free. Add logo, items, CGST/SGST/IGST, discount, UPI QR &amp; signature. Download PDF or share on WhatsApp. free." name="description"/>
+<meta content="invoice generator, free invoice maker, GST invoice, bill generator, tax invoice, UPI invoice QR, CGST SGST invoice, professional invoice online, Pro CSC Tools" name="keywords"/>
+<meta content="Pro CSC Tools" name="author"/>
+<meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/>
+<meta content="English" name="language"/>
+<meta content="IN" name="geo.region"/>
+<link href="https://procsctools.in/tools/invoice-generator/" rel="canonical"/>
+<!-- Open Graph -->
+<meta content="website" property="og:type"/>
+<meta content="Invoice Generator &amp; Bill Maker Online | Pro CSC Tools" property="og:title"/>
+<meta content="Create professional GST invoices &amp; bills online free. Add logo, items, CGST/SGST/IGST, discount, UPI QR &amp; signature. Download PDF or share on WhatsApp. free." property="og:description"/>
+<meta content="https://procsctools.in/tools/invoice-generator/" property="og:url"/>
+<meta content="Pro CSC Tools" property="og:site_name"/>
+<meta content="https://procsctools.in/images/invoice-generator.webp" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<!-- Twitter -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Invoice Generator &amp; Bill Maker Online | Pro CSC Tools" name="twitter:title"/>
+<meta content="Create professional GST invoices &amp; bills online free. Add logo, items, CGST/SGST/IGST, discount, UPI QR &amp; signature. Download PDF or share on WhatsApp. free." name="twitter:description"/>
+<meta content="https://procsctools.in/images/invoice-generator.webp" name="twitter:image"/>
+<meta content="#ab183d" name="theme-color"/>
+<link href="/favicon.ico" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/favicon.ico" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/logo.png" rel="apple-touch-icon" sizes="180x180"/>
+<!-- Structured Data -->
+<!-- Google AdSense: apni Publisher ID yaha daalein -->
+<!-- Fonts & Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<style>
+        * { font-family: 'Inter', sans-serif; }
+        body { background: #eef0f4; scroll-behavior: smooth; }
+        :root { --inv: #ab183d; }
+        .brand { color: #ab183d; }
+        .bg-brand { background: #ab183d; }
+        .card-shadow { box-shadow: 0 20px 45px -20px rgba(171, 24, 61, 0.35); }
+        .btn-primary { background: #ab183d; color: #fff; padding: .55rem 1rem; border-radius: .6rem; font-weight: 600; transition: all .2s; }
+        .btn-primary:hover { background: #8d1432; transform: translateY(-1px); }
+        .btn-secondary { background: #fff; color: #374151; border: 1px solid #d1d5db; padding: .55rem 1rem; border-radius: .6rem; font-weight: 600; transition: all .2s; }
+        .btn-secondary:hover { border-color: #ab183d; color: #ab183d; }
+        .invoice-sheet { background: #fff; border-radius: 1rem; }
+        [contenteditable]:empty:before { content: attr(data-placeholder); color: #9ca3af; }
+        input, textarea, select { outline: none; }
+        input:focus, textarea:focus { border-color: #ab183d; box-shadow: 0 0 0 2px rgba(171,24,61,.12); }
+        .upload-box { border: 2px dashed #cbd5e1; border-radius: .6rem; cursor: pointer; transition: all .2s; }
+        .upload-box:hover { border-color: #ab183d; background: #fdf2f5; }
+        .payment-tab { border-radius: .5rem; font-weight: 600; transition: all .2s; }
+        .payment-tab.active { background: #ab183d; color: #fff; }
+        .item-row input { width: 100%; border: 1px solid #e5e7eb; border-radius: .4rem; padding: .3rem .4rem; font-size: .8rem; }
+        .watermark-on .invoice-sheet { position: relative; }
+        .watermark-on .invoice-sheet::after { content: var(--wm, 'PAID'); position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 7rem; font-weight: 900; color: rgba(171,24,61,.08); transform: rotate(-25deg); pointer-events: none; z-index: 0; }
+        .toast { animation: slideIn .3s ease; }
+        @keyframes slideIn { from { transform: translateX(120%); } to { transform: translateX(0); } }
+        @media print {
+            body * { visibility: hidden; }
+            #invoice-sheet, #invoice-sheet * { visibility: visible; }
+            #invoice-sheet { position: absolute; left: 0; top: 0; width: 100%; box-shadow: none; }
+            .no-print { display: none !important; }
+            .print-value { display: inline !important; }
+            input, textarea, select { display: none !important; }
+        }
+        .print-value { display: none; }
+    </style>
+<meta content="en_IN" property="og:locale"/><meta content="Invoice Generator &amp; Bill Maker Online" property="og:image:alt"/><meta content="Invoice Generator &amp; Bill Maker Online" name="twitter:image:alt"/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://procsctools.in/#organization","name":"Pro CSC Tools","url":"https://procsctools.in/","logo":{"@type":"ImageObject","url":"https://procsctools.in/logo.png"}},{"@type":"WebSite","@id":"https://procsctools.in/#website","url":"https://procsctools.in/","name":"Pro CSC Tools","publisher":{"@id":"https://procsctools.in/#organization"},"inLanguage":["en-IN","hi-IN"]},{"@type":"WebApplication","@id":"https://procsctools.in/tools/invoice-generator/#application","name":"Invoice Generator & Bill Maker Online","url":"https://procsctools.in/tools/invoice-generator/","description":"Create professional GST invoices & bills online free. Add logo, items, CGST/SGST/IGST, discount, UPI QR & signature. Download PDF or share on WhatsApp. free.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires a modern web browser with JavaScript enabled","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"provider":{"@id":"https://procsctools.in/#organization"},"inLanguage":["en-IN","hi-IN"]},{"@type":"BreadcrumbList","@id":"https://procsctools.in/tools/invoice-generator/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://procsctools.in/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://procsctools.in/tools/"},{"@type":"ListItem","position":3,"name":"Invoice Generator & Bill Maker Online","item":"https://procsctools.in/tools/invoice-generator/"}]},{"@type":"WebPage","@id":"https://procsctools.in/tools/invoice-generator/#webpage","url":"https://procsctools.in/tools/invoice-generator/","name":"Invoice Generator & Bill Maker Online","description":"Create professional GST invoices & bills online free. Add logo, items, CGST/SGST/IGST, discount, UPI QR & signature. Download PDF or share on WhatsApp. free.","dateModified":"2026-07-27","isPartOf":{"@id":"https://procsctools.in/#website"},"mainEntity":{"@id":"https://procsctools.in/tools/invoice-generator/#application"},"inLanguage":["en-IN","hi-IN"]}]}</script><style data-seo-enhancements="true">.seo-related-tools{max-width:1120px;margin:48px auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px;background:#fff}.seo-related-tools ul{display:flex;flex-wrap:wrap;gap:12px;list-style:none;padding:0}.seo-related-tools a{display:inline-block;padding:10px 14px;border:1px solid #d8dee8;border-radius:8px;color:#8f1635;font-weight:700}.seo-related-tools a:focus-visible{outline:3px solid #e0aa14;outline-offset:3px}@media(min-width:800px){main>section:not(:first-child),footer{content-visibility:auto;contain-intrinsic-size:1px 800px}}</style><meta content="2026-07-27" name="date-modified"/><style data-depth-seo="true">.seo-depth-content{max-width:1000px;margin:48px auto;padding:28px;background:#fff;border:1px solid #e5e7eb;border-radius:12px;line-height:1.7}.seo-depth-content h2,.seo-depth-content h3{color:#172033}.seo-depth-content li{margin:.55rem 0}@media(max-width:700px){.seo-depth-content{margin:32px 16px;padding:20px}}</style></head>
+<body class="text-gray-800">
+<!-- ========== HEADER (Pro CSC Tools) ========== -->
+<nav class="fixed top-0 w-full z-50 backdrop-blur-lg bg-white/90 border-b border-gray-200 shadow-sm no-print">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="flex justify-between items-center h-16">
+<a class="text-2xl font-extrabold tracking-tight text-[#ab183d] drop-shadow-sm" href="/">
+<i class="fas fa-crown mr-1"></i> Pro CSC Tools
+                </a>
+<div class="hidden md:flex items-center gap-8 font-semibold">
+<a class="relative group text-gray-700 hover:text-[#ab183d]" href="/">Home<span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#ab183d] transition-all group-hover:w-full"></span></a>
+<a class="relative group text-gray-700 hover:text-[#ab183d]" href="/#tools">Tools<span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#ab183d] transition-all group-hover:w-full"></span></a>
+<a class="relative group text-gray-700 hover:text-[#ab183d]" href="/#calculators">Calculators<span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#ab183d] transition-all group-hover:w-full"></span></a>
+<a class="relative group text-gray-700 hover:text-[#ab183d]" href="/#validators">Validators<span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#ab183d] transition-all group-hover:w-full"></span></a>
+<a class="relative group text-gray-700 hover:text-[#ab183d]" href="/#blog">Guides<span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#ab183d] transition-all group-hover:w-full"></span></a>
+<a class="relative group text-gray-700 hover:text-[#ab183d]" href="/contact/">Support<span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#ab183d] transition-all group-hover:w-full"></span></a>
+</div>
+<a class="hidden md:block bg-[#ab183d] text-white px-5 py-2 rounded-full shadow-md hover:bg-red-700 transition-all hover:scale-105" href="/#tools"><i class="fas fa-rocket mr-1"></i> Get Started</a>
+<button aria-label="Menu" class="md:hidden text-2xl focus:outline-none" id="menuBtn"><i class="fas fa-bars"></i></button>
+</div>
+</div>
+</nav>
+<!-- Mobile Menu -->
+<div class="hidden fixed top-16 left-0 w-full bg-white shadow-xl p-6 z-40 border-t no-print" id="mobileMenu">
+<div class="flex flex-col space-y-4">
+<a class="block py-2 border-b border-gray-100 font-medium text-gray-800 hover:text-[#ab183d]" data-close-mobile="" href="/"><i class="fas fa-home mr-2 text-[#ab183d]"></i> Home</a>
+<a class="block py-2 border-b border-gray-100 font-medium text-gray-800 hover:text-[#ab183d]" data-close-mobile="" href="/#tools"><i class="fas fa-tools mr-2 text-[#ab183d]"></i> Tools</a>
+<a class="block py-2 border-b border-gray-100 font-medium text-gray-800 hover:text-[#ab183d]" data-close-mobile="" href="/#calculators"><i class="fas fa-calculator mr-2 text-[#ab183d]"></i> Calculators</a>
+<a class="block py-2 border-b border-gray-100 font-medium text-gray-800 hover:text-[#ab183d]" data-close-mobile="" href="/#validators"><i class="fas fa-check-circle mr-2 text-[#ab183d]"></i> Validators</a>
+<a class="block py-2 border-b border-gray-100 font-medium text-gray-800 hover:text-[#ab183d]" data-close-mobile="" href="/#blog"><i class="fas fa-newspaper mr-2 text-[#ab183d]"></i> Guides</a>
+<a class="block py-2 font-medium text-gray-800 hover:text-[#ab183d]" data-close-mobile="" href="/contact/"><i class="fas fa-headset mr-2 text-[#ab183d]"></i> Support</a>
+</div>
+</div>
+<!-- ========== HERO ========== -->
+<section class="bg-gradient-to-br from-[#ab183d] to-[#c53030] text-white pt-28 pb-16 text-center relative overflow-hidden no-print">
+<div class="relative z-10 max-w-3xl mx-auto px-4">
+<div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-1 rounded-full mb-4 text-sm font-semibold"><i class="fas fa-file-invoice text-yellow-300"></i> GST Ready Billing</div>
+<h1 class="text-3xl md:text-5xl font-extrabold leading-tight">Free Invoice Generator</h1>
+<p class="text-lg md:text-xl mt-3 font-medium opacity-95">Create professional GST bills with logo, CGST/SGST, UPI QR &amp; signature — download PDF or share on WhatsApp.</p>
+<nav aria-label="Breadcrumb" class="mt-5 text-white/80 text-sm"><a class="hover:underline" href="/">Home</a> <span class="mx-1">/</span> <a class="hover:underline" href="/#tools">Tools</a> <span class="mx-1">/</span> <span class="font-semibold">Invoice Generator</span></nav>
+</div>
+</section>
+<main class="max-w-4xl mx-auto px-4 -mt-10 relative z-20 pb-16">
+<!-- Toolbar -->
+<div class="bg-white rounded-2xl card-shadow p-4 mb-6 flex flex-wrap gap-3 items-center justify-between no-print">
+<div class="flex flex-wrap gap-2 items-center">
+<label class="text-xs font-semibold text-gray-500">Theme</label>
+<select class="btn-secondary text-sm" id="themeSelector">
+<option value="#ab183d">Maroon (Brand)</option>
+<option value="#2563eb">Blue</option>
+<option value="#059669">Green</option>
+<option value="#7c3aed">Purple</option>
+<option value="#ea580c">Orange</option>
+</select>
+<label class="text-xs font-semibold text-gray-500 ml-2">Currency</label>
+<select class="btn-secondary text-sm" id="currencySelector">
+<option value="₹">₹ INR</option>
+<option value="$">$ USD</option>
+<option value="€">€ EUR</option>
+<option value="£">£ GBP</option>
+</select>
+</div>
+<div class="flex flex-wrap gap-2">
+<button class="btn-secondary text-sm" id="watermarkBtn"><i class="fas fa-water mr-1"></i> Watermark</button>
+<button class="btn-secondary text-sm" id="saveBtn"><i class="fas fa-save mr-1"></i> Save</button>
+<button class="btn-secondary text-sm" id="loadBtn"><i class="fas fa-folder-open mr-1"></i> Load</button>
+<button class="btn-secondary text-sm" id="resetBtn"><i class="fas fa-redo mr-1"></i> Reset</button>
+</div>
+</div>
+<!-- ========== INVOICE SHEET ========== -->
+<div class="invoice-sheet card-shadow p-6 md:p-10" id="invoice-sheet">
+<!-- Top: logo + business + INVOICE -->
+<div class="flex justify-between items-start gap-4 flex-wrap">
+<div class="flex gap-3 items-center">
+<div class="upload-box w-16 h-16 flex items-center justify-center no-print" id="logoUpload">
+<img alt="Logo" class="max-w-full max-h-full hidden" decoding="async" id="logoPreview"/>
+<i class="fas fa-cloud-upload-alt text-2xl text-gray-400" id="logoIcon"></i>
+</div>
+<img alt="Logo" class="max-w-16 max-h-16 hidden" decoding="async" id="logoPrintImg" loading="lazy"/>
+<input accept="image/*" class="hidden" id="logoInput" type="file"/>
+<div>
+<div class="text-xl font-bold outline-none" contenteditable="true" data-placeholder="Your Business Name" id="businessName" style="color: var(--inv);">Your Business Name</div>
+<div class="text-gray-600 text-xs" contenteditable="true" data-placeholder="123 Business Street, City - 400001" id="businessAddress">123 Business Street, City - 400001</div>
+<div class="text-gray-600 text-xs" contenteditable="true" data-placeholder="+91 98765 43210" id="businessPhone">+91 98765 43210</div>
+<div class="text-gray-600 text-xs" contenteditable="true" data-placeholder="GSTIN: 22AAAAA0000A1Z5" id="businessGstin">GSTIN: 22AAAAA0000A1Z5</div>
+</div>
+</div>
+<div class="text-right">
+<div class="text-3xl font-extrabold" style="color: var(--inv);">INVOICE</div>
+<div class="text-xs mt-2 flex items-center justify-end gap-1"><span class="text-gray-500">No:</span><span class="print-value font-semibold" id="pInvoiceNo"></span><input class="border rounded px-1 py-0.5 w-28 no-print" id="invoiceNo" type="text" value="INV-2026-001"/></div>
+<div class="text-xs mt-1 flex items-center justify-end gap-1"><span class="text-gray-500">Date:</span><span class="print-value font-semibold" id="pInvoiceDate"></span><input class="border rounded px-1 py-0.5 w-32 no-print" id="invoiceDate" type="date"/></div>
+<div class="text-xs mt-1 flex items-center justify-end gap-1"><span class="text-gray-500">Due:</span><span class="print-value font-semibold" id="pDueDate"></span><input class="border rounded px-1 py-0.5 w-32 no-print" id="dueDate" type="date"/></div>
+</div>
+</div>
+<hr class="my-5"/>
+<!-- Bill To / Ship To -->
+<div class="grid sm:grid-cols-2 gap-5">
+<div>
+<h4 class="font-semibold text-xs uppercase tracking-wide mb-2" style="color: var(--inv);">Bill To</h4>
+<div class="print-value text-sm" id="pCustName"></div><div class="print-value text-xs" id="pCustAddr"></div><div class="print-value text-xs" id="pCustPhone"></div>
+<input class="w-full border rounded p-1 mb-1 text-xs no-print" id="customerName" placeholder="Customer Name" type="text"/>
+<input class="w-full border rounded p-1 mb-1 text-xs no-print" id="customerAddress" placeholder="Customer Address" type="text"/>
+<input class="w-full border rounded p-1 text-xs no-print" id="customerPhone" placeholder="Phone / Mobile" type="text"/>
+</div>
+<div>
+<h4 class="font-semibold text-xs uppercase tracking-wide mb-2" style="color: var(--inv);">Ship To <span class="text-gray-400 normal-case font-normal">(optional)</span></h4>
+<div class="print-value text-sm" id="pShipName"></div><div class="print-value text-xs" id="pShipAddr"></div><div class="print-value text-xs" id="pShipPhone"></div>
+<input class="w-full border rounded p-1 mb-1 text-xs no-print" id="shipName" placeholder="Shipping Name" type="text"/>
+<input class="w-full border rounded p-1 mb-1 text-xs no-print" id="shipAddress" placeholder="Shipping Address" type="text"/>
+<input class="w-full border rounded p-1 text-xs no-print" id="shipPhone" placeholder="Phone / Mobile" type="text"/>
+</div>
+</div>
+<!-- Items table -->
+<div class="mt-6 overflow-x-auto">
+<table class="w-full text-xs border-collapse">
+<thead>
+<tr class="text-white" style="background: var(--inv);">
+<th class="p-2 text-left rounded-l-lg">#</th>
+<th class="p-2 text-left">Item Description</th>
+<th class="p-2 text-left">HSN/SAC</th>
+<th class="p-2 text-right">Qty</th>
+<th class="p-2 text-right">Rate</th>
+<th class="p-2 text-right">Amount</th>
+<th class="p-2 no-print rounded-r-lg"></th>
+</tr>
+</thead>
+<tbody id="itemsBody"></tbody>
+</table>
+<button class="btn-secondary text-xs mt-3 no-print" id="addItemBtn"><i class="fas fa-plus mr-1"></i> Add Item</button>
+</div>
+<!-- Payment + Totals -->
+<div class="grid md:grid-cols-2 gap-6 mt-6">
+<!-- Payment -->
+<div>
+<h4 class="font-semibold text-xs uppercase tracking-wide mb-2" style="color: var(--inv);">Payment Details</h4>
+<div class="flex gap-1 bg-gray-100 p-1 rounded-lg mb-3 no-print w-fit">
+<button class="payment-tab active px-3 py-1 text-xs" data-payment="bank">Bank</button>
+<button class="payment-tab px-3 py-1 text-xs" data-payment="upi">UPI</button>
+<button class="payment-tab px-3 py-1 text-xs" data-payment="cash">Cash</button>
+</div>
+<div class="space-y-1" id="bankDetails">
+<div class="print-value text-xs" id="pBank"></div>
+<input class="w-full border rounded p-1 text-xs no-print" id="bankName" placeholder="Bank Name" type="text"/>
+<input class="w-full border rounded p-1 text-xs no-print" id="accountNo" placeholder="Account Number" type="text"/>
+<input class="w-full border rounded p-1 text-xs no-print" id="ifscCode" placeholder="IFSC Code" type="text"/>
+</div>
+<div class="hidden space-y-2" id="upiDetails">
+<input class="w-full border rounded p-1 text-xs no-print" id="upiId" placeholder="UPI ID (e.g. name@okhdfcbank)" type="text"/>
+<div class="print-value text-xs" id="pUpi"></div>
+<div class="mt-1" id="qrcode"></div>
+</div>
+<div class="hidden text-xs text-gray-500" id="cashDetails">Cash payment on delivery / counter.</div>
+</div>
+<!-- Totals -->
+<div class="text-sm space-y-2">
+<div class="flex justify-between"><span>Subtotal</span><span class="font-semibold" id="subtotal">₹0.00</span></div>
+<div class="flex justify-between items-center"><span>GST / Tax (%)</span><span class="flex items-center gap-1"><input class="border rounded p-0.5 w-14 text-right no-print" id="taxPercent" max="100" min="0" type="number" value="18"/><span id="taxAmount">₹0.00</span></span></div>
+<div class="text-xs text-gray-500 flex justify-between" id="gstSplitRow"><span>CGST <span id="cgstP">9</span>% / SGST <span id="sgstP">9</span>%</span><span><span id="cgstA">₹0</span> / <span id="sgstA">₹0</span></span></div>
+<div class="flex justify-between items-center"><span>Discount (%)</span><span class="flex items-center gap-1"><input class="border rounded p-0.5 w-14 text-right no-print" id="discountPercent" max="100" min="0" type="number" value="0"/><span id="discountAmount">₹0.00</span></span></div>
+<div class="flex justify-between items-center"><span>Round Off</span><label class="flex items-center gap-1 text-xs no-print"><input checked="" id="roundOff" type="checkbox"/> auto</label><span class="print-value" id="roundAmount">₹0.00</span></div>
+<div class="flex justify-between text-lg font-extrabold pt-2 border-t" style="color: var(--inv);"><span>Total</span><span id="total">₹0.00</span></div>
+<div class="flex justify-between items-center text-xs"><span>Amount Paid</span><span class="flex items-center gap-1"><input class="border rounded p-0.5 w-20 text-right no-print" id="amountPaid" min="0" type="number" value="0"/><span class="print-value" id="pPaid"></span></span></div>
+<div class="flex justify-between text-sm font-bold text-red-600"><span>Balance Due</span><span id="balanceDue">₹0.00</span></div>
+</div>
+</div>
+<!-- Amount in words -->
+<div class="mt-4 text-xs bg-gray-50 rounded-lg p-2"><span class="font-semibold">Amount in words:</span> <span id="amountWords">Zero Rupees Only</span></div>
+<!-- Notes + Signature -->
+<div class="grid sm:grid-cols-2 gap-5 mt-6">
+<div>
+<h4 class="font-semibold text-xs mb-1" style="color: var(--inv);">Notes</h4>
+<div class="print-value text-xs" id="pNotes"></div>
+<textarea class="w-full border rounded p-1 text-xs no-print" id="invoiceNotes" placeholder="Thank you for your business!" rows="2">Thank you for your business!</textarea>
+</div>
+<div class="text-right">
+<h4 class="font-semibold text-xs mb-1" style="color: var(--inv);">Authorized Signature</h4>
+<div class="upload-box w-24 h-12 ml-auto flex items-center justify-center no-print" id="signatureUpload">
+<img alt="Signature" class="max-w-full max-h-full hidden" decoding="async" id="signaturePreview" loading="lazy"/>
+<i class="fas fa-pen text-lg text-gray-400" id="signatureIcon"></i>
+</div>
+<img alt="Signature" class="max-w-24 max-h-12 ml-auto hidden" decoding="async" id="signaturePrintImg" loading="lazy"/>
+<input accept="image/*" class="hidden" id="signatureInput" type="file"/>
+<div class="text-xs text-gray-500 mt-1">Authorized Signatory</div>
+</div>
+</div>
+<div class="mt-5 pt-3 border-t text-center text-[10px] text-gray-400">This is a computer generated invoice and is valid without signature. · Generated by Pro CSC Tools</div>
+</div>
+<!-- Action buttons -->
+<div class="flex flex-wrap gap-3 justify-center mt-6 no-print">
+<button class="btn-primary" id="pdfBtn"><i class="fas fa-file-pdf mr-1"></i> Download PDF</button>
+<button class="btn-secondary" id="imgBtn"><i class="fas fa-image mr-1"></i> Download Image</button>
+<button class="btn-secondary" id="waBtn" style="background:#25D366;color:#fff;border:none;"><i class="fab fa-whatsapp mr-1"></i> Share on WhatsApp</button>
+</div>
+<!-- AdSense slot -->
+<div class="my-8 text-center text-gray-300 text-sm no-print"><!-- Ad slot --></div>
+<!-- ========== HOW TO USE ========== -->
+<section class="bg-white rounded-2xl card-shadow p-6 md:p-8 mt-8 no-print">
+<h2 class="text-2xl font-bold mb-6 flex items-center gap-2"><i class="fas fa-circle-question brand"></i> How to Use the Invoice Generator</h2>
+<div class="grid md:grid-cols-2 gap-5">
+<div class="flex gap-4"><div class="w-10 h-10 shrink-0 rounded-full bg-brand text-white flex items-center justify-center font-bold">1</div><div><h3 class="font-bold">Add business details</h3><p class="text-gray-600 text-sm">Upload your logo and edit your business name, address, phone &amp; GSTIN.</p></div></div>
+<div class="flex gap-4"><div class="w-10 h-10 shrink-0 rounded-full bg-brand text-white flex items-center justify-center font-bold">2</div><div><h3 class="font-bold">Add customer &amp; items</h3><p class="text-gray-600 text-sm">Fill Bill To details and add items with HSN, quantity and rate — amounts auto-calculate.</p></div></div>
+<div class="flex gap-4"><div class="w-10 h-10 shrink-0 rounded-full bg-brand text-white flex items-center justify-center font-bold">3</div><div><h3 class="font-bold">Set GST &amp; payment</h3><p class="text-gray-600 text-sm">Apply GST/tax and discount, then add bank or UPI — a QR code is generated automatically.</p></div></div>
+<div class="flex gap-4"><div class="w-10 h-10 shrink-0 rounded-full bg-brand text-white flex items-center justify-center font-bold">4</div><div><h3 class="font-bold">Download or share</h3><p class="text-gray-600 text-sm">Download as PDF or image, or share directly on WhatsApp. Use Save to continue later.</p></div></div>
+</div>
+</section>
+<!-- ========== FAQ ========== -->
+<section class="bg-white rounded-2xl card-shadow p-6 md:p-8 mt-8 no-print">
+<h2 class="text-2xl font-bold mb-5 flex items-center gap-2"><i class="fas fa-comments brand"></i> Frequently Asked Questions</h2>
+<div class="divide-y">
+<details class="py-4 group"><summary class="flex justify-between items-center cursor-pointer font-semibold list-none">How do I create a GST invoice? <i class="fas fa-chevron-down transition group-open:rotate-180"></i></summary><p class="text-gray-600 text-sm mt-3">Fill your business and customer details, add items, apply GST and discount, then click Download PDF. It is 100% free.</p></details>
+<details class="py-4 group"><summary class="flex justify-between items-center cursor-pointer font-semibold list-none">Can I add my logo and signature? <i class="fas fa-chevron-down transition group-open:rotate-180"></i></summary><p class="text-gray-600 text-sm mt-3">Yes — click the logo and signature boxes to upload images. They appear on the invoice and downloaded file.</p></details>
+<details class="py-4 group"><summary class="flex justify-between items-center cursor-pointer font-semibold list-none">Is the UPI QR option available? <i class="fas fa-chevron-down transition group-open:rotate-180"></i></summary><p class="text-gray-600 text-sm mt-3">Yes — switch to the UPI tab and enter your UPI ID; a scannable payment QR code is generated automatically.</p></details>
+</div>
+</section>
+<section aria-labelledby="seo-depth-title" class="seo-depth-content"><h2 id="seo-depth-title">How to Get the Best Result from Invoice Generator &amp; Bill Maker Online</h2><p>Invoice Generator &amp; Bill Maker Online supports routine billing, payroll or record work for CSC VLEs and small Indian businesses. Search intent in this category is strongly task-based: users want to enter details, verify calculations and download a professional document without learning complex accounting software.</p><h3>Recommended workflow</h3><ol><li>Confirm business, customer and employee details before generating the document.</li><li>Review taxes, earnings, deductions, quantities and totals line by line.</li><li>Save a PDF copy and maintain records according to applicable business requirements.</li></ol><h3>Accuracy and submission checks</h3><p>This tool does not replace professional accounting, payroll or tax advice. GST rates, deductions and statutory requirements can change, so verify the latest applicable rules.</p><p>This page is specifically optimized for “invoice generator &amp; bill maker online” intent. It avoids unrelated keyword repetition and links to closely related tools so users can complete the next step of the same task.</p></section><section aria-labelledby="related-tools-title" class="seo-related-tools" id="related-tools"><h2 id="related-tools-title">Related Pro CSC Tools</h2><p>Continue your work with these useful online tools:</p><ul><li><a href="/tools/cover-letter-generator/">Cover Letter Generator Online Free</a></li><li><a href="/tools/csc-affidavit-format-generator/">CSC Affidavit Format Generator Online Free</a></li><li><a href="/tools/csc-billing-software/">Free CSC Billing Software &amp; GST Bill Maker</a></li><li><a href="/tools/csc-farmer-registration/">CSC Farmer Registration &amp; ID Portal 2026</a></li></ul></section></main>
+<!-- ========== FOOTER (Pro CSC Tools) ========== -->
+<footer class="bg-gray-900 text-gray-400 pt-14 pb-8 no-print">
+<div class="max-w-7xl mx-auto px-6 grid sm:grid-cols-2 md:grid-cols-4 gap-8">
+<div>
+<h3 class="text-2xl font-bold text-white"><i class="fas fa-crown mr-1 text-[#ab183d]"></i> Pro CSC Tools</h3>
+<p class="text-sm mt-3 leading-relaxed">Free professional online tools for CSC VLEs, students and job applicants — documents, photos, billing and calculators, all in one place.</p>
+<div class="flex gap-3 mt-4 flex-wrap">
+<a aria-label="WhatsApp" class="w-9 h-9 rounded-full bg-gray-800 hover:bg-[#ab183d] flex items-center justify-center text-white transition" href="https://wa.me/916387617678" rel="noopener noreferrer" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<a aria-label="Email" class="w-9 h-9 rounded-full bg-gray-800 hover:bg-[#ab183d] flex items-center justify-center text-white transition" href="/contact/"><i class="fas fa-envelope"></i></a>
+<a aria-label="Call" class="w-9 h-9 rounded-full bg-gray-800 hover:bg-[#ab183d] flex items-center justify-center text-white transition" href="tel:+916387617678"><i class="fas fa-phone"></i></a>
+<a aria-label="Facebook" class="w-9 h-9 rounded-full bg-gray-800 hover:bg-[#ab183d] flex items-center justify-center text-white transition" href="https://www.facebook.com/procsctools" rel="noopener" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a aria-label="Instagram" class="w-9 h-9 rounded-full bg-gray-800 hover:bg-[#ab183d] flex items-center justify-center text-white transition" href="https://www.instagram.com/procsctools" rel="noopener" target="_blank"><i class="fab fa-instagram"></i></a>
+<a aria-label="YouTube" class="w-9 h-9 rounded-full bg-gray-800 hover:bg-[#ab183d] flex items-center justify-center text-white transition" href="https://www.youtube.com/@procsctools" rel="noopener" target="_blank"><i class="fab fa-youtube"></i></a>
+</div>
+</div>
+<div>
+<h4 class="text-white font-semibold mb-3">Quick Links</h4>
+<ul class="text-sm space-y-2">
+<li><a class="hover:text-white" href="/">Home</a></li>
+<li><a class="hover:text-white" href="/about/">About Us</a></li>
+<li><a class="hover:text-white" href="/contact/">Contact</a></li>
+<li><a class="hover:text-white" href="/#tools">All Tools</a></li>
+<li><a class="hover:text-white" href="/#blog">Blog / Guides</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-semibold mb-3">Popular Tools</h4>
+<ul class="text-sm space-y-2">
+<li><a class="hover:text-white" href="/tools/gst-calculator/">GST Calculator</a></li>
+<li><a class="hover:text-white" href="/tools/loan-emi-calculator/">Loan EMI Calculator</a></li>
+<li><a class="hover:text-white" href="/tools/resume-builder/">Resume Maker</a></li>
+<li><a class="hover:text-white" href="/tools/image-to-pdf/">Image to PDF</a></li>
+<li><a class="hover:text-white" href="/tools/passport-photo-maker/">Passport Photo Maker</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-semibold mb-3">Legal</h4>
+<ul class="text-sm space-y-2">
+<li><a class="hover:text-white" href="/privacy-policy/">Privacy Policy</a></li>
+<li><a class="hover:text-white" href="/terms-of-use/">Terms of Use</a></li>
+<li><a class="hover:text-white" href="/disclaimer/">Disclaimer</a></li>
+</ul>
+</div>
+</div>
+<div class="text-center text-xs pt-8 border-t border-gray-800 mt-10">© 2026 Pro CSC Tools. All rights reserved. Made with ❤️ in India for All CSC VLEs.</div>
+</footer>
+<div class="fixed bottom-5 right-5 z-50 space-y-2 no-print" id="toastBox"></div>
+<script src="page.js"></script>
+</body>
+</html>
