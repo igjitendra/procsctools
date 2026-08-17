@@ -2,19 +2,31 @@
 <html lang="en-IN">
 <head>
   <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
+  <!-- Google AdSense -->
+  <meta content="ca-pub-6791318178265120" name="google-adsense-account"/>
+  <script
+    async
+    crossorigin="anonymous"
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6791318178265120">
+  </script>
+
+  <!-- SEO -->
   <title>Privacy Policy | PRO CSC TOOLS</title>
 
   <meta
     name="description"
-    content="Privacy Policy of PRO CSC TOOLS explaining how we handle browser data, files, cookies, local storage, analytics, advertising and user information."
+    content="Read the Privacy Policy of PRO CSC TOOLS to understand how we handle cookies, browser data, files, local storage, analytics, advertising and user information."
   />
 
   <meta
     name="robots"
     content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
   />
+
+  <meta name="author" content="PRO CSC TOOLS"/>
+  <meta name="theme-color" content="#ab183d"/>
 
   <link
     rel="canonical"
@@ -27,7 +39,7 @@
   <meta property="og:title" content="Privacy Policy | PRO CSC TOOLS"/>
   <meta
     property="og:description"
-    content="Learn how PRO CSC TOOLS handles browser data, files, cookies, local storage, analytics, advertising and privacy."
+    content="Privacy Policy of PRO CSC TOOLS covering browser data, files, cookies, local storage, analytics and advertising."
   />
   <meta
     property="og:url"
@@ -35,7 +47,7 @@
   />
   <meta
     property="og:image"
-    content="https://procsctools.in/images/pro-csc-tools-social.jpg"
+    content="https://procsctools.in/images/procsctools.png"
   />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
@@ -47,13 +59,23 @@
   <meta name="twitter:title" content="Privacy Policy | PRO CSC TOOLS"/>
   <meta
     name="twitter:description"
-    content="Privacy Policy of PRO CSC TOOLS."
+    content="Privacy Policy of PRO CSC TOOLS covering browser data, files, cookies, local storage, analytics and advertising."
   />
   <meta
     name="twitter:image"
-    content="https://procsctools.in/images/pro-csc-tools-social.jpg"
+    content="https://procsctools.in/images/procsctools.png"
   />
-  <meta name="twitter:image:alt" content="PRO CSC TOOLS Privacy Policy"/>
+  <meta
+    name="twitter:image:alt"
+    content="PRO CSC TOOLS Privacy Policy"
+  />
+
+  <link rel="icon" href="/favicon.ico" sizes="32x32" type="image/png"/>
+  <link rel="icon" href="/favicon.ico" sizes="16x16" type="image/png"/>
+  <link rel="apple-touch-icon" href="/logo.png" sizes="180x180"/>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -95,7 +117,7 @@
       {
         "@type": "WebPage",
         "@id": "https://procsctools.in/privacy-policy/#webpage",
-        "name": "Privacy Policy",
+        "name": "Privacy Policy | PRO CSC TOOLS",
         "url": "https://procsctools.in/privacy-policy/",
         "description": "Privacy Policy of PRO CSC TOOLS.",
         "isPartOf": {
@@ -114,746 +136,1236 @@
   <meta name="date-modified" content="2026-08-17"/>
 
   <style>
-    :root {
-      --primary: #8f1635;
-      --heading: #151b26;
-      --text: #344054;
-      --muted: #667085;
-      --border: #e5e7eb;
-      --background: #f7f8fa;
-      --card: #ffffff;
-    }
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 
     * {
-      box-sizing: border-box;
+      font-family: "Inter", sans-serif;
     }
 
     html {
       scroll-behavior: smooth;
     }
 
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 16px;
-      line-height: 1.7;
-      color: var(--text);
-      background: var(--background);
+    .gradient-text {
+      background: #ab183d;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
-    header,
-    footer {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 24px;
+    .bg-indigo-600 {
+      background-color: #ab183d !important;
     }
 
-    header {
-      padding-top: 42px;
-      padding-bottom: 24px;
+    .hover\:bg-indigo-700:hover {
+      background-color: #8d1432 !important;
     }
 
-    nav {
-      margin-bottom: 30px;
+    .text-indigo-600 {
+      color: #ab183d !important;
     }
 
-    nav a {
-      display: inline-block;
-      margin-right: 18px;
-      color: var(--primary);
-      text-decoration: none;
-      font-weight: 600;
+    .focus\:border-indigo-500:focus {
+      border-color: #ab183d !important;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    .hero-grad {
+      background: linear-gradient(
+        135deg,
+        #ab183d 0%,
+        #d72660 100%
+      );
     }
 
-    h1,
-    h2,
-    h3 {
-      color: var(--heading);
-      line-height: 1.3;
+    #mobileMenu {
+      transition: transform 0.3s ease;
     }
 
-    h1 {
-      font-size: 36px;
-      margin: 0 0 10px;
+    #mobileMenu.hidden {
+      transform: translateX(-100%);
     }
 
-    h2 {
-      font-size: 24px;
-      margin-top: 36px;
+    .policy-card {
+      transition: all 0.2s ease;
     }
 
-    h3 {
-      font-size: 19px;
-      margin-top: 26px;
-    }
-
-    p {
-      margin: 12px 0;
-    }
-
-    ul {
-      padding-left: 24px;
-    }
-
-    li {
-      margin: 8px 0;
-    }
-
-    main {
-      max-width: 900px;
-      margin: 0 auto 40px;
-      padding: 36px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      box-shadow: 0 2px 10px rgba(16, 24, 40, 0.03);
-    }
-
-    a {
-      color: var(--primary);
-    }
-
-    .updated {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .business-box {
-      margin: 24px 0;
-      padding: 20px;
-      background: #fafafa;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-    }
-
-    .notice {
-      margin: 22px 0;
-      padding: 18px 20px;
-      background: #f8f9fb;
-      border-left: 4px solid var(--primary);
-      border-radius: 6px;
-    }
-
-    footer {
-      color: var(--muted);
-      font-size: 14px;
-      padding-bottom: 50px;
-    }
-
-    footer a {
-      margin-right: 12px;
-    }
-
-    @media (max-width: 700px) {
-      header,
-      footer {
-        padding-left: 18px;
-        padding-right: 18px;
-      }
-
-      main {
-        margin: 0 14px 32px;
-        padding: 22px;
-        border-radius: 12px;
-      }
-
-      h1 {
-        font-size: 30px;
-      }
-
-      h2 {
-        font-size: 22px;
-      }
-
-      nav a {
-        margin-right: 12px;
-        margin-bottom: 8px;
-      }
+    .policy-card:hover {
+      transform: translateY(-1px);
     }
   </style>
 </head>
 
-<body>
+<body class="bg-gray-50">
 
-<header>
+  <!-- =========================================================
+       HEADER
+  ========================================================== -->
 
-  <nav aria-label="Main navigation">
-    <a href="/">Home</a>
-    <a href="/tools/">Tools</a>
-    <a href="/blog/">Blog</a>
-    <a href="/contact/">Contact</a>
+  <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="flex justify-between items-center h-16">
+
+        <div class="flex items-center">
+
+          <!-- Mobile Menu Button -->
+          <button
+            class="md:hidden mr-4 text-gray-700 hover:text-indigo-600"
+            id="menuBtn"
+            aria-label="Open navigation menu"
+            type="button"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                d="M4 6h16M4 12h16M4 18h16"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              ></path>
+            </svg>
+          </button>
+
+          <!-- Logo -->
+          <a class="flex items-center" href="/">
+            <span class="text-2xl font-bold gradient-text">
+              Pro CSC Tools
+            </span>
+          </a>
+
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center space-x-8">
+
+          <a
+            class="text-gray-700 hover:text-indigo-600 font-medium transition"
+            href="/"
+          >
+            Home
+          </a>
+
+          <a
+            class="text-gray-700 hover:text-indigo-600 font-medium transition"
+            href="/tools/csc-billing-software/"
+          >
+            Csc Billing
+          </a>
+
+          <a
+            class="text-gray-700 hover:text-indigo-600 font-medium transition"
+            href="/tools/csc-center-management-tool/"
+          >
+            Csc Work
+          </a>
+
+          <a
+            class="text-gray-700 hover:text-indigo-600 font-medium transition"
+            href="/#tools"
+          >
+            Tools
+          </a>
+
+          <a
+            class="text-gray-700 hover:text-indigo-600 font-medium transition"
+            href="/blog/"
+          >
+            Blog
+          </a>
+
+          <a
+            class="text-gray-700 hover:text-indigo-600 font-medium transition"
+            href="/about/"
+          >
+            About Us
+          </a>
+
+          <a
+            class="text-indigo-600 font-semibold transition"
+            href="/contact/"
+          >
+            Contact
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
   </nav>
 
-  <h1>Privacy Policy</h1>
 
-  <p class="updated">
-    Last updated: 17 August 2026
-  </p>
+  <!-- =========================================================
+       MOBILE MENU
+  ========================================================== -->
 
-</header>
+  <div
+    class="md:hidden fixed inset-0 z-40 bg-white pt-16 hidden"
+    id="mobileMenu"
+  >
 
-<main>
+    <div class="p-6 space-y-6">
 
-  <section>
-    <h2>1. Introduction</h2>
-
-    <p>
-      This Privacy Policy explains how <strong>PRO CSC TOOLS</strong>
-      ("we", "us", "our", or "the Website") collects, processes, uses,
-      stores and protects information when you visit or use
-      <strong>https://procsctools.in/</strong> and its online tools.
-    </p>
-
-    <p>
-      PRO CSC TOOLS provides browser-based online utilities including
-      document tools, image and photo tools, calculators, PDF utilities,
-      QR tools and other digital services.
-    </p>
-
-    <p>
-      By using our Website or any of our tools, you acknowledge that you
-      have read and understood this Privacy Policy.
-    </p>
-  </section>
-
-
-  <section>
-    <h2>2. Business Information</h2>
-
-    <div class="business-box">
-
-      <p>
-        <strong>Business Name:</strong><br/>
-        PRO CSC TOOLS
-      </p>
-
-      <p>
-        <strong>Address:</strong><br/>
-        273, Sundar Talkies Rd,<br/>
-        Opp. Sahara India,<br/>
-        Chota Chauraha, Ab Nagar,<br/>
-        Unnao, Uttar Pradesh - 209801,<br/>
-        India
-      </p>
-
-      <p>
-        <strong>Telephone:</strong><br/>
-        <a href="tel:+916306356544">
-          +91 6306356544
-        </a>
-      </p>
-
-      <p>
-        <strong>Email:</strong><br/>
-        <a href="mailto:Palcscuno@gmail.com">
-          Palcscuno@gmail.com
-        </a>
-      </p>
-
-      <p>
-        <strong>Website:</strong><br/>
-        <a href="https://procsctools.in/">
-          https://procsctools.in/
-        </a>
-      </p>
-
-    </div>
-  </section>
-
-
-  <section>
-    <h2>3. Information We May Process</h2>
-
-    <p>
-      Depending on how you use the Website, we may process limited
-      technical, usage or voluntarily provided information.
-    </p>
-
-    <ul>
-      <li>IP address and approximate location information.</li>
-      <li>Browser type and version.</li>
-      <li>Device type and operating system.</li>
-      <li>Pages or tools visited.</li>
-      <li>Referring and exit pages.</li>
-      <li>Date, time and duration of visits.</li>
-      <li>Interaction with Website features and tools.</li>
-      <li>Cookies and similar technologies.</li>
-      <li>Information voluntarily provided through contact forms or email.</li>
-      <li>Files or information entered into a tool, where applicable.</li>
-    </ul>
-
-    <p>
-      We do not intentionally request sensitive personal information
-      unless it is necessary for a specific tool or service.
-    </p>
-  </section>
-
-
-  <section>
-    <h2>4. Browser-Based Tool Processing</h2>
-
-    <p>
-      Many PRO CSC TOOLS utilities are designed to perform processing
-      directly inside your web browser.
-    </p>
-
-    <div class="notice">
-      <strong>Important:</strong>
-      When a tool specifically states that processing is performed
-      locally in your browser, the selected file or entered information
-      is processed on your device and is not intentionally uploaded to
-      our server by that tool.
-    </div>
-
-    <p>
-      However, not every tool necessarily works in the same way.
-      Some features may require a server, external API or third-party
-      service to perform processing.
-    </p>
-
-    <p>
-      Always read the processing notice displayed on the individual tool
-      before submitting or uploading sensitive information.
-    </p>
-  </section>
-
-
-  <section>
-    <h2>5. Files, Documents and Sensitive Information</h2>
-
-    <p>
-      Some tools may allow users to work with documents, photographs,
-      signatures, PDFs or identity-related files.
-    </p>
-
-    <p>
-      Users should not upload or enter confidential information unless
-      the relevant tool clearly explains how the information is processed.
-    </p>
-
-    <p>
-      You are responsible for ensuring that you have the legal right and
-      necessary authorization to process any document or information
-      submitted through our tools.
-    </p>
-
-    <p>
-      We do not claim ownership of files that you process through our
-      tools.
-    </p>
-
-    <p>
-      Where a tool processes files locally in the browser, users should
-      understand that downloaded files may remain on their own device
-      until they delete them.
-    </p>
-  </section>
-
-
-  <section>
-    <h2>6. How We Use Information</h2>
-
-    <p>
-      Information may be used for legitimate purposes such as:
-    </p>
-
-    <ul>
-      <li>Providing and operating our Website and tools.</li>
-      <li>Improving website functionality and user experience.</li>
-      <li>Understanding website traffic and tool usage.</li>
-      <li>Detecting abuse, fraud, spam or security threats.</li>
-      <li>Maintaining website security and reliability.</li>
-      <li>Responding to user enquiries and support requests.</li>
-      <li>Displaying and measuring advertising where applicable.</li>
-      <li>Complying with applicable legal obligations.</li>
-    </ul>
-  </section>
-
-
-  <section>
-    <h2>7. Cookies and Local Storage</h2>
-
-    <p>
-      PRO CSC TOOLS may use cookies, local storage, session storage or
-      similar browser technologies.
-    </p>
-
-    <p>
-      These technologies may be used for:
-    </p>
-
-    <ul>
-      <li>Website functionality.</li>
-      <li>User preferences and settings.</li>
-      <li>Saved drafts or recent calculations.</li>
-      <li>Analytics and performance measurement.</li>
-      <li>Advertising and ad measurement.</li>
-      <li>Security and fraud prevention.</li>
-    </ul>
-
-    <p>
-      Local storage is generally stored on your own device or browser.
-      You can remove it through your browser's settings.
-    </p>
-  </section>
-
-
-  <section>
-    <h2>8. Analytics</h2>
-
-    <p>
-      We may use analytics services to understand how visitors use the
-      Website, including which pages and tools are used and how users
-      interact with the Website.
-    </p>
-
-    <p>
-      Analytics providers may process information such as device
-      information, browser information, IP address, approximate location,
-      referral information and interaction data according to their own
-      privacy policies.
-    </p>
-
-    <p>
-      If analytics services are enabled on the Website, their processing
-      will be subject to the applicable provider's terms and privacy
-      practices.
-    </p>
-  </section>
-
-
-  <section>
-    <h2>9. Advertising and Google Services</h2>
-
-    <p>
-      PRO CSC TOOLS may display advertisements through third-party
-      advertising providers, including Google AdSense or other advertising
-      networks.
-    </p>
-
-    <p>
-      Third-party advertising providers may use cookies, web beacons,
-      IP addresses, device identifiers or similar technologies to serve,
-      measure and improve advertisements.
-    </p>
-
-    <p>
-      Depending on the user's settings and applicable requirements,
-      advertisements may be personalized based on information such as
-      previous visits, browsing activity, approximate location or other
-      advertising signals.
-    </p>
-
-    <p>
-      Third parties may place and read cookies on users' browsers or use
-      similar technologies when advertisements are served on the Website.
-    </p>
-
-    <p>
-      Google provides users with controls for managing advertising
-      personalization through its advertising settings.
-    </p>
-
-    <p>
-      For information about how Google uses data when you use websites
-      or apps that use Google's services, please visit:
       <a
-        href="https://policies.google.com/technologies/partner-sites"
-        target="_blank"
-        rel="noopener noreferrer"
+        class="block text-gray-700 hover:text-indigo-600 font-medium transition text-lg"
+        href="/"
       >
-        How Google uses information from sites or apps that use our services
-      </a>.
-    </p>
+        Home
+      </a>
 
-    <p>
-      You may also manage certain Google advertising preferences through
-      your Google account and Google's advertising controls.
-    </p>
+      <a
+        class="block text-gray-700 hover:text-indigo-600 font-medium transition text-lg"
+        href="/tools/csc-billing-software/"
+      >
+        Csc Billing
+      </a>
 
-    <div class="notice">
-      <strong>Advertising status:</strong>
-      Advertising services may not be active on every page or at all
-      times. The actual technologies used may vary depending on the
-      Website's current configuration and the advertising provider.
+      <a
+        class="block text-gray-700 hover:text-indigo-600 font-medium transition text-lg"
+        href="/tools/csc-center-management-tool/"
+      >
+        Csc Work
+      </a>
+
+      <a
+        class="block text-gray-700 hover:text-indigo-600 font-medium transition text-lg"
+        href="/#tools"
+      >
+        Tools
+      </a>
+
+      <a
+        class="block text-gray-700 hover:text-indigo-600 font-medium transition text-lg"
+        href="/blog/"
+      >
+        Blog
+      </a>
+
+      <a
+        class="block text-gray-700 hover:text-indigo-600 font-medium transition text-lg"
+        href="/about/"
+      >
+        About Us
+      </a>
+
+      <a
+        class="block text-indigo-600 font-semibold transition text-lg"
+        href="/contact/"
+      >
+        Contact
+      </a>
+
     </div>
-  </section>
+
+  </div>
 
 
-  <section>
-    <h2>10. Third-Party Services</h2>
+  <!-- =========================================================
+       HERO
+  ========================================================== -->
 
-    <p>
-      Some Website features may depend on third-party services,
-      APIs, hosting providers, analytics providers, advertising networks
-      or other technology providers.
-    </p>
+  <section class="hero-grad text-white pt-28 pb-16">
 
-    <p>
-      These third parties may process technical or usage information
-      according to their own privacy policies and terms.
-    </p>
+    <div
+      class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+    >
 
-    <p>
-      We do not control the privacy practices of independent third-party
-      services and recommend reviewing their policies before using
-      features that depend on them.
-    </p>
-  </section>
+      <div class="text-5xl mb-5">
+        🔒
+      </div>
 
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-4">
+        Privacy Policy
+      </h1>
 
-  <section>
-    <h2>11. Data Sharing and Disclosure</h2>
-
-    <p>
-      We do not sell your personal information as a business practice.
-    </p>
-
-    <p>
-      Information may be disclosed to service providers when reasonably
-      necessary to operate the Website, provide a requested service,
-      maintain security, measure traffic, serve advertisements or comply
-      with applicable law.
-    </p>
-
-    <p>
-      We may also disclose information when required by law, legal process,
-      governmental request or to protect the rights, property and safety
-      of our users, Website or business.
-    </p>
-  </section>
-
-
-  <section>
-    <h2>12. Data Retention</h2>
-
-    <p>
-      We retain information only for as long as reasonably necessary for
-      the purpose for which it was collected, to provide the requested
-      service, maintain security, comply with legal obligations or resolve
-      disputes.
-    </p>
-
-    <p>
-      Information stored through browser technologies such as local
-      storage may remain on the user's device until the user clears the
-      relevant browser data or the Website removes it.
-    </p>
-
-    <p>
-      Data processed by third-party providers may be retained according
-      to their respective policies and contractual or legal requirements.
-    </p>
-  </section>
-
-
-  <section>
-    <h2>13. Data Security</h2>
-
-    <p>
-      We take reasonable technical and organizational measures to protect
-      information against unauthorized access, misuse, alteration,
-      disclosure or destruction.
-    </p>
-
-    <p>
-      However, no method of transmission or electronic storage can be
-      guaranteed to be completely secure.
-    </p>
-
-    <p>
-      Users should avoid submitting highly confidential information unless
-      the relevant tool explicitly states that such processing is supported
-      and explains how the information is handled.
-    </p>
-  </section>
-
-
-  <section>
-    <h2>14. Your Choices and Controls</h2>
-
-    <p>
-      Depending on your browser and location, you may be able to:
-    </p>
-
-    <ul>
-      <li>Block or delete cookies.</li>
-      <li>Clear local storage and site data.</li>
-      <li>Disable JavaScript.</li>
-      <li>Control certain advertising preferences.</li>
-      <li>Stop using a particular tool.</li>
-      <li>Contact us regarding applicable privacy requests.</li>
-    </ul>
-
-    <p>
-      Disabling certain technologies may cause some Website features or
-      tools to stop working correctly.
-    </p>
-  </section>
-
-
-  <section>
-    <h2>15. Children's Privacy</h2>
-
-    <p>
-      PRO CSC TOOLS is a general-purpose online tools website and is not
-      specifically directed at children.
-    </p>
-
-    <p>
-      We do not knowingly request personal information from children for
-      purposes that are prohibited by applicable law.
-    </p>
-  </section>
-
-
-  <section>
-    <h2>16. External Links</h2>
-
-    <p>
-      Our Website may contain links to external websites, services or
-      resources.
-    </p>
-
-    <p>
-      We are not responsible for the privacy practices, security or content
-      of third-party websites. Users should review the privacy policies of
-      external websites before providing them with personal information.
-    </p>
-  </section>
-
-
-  <section>
-    <h2>17. Privacy Rights and Requests</h2>
-
-    <p>
-      Subject to applicable law, users may contact us to ask questions
-      about information associated with their interaction with our
-      Website or to request appropriate action where legally applicable.
-    </p>
-
-    <p>
-      Depending on the circumstances and applicable law, requests may
-      include access, correction, deletion or withdrawal of consent where
-      such rights apply.
-    </p>
-
-    <p>
-      Requests should include sufficient information for us to understand
-      and respond to the request. We may need to verify a request before
-      taking action.
-    </p>
-  </section>
-
-
-  <section>
-    <h2>18. Grievance and Privacy Contact</h2>
-
-    <p>
-      If you have any question, complaint or concern regarding this
-      Privacy Policy or the handling of information by PRO CSC TOOLS,
-      please contact us.
-    </p>
-
-    <div class="business-box">
-
-      <p>
-        <strong>PRO CSC TOOLS</strong>
+      <p class="text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
+        Your privacy matters to us. Learn how PRO CSC TOOLS handles
+        browser data, files, cookies, local storage, analytics and
+        advertising.
       </p>
 
-      <p>
-        273, Sundar Talkies Rd,<br/>
-        Opp. Sahara India,<br/>
-        Chota Chauraha, Ab Nagar,<br/>
-        Unnao, Uttar Pradesh - 209801,<br/>
-        India
-      </p>
-
-      <p>
-        <strong>Telephone:</strong>
-        <a href="tel:+916306356544">
-          +91 6306356544
-        </a>
-      </p>
-
-      <p>
-        <strong>Email:</strong>
-        <a href="mailto:Palcscuno@gmail.com">
-          Palcscuno@gmail.com
-        </a>
+      <p class="mt-5 text-sm text-white/80">
+        Last updated: 17 August 2026
       </p>
 
     </div>
-  </section>
-
-
-  <section>
-    <h2>19. Changes to This Privacy Policy</h2>
-
-    <p>
-      We may update this Privacy Policy from time to time to reflect
-      changes to our Website, tools, technology, services, advertising
-      partners or applicable legal requirements.
-    </p>
-
-    <p>
-      The updated version will be published on this page with a revised
-      "Last updated" date.
-    </p>
-  </section>
-
-
-  <section>
-    <h2>20. Contact Us</h2>
-
-    <p>
-      For privacy-related questions, support or other enquiries:
-    </p>
-
-    <p>
-      <strong>PRO CSC TOOLS</strong><br/>
-      273, Sundar Talkies Rd, Opp. Sahara India,<br/>
-      Chota Chauraha, Ab Nagar,<br/>
-      Unnao, Uttar Pradesh - 209801, India
-    </p>
-
-    <p>
-      Telephone:
-      <a href="tel:+916306356544">
-        +91 6306356544
-      </a>
-    </p>
-
-    <p>
-      Email:
-      <a href="mailto:Palcscuno@gmail.com">
-        Palcscuno@gmail.com
-      </a>
-    </p>
 
   </section>
 
-</main>
+
+  <!-- =========================================================
+       PRIVACY POLICY
+  ========================================================== -->
+
+  <main class="py-14">
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Intro -->
+      <div
+        class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-10 mb-8 policy-card"
+      >
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">
+          1. Introduction
+        </h2>
+
+        <p class="text-gray-600 mb-4">
+          This Privacy Policy explains how
+          <strong>PRO CSC TOOLS</strong>
+          ("we", "us", "our", or "the Website") collects, processes,
+          uses and protects information when you visit or use
+          <strong>https://procsctools.in/</strong>
+          and its online tools.
+        </p>
+
+        <p class="text-gray-600">
+          PRO CSC TOOLS provides browser-based online utilities,
+          including document tools, photo and image tools, PDF utilities,
+          calculators, QR tools and other digital services.
+        </p>
+
+      </div>
 
 
-<footer>
+      <!-- Business Information -->
+      <div
+        class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-10 mb-8 policy-card"
+      >
 
-  <p>
-    © 2026 PRO CSC TOOLS. All rights reserved.
-  </p>
+        <h2 class="text-2xl font-bold text-gray-800 mb-5">
+          2. Business Information
+        </h2>
 
-  <p>
-    <a href="/privacy-policy/">Privacy Policy</a>
-    <a href="/terms-of-use/">Terms of Use</a>
-    <a href="/disclaimer/">Disclaimer</a>
-    <a href="/contact/">Contact</a>
-  </p>
+        <div class="bg-gray-50 rounded-xl p-5 border border-gray-200">
 
-</footer>
+          <div class="flex gap-4 mb-5">
+
+            <div class="text-2xl">
+              🏢
+            </div>
+
+            <div>
+              <p class="font-semibold text-gray-800">
+                Business Name
+              </p>
+
+              <p class="text-gray-600">
+                PRO CSC TOOLS
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="flex gap-4 mb-5">
+
+            <div class="text-2xl">
+              📍
+            </div>
+
+            <div>
+
+              <p class="font-semibold text-gray-800">
+                Business Address
+              </p>
+
+              <p class="text-gray-600">
+                273, Sundar Talkies Rd,<br/>
+                Opp. Sahara India,<br/>
+                Chota Chauraha, Ab Nagar,<br/>
+                Unnao, Uttar Pradesh - 209801,<br/>
+                India
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="flex gap-4 mb-5">
+
+            <div class="text-2xl">
+              📞
+            </div>
+
+            <div>
+
+              <p class="font-semibold text-gray-800">
+                Telephone
+              </p>
+
+              <a
+                class="text-indigo-600 hover:underline"
+                href="tel:+916306356544"
+              >
+                +91 6306356544
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <div class="flex gap-4">
+
+            <div class="text-2xl">
+              📧
+            </div>
+
+            <div>
+
+              <p class="font-semibold text-gray-800">
+                Email
+              </p>
+
+              <a
+                class="text-indigo-600 hover:underline"
+                href="mailto:Palcscuno@gmail.com"
+              >
+                Palcscuno@gmail.com
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Information -->
+      <div
+        class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-10 mb-8 policy-card"
+      >
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">
+          3. Information We May Process
+        </h2>
+
+        <p class="text-gray-600 mb-4">
+          Depending on how you use our Website, we may process limited
+          technical, usage or voluntarily provided information.
+        </p>
+
+        <ul class="list-disc pl-6 text-gray-600 space-y-2">
+
+          <li>IP address and approximate location.</li>
+
+          <li>Browser type and version.</li>
+
+          <li>Device type and operating system.</li>
+
+          <li>Pages and tools visited.</li>
+
+          <li>Referring and exit pages.</li>
+
+          <li>Date, time and duration of visits.</li>
+
+          <li>Interaction with Website features.</li>
+
+          <li>Cookies and similar technologies.</li>
+
+          <li>Information voluntarily provided through email or contact forms.</li>
+
+          <li>Files or information entered into a tool, where applicable.</li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- Browser Processing -->
+      <div
+        class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-10 mb-8 policy-card"
+      >
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">
+          4. Browser-Based Processing
+        </h2>
+
+        <p class="text-gray-600 mb-4">
+          Many PRO CSC TOOLS utilities are designed to perform processing
+          directly inside your web browser.
+        </p>
+
+        <div
+          class="bg-red-50 border-l-4 border-[#ab183d] rounded-lg p-5 mb-5"
+        >
+
+          <p class="font-semibold text-gray-800 mb-1">
+            Important
+          </p>
+
+          <p class="text-gray-600">
+            When a tool specifically states that processing occurs locally
+            in your browser, the selected file or entered information is
+            processed on your device and is not intentionally uploaded to
+            our server by that tool.
+          </p>
+
+        </div>
+
+        <p class="text-gray-600">
+          However, not every tool necessarily works in the same way.
+          Some features may require a server, API or third-party service.
+          Please read the privacy or processing notice displayed on the
+          individual tool before submitting sensitive information.
+        </p>
+
+      </div>
+
+
+      <!-- Files -->
+      <div
+        class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-10 mb-8 policy-card"
+      >
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">
+          5. Files, Documents and Sensitive Information
+        </h2>
+
+        <p class="text-gray-600 mb-4">
+          Some tools may allow users to work with documents,
+          photographs, signatures, PDFs or identity-related files.
+        </p>
+
+        <p class="text-gray-600 mb-4">
+          Users should not upload or enter confidential information
+          unless the relevant tool clearly explains how the information
+          is processed.
+        </p>
+
+        <p class="text-gray-600">
+          You are responsible for ensuring that you have the legal right
+          and necessary authorization to process any document or
+          information submitted through our tools.
+        </p>
+
+      </div>
+
+
+      <!-- Cookies -->
+      <div
+        class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-10 mb-8 policy-card"
+      >
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">
+          6. Cookies and Local Storage
+        </h2>
+
+        <p class="text-gray-600 mb-4">
+          PRO CSC TOOLS may use cookies, local storage, session storage
+          or similar browser technologies.
+        </p>
+
+        <ul class="list-disc pl-6 text-gray-600 space-y-2 mb-4">
+
+          <li>Website functionality.</li>
+
+          <li>User preferences and settings.</li>
+
+          <li>Saved drafts or recent calculations.</li>
+
+          <li>Analytics and performance measurement.</li>
+
+          <li>Advertising and ad measurement.</li>
+
+          <li>Security and fraud prevention.</li>
+
+        </ul>
+
+        <p class="text-gray-600">
+          You can remove cookies and local storage through your browser
+          settings. Disabling certain technologies may affect some
+          Website features.
+        </p>
+
+      </div>
+
+
+      <!-- Analytics -->
+      <div
+        class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-10 mb-8 policy-card"
+      >
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">
+          7. Analytics
+        </h2>
+
+        <p class="text-gray-600 mb-4">
+          We may use analytics services to understand how visitors use
+          the Website, including which pages and tools are used and how
+          users interact with the Website.
+        </p>
+
+        <p class="text-gray-600">
+          Analytics providers may process information such as device
+          information, browser information, IP address, approximate
+          location, referral information and interaction data according
+          to their own privacy policies.
+        </p>
+
+      </div>
+
+
+      <!-- Advertising -->
+      <div
+        class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-10 mb-8 policy-card"
+      >
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">
+          8. Advertising and Google Services
+        </h2>
+
+        <p class="text-gray-600 mb-4">
+          PRO CSC TOOLS may display advertisements through third-party
+          advertising providers, including Google AdSense or other
+          advertising networks.
+        </p>
+
+        <p class="text-gray-600 mb-4">
+          Third-party advertising providers may use cookies, web beacons,
+          IP addresses, device identifiers or similar technologies to
+          serve, measure and improve advertisements.
+        </p>
+
+        <p class="text-gray-600 mb-4">
+          Depending on user settings and applicable requirements,
+          advertisements may be personalized using advertising signals
+          such as previous visits, browsing activity or approximate
+          location.
+        </p>
+
+        <p class="text-gray-600">
+          For more information about how Google uses information from
+          websites that use Google's services, visit:
+        </p>
+
+        <a
+          class="inline-block mt-3 text-indigo-600 font-semibold hover:underline"
+          href="https://policies.google.com/technologies/partner-sites"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Google — How Google uses information from sites or apps
+        </a>
+
+      </div>
+
+
+      <!-- Third Party -->
+      <div
+        class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-10 mb-8 policy-card"
+      >
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">
+          9. Third-Party Services
+        </h2>
+
+        <p class="text-gray-600 mb-4">
+          Some Website features may depend on third-party services,
+          APIs, hosting providers, analytics providers, advertising
+          networks or other technology providers.
+        </p>
+
+        <p class="text-gray-600">
+          These third parties may process technical or usage information
+          according to their own privacy policies and terms.
+        </p>
+
+      </div>
+
+
+      <!-- Sharing -->
+      <div
+        class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-10 mb-8 policy-card"
+      >
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">
+          10. Data Sharing and Disclosure
+        </h2>
+
+        <p class="text-gray-600 mb-4">
+          We do not sell your personal information as a business practice.
+        </p>
+
+        <p class="text-gray-600">
+          Information may be disclosed to service providers when
+          reasonably necessary to operate the Website, provide requested
+          services, maintain security, measure traffic, serve
+          advertisements or comply with applicable law.
+        </p>
+
+      </div>
+
+
+      <!-- Retention -->
+      <div
+        class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-10 mb-8 policy-card"
+      >
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">
+          11. Data Retention
+        </h2>
+
+        <p class="text-gray-600 mb-4">
+          We retain information only for as long as reasonably necessary
+          for the purpose for which it was collected, to provide services,
+          maintain security, comply with legal obligations or resolve
+          disputes.
+        </p>
+
+        <p class="text-gray-600">
+          Information stored through browser technologies such as local
+          storage may remain on the user's device until the user clears
+          the relevant browser data.
+        </p>
+
+      </div>
+
+
+      <!-- Security -->
+      <div
+        class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-10 mb-8 policy-card"
+      >
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">
+          12. Data Security
+        </h2>
+
+        <p class="text-gray-600 mb-4">
+          We take reasonable technical and organizational measures to
+          protect information against unauthorized access, misuse,
+          alteration, disclosure or destruction.
+        </p>
+
+        <p class="text-gray-600">
+          However, no method of electronic transmission or storage can
+          be guaranteed to be completely secure.
+        </p>
+
+      </div>
+
+
+      <!-- User Choices -->
+      <div
+        class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-10 mb-8 policy-card"
+      >
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">
+          13. Your Choices and Controls
+        </h2>
+
+        <p class="text-gray-600 mb-4">
+          Depending on your browser and location, you may be able to:
+        </p>
+
+        <ul class="list-disc pl-6 text-gray-600 space-y-2">
+
+          <li>Block or delete cookies.</li>
+
+          <li>Clear local storage and site data.</li>
+
+          <li>Control certain advertising preferences.</li>
+
+          <li>Disable JavaScript.</li>
+
+          <li>Stop using a particular tool.</li>
+
+          <li>Contact us regarding applicable privacy requests.</li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- Children's Privacy -->
+      <div
+        class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-10 mb-8 policy-card"
+      >
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">
+          14. Children's Privacy
+        </h2>
+
+        <p class="text-gray-600">
+          PRO CSC TOOLS is a general-purpose online tools website and is
+          not specifically directed at children. We do not knowingly
+          request personal information from children for purposes that
+          are prohibited by applicable law.
+        </p>
+
+      </div>
+
+
+      <!-- External Links -->
+      <div
+        class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-10 mb-8 policy-card"
+      >
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">
+          15. External Links
+        </h2>
+
+        <p class="text-gray-600">
+          Our Website may contain links to external websites, services
+          or resources. We are not responsible for the privacy practices,
+          security or content of third-party websites. Users should review
+          the privacy policies of external websites before providing
+          personal information.
+        </p>
+
+      </div>
+
+
+      <!-- Privacy Rights -->
+      <div
+        class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-10 mb-8 policy-card"
+      >
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">
+          16. Privacy Rights and Requests
+        </h2>
+
+        <p class="text-gray-600 mb-4">
+          Subject to applicable law, users may contact us with questions
+          about information associated with their interaction with our
+          Website or request appropriate action where legally applicable.
+        </p>
+
+        <p class="text-gray-600">
+          Depending on the circumstances and applicable law, requests may
+          include access, correction, deletion or withdrawal of consent
+          where such rights apply.
+        </p>
+
+      </div>
+
+
+      <!-- Contact -->
+      <div
+        class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-10 mb-8 policy-card"
+      >
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-5">
+          17. Contact & Privacy Enquiries
+        </h2>
+
+        <p class="text-gray-600 mb-6">
+          If you have any privacy question, complaint or concern regarding
+          PRO CSC TOOLS, please contact us using the information below.
+        </p>
+
+        <div class="grid sm:grid-cols-2 gap-5">
+
+          <!-- Business -->
+          <div class="bg-gray-50 rounded-xl p-5 border border-gray-200">
+
+            <div class="text-3xl mb-3">
+              🏢
+            </div>
+
+            <h3 class="font-semibold text-gray-800 mb-2">
+              PRO CSC TOOLS
+            </h3>
+
+            <p class="text-gray-600 text-sm leading-6">
+              273, Sundar Talkies Rd,<br/>
+              Opp. Sahara India,<br/>
+              Chota Chauraha, Ab Nagar,<br/>
+              Unnao, Uttar Pradesh - 209801,<br/>
+              India
+            </p>
+
+          </div>
+
+
+          <!-- Contact -->
+          <div class="bg-gray-50 rounded-xl p-5 border border-gray-200">
+
+            <div class="text-3xl mb-3">
+              📞
+            </div>
+
+            <h3 class="font-semibold text-gray-800 mb-3">
+              Contact
+            </h3>
+
+            <p class="text-sm mb-2">
+
+              <strong>Phone:</strong><br/>
+
+              <a
+                class="text-indigo-600 hover:underline"
+                href="tel:+916306356544"
+              >
+                +91 6306356544
+              </a>
+
+            </p>
+
+            <p class="text-sm">
+
+              <strong>Email:</strong><br/>
+
+              <a
+                class="text-indigo-600 hover:underline"
+                href="mailto:Palcscuno@gmail.com"
+              >
+                Palcscuno@gmail.com
+              </a>
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Changes -->
+      <div
+        class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-10 mb-8 policy-card"
+      >
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">
+          18. Changes to This Privacy Policy
+        </h2>
+
+        <p class="text-gray-600">
+          We may update this Privacy Policy from time to time to reflect
+          changes to our Website, tools, technology, services, advertising
+          partners or applicable legal requirements.
+        </p>
+
+        <p class="text-gray-600 mt-4">
+          The updated version will be published on this page with a
+          revised "Last updated" date.
+        </p>
+
+      </div>
+
+
+      <!-- Final Contact CTA -->
+      <div
+        class="hero-grad text-white rounded-2xl p-7 md:p-10 text-center shadow-lg"
+      >
+
+        <div class="text-4xl mb-3">
+          💬
+        </div>
+
+        <h2 class="text-2xl md:text-3xl font-bold mb-3">
+          Have a Privacy Question?
+        </h2>
+
+        <p class="text-white/90 max-w-2xl mx-auto mb-6">
+          If you have any question regarding this Privacy Policy or
+          how PRO CSC TOOLS handles information, feel free to contact us.
+        </p>
+
+        <div class="flex flex-col sm:flex-row justify-center gap-3">
+
+          <a
+            href="mailto:Palcscuno@gmail.com"
+            class="bg-white text-[#ab183d] px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition"
+          >
+            📧 Email Us
+          </a>
+
+          <a
+            href="tel:+916306356544"
+            class="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition"
+          >
+            📞 Call Us
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+
+  <footer class="bg-gray-900 text-white py-12">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+
+        <!-- About -->
+        <div>
+
+          <h3 class="text-2xl font-bold mb-4">
+            Pro CSC Tools
+          </h3>
+
+          <p class="text-gray-400">
+            India's online platform for CSC VLEs, students and users
+            looking for useful document, ID card, PDF, image and
+            online tools.
+          </p>
+
+        </div>
+
+
+        <!-- Quick Links -->
+        <div>
+
+          <h4 class="text-lg font-semibold mb-4">
+            Quick Links
+          </h4>
+
+          <ul class="space-y-2">
+
+            <li>
+              <a
+                class="text-gray-400 hover:text-white transition"
+                href="/"
+              >
+                Home
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="text-gray-400 hover:text-white transition"
+                href="/#tools"
+              >
+                Tools
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="text-gray-400 hover:text-white transition"
+                href="/#features"
+              >
+                Features
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="text-gray-400 hover:text-white transition"
+                href="/about/"
+              >
+                About Us
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <!-- Popular Tools -->
+        <div>
+
+          <h4 class="text-lg font-semibold mb-4">
+            Popular Tools
+          </h4>
+
+          <ul class="space-y-2">
+
+            <li>
+              <a
+                class="text-gray-400 hover:text-white transition"
+                href="/tools/resume-builder/"
+              >
+                Resume Maker
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="text-gray-400 hover:text-white transition"
+                href="/tools/image-to-pdf/"
+              >
+                PDF Converter
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="text-gray-400 hover:text-white transition"
+                href="/tools/image-resizer/"
+              >
+                Image Resizer
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="text-gray-400 hover:text-white transition"
+                href="/tools/age-calculator/"
+              >
+                Age Calculator
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <!-- Legal -->
+        <div>
+
+          <h4 class="text-lg font-semibold mb-4">
+            Legal
+          </h4>
+
+          <ul class="space-y-2">
+
+            <li>
+              <a
+                class="text-gray-400 hover:text-white transition"
+                href="/privacy-policy/"
+              >
+                Privacy Policy
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="text-gray-400 hover:text-white transition"
+                href="/terms-of-use/"
+              >
+                Terms of Service
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="text-gray-400 hover:text-white transition"
+                href="/disclaimer/"
+              >
+                Disclaimer
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="text-gray-400 hover:text-white transition"
+                href="/contact/"
+              >
+                Contact
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+
+      <!-- Business Information -->
+      <div class="border-t border-gray-800 pt-8">
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-5 text-sm text-gray-400"
+        >
+
+          <div>
+            <span class="font-semibold text-gray-300">
+              Business:
+            </span>
+            PRO CSC TOOLS
+          </div>
+
+          <div>
+            <span class="font-semibold text-gray-300">
+              Phone:
+            </span>
+
+            <a
+              class="hover:text-white"
+              href="tel:+916306356544"
+            >
+              +91 6306356544
+            </a>
+          </div>
+
+          <div>
+            <span class="font-semibold text-gray-300">
+              Email:
+            </span>
+
+            <a
+              class="hover:text-white"
+              href="mailto:Palcscuno@gmail.com"
+            >
+              Palcscuno@gmail.com
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Copyright -->
+      <div
+        class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400"
+      >
+
+        <p>
+          © 2026 Pro CSC Tools. All rights reserved.
+          Made with ❤️ in India for All CSC VLEs.
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================================================
+       MOBILE MENU SCRIPT
+  ========================================================== -->
+
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    document.addEventListener("click", function (e) {
+      if (
+        !menuBtn.contains(e.target) &&
+        !mobileMenu.contains(e.target)
+      ) {
+        mobileMenu.classList.add("hidden");
+      }
+    });
+
+    mobileMenu.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        mobileMenu.classList.add("hidden");
+      });
+    });
+  </script>
 
 </body>
 </html>
