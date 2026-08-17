@@ -276,55 +276,6 @@
             document.getElementById('unitResult').classList.remove('hidden');
         }
 
-        // ========== VALIDATOR FUNCTIONS ==========
-        function checkAadhaar() {
-            let a = document.getElementById('aadhaar').value;
-            if (/^\d{12}$/.test(a)) {
-                document.getElementById('aadhaarResult').innerHTML = '<span class="text-green-600 font-semibold">✓ Valid Aadhaar Format</span>';
-            } else {
-                document.getElementById('aadhaarResult').innerHTML = '<span class="text-red-600 font-semibold">✗ Invalid Aadhaar (12 digits required)</span>';
-            }
-        }
-
-        function checkPAN() {
-            let p = document.getElementById('pan').value.toUpperCase();
-            if (/^[A-Z]{5}[0-9]{4}[A-Z]$/.test(p)) {
-                document.getElementById('panResult').innerHTML = '<span class="text-green-600 font-semibold">✓ Valid PAN Format</span>';
-            } else {
-                document.getElementById('panResult').innerHTML = '<span class="text-red-600 font-semibold">✗ Invalid PAN (Format: ABCDE1234F)</span>';
-            }
-        }
-
-        function checkIFSC() {
-            let code = document.getElementById('ifsc').value.toUpperCase();
-            if (/^[A-Z]{4}0[A-Z0-9]{6}$/.test(code)) {
-                document.getElementById('ifscResult').innerHTML = '<span class="text-green-600 font-semibold">✓ Valid IFSC Format</span>';
-            } else {
-                document.getElementById('ifscResult').innerHTML = '<span class="text-red-600 font-semibold">✗ Invalid IFSC (Format: SBIN0001234)</span>';
-            }
-        }
-
-        function checkUPI() {
-            let u = document.getElementById('upi').value;
-            if (/^[\w.-]+@[\w]+$/.test(u)) {
-                document.getElementById('upiResult').innerHTML = '<span class="text-green-600 font-semibold">✓ Valid UPI ID</span>';
-            } else {
-                document.getElementById('upiResult').innerHTML = '<span class="text-red-600 font-semibold">✗ Invalid UPI ID (Format: name@bank)</span>';
-            }
-        }
-
-        function genName() {
-            let names = ["Rahul Sharma", "Amit Kumar", "Neha Verma", "Priya Singh", "Rohit Mehta", "Sneha Gupta", "Vikram Rathore", "Pooja Nair", "Anjali Desai", "Rajesh Khanna"];
-            let random = names[Math.floor(Math.random() * names.length)];
-            document.getElementById('nameResult').innerHTML = `<span class="text-2xl font-bold">${random}</span>`;
-        }
-
-        function speak() {
-            let msg = new SpeechSynthesisUtterance(document.getElementById('textToSpeak').value);
-            msg.lang = 'en-IN';
-            speechSynthesis.speak(msg);
-        }
-
         // Notepad auto-save
         window.onload = function() {
             let noteField = document.getElementById('note');
