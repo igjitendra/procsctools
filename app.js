@@ -5,7 +5,7 @@
 
         // ========== TOOLS DATA ==========
         const toolsData = [
-            { name: "CSC ID Card Maker", desc: "Create professional CSC VLE, employee & student ID cards online.", icon: "fa-id-card", color: "from-red-500 to-rose-600", category: "doc", badge: "Popular", pin: true, img: "", url: "/tools/csc-id-card-maker.html" },
+            { name: "CSC-style ID Card Maker", desc: "Create professional CSC VLE, employee & student ID cards online.", icon: "fa-id-card", color: "from-red-500 to-rose-600", category: "doc", badge: "Popular", pin: true, img: "", url: "/tools/csc-id-card-maker.html" },
             { name: "Passport Photo Maker", desc: "Make passport-size photos with correct dimensions for forms.", icon: "fa-id-card", color: "from-red-500 to-rose-600", category: "doc", badge: "Popular", pin: true, img: "/images/passport.webp", url: "/tools/passport.html" },
             { name: "Background Remover", desc: "Remove image background free, fast and automatically.", icon: "fa-wand-magic-sparkles", color: "from-violet-500 to-purple-600", category: "doc", badge: "Popular", pin: true, img: "/images/bg.webp", url: "/tools/bg.html" },
             { name: "Photo & Signature Resizer", desc: "Resize photo & signature to exam KB and DPI limits.", icon: "fa-signature", color: "from-orange-500 to-amber-600", category: "doc", badge: "", pin: true, img: "/images/photo-sign.webp", url: "/tools/photo-signature-joiner.html" },
